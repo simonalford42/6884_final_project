@@ -20,12 +20,16 @@ import numpy as np
 data_file = "scan/SCAN-master/simple_split/tasks_test_simple.txt"
 
 input_lang, output_lang, pairs = prepareData('scan_in', 'scan_out', data_file, False)
-print(random.choice(pairs))
+print('Sample data pair: {}'.format(random.choice(pairs)))
+print('Dataset size: {}'.format(len(pairs)))
 
 INPUT_SIZE = input_lang.n_words
 HIDDEN_SIZE = 200
 OUTPUT_SIZE = output_lang.n_words
 MAX_LENGTH = 10
+
+# set to -1 if no clipping desired
+gradient_clip = 5
 
 teacher_forcing_ratio = 0.5
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -160,7 +164,9 @@ class DecoderRNN(nn.Module):
 Training 
 """
 
-def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, max_length=MAX_LENGTH):
+def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer,
+        decoder_optimizer, criterion, max_length=MAX_LENGTH,
+        gradient_clip=5):
     encoder_hidden = encoder.initHidden()
 
     encoder_optimizer.zero_grad()
@@ -204,6 +210,8 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, deco
             if decoder_input.item() == EOS_token:
                 break
 
+    torch.nn.utils.clip_grad_norm_(encoder.parameters(), gradient_clip)
+    torch.nn.utils.clip_grad_norm_(decoder.parameters(), gradient_clip)
     loss.backward()
 
     encoder_optimizer.step()
@@ -213,7 +221,8 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, deco
 
 
 
-def trainIters(encoder, decoder, n_iters, print_every=1000, plot_every=100, learning_rate=0.01):
+def trainIters(encoder, decoder, n_iters, print_every=1000, plot_every=100,
+        learning_rate=0.001):
     print('Starting training')
     start = time.time()
     plot_losses = []
@@ -225,6 +234,8 @@ def trainIters(encoder, decoder, n_iters, print_every=1000, plot_every=100, lear
     training_pairs = [tensorsFromPair(input_lang, output_lang, random.choice(pairs))
                       for i in range(n_iters)]
     criterion = nn.NLLLoss()
+
+    evaluateRandomly(encoder, decoder, n = 100)
 
     for iter in range(1, n_iters + 1):
         # print("iter")
@@ -242,6 +253,8 @@ def trainIters(encoder, decoder, n_iters, print_every=1000, plot_every=100, lear
             print_loss_total = 0
             print('Duration (Remaining): %s Iters: (%d %d%%) Loss avg: %.4f' % (timeSince(start, iter / n_iters),
                                          iter, iter / n_iters * 100, print_loss_avg))
+
+            evaluateRandomly(encoder, decoder, n = 100)
 
         if iter % plot_every == 0:
             plot_loss_avg = plot_loss_total / plot_every
@@ -274,13 +287,13 @@ def evaluate(encoder, decoder, sentence, max_length=MAX_LENGTH):
         decoder_hidden = encoder_hidden
 
         decoded_words = []
-        decoder_attentions = torch.zeros(max_length, max_length)
 
         for di in range(max_length):
-            decoder_output, decoder_hidden, decoder_attention = decoder(
-                decoder_input, decoder_hidden, encoder_outputs)
-            decoder_attentions[di] = decoder_attention.data
-            topv, topi = decoder_output.data.topk(1)
+            decoder_output, decoder_hidden = decoder(
+                decoder_input, decoder_hidden)
+            topv, topi = decoder_output.topk(1)
+            decoder_input = topi.squeeze().detach()  # detach from history as input
+
             if topi.item() == EOS_token:
                 decoded_words.append('<EOS>')
                 break
@@ -289,11 +302,84 @@ def evaluate(encoder, decoder, sentence, max_length=MAX_LENGTH):
 
             decoder_input = topi.squeeze().detach()
 
-        return decoded_words, decoder_attentions[:di + 1]
+        return decoded_words
 
+
+def evaluateTestSet(encoder, decoder, pairs):
+    encoder.eval()
+    decoder.eval()
+
+    with torch.no_grad():
+        print('Evaluating {} test examples'.format(len(pairs)))
+        hits = 0
+        for pair in pairs:
+            output_words = evaluate(encoder, decoder, pair[0])
+            output_sentence = ' '.join(output_words)
+            if output_words[-1] == '<EOS>':
+                output_sentence = ' '.join(output_words[:-1])
+                if pair[1] == output_sentence:
+                    hits += 1
+
+        print('Evaluation accuracy: {}/{} = {:.2f}%'.format(hits, len(pairs),
+            hits/len(pairs)))
+
+        return hits
+
+    encoder.train()
+    decoder.train()
+
+
+
+def evaluateRandomly(encoder, decoder, n=10, verbose=False):
+    encoder.eval()
+    decoder.eval()
+
+    with torch.no_grad():
+        hits = 0
+        for i in range(n):
+            pair = random.choice(pairs)
+            if verbose:
+                print('>', pair[0])
+                print('=', pair[1])
+            output_words = evaluate(encoder, decoder, pair[0])
+            output_sentence = ' '.join(output_words)
+            if verbose:
+                print('<', output_sentence)
+            if output_words[-1] == '<EOS>':
+                output_sentence = ' '.join(output_words[:-1])
+                if pair[1] == output_sentence:
+                    hits += 1
+            if verbose:
+                print('')
+
+    encoder.train()
+    decoder.train()
+
+    print('Hits {}/{} test samples'.format(hits, n))
+
+
+def saveModels(encoder, decoder, path):
+    torch.save({
+        'encoder_state_dict': encoder.state_dict(),
+        'decoder_state_dict': decoder.state_dict()
+        }, path)
+
+
+
+def loadParameters(encoder, decoder, path):
+    checkpoint = torch.load(path)
+    encoder.load_state_dict(checkpoint['encoder_state_dict'])
+    decoder.load_state_dict(checkpoint['decoder_state_dict'])
 
 
 encoder = EncoderRNN(INPUT_SIZE, HIDDEN_SIZE).to(device)
 decoder = DecoderRNN(HIDDEN_SIZE, OUTPUT_SIZE).to(device)
 
-trainIters(encoder, decoder, 10000)
+# trainIters(encoder, decoder, 5000)
+# evaluateTestSet(encoder, decoder, pairs)
+# saveModels(encoder, decoder, 'save_test.pt')
+
+loadParameters(encoder, decoder, 'save_test.pt')
+evaluateTestSet(encoder, decoder, pairs)
+trainIters(encoder, decoder, 5000)
+evaluateTestSet(encoder, decoder, pairs)
