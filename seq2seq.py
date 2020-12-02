@@ -10,6 +10,11 @@ from torch import optim
 import torch.nn.functional as F
 import pdb
 
+import matplotlib.pyplot as plt
+plt.switch_backend('agg')
+import matplotlib.ticker as ticker
+import numpy as np
+
 
 
 data_file = "scan/SCAN-master/simple_split/tasks_test_simple.txt"
@@ -24,10 +29,20 @@ MAX_LENGTH = 10
 
 teacher_forcing_ratio = 0.5
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print('Torch device: {}'.format(device))
 
 """
 Helpers
 """
+
+
+def showPlot(points):
+    plt.figure()
+    fig, ax = plt.subplots()
+    # this locator puts ticks at regular intervals
+    loc = ticker.MultipleLocator(base=0.2)
+    ax.yaxis.set_major_locator(loc)
+    plt.plot(points)
 
 def asMinutes(s):
     m = math.floor(s / 60)
@@ -143,9 +158,6 @@ class DecoderRNN(nn.Module):
 
 """
 Training 
-
-
-
 """
 
 def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, max_length=MAX_LENGTH):
@@ -202,6 +214,7 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, deco
 
 
 def trainIters(encoder, decoder, n_iters, print_every=1000, plot_every=100, learning_rate=0.01):
+    print('Starting training')
     start = time.time()
     plot_losses = []
     print_loss_total = 0  # Reset every print_every
@@ -227,7 +240,7 @@ def trainIters(encoder, decoder, n_iters, print_every=1000, plot_every=100, lear
         if iter % print_every == 0:
             print_loss_avg = print_loss_total / print_every
             print_loss_total = 0
-            print('%s (%d %d%%) %.4f' % (timeSince(start, iter / n_iters),
+            print('Duration (Remaining): %s Iters: (%d %d%%) Loss avg: %.4f' % (timeSince(start, iter / n_iters),
                                          iter, iter / n_iters * 100, print_loss_avg))
 
         if iter % plot_every == 0:
@@ -240,8 +253,6 @@ def trainIters(encoder, decoder, n_iters, print_every=1000, plot_every=100, lear
 
 """
 Evaluation
-
-
 """
 
 
@@ -282,9 +293,7 @@ def evaluate(encoder, decoder, sentence, max_length=MAX_LENGTH):
 
 
 
-encoder = EncoderRNN(INPUT_SIZE, HIDDEN_SIZE)
-decoder = DecoderRNN(HIDDEN_SIZE, OUTPUT_SIZE)
+encoder = EncoderRNN(INPUT_SIZE, HIDDEN_SIZE).to(device)
+decoder = DecoderRNN(HIDDEN_SIZE, OUTPUT_SIZE).to(device)
 
-import pdb
-pdb.set_trace()
 trainIters(encoder, decoder, 10000)
