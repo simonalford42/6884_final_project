@@ -17,18 +17,13 @@ import numpy as np
 
 # use full data for determining input/output language, in case splits somehow change it
 full_data = "scan/SCAN-master/tasks.txt"
-input_lang, output_lang, full_pairs = prepareData('scan_in', 'scan_out', full_data, False)
+INPUT_LANG, OUTPUT_LANG, full_pairs = prepareData('scan_in', 'scan_out', full_data, False)
 # used for train as well as test splits
 # I add one for the <EOS> tag. Not sure if necessary but can't hurt.
-MAX_LENGTH = max(len(pair[i].split(' ')) for pair in full_pairs) + 1
+MAX_LENGTH = max(len(pair[1].split(' ')) for pair in full_pairs) + 1
 
-split_path = 'scan/SCAN-master/simple_split/tasks_test_simple.txt'
-_, _, pairs = prepareData('scan_in', 'scan_out', data_file, False)
-print('Sample data pair: {}'.format(random.choice(pairs)))
-print('Dataset size: {}'.format(len(pairs)))
-
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print('Torch device: {}'.format(device))
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print('Torch device: {}'.format(DEVICE))
 
 """
 Helpers
@@ -56,14 +51,14 @@ def timeSince(since, percent):
     return '%s (- %s)' % (asMinutes(s), asMinutes(rs)) 
 
 # Get Sentences
-def indexesFromSentence(lang, sentence):
+def indicesFromSentence(lang, sentence):
     return [lang.word2index[word] for word in sentence.split(' ')]
 
 
 def tensorFromSentence(lang, sentence, device):
-    indexes = indexesFromSentence(lang, sentence)
-    indexes.append(EOS_token)
-    return torch.tensor(indexes, dtype=torch.long, device=device).view(-1, 1)
+    indices = indicesFromSentence(lang, sentence)
+    indices.append(EOS_token)
+    return torch.tensor(indices, dtype=torch.long, device=device).view(-1, 1)
 
 
 def tensorsFromPair(input_lang, output_lang, pair, device):
@@ -82,6 +77,7 @@ class EncoderRNN(nn.Module):
     def __init__(self, input_size, hidden_size, device):
         super(EncoderRNN, self).__init__()
         self.hidden_size = hidden_size
+        self.device = device
 
         self.embedding = nn.Embedding(input_size, hidden_size)
         self.rnn = nn.GRU(hidden_size, hidden_size)
@@ -93,13 +89,14 @@ class EncoderRNN(nn.Module):
         return output, hidden
 
     def initHidden(self):
-        return torch.zeros(1, 1, self.hidden_size, device=device)
+        return torch.zeros(1, 1, self.hidden_size, device=self.device)
 
 
 class DecoderRNN(nn.Module):
     def __init__(self, hidden_size, output_size, device):
         super(DecoderRNN, self).__init__()
         self.hidden_size = hidden_size
+        self.device = device
 
         self.embedding = nn.Embedding(output_size, hidden_size)
         self.rnn = nn.GRU(hidden_size, hidden_size)
@@ -114,7 +111,7 @@ class DecoderRNN(nn.Module):
         return output, hidden
 
     def initHidden(self):
-        return torch.zeros(1, 1, self.hidden_size, device=device)
+        return torch.zeros(1, 1, self.hidden_size, device=self.device)
 
 
 # class AttnDecoderRNN(nn.Module):
@@ -218,7 +215,7 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer,
 
 
 
-def trainIters(encoder, decoder, n_iters, device, print_every=1000, plot_every=100,
+def trainIters(encoder, decoder, pairs, n_iters, device, print_every=1000, plot_every=100,
         learning_rate=0.001):
     print('Starting training')
     start = time.time()
@@ -228,11 +225,11 @@ def trainIters(encoder, decoder, n_iters, device, print_every=1000, plot_every=1
 
     encoder_optimizer = optim.Adam(encoder.parameters(), lr=learning_rate)
     decoder_optimizer = optim.Adam(decoder.parameters(), lr=learning_rate)
-    training_pairs = [tensorsFromPair(input_lang, output_lang, random.choice(pairs), device)
+    training_pairs = [tensorsFromPair(INPUT_LANG, OUTPUT_LANG, random.choice(pairs), device)
                       for i in range(n_iters)]
     criterion = nn.NLLLoss()
 
-    evaluateRandomly(encoder, decoder, n = 100)
+    evaluateRandomly(encoder, decoder, pairs, device, n = 100)
 
     for iter in range(1, n_iters + 1):
         # print("iter")
@@ -252,7 +249,7 @@ def trainIters(encoder, decoder, n_iters, device, print_every=1000, plot_every=1
             print('Duration (Remaining): %s Iters: (%d %d%%) Loss avg: %.4f' % (timeSince(start, iter / n_iters),
                                          iter, iter / n_iters * 100, print_loss_avg))
 
-            evaluateRandomly(encoder, decoder, n = 100)
+            evaluateRandomly(encoder, decoder, pairs, device, n = 100)
 
         if iter % plot_every == 0:
             plot_loss_avg = plot_loss_total / plot_every
@@ -270,7 +267,7 @@ Evaluation
 
 def evaluate(encoder, decoder, sentence, device):
     with torch.no_grad():
-        input_tensor = tensorFromSentence(input_lang, sentence)
+        input_tensor = tensorFromSentence(INPUT_LANG, sentence, device)
         input_length = input_tensor.size()[0]
         encoder_hidden = encoder.initHidden()
 
@@ -297,7 +294,7 @@ def evaluate(encoder, decoder, sentence, device):
                 decoded_words.append('<EOS>')
                 break
             else:
-                decoded_words.append(output_lang.index2word[topi.item()])
+                decoded_words.append(OUTPUT_LANG.index2word[topi.item()])
 
             decoder_input = topi.squeeze().detach()
 
@@ -332,8 +329,7 @@ def evaluateTestSet(encoder, decoder, pairs, device):
 
 
 
-
-def evaluateRandomly(encoder, decoder, device, n=10, verbose=False):
+def evaluateRandomly(encoder, decoder, pairs, device, n=10, verbose=False):
     encoder.eval()
     decoder.eval()
 
@@ -361,7 +357,7 @@ def evaluateRandomly(encoder, decoder, device, n=10, verbose=False):
     print('Hits {}/{} test samples'.format(hits, n))
 
 
-def saveModel(encoder, decoder, checkpoint  path):
+def saveModel(encoder, decoder, checkpoint, path):
     checkpoint['encoder_state_dict'] = encoder.state_dict()
     checkpoint['decoder_state_dict'] = decoder.state_dict()
     torch.save(checkpoint, path)
@@ -374,20 +370,27 @@ def loadParameters(encoder, decoder, path):
     return checkpoint
 
 
-def train_test_split(train_path, test_path, save_path):
+def scanData(path):
+    _, _, pairs = prepareData('scan_in', 'scan_out', path, False)
+    print('Loaded data from {}'.format(path))
+    print('{} examples. Sample pair: {}'.format(len(pairs), random.choice(pairs)))
+    return pairs
+
+
+def trainTestSplit(train_path, test_path, save_path, device, iters=100000):
     train_path = 'scan/SCAN-master/' + train_path
     test_path = 'scan/SCAN-master/' + test_path
-    _, _, train_pairs = prepareData('scan_in', 'scan_out', train_path, False)
-    _, _, test_pairs = prepareData('scan_in', 'scan_out', test_path, False)
+    train_pairs = scanData(train_path)
+    test_pairs = scanData(test_path)
 
-    input_size = input_lang.n_words
+    input_size = INPUT_LANG.n_words
     hidden_size = 200
-    output_size = output_lang.n_words
+    output_size = OUTPUT_LANG.n_words
 
     encoder = EncoderRNN(input_size, hidden_size, device).to(device)
     decoder = DecoderRNN(hidden_size, output_size, device).to(device)
 
-    train_losses = trainIters(encoder, decoder, 100000, device)
+    train_losses = trainIters(encoder, decoder, train_pairs, iters, device)
     print('Evaluating training split accuracy')
     train_acc = evaluateTestSet(encoder, decoder, train_pairs, device)
     print('Evaluating test split accuracy')
@@ -400,10 +403,33 @@ def train_test_split(train_path, test_path, save_path):
     saveModel(encoder, decoder, checkpoint, save_path)
 
 
-def loadModel(path):
+def loadModel(path, device):
+
+    input_size = INPUT_LANG.n_words
+    hidden_size = 200
+    output_size = OUTPUT_LANG.n_words
+
     encoder = EncoderRNN(input_size, hidden_size, device).to(device)
     decoder = DecoderRNN(hidden_size, output_size, device).to(device)
 
     checkpoint = loadParameters(encoder, decoder, path)
     return encoder, decoder, checkpoint
+
+
+def evalSplit(encoder, decoder, split_path, device):
+    split_path = 'scan/SCAN-master/' + split_path
+    split_pairs = scanData(split_path)
+    pairs = scanData(split_path)
+    accuracy = evaluateTestSet(encoder, decoder, pairs, device)
+    return accuracy
+
+
+if __name__ == '__main__':
+    train_path = 'simple_split/tasks_train_simple.txt'
+    test_path = 'simple_split/tasks_test_simple.txt'
+    trainTestSplit(train_path, test_path, 'simple_split2.pt', device=DEVICE)
+
+    # encoder, decoder, checkpoint = loadModel('simple_split1.pt', DEVICE)
+    # print('Evaluating with loaded model')
+    # evalSplit(encoder, decoder, test_path, DEVICE)
 
