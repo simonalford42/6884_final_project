@@ -10,6 +10,8 @@ from torch import optim
 import torch.nn.functional as F
 import pdb
 
+import os
+
 import numpy as np
 import argparse
 
@@ -499,9 +501,9 @@ def trainTestSplit(device, encoder, decoder, model, train_path, test_path, iters
 
     train_losses = trainIters(device, encoder, decoder, model, train_pairs, iters)
     print('Evaluating training split accuracy')
-    train_acc = evaluateTestSet(device, encoder, decoder, model, train_pairs)
+    train_acc = evaluateTestSet(device, encoder, decoder, model, train_pairs[0:100])
     print('Evaluating test split accuracy')
-    test_acc = evaluateTestSet(device, encoder, decoder, model, test_pairs)
+    test_acc = evaluateTestSet(device, encoder, decoder, model, test_pairs[0:100])
 
     checkpoint = {'train_accuracy': train_acc,
             'test_accuracy': test_acc,
@@ -573,6 +575,11 @@ if __name__ == '__main__':
     checkpoint = trainTestSplit(DEVICE, encoder, decoder, args.model, train_path, test_path, iters=args.iters)
     save_path = 'saved/{}{}_{}{}.pt'.format(args.split, '_inter' if args.inter_rep else '',
             args.iters, '_' + args.tag if args.tag else '')
+
+    i = 0
+    while os.path.isfile(save_path):
+        save_path = save_path[:-3] + '_({}).pt'.format(i)
+
     saveModel(encoder, decoder, checkpoint, save_path) 
 
     # encoder, decoder, checkpoint = loadModel('simple_split1.pt', DEVICE)
