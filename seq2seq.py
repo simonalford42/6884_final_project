@@ -9,10 +9,16 @@ import torch.nn as nn
 from torch import optim
 import torch.nn.functional as F
 import pdb
+import matplotlib.pyplot as plt
+plt.switch_backend('agg')
+import matplotlib.ticker as ticker
+import numpy as np
 
 
 
-data_file = "scan/SCAN-master/simple_split/tasks_test_simple.txt"
+
+data_file = "scan/SCAN-master/simple_split/tasks_train_simple.txt"
+test_file = "scan/SCAN-master/simple_split/tasks_test_simple.txt"
 
 input_lang, output_lang, pairs = prepareData('scan_in', 'scan_out', data_file, False)
 print(random.choice(pairs))
@@ -59,6 +65,14 @@ def tensorsFromPair(input_lang, output_lang, pair):
     return (input_tensor, target_tensor)
 
 
+def showPlot(points):
+    plt.figure()
+    fig, ax = plt.subplots()
+    # this locator puts ticks at regular intervals
+    loc = ticker.MultipleLocator(base=0.2)
+    ax.yaxis.set_major_locator(loc)
+    plt.plot(points)
+
 """
 Model Architecture
 
@@ -66,15 +80,17 @@ Model Architecture
 
 
 class EncoderRNN(nn.Module):
-    def __init__(self, input_size, hidden_size):
+    def __init__(self, input_size, hidden_size, dropout=.5):
         super(EncoderRNN, self).__init__()
         self.hidden_size = hidden_size
 
         self.embedding = nn.Embedding(input_size, hidden_size)
         self.rnn = nn.GRU(hidden_size, hidden_size)
+        self.dropout = nn.Dropout(dropout)
 
     def forward(self, input, hidden):
-        embedded = self.embedding(input).view(1, 1, -1)
+        # pdb.set_trace()
+        embedded = self.dropout(self.embedding(input).view(1, 1, -1))
         output = embedded
         output, hidden = self.rnn(output, hidden)
         return output, hidden
@@ -84,7 +100,7 @@ class EncoderRNN(nn.Module):
 
 
 class DecoderRNN(nn.Module):
-    def __init__(self, hidden_size, output_size):
+    def __init__(self, hidden_size, output_size, dropout=.5):
         super(DecoderRNN, self).__init__()
         self.hidden_size = hidden_size
 
@@ -92,9 +108,10 @@ class DecoderRNN(nn.Module):
         self.rnn = nn.GRU(hidden_size, hidden_size)
         self.out = nn.Linear(hidden_size, output_size)
         self.softmax = nn.LogSoftmax(dim=1)
+        self.dropout = nn.Dropout(dropout)
 
     def forward(self, input, hidden):
-        output = self.embedding(input).view(1, 1, -1)
+        output = self.dropout(self.embedding(input).view(1, 1, -1))
         output = F.relu(output)
         output, hidden = self.rnn(output, hidden)
         output = self.softmax(self.out(output[0]))
@@ -103,6 +120,47 @@ class DecoderRNN(nn.Module):
     def initHidden(self):
         return torch.zeros(1, 1, self.hidden_size, device=device)
 
+
+class EncoderLSTM(nn.Module):
+    def __init__(self, input_size, hidden_size, n_layers=1, dropout=.5):
+        super(EncoderLSTM, self).__init__()
+        self.hidden_size = hidden_size
+
+        self.embedding = nn.Embedding(input_size, hidden_size)
+        self.rnn = nn.LSTM(hidden_size, hidden_size, n_layers)
+        self.dropout = nn.Dropout(dropout)
+
+    def forward(self, input, hidden, cell):
+        # pdb.set_trace()
+        embedded = self.dropout(self.embedding(input).view(1, 1, -1))
+        output = embedded
+        output, (hidden, cell) = self.rnn(output, (hidden, cell))
+        return output, (hidden, cell)
+
+    def initHidden(self):
+        return (torch.zeros(1, 1, self.hidden_size, device=device), torch.zeros(1, 1, self.hidden_size, device=device))
+
+
+class DecoderLSTM(nn.Module):
+    def __init__(self, hidden_size, output_size, n_layers=1, dropout=.5):
+        super(DecoderLSTM, self).__init__()
+        self.hidden_size = hidden_size
+
+        self.embedding = nn.Embedding(output_size, hidden_size)
+        self.rnn = nn.LSTM(hidden_size, hidden_size, n_layers)
+        self.out = nn.Linear(hidden_size, output_size)
+        # self.softmax = nn.LogSoftmax(dim=1)
+        self.dropout = nn.Dropout(dropout)
+
+    def forward(self, input, hidden, cell):
+        output = self.dropout(self.embedding(input).view(1, 1, -1))
+        output = F.relu(output)
+        output, (hidden, cell) = self.rnn(output, (hidden, cell))
+        output = self.out(output[0])
+        return output, (hidden, cell)
+
+    def initHidden(self):
+        return (torch.zeros(1, 1, self.hidden_size, device=device), torch.zeros(1, 1, self.hidden_size, device=device))
 
 # class AttnDecoderRNN(nn.Module):
 #     def __init__(self, hidden_size, output_size, dropout_p=0.1, max_length=MAX_LENGTH):
@@ -148,7 +206,7 @@ Training
 
 """
 
-def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, max_length=MAX_LENGTH):
+def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, mode, max_length=MAX_LENGTH):
     encoder_hidden = encoder.initHidden()
 
     encoder_optimizer.zero_grad()
@@ -162,8 +220,12 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, deco
     loss = 0
 
     for ei in range(input_length):
-        encoder_output, encoder_hidden = encoder(
-            input_tensor[ei], encoder_hidden)
+        if mode == "LSTM":
+            encoder_output, encoder_hidden = encoder(
+                input_tensor[ei], *encoder_hidden)
+        else:
+            encoder_output, encoder_hidden = encoder(
+                input_tensor[ei], encoder_hidden)
         encoder_outputs[ei] = encoder_output[0, 0]
 
     decoder_input = torch.tensor([[SOS_token]], device=device)
@@ -175,16 +237,24 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, deco
     if use_teacher_forcing:
         # Teacher forcing: Feed the target as the next input
         for di in range(target_length):
-            decoder_output, decoder_hidden = decoder(
-                decoder_input, decoder_hidden)
+            if mode == "LSTM":
+                decoder_output, decoder_hidden = decoder(
+                    decoder_input, *decoder_hidden)
+            else:
+                decoder_output, decoder_hidden = decoder(
+                    decoder_input, decoder_hidden)
             loss += criterion(decoder_output, target_tensor[di])
             decoder_input = target_tensor[di]  # Teacher forcing
 
     else:
         # Without teacher forcing: use its own predictions as the next input
         for di in range(target_length):
-            decoder_output, decoder_hidden = decoder(
-                decoder_input, decoder_hidden)
+            if mode == "LSTM":
+                decoder_output, decoder_hidden = decoder(
+                    decoder_input, *decoder_hidden)
+            else:
+                decoder_output, decoder_hidden = decoder(
+                    decoder_input, decoder_hidden)
             topv, topi = decoder_output.topk(1)
             decoder_input = topi.squeeze().detach()  # detach from history as input
 
@@ -201,7 +271,7 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, deco
 
 
 
-def trainIters(encoder, decoder, n_iters, print_every=1000, plot_every=100, learning_rate=0.01):
+def trainIters(encoder, decoder, n_iters, print_every=1000, plot_every=100, learning_rate=0.01, mode="GRU"):
     start = time.time()
     plot_losses = []
     print_loss_total = 0  # Reset every print_every
@@ -220,7 +290,7 @@ def trainIters(encoder, decoder, n_iters, print_every=1000, plot_every=100, lear
         target_tensor = training_pair[1]
 
         loss = train(input_tensor, target_tensor, encoder,
-                     decoder, encoder_optimizer, decoder_optimizer, criterion)
+                     decoder, encoder_optimizer, decoder_optimizer, criterion, mode=mode)
         print_loss_total += loss
         plot_loss_total += loss
 
@@ -263,12 +333,10 @@ def evaluate(encoder, decoder, sentence, max_length=MAX_LENGTH):
         decoder_hidden = encoder_hidden
 
         decoded_words = []
-        decoder_attentions = torch.zeros(max_length, max_length)
 
         for di in range(max_length):
-            decoder_output, decoder_hidden, decoder_attention = decoder(
-                decoder_input, decoder_hidden, encoder_outputs)
-            decoder_attentions[di] = decoder_attention.data
+            decoder_output, decoder_hidden = decoder(
+                decoder_input, decoder_hidden)
             topv, topi = decoder_output.data.topk(1)
             if topi.item() == EOS_token:
                 decoded_words.append('<EOS>')
@@ -278,7 +346,21 @@ def evaluate(encoder, decoder, sentence, max_length=MAX_LENGTH):
 
             decoder_input = topi.squeeze().detach()
 
-        return decoded_words, decoder_attentions[:di + 1]
+        return decoded_words
+
+
+def evaluateRandomly(encoder, decoder, n=10):
+    for i in range(n):
+        pair = random.choice(pairs)
+        print('>', pair[0])
+        print('=', pair[1])
+        output_words = evaluate(encoder, decoder, pair[0])
+        output_sentence = ' '.join(output_words)
+        print('<', output_sentence)
+        print('')
+
+def evaluate_on_set(encoder, decoder, test_file):
+    input_lang, output_lang, pairs = prepareData('scan_in', 'scan_out', test_file, False)
 
 
 
@@ -287,4 +369,6 @@ decoder = DecoderRNN(HIDDEN_SIZE, OUTPUT_SIZE)
 
 import pdb
 pdb.set_trace()
-trainIters(encoder, decoder, 10000)
+trainIters(encoder, decoder, n_iters=10000)
+
+evaluateRandomly(encoder, decoder, 20)
