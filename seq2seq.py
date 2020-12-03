@@ -158,41 +158,41 @@ class DecoderLSTM(nn.Module):
     def initHidden(self):
         return (torch.zeros(1, 1, self.hidden_size, device=device), torch.zeros(1, 1, self.hidden_size, device=device))
 
-# class AttnDecoderRNN(nn.Module):
-#     def __init__(self, hidden_size, output_size, dropout_p=0.1, max_length=MAX_LENGTH):
-#         super(AttnDecoderRNN, self).__init__()
-#         self.hidden_size = hidden_size
-#         self.output_size = output_size
-#         self.dropout_p = dropout_p
-#         self.max_length = max_length
+class AttnDecoderRNN(nn.Module):
+    def __init__(self, hidden_size, output_size, dropout_p=0.1, max_length=MAX_LENGTH):
+        super(AttnDecoderRNN, self).__init__()
+        self.hidden_size = hidden_size
+        self.output_size = output_size
+        self.dropout_p = dropout_p
+        self.max_length = max_length
 
-#         self.embedding = nn.Embedding(self.output_size, self.hidden_size)
-#         self.attn = nn.Linear(self.hidden_size * 2, self.max_length)
-#         self.attn_combine = nn.Linear(self.hidden_size * 2, self.hidden_size)
-#         self.dropout = nn.Dropout(self.dropout_p)
-#         self.gru = nn.GRU(self.hidden_size, self.hidden_size)
-#         self.out = nn.Linear(self.hidden_size, self.output_size)
+        self.embedding = nn.Embedding(self.output_size, self.hidden_size)
+        self.attn = nn.Linear(self.hidden_size * 2, self.max_length)
+        self.attn_combine = nn.Linear(self.hidden_size * 2, self.hidden_size)
+        self.dropout = nn.Dropout(self.dropout_p)
+        self.gru = nn.GRU(self.hidden_size, self.hidden_size)
+        self.out = nn.Linear(self.hidden_size, self.output_size)
 
-#     def forward(self, input, hidden, encoder_outputs):
-#         embedded = self.embedding(input).view(1, 1, -1)
-#         embedded = self.dropout(embedded)
+    def forward(self, input, hidden, encoder_outputs):
+        embedded = self.embedding(input).view(1, 1, -1)
+        embedded = self.dropout(embedded)
 
-#         attn_weights = F.softmax(
-#             self.attn(torch.cat((embedded[0], hidden[0]), 1)), dim=1)
-#         attn_applied = torch.bmm(attn_weights.unsqueeze(0),
-#                                  encoder_outputs.unsqueeze(0))
+        attn_weights = F.softmax(
+            self.attn(torch.cat((embedded[0], hidden[0]), 1)), dim=1)
+        attn_applied = torch.bmm(attn_weights.unsqueeze(0),
+                                 encoder_outputs.unsqueeze(0))
 
-#         output = torch.cat((embedded[0], attn_applied[0]), 1)
-#         output = self.attn_combine(output).unsqueeze(0)
+        output = torch.cat((embedded[0], attn_applied[0]), 1)
+        output = self.attn_combine(output).unsqueeze(0)
 
-#         output = F.relu(output)
-#         output, hidden = self.gru(output, hidden)
+        output = F.relu(output)
+        output, hidden = self.gru(output, hidden)
 
-#         output = F.log_softmax(self.out(output[0]), dim=1)
-#         return output, hidden, attn_weights
+        output = F.log_softmax(self.out(output[0]), dim=1)
+        return output, hidden, attn_weights
 
-#     def initHidden(self):
-#         return torch.zeros(1, 1, self.hidden_size, device=device)
+    def initHidden(self):
+        return torch.zeros(1, 1, self.hidden_size, device=device)
 
 
 """
@@ -238,6 +238,9 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer,
             if mode == "LSTM":
                 decoder_output, decoder_hidden = decoder(
                     decoder_input, *decoder_hidden)
+            elif mode == "GRU_A":
+                decoder_output, decoder_hidden, decoder_attention = decoder(
+                    decoder_input, decoder_hidden, encoder_outputs)
             else:
                 decoder_output, decoder_hidden = decoder(
                     decoder_input, decoder_hidden)
@@ -250,6 +253,9 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer,
             if mode == "LSTM":
                 decoder_output, decoder_hidden = decoder(
                     decoder_input, *decoder_hidden)
+            elif mode == "GRU_A":
+                decoder_output, decoder_hidden, decoder_attention = decoder(
+                    decoder_input, decoder_hidden, encoder_outputs)
             else:
                 decoder_output, decoder_hidden = decoder(
                     decoder_input, decoder_hidden)
@@ -322,7 +328,7 @@ Evaluation
 """
 
 
-def evaluate(encoder, decoder, sentence, device):
+def evaluate(encoder, decoder, sentence, device, mode="GRU_A"):
     with torch.no_grad():
         input_tensor = tensorFromSentence(INPUT_LANG, sentence, device)
         input_length = input_tensor.size()[0]
@@ -340,10 +346,16 @@ def evaluate(encoder, decoder, sentence, device):
         decoder_hidden = encoder_hidden
 
         decoded_words = []
+        decoder_attentions = torch.zeros(MAX_LENGTH, MAX_LENGTH)
 
         for di in range(MAX_LENGTH):
-            decoder_output, decoder_hidden = decoder(
-                decoder_input, decoder_hidden)
+            if mode == "GRU_A":
+                decoder_output, decoder_hidden, decoder_attention = decoder(
+                    decoder_input, decoder_hidden, encoder_outputs)
+                decoder_attentions[di] = decoder_attention.data
+            else:
+                decoder_output, decoder_hidden = decoder(
+                    decoder_input, decoder_hidden)
             topv, topi = decoder_output.topk(1)
             decoder_input = topi.squeeze().detach()  # detach from history as input
 
@@ -445,9 +457,9 @@ def trainTestSplit(train_path, test_path, save_path, device, iters=100000):
     output_size = OUTPUT_LANG.n_words
 
     encoder = EncoderRNN(input_size, hidden_size, device).to(device)
-    decoder = DecoderRNN(hidden_size, output_size, device).to(device)
+    decoder = AttnDecoderRNN(hidden_size, output_size).to(device)
 
-    train_losses = trainIters(encoder, decoder, train_pairs, iters, device)
+    train_losses = trainIters(encoder, decoder, train_pairs, iters, device, mode="GRU_A")
     print('Evaluating training split accuracy')
     train_acc = evaluateTestSet(encoder, decoder, train_pairs, device)
     print('Evaluating test split accuracy')
@@ -467,7 +479,7 @@ def loadModel(path, device):
     output_size = OUTPUT_LANG.n_words
 
     encoder = EncoderRNN(input_size, hidden_size, device).to(device)
-    decoder = DecoderRNN(hidden_size, output_size, device).to(device)
+    decoder = DecoderRNN(hidden_size, output_size).to(device)
 
     checkpoint = loadParameters(encoder, decoder, path)
     return encoder, decoder, checkpoint
