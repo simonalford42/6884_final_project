@@ -10,32 +10,52 @@ from torch import optim
 import torch.nn.functional as F
 import pdb
 
-import matplotlib.pyplot as plt
-plt.switch_backend('agg')
-import matplotlib.ticker as ticker
 import numpy as np
+import argparse
+
+parser = argparse.ArgumentParser(description='Train on SCAN splits.')
+parser.add_argument('-r', '--inter-rep', dest='inter_rep', action='store_true',
+        default=False, help='train to predict intermediate representation, or do traditional SCAN i/o pairs?')
+parser.add_argument('-s', '--split', type=str, dest='split',
+        default='scan', help='desired split name, example: \'scan\' or \'jump_around_right\'')
+parser.add_argument('-m', '--model', type=str, dest='model',
+        default='GRU', help='Model to train with. Choices: \'GRU\', \'GRU_A\', \'LSTM\'')
+parser.add_argument('-g', '--gpu', type=int, dest='gpu',
+        default='0', help='gpu to train on')
+parser.add_argument('-i', '--iters', type=int, dest='iters',
+        default='100000', help='Number of iterations to train')
+parser.add_argument('-t', '--tag', type=str, dest='tag',
+        default=None, help='Optional tag to append to saved results file name, which is by default just the split name, model, and iters')
+
+args = parser.parse_args()
 
 # use full data for determining input/output language, in case splits somehow change it
-full_data = SCAN_DIR + 'tasks.txt'
-INPUT_LANG, OUTPUT_LANG, full_pairs = prepareData('scan_in', 'scan_out', full_data, False)
-# used for train as well as test splits
-# I add one for the <EOS> tag. Not sure if necessary but can't hurt.
-MAX_LENGTH = max(len(pair[1].split(' ')) for pair in full_pairs) + 1
+if args.inter_rep:
+    full_data = SCAN_DIR + 'tasks_inter.txt'
+    INPUT_LANG, OUTPUT_LANG, full_pairs = prepareData('scan_in', 'scan_out', full_data, False)
+    # used for train as well as test splits
+    # I add one for the <EOS> tag. Not sure if necessary but can't hurt.
+    MAX_LENGTH = max(len(pair[1].split(' ')) for pair in full_pairs) + 1
+else:
+    # use full data for determining input/output language, in case splits somehow change it
+    full_data = SCAN_DIR + 'tasks.txt'
+    INPUT_LANG, OUTPUT_LANG, full_pairs = prepareData('scan_in', 'scan_out', full_data, False)
+    # used for train as well as test splits
+    # I add one for the <EOS> tag. Not sure if necessary but can't hurt.
+    MAX_LENGTH = max(len(pair[1].split(' ')) for pair in full_pairs) + 1
 
-DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print('Torch device: {}'.format(DEVICE))
+
+if not torch.cuda.is_available():
+    print('GPU unavailable, training with CPU')
+    DEVICE = torch.device('cpu')
+
+DEVICE = torch.device('cuda:{}'.format(args.gpu))
+print('Training on {}'.format(DEVICE))
 
 """
 Helpers
 """
 
-def showPlot(points):
-    plt.figure()
-    fig, ax = plt.subplots()
-    # this locator puts ticks at regular intervals
-    loc = ticker.MultipleLocator(base=0.2)
-    ax.yaxis.set_major_locator(loc)
-    plt.plot(points)
 
 def asMinutes(s):
     m = math.floor(s / 60)
@@ -296,9 +316,8 @@ def trainIters(device, encoder, decoder, model, pairs, n_iters, print_every=1000
 
     evaluateRandomly(device, encoder, decoder, model, pairs, n = 100)
 
-    for iter in range(1, n_iters + 1):
-        # print("iter")
-        training_pair = training_pairs[iter - 1]
+    for i in range(1, n_iters + 1):
+        training_pair = training_pairs[i - 1]
         input_tensor = training_pair[0]
         target_tensor = training_pair[1]
 
@@ -307,15 +326,15 @@ def trainIters(device, encoder, decoder, model, pairs, n_iters, print_every=1000
         print_loss_total += loss
         plot_loss_total += loss
 
-        if iter % print_every == 0:
+        if i % print_every == 0:
             print_loss_avg = print_loss_total / print_every
             print_loss_total = 0
-            print('Duration (Remaining): %s Iters: (%d %d%%) Loss avg: %.4f' % (timeSince(start, iter / n_iters),
-                                         iter, iter / n_iters * 100, print_loss_avg))
+            print('Duration (Remaining): %s Iters: (%d %d%%) Loss avg: %.4f' % (timeSince(start, i / n_iters),
+                                         i, i / n_iters * 100, print_loss_avg))
 
             evaluateRandomly(device, encoder, decoder, model, pairs, n = 100)
 
-        if iter % plot_every == 0:
+        if i % plot_every == 0:
             plot_loss_avg = plot_loss_total / plot_every
             plot_losses.append(plot_loss_avg)
             plot_loss_total = 0
@@ -445,6 +464,12 @@ def saveModel(encoder, decoder, checkpoint, path):
         pass
 
     torch.save(checkpoint, path)
+    
+    del checkpoint['encoder_state_dict']
+    del checkpoint['decoder_state_dict']
+    with open(path[:-3] + '.txt', 'w+') as f:
+        f.write(str(checkpoint))
+
     print('Saved model at {}'.format(path))
 
 
@@ -471,9 +496,11 @@ def trainTestSplit(device, encoder, decoder, model, train_path, test_path, iters
 
     train_losses = trainIters(device, encoder, decoder, model, train_pairs, iters)
     print('Evaluating training split accuracy')
-    train_acc = evaluateTestSet(device, encoder, decoder, model, train_pairs)
+    train_acc = evaluateTestSet(device, encoder, decoder, model,
+            train_pairs[0:100])
     print('Evaluating test split accuracy')
-    test_acc = evaluateTestSet(device, encoder, decoder, model, test_pairs)
+    test_acc = evaluateTestSet(device, encoder, decoder, model,
+            test_pairs[0:100])
 
     checkpoint = {'train_accuracy': train_acc,
             'test_accuracy': test_acc,
@@ -513,24 +540,39 @@ def evalSplit(encoder, decoder, split_path, device):
 
 
 if __name__ == '__main__':
-    train_path = 'simple_split/tasks_train_simple.txt'
-    test_path = 'simple_split/tasks_test_simple.txt'
+    assert args.split in ['jump', 'turn_left', 'jump_around_right', 'around_right', 'opposite_right', 'length', 'mcd', 'scan']
+    if args.split == 'scan':
+        if args.inter_rep:
+            train_path = 'tasks_inter.txt'
+            test_path = 'tasks_inter.txt'
+        else:
+            train_path = 'tasks.txt'
+            test_path = 'tasks.txt'
+    else:
+        if args.inter_rep:
+            train_path = args.split + '_train_inter.txt'
+            test_path = args.split + '_test_inter.txt'
+        else:
+            train_path = args.split + '_train.txt'
+            test_path = args.split + '_test.txt'
 
-    # model = 'GRU'
-    # encoder, decoder= initModel('GRU', DEVICE, hidden_size=50, dropout=0.5)
-
-    model = 'GRU_A'
-    encoder, decoder = initModel('GRU_A', DEVICE, hidden_size=50, dropout=0.5)
-
-    # model = 'LSTM'
-    # encoder, decoder = initModel('LSTM', DEVICE, hidden_size=200, dropout=0.5, n_layers=2)
+    if args.model == 'GRU':
+        encoder, decoder= initModel('GRU', DEVICE, hidden_size=100, dropout=0.1)
+    elif args.model == 'GRU_A':
+        encoder, decoder = initModel('GRU_A', DEVICE, hidden_size=100, dropout=0.1)
+    else:
+        assert args.model == 'LSTM'
+        encoder, decoder = initModel('LSTM', DEVICE, hidden_size=200, dropout=0.5, n_layers=2)
 
     # checkpoint_path = ''
     # loadParameters(encoder, decoder, checkpoint_path)
 
-    checkpoint = trainTestSplit(DEVICE, encoder, decoder, model, train_path, test_path, iters=100000)
-    # save_path = 'simple_split_gru.pt'
-    # saveModel(encoder, decoder, checkpoint, save_path) 
+    print('Training SCAN model {} on split \'{}\' for {} iterations on device {}, intermediate rep? {}, tag {}'.format(args.model, args.split, args.iters, DEVICE, args.inter_rep, args.tag))
+
+    checkpoint = trainTestSplit(DEVICE, encoder, decoder, args.model, train_path, test_path, iters=args.iters)
+    save_path = 'saved/{}{}_{}{}.pt'.format(args.split, '_inter' if args.inter_rep else '',
+            args.iters, '_' + args.tag if args.tag else '')
+    saveModel(encoder, decoder, checkpoint, save_path) 
 
     # encoder, decoder, checkpoint = loadModel('simple_split1.pt', DEVICE)
     # print('Evaluating with loaded model')

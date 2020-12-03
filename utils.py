@@ -305,7 +305,7 @@ def test_intermediate_reps():
         if output != o:
             assert False
 
-def make_split(phrase, path, percent=10):
+def make_split(phrase, path, percent=0.1):
     print('Making split for phrase {}'.format(phrase))
 
     def in_train(task):
@@ -317,33 +317,36 @@ def make_split(phrase, path, percent=10):
 
     # add phrase to be 10% of train tasks
     phrase_tasks = [t for t in tasks if t[0] == phrase]
-    assert len(phrase_tasks) == 1
-    phrase_task = phrase_tasks[0]
-    print('Phrase task chosen to be: {}'.format(phrase_task))
-    # want to be percent after adding the repeats
-    # y / (y+x) = percent => y (1 - percent) = percent x => y = x (percent / 1 - percent)
-    repeats = int(len(tasks) * percent / (1 - percent))
-    addition = [phrase_task] * repeats
-    print('addition: {}'.format(addition[-10:]))
-    train_tasks += addition
-    print('train_tasks: {}'.format(train_tasks[-10:]))
+    assert len(phrase_tasks) <= 1
+    if len(phrase_tasks) == 1:
+        phrase_task = phrase_tasks[0]
+        print('Phrase task chosen to be: {}'.format(phrase_task))
+        # want to be percent after adding the repeats
+        # y / (y+x) = p => y = p (y + x) => y(1 - p) = p x => y = x p / (1 - p)
+        # subtract one since one is already present!
+        repeats = int(len(train_tasks) * percent / (1 - percent)) - 1
+        addition = [phrase_task] * repeats
+        train_tasks += addition
+    else:
+        print('No atomic task found for phrase')
 
     export_tasks(train_tasks, path + '_train.txt')
     export_tasks(test_tasks, path + '_test.txt')
 
 
-def generate_intermediate_tasks(path, new_path):
-    tasks = import_data(path)
+def generate_intermediate_tasks(path):
+    new_path = path + '_inter.txt'
+    tasks = import_data(SCAN_DIR + path + '.txt')
 
-    def format_line(i, p, o):
-        return 'IN: {} OUT: {}'.format(i, p, o)
+    def format_line(i, o):
+        return 'IN: {} OUT: {}'.format(i, o)
 
-    with open(new_path, 'w+') as f:
+    with open(SCAN_DIR + new_path, 'w+') as f:
         for (i, o) in tasks:
             inter_rep = parse_intermediate_rep(i)
             string = to_string(inter_rep)
             polish = polish_form(inter_rep)
-            f.write(format_line(i, string, polish) + '\n')
+            f.write(format_line(i, polish) + '\n')
 
 
 def import_data(path, simplify_output=False):
@@ -382,4 +385,14 @@ def export_tasks(tasks, path):
 
 
 if __name__ == '__main__':
-    make_split('jump', SCAN_DIR + 'jump')
+    # make_split('jump', SCAN_DIR + 'jump')
+    # make_split('turn left', SCAN_DIR + 'turn_left')
+    # make_split('jump around right', SCAN_DIR + 'jump_around_right')
+    # make_split('around right', SCAN_DIR + 'around_right')
+    # make_split('opposite right', SCAN_DIR + 'opposite_right')
+
+    generate_intermediate_tasks('tasks')
+    for split in ['jump', 'turn_left', 'jump_around_right', 'around_right',
+            'opposite_right', 'mcd', 'length']:
+        generate_intermediate_tasks(split + '_train')
+        generate_intermediate_tasks(split + '_test')

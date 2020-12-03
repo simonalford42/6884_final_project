@@ -1,0 +1,1208 @@
+IN: run and turn left OUT: and run left turn
+IN: turn left after run OUT: after left turn run
+IN: turn left and run OUT: and left turn run
+IN: run after turn left OUT: after run left turn
+IN: jump and turn left OUT: and jump left turn
+IN: jump after turn left OUT: after jump left turn
+IN: walk after turn left OUT: after walk left turn
+IN: look and turn left OUT: and look left turn
+IN: turn left and walk OUT: and left turn walk
+IN: turn left and jump OUT: and left turn jump
+IN: turn left after jump OUT: after left turn jump
+IN: turn left after walk OUT: after left turn walk
+IN: turn left and look OUT: and left turn look
+IN: look after turn left OUT: after look left turn
+IN: turn left after look OUT: after left turn look
+IN: walk and turn left OUT: and walk left turn
+IN: turn left after turn left OUT: after left turn left turn
+IN: turn left twice OUT: twice left turn
+IN: run twice after turn left OUT: after twice run left turn
+IN: turn left after run twice OUT: after left turn twice run
+IN: run twice and turn left OUT: and twice run left turn
+IN: turn left and turn left OUT: and left turn left turn
+IN: turn left and run twice OUT: and left turn twice run
+IN: turn right after turn left OUT: after right turn left turn
+IN: turn left and turn right OUT: and left turn right turn
+IN: turn right and turn left OUT: and right turn left turn
+IN: turn left after turn right OUT: after left turn right turn
+IN: jump twice after turn left OUT: after twice jump left turn
+IN: walk twice after turn left OUT: after twice walk left turn
+IN: turn left and walk twice OUT: and left turn twice walk
+IN: look twice and turn left OUT: and twice look left turn
+IN: turn left and jump twice OUT: and left turn twice jump
+IN: turn left after look twice OUT: after left turn twice look
+IN: turn left after jump twice OUT: after left turn twice jump
+IN: walk twice and turn left OUT: and twice walk left turn
+IN: jump twice and turn left OUT: and twice jump left turn
+IN: turn left after walk twice OUT: after left turn twice walk
+IN: look twice after turn left OUT: after twice look left turn
+IN: turn left and look twice OUT: and left turn twice look
+IN: run left after turn left OUT: after left run left turn
+IN: run thrice and turn left OUT: and thrice run left turn
+IN: turn left twice after run OUT: after twice left turn run
+IN: turn left after run thrice OUT: after left turn thrice run
+IN: turn left twice and run OUT: and twice left turn run
+IN: turn left after run left OUT: after left turn left run
+IN: run after turn left twice OUT: after run twice left turn
+IN: turn left and run thrice OUT: and left turn thrice run
+IN: run thrice after turn left OUT: after thrice run left turn
+IN: run and turn left twice OUT: and run twice left turn
+IN: run left and turn left OUT: and left run left turn
+IN: turn left and run left OUT: and left turn left run
+IN: turn left and jump left OUT: and left turn left jump
+IN: run right after turn left OUT: after right run left turn
+IN: look left and turn left OUT: and left look left turn
+IN: jump after turn left twice OUT: after jump twice left turn
+IN: jump left after turn left OUT: after left jump left turn
+IN: run right and turn left OUT: and right run left turn
+IN: look left after turn left OUT: after left look left turn
+IN: turn left after run right OUT: after left turn right run
+IN: turn left twice after walk OUT: after twice left turn walk
+IN: turn left and run right OUT: and left turn right run
+IN: walk after turn left twice OUT: after walk twice left turn
+IN: walk left after turn left OUT: after left walk left turn
+IN: turn left and walk left OUT: and left turn left walk
+IN: turn left after jump left OUT: after left turn left jump
+IN: turn left after walk left OUT: after left turn left walk
+IN: jump and turn left twice OUT: and jump twice left turn
+IN: look after turn left twice OUT: after look twice left turn
+IN: look and turn left twice OUT: and look twice left turn
+IN: turn left twice after look OUT: after twice left turn look
+IN: jump left and turn left OUT: and left jump left turn
+IN: turn left after look left OUT: after left turn left look
+IN: turn left twice and jump OUT: and twice left turn jump
+IN: walk left and turn left OUT: and left walk left turn
+IN: turn left and look left OUT: and left turn left look
+IN: turn left twice and walk OUT: and twice left turn walk
+IN: turn left twice and look OUT: and twice left turn look
+IN: walk and turn left twice OUT: and walk twice left turn
+IN: turn left twice after jump OUT: after twice left turn jump
+IN: turn left and walk right OUT: and left turn right walk
+IN: turn left and jump right OUT: and left turn right jump
+IN: turn left after walk right OUT: after left turn right walk
+IN: turn left after look right OUT: after left turn right look
+IN: walk right and turn left OUT: and right walk left turn
+IN: look right after turn left OUT: after right look left turn
+IN: jump right and turn left OUT: and right jump left turn
+IN: turn left after jump right OUT: after left turn right jump
+IN: look right and turn left OUT: and right look left turn
+IN: jump right after turn left OUT: after right jump left turn
+IN: turn left and look right OUT: and left turn right look
+IN: walk right after turn left OUT: after right walk left turn
+IN: turn left and walk thrice OUT: and left turn thrice walk
+IN: turn left and look thrice OUT: and left turn thrice look
+IN: jump thrice and turn left OUT: and thrice jump left turn
+IN: look thrice after turn left OUT: after thrice look left turn
+IN: turn left and jump thrice OUT: and left turn thrice jump
+IN: jump thrice after turn left OUT: after thrice jump left turn
+IN: walk thrice and turn left OUT: and thrice walk left turn
+IN: turn left after jump thrice OUT: after left turn thrice jump
+IN: turn left after look thrice OUT: after left turn thrice look
+IN: look thrice and turn left OUT: and thrice look left turn
+IN: turn left after walk thrice OUT: after left turn thrice walk
+IN: walk thrice after turn left OUT: after thrice walk left turn
+IN: turn left thrice OUT: thrice left turn
+IN: turn left and turn opposite left OUT: and left turn opposite turn left
+IN: turn left and turn left twice OUT: and left turn twice left turn
+IN: turn left twice after turn left OUT: after twice left turn left turn
+IN: run twice after turn left twice OUT: after twice run twice left turn
+IN: turn left after turn left twice OUT: after left turn twice left turn
+IN: turn left twice and turn left OUT: and twice left turn left turn
+IN: run twice and turn left twice OUT: and twice run twice left turn
+IN: turn opposite left after turn left OUT: after opposite turn left left turn
+IN: turn left after turn opposite left OUT: after left turn opposite turn left
+IN: turn opposite left and turn left OUT: and opposite turn left left turn
+IN: turn left twice after run twice OUT: after twice left turn twice run
+IN: turn left twice and run twice OUT: and twice left turn twice run
+IN: turn right and turn left twice OUT: and right turn twice left turn
+IN: turn right after turn left twice OUT: after right turn twice left turn
+IN: turn left twice after turn right OUT: after twice left turn right turn
+IN: turn left twice and turn right OUT: and twice left turn right turn
+IN: turn left and turn opposite right OUT: and left turn opposite turn right
+IN: walk twice after turn left twice OUT: after twice walk twice left turn
+IN: turn left twice and look twice OUT: and twice left turn twice look
+IN: look twice after turn left twice OUT: after twice look twice left turn
+IN: turn left after turn right twice OUT: after left turn twice right turn
+IN: turn left twice after walk twice OUT: after twice left turn twice walk
+IN: turn left twice and walk twice OUT: and twice left turn twice walk
+IN: turn opposite right and turn left OUT: and opposite turn right left turn
+IN: look twice and turn left twice OUT: and twice look twice left turn
+IN: turn left twice after jump twice OUT: after twice left turn twice jump
+IN: turn right twice and turn left OUT: and twice right turn left turn
+IN: jump twice and turn left twice OUT: and twice jump twice left turn
+IN: turn left twice and jump twice OUT: and twice left turn twice jump
+IN: turn opposite right after turn left OUT: after opposite turn right left turn
+IN: turn left after turn opposite right OUT: after left turn opposite turn right
+IN: turn left twice after look twice OUT: after twice left turn twice look
+IN: jump twice after turn left twice OUT: after twice jump twice left turn
+IN: turn right twice after turn left OUT: after twice right turn left turn
+IN: walk twice and turn left twice OUT: and twice walk twice left turn
+IN: turn left and turn right twice OUT: and left turn twice right turn
+IN: run left after turn left twice OUT: after left run twice left turn
+IN: run thrice after turn left twice OUT: after thrice run twice left turn
+IN: turn left twice after run thrice OUT: after twice left turn thrice run
+IN: run opposite left after turn left OUT: after opposite run left left turn
+IN: turn left twice and run thrice OUT: and twice left turn thrice run
+IN: run opposite left and turn left OUT: and opposite run left left turn
+IN: turn left twice and run left OUT: and twice left turn left run
+IN: turn left after run opposite left OUT: after left turn opposite run left
+IN: turn left thrice and run OUT: and thrice left turn run
+IN: turn left thrice after run OUT: after thrice left turn run
+IN: run left and turn left twice OUT: and left run twice left turn
+IN: run thrice and turn left twice OUT: and thrice run twice left turn
+IN: turn left twice after run left OUT: after twice left turn left run
+IN: turn left and run opposite left OUT: and left turn opposite run left
+IN: run after turn left thrice OUT: after run thrice left turn
+IN: run and turn left thrice OUT: and run thrice left turn
+IN: turn left twice and jump left OUT: and twice left turn left jump
+IN: turn left after walk opposite left OUT: after left turn opposite walk left
+IN: turn left twice after walk left OUT: after twice left turn left walk
+IN: look after turn left thrice OUT: after look thrice left turn
+IN: run right and turn left twice OUT: and right run twice left turn
+IN: turn left after look opposite left OUT: after left turn opposite look left
+IN: walk left after turn left twice OUT: after left walk twice left turn
+IN: turn left after jump opposite left OUT: after left turn opposite jump left
+IN: turn left thrice after look OUT: after thrice left turn look
+IN: turn left and look opposite left OUT: and left turn opposite look left
+IN: look left and turn left twice OUT: and left look twice left turn
+IN: jump left after turn left twice OUT: after left jump twice left turn
+IN: turn left thrice after jump OUT: after thrice left turn jump
+IN: turn left twice and walk left OUT: and twice left turn left walk
+IN: turn left twice after look left OUT: after twice left turn left look
+IN: run right after turn left twice OUT: after right run twice left turn
+IN: turn left and jump opposite left OUT: and left turn opposite jump left
+IN: jump opposite left and turn left OUT: and opposite jump left left turn
+IN: walk after turn left thrice OUT: after walk thrice left turn
+IN: turn left twice after run right OUT: after twice left turn right run
+IN: look left after turn left twice OUT: after left look twice left turn
+IN: turn left and walk opposite left OUT: and left turn opposite walk left
+IN: look opposite left after turn left OUT: after opposite look left left turn
+IN: turn left twice and run right OUT: and twice left turn right run
+IN: walk opposite left after turn left OUT: after opposite walk left left turn
+IN: look opposite left and turn left OUT: and opposite look left left turn
+IN: walk and turn left thrice OUT: and walk thrice left turn
+IN: jump after turn left thrice OUT: after jump thrice left turn
+IN: jump opposite left after turn left OUT: after opposite jump left left turn
+IN: turn left thrice and look OUT: and thrice left turn look
+IN: turn left twice and look left OUT: and twice left turn left look
+IN: walk left and turn left twice OUT: and left walk twice left turn
+IN: walk opposite left and turn left OUT: and opposite walk left left turn
+IN: look and turn left thrice OUT: and look thrice left turn
+IN: turn left thrice and walk OUT: and thrice left turn walk
+IN: jump left and turn left twice OUT: and left jump twice left turn
+IN: turn left thrice and jump OUT: and thrice left turn jump
+IN: turn left thrice after walk OUT: after thrice left turn walk
+IN: jump and turn left thrice OUT: and jump thrice left turn
+IN: turn left twice after jump left OUT: after twice left turn left jump
+IN: turn left twice and look right OUT: and twice left turn right look
+IN: walk right and turn left twice OUT: and right walk twice left turn
+IN: turn left twice and jump right OUT: and twice left turn right jump
+IN: turn left twice after walk right OUT: after twice left turn right walk
+IN: turn left twice after look right OUT: after twice left turn right look
+IN: look right after turn left twice OUT: after right look twice left turn
+IN: turn left twice after jump right OUT: after twice left turn right jump
+IN: turn left and run opposite right OUT: and left turn opposite run right
+IN: walk right after turn left twice OUT: after right walk twice left turn
+IN: turn left twice and walk right OUT: and twice left turn right walk
+IN: jump right and turn left twice OUT: and right jump twice left turn
+IN: look right and turn left twice OUT: and right look twice left turn
+IN: run opposite right and turn left OUT: and opposite run right left turn
+IN: turn left after run opposite right OUT: after left turn opposite run right
+IN: run opposite right after turn left OUT: after opposite run right left turn
+IN: jump right after turn left twice OUT: after right jump twice left turn
+IN: turn left and jump opposite right OUT: and left turn opposite jump right
+IN: turn left twice after jump thrice OUT: after twice left turn thrice jump
+IN: look thrice after turn left twice OUT: after thrice look twice left turn
+IN: jump opposite right and turn left OUT: and opposite jump right left turn
+IN: look opposite right and turn left OUT: and opposite look right left turn
+IN: walk thrice after turn left twice OUT: after thrice walk twice left turn
+IN: turn left twice after look thrice OUT: after twice left turn thrice look
+IN: walk opposite right and turn left OUT: and opposite walk right left turn
+IN: turn left after jump opposite right OUT: after left turn opposite jump right
+IN: turn left and walk opposite right OUT: and left turn opposite walk right
+IN: look opposite right after turn left OUT: after opposite look right left turn
+IN: jump thrice after turn left twice OUT: after thrice jump twice left turn
+IN: jump opposite right after turn left OUT: after opposite jump right left turn
+IN: look thrice and turn left twice OUT: and thrice look twice left turn
+IN: turn left twice and jump thrice OUT: and twice left turn thrice jump
+IN: turn left after walk opposite right OUT: after left turn opposite walk right
+IN: walk thrice and turn left twice OUT: and thrice walk twice left turn
+IN: jump thrice and turn left twice OUT: and thrice jump twice left turn
+IN: turn left after look opposite right OUT: after left turn opposite look right
+IN: turn left and look opposite right OUT: and left turn opposite look right
+IN: walk opposite right after turn left OUT: after opposite walk right left turn
+IN: turn left twice after walk thrice OUT: after twice left turn thrice walk
+IN: turn left twice and look thrice OUT: and twice left turn thrice look
+IN: turn left twice and walk thrice OUT: and twice left turn thrice walk
+IN: turn left thrice and run twice OUT: and thrice left turn twice run
+IN: turn opposite left after turn left twice OUT: after opposite turn left twice left turn
+IN: turn left twice after turn opposite left OUT: after twice left turn opposite turn left
+IN: turn left thrice and turn left OUT: and thrice left turn left turn
+IN: turn left twice and turn opposite left OUT: and twice left turn opposite turn left
+IN: turn opposite left and turn left twice OUT: and opposite turn left twice left turn
+IN: run twice and turn left thrice OUT: and twice run thrice left turn
+IN: run twice after turn left thrice OUT: after twice run thrice left turn
+IN: turn left thrice after run twice OUT: after thrice left turn twice run
+IN: run left twice and turn left OUT: and twice left run left turn
+IN: turn left after run left twice OUT: after left turn twice left run
+IN: turn left twice after turn left twice OUT: after twice left turn twice left turn
+IN: run left twice after turn left OUT: after twice left run left turn
+IN: turn left twice and turn left twice OUT: and twice left turn twice left turn
+IN: turn left and run left twice OUT: and left turn twice left run
+IN: turn left and turn left thrice OUT: and left turn thrice left turn
+IN: turn left thrice after turn left OUT: after thrice left turn left turn
+IN: turn left after turn left thrice OUT: after left turn thrice left turn
+IN: turn right after turn left thrice OUT: after right turn thrice left turn
+IN: turn right and turn left thrice OUT: and right turn thrice left turn
+IN: turn left thrice after turn right OUT: after thrice left turn right turn
+IN: turn left thrice and turn right OUT: and thrice left turn right turn
+IN: walk twice after turn left thrice OUT: after twice walk thrice left turn
+IN: jump left twice and turn left OUT: and twice left jump left turn
+IN: run right twice after turn left OUT: after twice right run left turn
+IN: turn right twice after turn left twice OUT: after twice right turn twice left turn
+IN: turn left thrice after walk twice OUT: after thrice left turn twice walk
+IN: turn opposite right and turn left twice OUT: and opposite turn right twice left turn
+IN: turn left after run right twice OUT: after left turn twice right run
+IN: walk left twice and turn left OUT: and twice left walk left turn
+IN: look twice after turn left thrice OUT: after twice look thrice left turn
+IN: jump left twice after turn left OUT: after twice left jump left turn
+IN: turn opposite right after turn left twice OUT: after opposite turn right twice left turn
+IN: turn left twice and turn right twice OUT: and twice left turn twice right turn
+IN: walk left twice after turn left OUT: after twice left walk left turn
+IN: turn left thrice and look twice OUT: and thrice left turn twice look
+IN: turn left after jump left twice OUT: after left turn twice left jump
+IN: look twice and turn left thrice OUT: and twice look thrice left turn
+IN: turn left and walk left twice OUT: and left turn twice left walk
+IN: walk twice and turn left thrice OUT: and twice walk thrice left turn
+IN: turn left thrice and jump twice OUT: and thrice left turn twice jump
+IN: look left twice after turn left OUT: after twice left look left turn
+IN: turn left after look left twice OUT: after left turn twice left look
+IN: turn left thrice after jump twice OUT: after thrice left turn twice jump
+IN: turn left and run right twice OUT: and left turn twice right run
+IN: look left twice and turn left OUT: and twice left look left turn
+IN: turn left twice after turn right twice OUT: after twice left turn twice right turn
+IN: turn left after walk left twice OUT: after left turn twice left walk
+IN: jump twice after turn left thrice OUT: after twice jump thrice left turn
+IN: turn left and look left twice OUT: and left turn twice left look
+IN: jump twice and turn left thrice OUT: and twice jump thrice left turn
+IN: turn left twice and turn opposite right OUT: and twice left turn opposite turn right
+IN: run right twice and turn left OUT: and twice right run left turn
+IN: turn left twice after turn opposite right OUT: after twice left turn opposite turn right
+IN: turn left and jump left twice OUT: and left turn twice left jump
+IN: turn left thrice after look twice OUT: after thrice left turn twice look
+IN: turn right twice and turn left twice OUT: and twice right turn twice left turn
+IN: turn left thrice and walk twice OUT: and thrice left turn twice walk
+IN: turn left after turn right thrice OUT: after left turn thrice right turn
+IN: turn right thrice and turn left OUT: and thrice right turn left turn
+IN: turn right thrice after turn left OUT: after thrice right turn left turn
+IN: turn left and turn right thrice OUT: and left turn thrice right turn
+IN: turn left and look right twice OUT: and left turn twice right look
+IN: turn left after walk right twice OUT: after left turn twice right walk
+IN: turn left after jump right twice OUT: after left turn twice right jump
+IN: look right twice after turn left OUT: after twice right look left turn
+IN: jump right twice after turn left OUT: after twice right jump left turn
+IN: walk right twice and turn left OUT: and twice right walk left turn
+IN: turn left and walk right twice OUT: and left turn twice right walk
+IN: look right twice and turn left OUT: and twice right look left turn
+IN: turn left and jump right twice OUT: and left turn twice right jump
+IN: jump right twice and turn left OUT: and twice right jump left turn
+IN: walk right twice after turn left OUT: after twice right walk left turn
+IN: turn left after look right twice OUT: after left turn twice right look
+IN: turn left twice and run opposite left OUT: and twice left turn opposite run left
+IN: run thrice after turn left thrice OUT: after thrice run thrice left turn
+IN: turn left thrice and run thrice OUT: and thrice left turn thrice run
+IN: turn left thrice after run thrice OUT: after thrice left turn thrice run
+IN: turn left thrice after run left OUT: after thrice left turn left run
+IN: run opposite left after turn left twice OUT: after opposite run left twice left turn
+IN: run opposite left and turn left twice OUT: and opposite run left twice left turn
+IN: run left after turn left thrice OUT: after left run thrice left turn
+IN: turn left thrice and run left OUT: and thrice left turn left run
+IN: turn left twice after run opposite left OUT: after twice left turn opposite run left
+IN: run left and turn left thrice OUT: and left run thrice left turn
+IN: run thrice and turn left thrice OUT: and thrice run thrice left turn
+IN: turn left twice and jump opposite left OUT: and twice left turn opposite jump left
+IN: walk left after turn left thrice OUT: after left walk thrice left turn
+IN: turn left twice after jump opposite left OUT: after twice left turn opposite jump left
+IN: turn left twice and walk opposite left OUT: and twice left turn opposite walk left
+IN: look left and turn left thrice OUT: and left look thrice left turn
+IN: walk opposite left and turn left twice OUT: and opposite walk left twice left turn
+IN: look opposite left and turn left twice OUT: and opposite look left twice left turn
+IN: jump opposite left and turn left twice OUT: and opposite jump left twice left turn
+IN: run right after turn left thrice OUT: after right run thrice left turn
+IN: turn left twice after walk opposite left OUT: after twice left turn opposite walk left
+IN: jump opposite left after turn left twice OUT: after opposite jump left twice left turn
+IN: turn left thrice and run right OUT: and thrice left turn right run
+IN: walk left and turn left thrice OUT: and left walk thrice left turn
+IN: turn left thrice after walk left OUT: after thrice left turn left walk
+IN: turn left thrice after jump left OUT: after thrice left turn left jump
+IN: turn left thrice and walk left OUT: and thrice left turn left walk
+IN: turn left thrice after run right OUT: after thrice left turn right run
+IN: turn left thrice and jump left OUT: and thrice left turn left jump
+IN: turn left twice and look opposite left OUT: and twice left turn opposite look left
+IN: jump left and turn left thrice OUT: and left jump thrice left turn
+IN: look opposite left after turn left twice OUT: after opposite look left twice left turn
+IN: walk opposite left after turn left twice OUT: after opposite walk left twice left turn
+IN: look left after turn left thrice OUT: after left look thrice left turn
+IN: jump left after turn left thrice OUT: after left jump thrice left turn
+IN: turn left thrice and look left OUT: and thrice left turn left look
+IN: turn left twice after look opposite left OUT: after twice left turn opposite look left
+IN: run right and turn left thrice OUT: and right run thrice left turn
+IN: turn left thrice after look left OUT: after thrice left turn left look
+IN: jump right after turn left thrice OUT: after right jump thrice left turn
+IN: run opposite right and turn left twice OUT: and opposite run right twice left turn
+IN: look right and turn left thrice OUT: and right look thrice left turn
+IN: turn left thrice and walk right OUT: and thrice left turn right walk
+IN: run opposite right after turn left twice OUT: after opposite run right twice left turn
+IN: walk right after turn left thrice OUT: after right walk thrice left turn
+IN: turn left thrice after look right OUT: after thrice left turn right look
+IN: turn left thrice after jump right OUT: after thrice left turn right jump
+IN: turn left thrice and look right OUT: and thrice left turn right look
+IN: turn left twice after run opposite right OUT: after twice left turn opposite run right
+IN: turn left twice and run opposite right OUT: and twice left turn opposite run right
+IN: look right after turn left thrice OUT: after right look thrice left turn
+IN: jump right and turn left thrice OUT: and right jump thrice left turn
+IN: turn left thrice after walk right OUT: after thrice left turn right walk
+IN: turn left thrice and jump right OUT: and thrice left turn right jump
+IN: walk right and turn left thrice OUT: and right walk thrice left turn
+IN: turn left twice and look opposite right OUT: and twice left turn opposite look right
+IN: turn left thrice after walk thrice OUT: after thrice left turn thrice walk
+IN: jump opposite right and turn left twice OUT: and opposite jump right twice left turn
+IN: turn left twice after walk opposite right OUT: after twice left turn opposite walk right
+IN: look thrice and turn left thrice OUT: and thrice look thrice left turn
+IN: look thrice after turn left thrice OUT: after thrice look thrice left turn
+IN: jump opposite right after turn left twice OUT: after opposite jump right twice left turn
+IN: jump thrice after turn left thrice OUT: after thrice jump thrice left turn
+IN: turn left twice and walk opposite right OUT: and twice left turn opposite walk right
+IN: turn left thrice after jump thrice OUT: after thrice left turn thrice jump
+IN: look opposite right after turn left twice OUT: after opposite look right twice left turn
+IN: walk opposite right after turn left twice OUT: after opposite walk right twice left turn
+IN: turn left thrice and jump thrice OUT: and thrice left turn thrice jump
+IN: turn left twice after jump opposite right OUT: after twice left turn opposite jump right
+IN: jump thrice and turn left thrice OUT: and thrice jump thrice left turn
+IN: walk opposite right and turn left twice OUT: and opposite walk right twice left turn
+IN: turn left twice after look opposite right OUT: after twice left turn opposite look right
+IN: turn left twice and jump opposite right OUT: and twice left turn opposite jump right
+IN: look opposite right and turn left twice OUT: and opposite look right twice left turn
+IN: turn left thrice and look thrice OUT: and thrice left turn thrice look
+IN: walk thrice after turn left thrice OUT: after thrice walk thrice left turn
+IN: turn left thrice after look thrice OUT: after thrice left turn thrice look
+IN: turn left thrice and walk thrice OUT: and thrice left turn thrice walk
+IN: walk thrice and turn left thrice OUT: and thrice walk thrice left turn
+IN: turn left thrice after turn left twice OUT: after thrice left turn twice left turn
+IN: turn left thrice after turn opposite left OUT: after thrice left turn opposite turn left
+IN: turn left after turn around left OUT: after left turn around turn left
+IN: run left twice and turn left twice OUT: and twice left run twice left turn
+IN: run left twice after turn left twice OUT: after twice left run twice left turn
+IN: turn left twice and run left twice OUT: and twice left turn twice left run
+IN: turn around left and turn left OUT: and around turn left left turn
+IN: turn left and turn around left OUT: and left turn around turn left
+IN: turn left twice after run left twice OUT: after twice left turn twice left run
+IN: turn left twice and turn left thrice OUT: and twice left turn thrice left turn
+IN: turn opposite left twice after turn left OUT: after twice opposite turn left left turn
+IN: turn opposite left twice and turn left OUT: and twice opposite turn left left turn
+IN: turn opposite left after turn left thrice OUT: after opposite turn left thrice left turn
+IN: turn left thrice and turn left twice OUT: and thrice left turn twice left turn
+IN: turn left twice after turn left thrice OUT: after twice left turn thrice left turn
+IN: turn left and turn opposite left twice OUT: and left turn twice opposite turn left
+IN: turn around left after turn left OUT: after around turn left left turn
+IN: turn left thrice and turn opposite left OUT: and thrice left turn opposite turn left
+IN: turn opposite left and turn left thrice OUT: and opposite turn left thrice left turn
+IN: turn left after turn opposite left twice OUT: after left turn twice opposite turn left
+IN: run right twice and turn left twice OUT: and twice right run twice left turn
+IN: turn left twice and jump left twice OUT: and twice left turn twice left jump
+IN: look left twice and turn left twice OUT: and twice left look twice left turn
+IN: turn left twice and walk left twice OUT: and twice left turn twice left walk
+IN: turn left twice and run right twice OUT: and twice left turn twice right run
+IN: run right twice after turn left twice OUT: after twice right run twice left turn
+IN: turn right twice and turn left thrice OUT: and twice right turn thrice left turn
+IN: turn left thrice and turn opposite right OUT: and thrice left turn opposite turn right
+IN: jump left twice and turn left twice OUT: and twice left jump twice left turn
+IN: jump left twice after turn left twice OUT: after twice left jump twice left turn
+IN: turn opposite right after turn left thrice OUT: after opposite turn right thrice left turn
+IN: walk left twice after turn left twice OUT: after twice left walk twice left turn
+IN: turn left twice and look left twice OUT: and twice left turn twice left look
+IN: look left twice after turn left twice OUT: after twice left look twice left turn
+IN: turn left thrice after turn opposite right OUT: after thrice left turn opposite turn right
+IN: turn left thrice after turn right twice OUT: after thrice left turn twice right turn
+IN: turn left twice after run right twice OUT: after twice left turn twice right run
+IN: turn right twice after turn left thrice OUT: after twice right turn thrice left turn
+IN: turn opposite right and turn left thrice OUT: and opposite turn right thrice left turn
+IN: turn left twice after jump left twice OUT: after twice left turn twice left jump
+IN: turn left thrice and turn right twice OUT: and thrice left turn twice right turn
+IN: walk left twice and turn left twice OUT: and twice left walk twice left turn
+IN: turn left twice after walk left twice OUT: after twice left turn twice left walk
+IN: turn left twice after look left twice OUT: after twice left turn twice left look
+IN: turn right thrice after turn left twice OUT: after thrice right turn twice left turn
+IN: turn left twice after turn right thrice OUT: after twice left turn thrice right turn
+IN: turn right thrice and turn left twice OUT: and thrice right turn twice left turn
+IN: turn left twice and turn right thrice OUT: and twice left turn thrice right turn
+IN: turn opposite right twice and turn left OUT: and twice opposite turn right left turn
+IN: turn left twice after look right twice OUT: after twice left turn twice right look
+IN: turn around right after turn left OUT: after around turn right left turn
+IN: turn left after turn opposite right twice OUT: after left turn twice opposite turn right
+IN: turn left twice after walk right twice OUT: after twice left turn twice right walk
+IN: jump right twice and turn left twice OUT: and twice right jump twice left turn
+IN: turn left and turn around right OUT: and left turn around turn right
+IN: walk right twice after turn left twice OUT: after twice right walk twice left turn
+IN: turn left and turn opposite right twice OUT: and left turn twice opposite turn right
+IN: turn left after turn around right OUT: after left turn around turn right
+IN: look right twice and turn left twice OUT: and twice right look twice left turn
+IN: turn left twice and jump right twice OUT: and twice left turn twice right jump
+IN: turn opposite right twice after turn left OUT: after twice opposite turn right left turn
+IN: walk right twice and turn left twice OUT: and twice right walk twice left turn
+IN: jump right twice after turn left twice OUT: after twice right jump twice left turn
+IN: turn left twice after jump right twice OUT: after twice left turn twice right jump
+IN: turn left twice and walk right twice OUT: and twice left turn twice right walk
+IN: turn left twice and look right twice OUT: and twice left turn twice right look
+IN: turn around right and turn left OUT: and around turn right left turn
+IN: look right twice after turn left twice OUT: after twice right look twice left turn
+IN: turn left and run left thrice OUT: and left turn thrice left run
+IN: turn left after run left thrice OUT: after left turn thrice left run
+IN: run left thrice and turn left OUT: and thrice left run left turn
+IN: run left thrice after turn left OUT: after thrice left run left turn
+IN: run opposite left and turn left thrice OUT: and opposite run left thrice left turn
+IN: run opposite left after turn left thrice OUT: after opposite run left thrice left turn
+IN: turn left thrice after run opposite left OUT: after thrice left turn opposite run left
+IN: turn left thrice and run opposite left OUT: and thrice left turn opposite run left
+IN: walk opposite left after turn left thrice OUT: after opposite walk left thrice left turn
+IN: turn left thrice after look opposite left OUT: after thrice left turn opposite look left
+IN: walk opposite left and turn left thrice OUT: and opposite walk left thrice left turn
+IN: jump opposite left after turn left thrice OUT: after opposite jump left thrice left turn
+IN: turn left thrice after jump opposite left OUT: after thrice left turn opposite jump left
+IN: look opposite left and turn left thrice OUT: and opposite look left thrice left turn
+IN: turn left thrice after walk opposite left OUT: after thrice left turn opposite walk left
+IN: turn left thrice and jump opposite left OUT: and thrice left turn opposite jump left
+IN: turn left thrice and look opposite left OUT: and thrice left turn opposite look left
+IN: turn left thrice and walk opposite left OUT: and thrice left turn opposite walk left
+IN: jump opposite left and turn left thrice OUT: and opposite jump left thrice left turn
+IN: look opposite left after turn left thrice OUT: after opposite look left thrice left turn
+IN: run opposite right and turn left thrice OUT: and opposite run right thrice left turn
+IN: turn left thrice after run opposite right OUT: after thrice left turn opposite run right
+IN: turn left thrice and run opposite right OUT: and thrice left turn opposite run right
+IN: run opposite right after turn left thrice OUT: after opposite run right thrice left turn
+IN: turn left thrice and look opposite right OUT: and thrice left turn opposite look right
+IN: turn left thrice and walk opposite right OUT: and thrice left turn opposite walk right
+IN: turn left after run right thrice OUT: after left turn thrice right run
+IN: turn left thrice after jump opposite right OUT: after thrice left turn opposite jump right
+IN: jump left thrice after turn left OUT: after thrice left jump left turn
+IN: turn left after look left thrice OUT: after left turn thrice left look
+IN: run right thrice and turn left OUT: and thrice right run left turn
+IN: turn left thrice after look opposite right OUT: after thrice left turn opposite look right
+IN: jump opposite right after turn left thrice OUT: after opposite jump right thrice left turn
+IN: run right thrice after turn left OUT: after thrice right run left turn
+IN: walk left thrice and turn left OUT: and thrice left walk left turn
+IN: turn left and run right thrice OUT: and left turn thrice right run
+IN: jump left thrice and turn left OUT: and thrice left jump left turn
+IN: turn left thrice and jump opposite right OUT: and thrice left turn opposite jump right
+IN: look opposite right after turn left thrice OUT: after opposite look right thrice left turn
+IN: walk opposite right after turn left thrice OUT: after opposite walk right thrice left turn
+IN: walk opposite right and turn left thrice OUT: and opposite walk right thrice left turn
+IN: turn left and look left thrice OUT: and left turn thrice left look
+IN: turn left thrice after walk opposite right OUT: after thrice left turn opposite walk right
+IN: turn left and walk left thrice OUT: and left turn thrice left walk
+IN: turn left and jump left thrice OUT: and left turn thrice left jump
+IN: walk left thrice after turn left OUT: after thrice left walk left turn
+IN: look left thrice after turn left OUT: after thrice left look left turn
+IN: turn left after jump left thrice OUT: after left turn thrice left jump
+IN: turn left after walk left thrice OUT: after left turn thrice left walk
+IN: jump opposite right and turn left thrice OUT: and opposite jump right thrice left turn
+IN: look left thrice and turn left OUT: and thrice left look left turn
+IN: look opposite right and turn left thrice OUT: and opposite look right thrice left turn
+IN: walk right thrice after turn left OUT: after thrice right walk left turn
+IN: turn around left after turn left twice OUT: after around turn left twice left turn
+IN: turn left thrice after turn left thrice OUT: after thrice left turn thrice left turn
+IN: run opposite left twice after turn left OUT: after twice opposite run left left turn
+IN: turn left and run opposite left twice OUT: and left turn twice opposite run left
+IN: turn opposite left twice and turn left twice OUT: and twice opposite turn left twice left turn
+IN: turn left after run opposite left twice OUT: after left turn twice opposite run left
+IN: run left twice and turn left thrice OUT: and twice left run thrice left turn
+IN: turn left after look right thrice OUT: after left turn thrice right look
+IN: turn left after jump right thrice OUT: after left turn thrice right jump
+IN: look right thrice after turn left OUT: after thrice right look left turn
+IN: turn left and jump right thrice OUT: and left turn thrice right jump
+IN: turn left thrice after run left twice OUT: after thrice left turn twice left run
+IN: walk right thrice and turn left OUT: and thrice right walk left turn
+IN: run left twice after turn left thrice OUT: after twice left run thrice left turn
+IN: turn left twice after turn around left OUT: after twice left turn around turn left
+IN: run opposite left twice and turn left OUT: and twice opposite run left left turn
+IN: turn left thrice and turn left thrice OUT: and thrice left turn thrice left turn
+IN: turn left twice and turn opposite left twice OUT: and twice left turn twice opposite turn left
+IN: jump right thrice and turn left OUT: and thrice right jump left turn
+IN: turn around left and turn left twice OUT: and around turn left twice left turn
+IN: turn left thrice and run left twice OUT: and thrice left turn twice left run
+IN: turn left twice after turn opposite left twice OUT: after twice left turn twice opposite turn left
+IN: jump right thrice after turn left OUT: after thrice right jump left turn
+IN: look right thrice and turn left OUT: and thrice right look left turn
+IN: turn opposite left twice after turn left twice OUT: after twice opposite turn left twice left turn
+IN: turn left and look right thrice OUT: and left turn thrice right look
+IN: turn left twice and turn around left OUT: and twice left turn around turn left
+IN: turn left after walk right thrice OUT: after left turn thrice right walk
+IN: turn left and walk right thrice OUT: and left turn thrice right walk
+IN: run right twice after turn left thrice OUT: after twice right run thrice left turn
+IN: turn left thrice and jump left twice OUT: and thrice left turn twice left jump
+IN: jump opposite left twice after turn left OUT: after twice opposite jump left left turn
+IN: walk left twice and turn left thrice OUT: and twice left walk thrice left turn
+IN: turn left and jump opposite left twice OUT: and left turn twice opposite jump left
+IN: turn left thrice after look left twice OUT: after thrice left turn twice left look
+IN: turn left thrice and run right twice OUT: and thrice left turn twice right run
+IN: turn left thrice after walk left twice OUT: after thrice left turn twice left walk
+IN: walk left twice after turn left thrice OUT: after twice left walk thrice left turn
+IN: turn left and look opposite left twice OUT: and left turn twice opposite look left
+IN: turn left after look opposite left twice OUT: after left turn twice opposite look left
+IN: look opposite left twice after turn left OUT: after twice opposite look left left turn
+IN: look opposite left twice and turn left OUT: and twice opposite look left left turn
+IN: turn left after walk opposite left twice OUT: after left turn twice opposite walk left
+IN: turn left thrice after jump left twice OUT: after thrice left turn twice left jump
+IN: look left twice after turn left thrice OUT: after twice left look thrice left turn
+IN: jump opposite left twice and turn left OUT: and twice opposite jump left left turn
+IN: turn left and walk opposite left twice OUT: and left turn twice opposite walk left
+IN: jump left twice and turn left thrice OUT: and twice left jump thrice left turn
+IN: turn left after jump opposite left twice OUT: after left turn twice opposite jump left
+IN: look left twice and turn left thrice OUT: and twice left look thrice left turn
+IN: turn left thrice after run right twice OUT: after thrice left turn twice right run
+IN: run right twice and turn left thrice OUT: and twice right run thrice left turn
+IN: walk opposite left twice after turn left OUT: after twice opposite walk left left turn
+IN: turn left thrice and walk left twice OUT: and thrice left turn twice left walk
+IN: jump left twice after turn left thrice OUT: after twice left jump thrice left turn
+IN: turn left thrice and look left twice OUT: and thrice left turn twice left look
+IN: walk opposite left twice and turn left OUT: and twice opposite walk left left turn
+IN: turn left thrice after turn right thrice OUT: after thrice left turn thrice right turn
+IN: turn left thrice and turn right thrice OUT: and thrice left turn thrice right turn
+IN: turn right thrice after turn left thrice OUT: after thrice right turn thrice left turn
+IN: turn right thrice and turn left thrice OUT: and thrice right turn thrice left turn
+IN: turn left twice after turn opposite right twice OUT: after twice left turn twice opposite turn right
+IN: turn around right and turn left twice OUT: and around turn right twice left turn
+IN: turn around right after turn left twice OUT: after around turn right twice left turn
+IN: run opposite right twice and turn left OUT: and twice opposite run right left turn
+IN: walk right twice after turn left thrice OUT: after twice right walk thrice left turn
+IN: turn left twice and turn around right OUT: and twice left turn around turn right
+IN: turn left thrice and walk right twice OUT: and thrice left turn twice right walk
+IN: turn left twice after turn around right OUT: after twice left turn around turn right
+IN: turn left and run opposite right twice OUT: and left turn twice opposite run right
+IN: turn opposite right twice and turn left twice OUT: and twice opposite turn right twice left turn
+IN: turn left thrice and jump right twice OUT: and thrice left turn twice right jump
+IN: turn left thrice and look right twice OUT: and thrice left turn twice right look
+IN: turn opposite right twice after turn left twice OUT: after twice opposite turn right twice left turn
+IN: run opposite right twice after turn left OUT: after twice opposite run right left turn
+IN: turn left twice and turn opposite right twice OUT: and twice left turn twice opposite turn right
+IN: turn left thrice after look right twice OUT: after thrice left turn twice right look
+IN: jump right twice and turn left thrice OUT: and twice right jump thrice left turn
+IN: turn left thrice after jump right twice OUT: after thrice left turn twice right jump
+IN: turn left thrice after walk right twice OUT: after thrice left turn twice right walk
+IN: look right twice after turn left thrice OUT: after twice right look thrice left turn
+IN: look right twice and turn left thrice OUT: and twice right look thrice left turn
+IN: jump right twice after turn left thrice OUT: after twice right jump thrice left turn
+IN: walk right twice and turn left thrice OUT: and twice right walk thrice left turn
+IN: turn left after run opposite right twice OUT: after left turn twice opposite run right
+IN: turn left and walk opposite right twice OUT: and left turn twice opposite walk right
+IN: look opposite right twice after turn left OUT: after twice opposite look right left turn
+IN: walk opposite right twice and turn left OUT: and twice opposite walk right left turn
+IN: jump opposite right twice after turn left OUT: after twice opposite jump right left turn
+IN: look opposite right twice and turn left OUT: and twice opposite look right left turn
+IN: turn left after walk opposite right twice OUT: after left turn twice opposite walk right
+IN: turn left twice and run left thrice OUT: and twice left turn thrice left run
+IN: run left thrice after turn left twice OUT: after thrice left run twice left turn
+IN: walk opposite right twice after turn left OUT: after twice opposite walk right left turn
+IN: turn left and look opposite right twice OUT: and left turn twice opposite look right
+IN: turn left twice after run left thrice OUT: after twice left turn thrice left run
+IN: turn left and jump opposite right twice OUT: and left turn twice opposite jump right
+IN: turn left after jump opposite right twice OUT: after left turn twice opposite jump right
+IN: turn left after look opposite right twice OUT: after left turn twice opposite look right
+IN: jump opposite right twice and turn left OUT: and twice opposite jump right left turn
+IN: run left thrice and turn left twice OUT: and thrice left run twice left turn
+IN: walk left thrice and turn left twice OUT: and thrice left walk twice left turn
+IN: turn left twice and walk left thrice OUT: and twice left turn thrice left walk
+IN: turn left twice after look left thrice OUT: after twice left turn thrice left look
+IN: run right thrice after turn left twice OUT: after thrice right run twice left turn
+IN: turn left twice and look left thrice OUT: and twice left turn thrice left look
+IN: turn left twice after jump left thrice OUT: after twice left turn thrice left jump
+IN: walk left thrice after turn left twice OUT: after thrice left walk twice left turn
+IN: jump left thrice and turn left twice OUT: and thrice left jump twice left turn
+IN: turn left twice and run right thrice OUT: and twice left turn thrice right run
+IN: look left thrice after turn left twice OUT: after thrice left look twice left turn
+IN: jump left thrice after turn left twice OUT: after thrice left jump twice left turn
+IN: turn left twice after walk left thrice OUT: after twice left turn thrice left walk
+IN: turn left twice and jump left thrice OUT: and twice left turn thrice left jump
+IN: run right thrice and turn left twice OUT: and thrice right run twice left turn
+IN: look left thrice and turn left twice OUT: and thrice left look twice left turn
+IN: turn left twice after run right thrice OUT: after twice left turn thrice right run
+IN: run around left and turn left OUT: and around run left left turn
+IN: run opposite left twice and turn left twice OUT: and twice opposite run left twice left turn
+IN: turn left twice after jump right thrice OUT: after twice left turn thrice right jump
+IN: walk right thrice and turn left twice OUT: and thrice right walk twice left turn
+IN: turn around left and turn left thrice OUT: and around turn left thrice left turn
+IN: turn left after turn opposite left thrice OUT: after left turn thrice opposite turn left
+IN: walk right thrice after turn left twice OUT: after thrice right walk twice left turn
+IN: turn left twice after look right thrice OUT: after twice left turn thrice right look
+IN: turn left thrice and turn opposite left twice OUT: and thrice left turn twice opposite turn left
+IN: turn left thrice after turn opposite left twice OUT: after thrice left turn twice opposite turn left
+IN: turn left and run around left OUT: and left turn around run left
+IN: turn left twice after walk right thrice OUT: after twice left turn thrice right walk
+IN: turn opposite left thrice and turn left OUT: and thrice opposite turn left left turn
+IN: turn opposite left twice after turn left thrice OUT: after twice opposite turn left thrice left turn
+IN: turn left twice and jump right thrice OUT: and twice left turn thrice right jump
+IN: turn left twice and run opposite left twice OUT: and twice left turn twice opposite run left
+IN: jump right thrice after turn left twice OUT: after thrice right jump twice left turn
+IN: turn left twice after run opposite left twice OUT: after twice left turn twice opposite run left
+IN: turn around left after turn left thrice OUT: after around turn left thrice left turn
+IN: look right thrice and turn left twice OUT: and thrice right look twice left turn
+IN: turn left after run around left OUT: after left turn around run left
+IN: turn left twice and walk right thrice OUT: and twice left turn thrice right walk
+IN: turn left twice and look right thrice OUT: and twice left turn thrice right look
+IN: look right thrice after turn left twice OUT: after thrice right look twice left turn
+IN: run around left after turn left OUT: after around run left left turn
+IN: turn opposite left twice and turn left thrice OUT: and twice opposite turn left thrice left turn
+IN: turn opposite left thrice after turn left OUT: after thrice opposite turn left left turn
+IN: run opposite left twice after turn left twice OUT: after twice opposite run left twice left turn
+IN: turn left thrice and turn around left OUT: and thrice left turn around turn left
+IN: turn left thrice after turn around left OUT: after thrice left turn around turn left
+IN: jump right thrice and turn left twice OUT: and thrice right jump twice left turn
+IN: turn left and turn opposite left thrice OUT: and left turn thrice opposite turn left
+IN: turn left twice after look opposite left twice OUT: after twice left turn twice opposite look left
+IN: turn left twice and look opposite left twice OUT: and twice left turn twice opposite look left
+IN: turn left twice after walk opposite left twice OUT: after twice left turn twice opposite walk left
+IN: turn left twice and jump opposite left twice OUT: and twice left turn twice opposite jump left
+IN: jump opposite left twice and turn left twice OUT: and twice opposite jump left twice left turn
+IN: turn left twice after jump opposite left twice OUT: after twice left turn twice opposite jump left
+IN: turn left twice and walk opposite left twice OUT: and twice left turn twice opposite walk left
+IN: look opposite left twice and turn left twice OUT: and twice opposite look left twice left turn
+IN: jump opposite left twice after turn left twice OUT: after twice opposite jump left twice left turn
+IN: walk opposite left twice and turn left twice OUT: and twice opposite walk left twice left turn
+IN: look opposite left twice after turn left twice OUT: after twice opposite look left twice left turn
+IN: walk opposite left twice after turn left twice OUT: after twice opposite walk left twice left turn
+IN: turn left after look around left OUT: after left turn around look left
+IN: walk around left and turn left OUT: and around walk left left turn
+IN: turn left twice after run opposite right twice OUT: after twice left turn twice opposite run right
+IN: turn left and run around right OUT: and left turn around run right
+IN: turn left thrice and turn opposite right twice OUT: and thrice left turn twice opposite turn right
+IN: run around right and turn left OUT: and around run right left turn
+IN: run opposite right twice and turn left twice OUT: and twice opposite run right twice left turn
+IN: walk around left after turn left OUT: after around walk left left turn
+IN: turn opposite right twice after turn left thrice OUT: after twice opposite turn right thrice left turn
+IN: turn left after walk around left OUT: after left turn around walk left
+IN: turn left and walk around left OUT: and left turn around walk left
+IN: look around left after turn left OUT: after around look left left turn
+IN: run around right after turn left OUT: after around run right left turn
+IN: turn left and jump around left OUT: and left turn around jump left
+IN: turn around right after turn left thrice OUT: after around turn right thrice left turn
+IN: turn left after jump around left OUT: after left turn around jump left
+IN: jump around left after turn left OUT: after around jump left left turn
+IN: look around left and turn left OUT: and around look left left turn
+IN: turn opposite right twice and turn left thrice OUT: and twice opposite turn right thrice left turn
+IN: turn left thrice after turn opposite right twice OUT: after thrice left turn twice opposite turn right
+IN: turn left after run around right OUT: after left turn around run right
+IN: turn left thrice and turn around right OUT: and thrice left turn around turn right
+IN: run opposite right twice after turn left twice OUT: after twice opposite run right twice left turn
+IN: jump around left and turn left OUT: and around jump left left turn
+IN: turn left and look around left OUT: and left turn around look left
+IN: turn around right and turn left thrice OUT: and around turn right thrice left turn
+IN: turn left twice and run opposite right twice OUT: and twice left turn twice opposite run right
+IN: turn left thrice after turn around right OUT: after thrice left turn around turn right
+IN: run left thrice after turn left thrice OUT: after thrice left run thrice left turn
+IN: walk opposite right twice after turn left twice OUT: after twice opposite walk right twice left turn
+IN: look opposite right twice after turn left twice OUT: after twice opposite look right twice left turn
+IN: turn opposite right thrice and turn left OUT: and thrice opposite turn right left turn
+IN: turn left thrice after run left thrice OUT: after thrice left turn thrice left run
+IN: jump opposite right twice and turn left twice OUT: and twice opposite jump right twice left turn
+IN: run left thrice and turn left thrice OUT: and thrice left run thrice left turn
+IN: turn left thrice and run left thrice OUT: and thrice left turn thrice left run
+IN: turn left after turn opposite right thrice OUT: after left turn thrice opposite turn right
+IN: turn left twice after look opposite right twice OUT: after twice left turn twice opposite look right
+IN: turn left twice and look opposite right twice OUT: and twice left turn twice opposite look right
+IN: jump opposite right twice after turn left twice OUT: after twice opposite jump right twice left turn
+IN: turn opposite right thrice after turn left OUT: after thrice opposite turn right left turn
+IN: walk opposite right twice and turn left twice OUT: and twice opposite walk right twice left turn
+IN: turn left twice after walk opposite right twice OUT: after twice left turn twice opposite walk right
+IN: turn left twice and jump opposite right twice OUT: and twice left turn twice opposite jump right
+IN: look opposite right twice and turn left twice OUT: and twice opposite look right twice left turn
+IN: turn left twice and walk opposite right twice OUT: and twice left turn twice opposite walk right
+IN: turn left twice after jump opposite right twice OUT: after twice left turn twice opposite jump right
+IN: turn left and turn opposite right thrice OUT: and left turn thrice opposite turn right
+IN: look around right after turn left OUT: after around look right left turn
+IN: walk around right and turn left OUT: and around walk right left turn
+IN: turn left after look around right OUT: after left turn around look right
+IN: turn left and walk around right OUT: and left turn around walk right
+IN: turn left and jump around right OUT: and left turn around jump right
+IN: turn left after jump around right OUT: after left turn around jump right
+IN: turn left after walk around right OUT: after left turn around walk right
+IN: jump around right and turn left OUT: and around jump right left turn
+IN: walk around right after turn left OUT: after around walk right left turn
+IN: look around right and turn left OUT: and around look right left turn
+IN: jump around right after turn left OUT: after around jump right left turn
+IN: turn left and look around right OUT: and left turn around look right
+IN: turn left thrice after jump left thrice OUT: after thrice left turn thrice left jump
+IN: jump left thrice and turn left thrice OUT: and thrice left jump thrice left turn
+IN: turn left thrice and walk left thrice OUT: and thrice left turn thrice left walk
+IN: turn left thrice after look left thrice OUT: after thrice left turn thrice left look
+IN: turn left thrice after walk left thrice OUT: after thrice left turn thrice left walk
+IN: turn left thrice and run right thrice OUT: and thrice left turn thrice right run
+IN: walk left thrice and turn left thrice OUT: and thrice left walk thrice left turn
+IN: run right thrice after turn left thrice OUT: after thrice right run thrice left turn
+IN: look left thrice and turn left thrice OUT: and thrice left look thrice left turn
+IN: turn left thrice after run right thrice OUT: after thrice left turn thrice right run
+IN: jump left thrice after turn left thrice OUT: after thrice left jump thrice left turn
+IN: turn left thrice and jump left thrice OUT: and thrice left turn thrice left jump
+IN: turn left thrice and look left thrice OUT: and thrice left turn thrice left look
+IN: look left thrice after turn left thrice OUT: after thrice left look thrice left turn
+IN: walk left thrice after turn left thrice OUT: after thrice left walk thrice left turn
+IN: run right thrice and turn left thrice OUT: and thrice right run thrice left turn
+IN: turn left twice and turn opposite left thrice OUT: and twice left turn thrice opposite turn left
+IN: run around left and turn left twice OUT: and around run left twice left turn
+IN: turn opposite left thrice after turn left twice OUT: after thrice opposite turn left twice left turn
+IN: run around left after turn left twice OUT: after around run left twice left turn
+IN: walk right thrice after turn left thrice OUT: after thrice right walk thrice left turn
+IN: turn left twice after turn opposite left thrice OUT: after twice left turn thrice opposite turn left
+IN: turn left thrice and look right thrice OUT: and thrice left turn thrice right look
+IN: look right thrice after turn left thrice OUT: after thrice right look thrice left turn
+IN: turn left twice after run around left OUT: after twice left turn around run left
+IN: turn left thrice and jump right thrice OUT: and thrice left turn thrice right jump
+IN: jump right thrice and turn left thrice OUT: and thrice right jump thrice left turn
+IN: turn left thrice after run opposite left twice OUT: after thrice left turn twice opposite run left
+IN: turn left twice and run around left OUT: and twice left turn around run left
+IN: run opposite left twice after turn left thrice OUT: after twice opposite run left thrice left turn
+IN: turn opposite left thrice and turn left twice OUT: and thrice opposite turn left twice left turn
+IN: run opposite left twice and turn left thrice OUT: and twice opposite run left thrice left turn
+IN: turn left thrice after jump right thrice OUT: after thrice left turn thrice right jump
+IN: jump right thrice after turn left thrice OUT: after thrice right jump thrice left turn
+IN: turn left thrice and walk right thrice OUT: and thrice left turn thrice right walk
+IN: walk right thrice and turn left thrice OUT: and thrice right walk thrice left turn
+IN: look right thrice and turn left thrice OUT: and thrice right look thrice left turn
+IN: turn left thrice after walk right thrice OUT: after thrice left turn thrice right walk
+IN: turn left thrice and run opposite left twice OUT: and thrice left turn twice opposite run left
+IN: turn left thrice after look right thrice OUT: after thrice left turn thrice right look
+IN: turn left thrice after walk opposite left twice OUT: after thrice left turn twice opposite walk left
+IN: turn left thrice and look opposite left twice OUT: and thrice left turn twice opposite look left
+IN: turn left thrice after jump opposite left twice OUT: after thrice left turn twice opposite jump left
+IN: look opposite left twice after turn left thrice OUT: after twice opposite look left thrice left turn
+IN: jump opposite left twice after turn left thrice OUT: after twice opposite jump left thrice left turn
+IN: walk opposite left twice and turn left thrice OUT: and twice opposite walk left thrice left turn
+IN: walk opposite left twice after turn left thrice OUT: after twice opposite walk left thrice left turn
+IN: turn left thrice and jump opposite left twice OUT: and thrice left turn twice opposite jump left
+IN: turn left thrice and walk opposite left twice OUT: and thrice left turn twice opposite walk left
+IN: look opposite left twice and turn left thrice OUT: and twice opposite look left thrice left turn
+IN: jump opposite left twice and turn left thrice OUT: and twice opposite jump left thrice left turn
+IN: turn left thrice after look opposite left twice OUT: after thrice left turn twice opposite look left
+IN: run opposite right twice and turn left thrice OUT: and twice opposite run right thrice left turn
+IN: jump around left after turn left twice OUT: after around jump left twice left turn
+IN: turn left twice after walk around left OUT: after twice left turn around walk left
+IN: run around right and turn left twice OUT: and around run right twice left turn
+IN: look around left and turn left twice OUT: and around look left twice left turn
+IN: walk around left and turn left twice OUT: and around walk left twice left turn
+IN: turn left thrice and run opposite right twice OUT: and thrice left turn twice opposite run right
+IN: walk around left after turn left twice OUT: after around walk left twice left turn
+IN: turn left twice after run around right OUT: after twice left turn around run right
+IN: look around left after turn left twice OUT: after around look left twice left turn
+IN: turn left twice and look around left OUT: and twice left turn around look left
+IN: jump around left and turn left twice OUT: and around jump left twice left turn
+IN: turn left twice after look around left OUT: after twice left turn around look left
+IN: turn left twice and jump around left OUT: and twice left turn around jump left
+IN: run around right after turn left twice OUT: after around run right twice left turn
+IN: turn left twice and walk around left OUT: and twice left turn around walk left
+IN: turn left twice after jump around left OUT: after twice left turn around jump left
+IN: turn left twice and run around right OUT: and twice left turn around run right
+IN: turn left thrice after run opposite right twice OUT: after thrice left turn twice opposite run right
+IN: run opposite right twice after turn left thrice OUT: after twice opposite run right thrice left turn
+IN: look opposite right twice and turn left thrice OUT: and twice opposite look right thrice left turn
+IN: walk opposite right twice after turn left thrice OUT: after twice opposite walk right thrice left turn
+IN: turn left thrice and walk opposite right twice OUT: and thrice left turn twice opposite walk right
+IN: walk opposite right twice and turn left thrice OUT: and twice opposite walk right thrice left turn
+IN: jump opposite right twice and turn left thrice OUT: and twice opposite jump right thrice left turn
+IN: turn left thrice and jump opposite right twice OUT: and thrice left turn twice opposite jump right
+IN: look opposite right twice after turn left thrice OUT: after twice opposite look right thrice left turn
+IN: turn left twice and turn opposite right thrice OUT: and twice left turn thrice opposite turn right
+IN: turn left thrice and look opposite right twice OUT: and thrice left turn twice opposite look right
+IN: jump opposite right twice after turn left thrice OUT: after twice opposite jump right thrice left turn
+IN: run opposite left thrice and turn left OUT: and thrice opposite run left left turn
+IN: turn left thrice after jump opposite right twice OUT: after thrice left turn twice opposite jump right
+IN: turn left thrice after look opposite right twice OUT: after thrice left turn twice opposite look right
+IN: run opposite left thrice after turn left OUT: after thrice opposite run left left turn
+IN: turn left after run opposite left thrice OUT: after left turn thrice opposite run left
+IN: turn left and run opposite left thrice OUT: and left turn thrice opposite run left
+IN: turn opposite right thrice and turn left twice OUT: and thrice opposite turn right twice left turn
+IN: turn left thrice after walk opposite right twice OUT: after thrice left turn twice opposite walk right
+IN: turn opposite right thrice after turn left twice OUT: after thrice opposite turn right twice left turn
+IN: turn left twice after turn opposite right thrice OUT: after twice left turn thrice opposite turn right
+IN: look around right after turn left twice OUT: after around look right twice left turn
+IN: walk around right and turn left twice OUT: and around walk right twice left turn
+IN: turn left twice and walk around right OUT: and twice left turn around walk right
+IN: look around right and turn left twice OUT: and around look right twice left turn
+IN: jump around right after turn left twice OUT: after around jump right twice left turn
+IN: turn left twice after walk around right OUT: after twice left turn around walk right
+IN: walk around right after turn left twice OUT: after around walk right twice left turn
+IN: jump around right and turn left twice OUT: and around jump right twice left turn
+IN: turn left twice after jump around right OUT: after twice left turn around jump right
+IN: turn left twice after look around right OUT: after twice left turn around look right
+IN: turn left twice and jump around right OUT: and twice left turn around jump right
+IN: turn left twice and look around right OUT: and twice left turn around look right
+IN: look opposite left thrice and turn left OUT: and thrice opposite look left left turn
+IN: jump opposite left thrice after turn left OUT: after thrice opposite jump left left turn
+IN: turn left and jump opposite left thrice OUT: and left turn thrice opposite jump left
+IN: turn left after jump opposite left thrice OUT: after left turn thrice opposite jump left
+IN: turn left after walk opposite left thrice OUT: after left turn thrice opposite walk left
+IN: turn left and look opposite left thrice OUT: and left turn thrice opposite look left
+IN: turn left after look opposite left thrice OUT: after left turn thrice opposite look left
+IN: look opposite left thrice after turn left OUT: after thrice opposite look left left turn
+IN: turn left and walk opposite left thrice OUT: and left turn thrice opposite walk left
+IN: walk opposite left thrice after turn left OUT: after thrice opposite walk left left turn
+IN: jump opposite left thrice and turn left OUT: and thrice opposite jump left left turn
+IN: walk opposite left thrice and turn left OUT: and thrice opposite walk left left turn
+IN: turn opposite left thrice after turn left thrice OUT: after thrice opposite turn left thrice left turn
+IN: run around left and turn left thrice OUT: and around run left thrice left turn
+IN: turn left thrice after turn opposite left thrice OUT: after thrice left turn thrice opposite turn left
+IN: turn left after run opposite right thrice OUT: after left turn thrice opposite run right
+IN: turn left thrice after run around left OUT: after thrice left turn around run left
+IN: turn left and run opposite right thrice OUT: and left turn thrice opposite run right
+IN: turn around left twice after turn left OUT: after twice around turn left left turn
+IN: run opposite right thrice after turn left OUT: after thrice opposite run right left turn
+IN: turn left thrice and turn opposite left thrice OUT: and thrice left turn thrice opposite turn left
+IN: turn opposite left thrice and turn left thrice OUT: and thrice opposite turn left thrice left turn
+IN: turn left after turn around left twice OUT: after left turn twice around turn left
+IN: turn left and turn around left twice OUT: and left turn twice around turn left
+IN: turn left thrice and run around left OUT: and thrice left turn around run left
+IN: turn around left twice and turn left OUT: and twice around turn left left turn
+IN: run around left after turn left thrice OUT: after around run left thrice left turn
+IN: run opposite right thrice and turn left OUT: and thrice opposite run right left turn
+IN: turn left and walk opposite right thrice OUT: and left turn thrice opposite walk right
+IN: turn left and look opposite right thrice OUT: and left turn thrice opposite look right
+IN: look opposite right thrice after turn left OUT: after thrice opposite look right left turn
+IN: jump opposite right thrice after turn left OUT: after thrice opposite jump right left turn
+IN: walk opposite right thrice and turn left OUT: and thrice opposite walk right left turn
+IN: turn left after walk opposite right thrice OUT: after left turn thrice opposite walk right
+IN: walk opposite right thrice after turn left OUT: after thrice opposite walk right left turn
+IN: jump opposite right thrice and turn left OUT: and thrice opposite jump right left turn
+IN: look opposite right thrice and turn left OUT: and thrice opposite look right left turn
+IN: turn left and jump opposite right thrice OUT: and left turn thrice opposite jump right
+IN: turn left after jump opposite right thrice OUT: after left turn thrice opposite jump right
+IN: turn left after look opposite right thrice OUT: after left turn thrice opposite look right
+IN: turn left thrice and look around left OUT: and thrice left turn around look left
+IN: turn left thrice after look around left OUT: after thrice left turn around look left
+IN: turn left thrice after walk around left OUT: after thrice left turn around walk left
+IN: turn left thrice and jump around left OUT: and thrice left turn around jump left
+IN: turn left thrice after jump around left OUT: after thrice left turn around jump left
+IN: turn left thrice and run around right OUT: and thrice left turn around run right
+IN: run around right after turn left thrice OUT: after around run right thrice left turn
+IN: jump around left and turn left thrice OUT: and around jump left thrice left turn
+IN: look around left and turn left thrice OUT: and around look left thrice left turn
+IN: run around right and turn left thrice OUT: and around run right thrice left turn
+IN: walk around left after turn left thrice OUT: after around walk left thrice left turn
+IN: turn left thrice after run around right OUT: after thrice left turn around run right
+IN: jump around left after turn left thrice OUT: after around jump left thrice left turn
+IN: turn left thrice and walk around left OUT: and thrice left turn around walk left
+IN: walk around left and turn left thrice OUT: and around walk left thrice left turn
+IN: look around left after turn left thrice OUT: after around look left thrice left turn
+IN: turn opposite right thrice and turn left thrice OUT: and thrice opposite turn right thrice left turn
+IN: run opposite left thrice and turn left twice OUT: and thrice opposite run left twice left turn
+IN: turn left thrice and turn opposite right thrice OUT: and thrice left turn thrice opposite turn right
+IN: turn left twice after run opposite left thrice OUT: after twice left turn thrice opposite run left
+IN: turn left thrice after turn opposite right thrice OUT: after thrice left turn thrice opposite turn right
+IN: turn opposite right thrice after turn left thrice OUT: after thrice opposite turn right thrice left turn
+IN: run opposite left thrice after turn left twice OUT: after thrice opposite run left twice left turn
+IN: turn left twice and run opposite left thrice OUT: and twice left turn thrice opposite run left
+IN: look around right and turn left thrice OUT: and around look right thrice left turn
+IN: turn left after turn around right twice OUT: after left turn twice around turn right
+IN: turn around right twice after turn left OUT: after twice around turn right left turn
+IN: turn left thrice and jump around right OUT: and thrice left turn around jump right
+IN: look around right after turn left thrice OUT: after around look right thrice left turn
+IN: jump around right after turn left thrice OUT: after around jump right thrice left turn
+IN: turn left thrice after walk around right OUT: after thrice left turn around walk right
+IN: turn left thrice after jump around right OUT: after thrice left turn around jump right
+IN: walk around right and turn left thrice OUT: and around walk right thrice left turn
+IN: turn around right twice and turn left OUT: and twice around turn right left turn
+IN: turn left and turn around right twice OUT: and left turn twice around turn right
+IN: turn left thrice after look around right OUT: after thrice left turn around look right
+IN: jump around right and turn left thrice OUT: and around jump right thrice left turn
+IN: turn left thrice and walk around right OUT: and thrice left turn around walk right
+IN: walk around right after turn left thrice OUT: after around walk right thrice left turn
+IN: turn left thrice and look around right OUT: and thrice left turn around look right
+IN: turn left twice after walk opposite left thrice OUT: after twice left turn thrice opposite walk left
+IN: turn left twice and walk opposite left thrice OUT: and twice left turn thrice opposite walk left
+IN: look opposite left thrice after turn left twice OUT: after thrice opposite look left twice left turn
+IN: turn left twice after look opposite left thrice OUT: after twice left turn thrice opposite look left
+IN: turn left twice after jump opposite left thrice OUT: after twice left turn thrice opposite jump left
+IN: walk opposite left thrice and turn left twice OUT: and thrice opposite walk left twice left turn
+IN: jump opposite left thrice after turn left twice OUT: after thrice opposite jump left twice left turn
+IN: turn left twice and look opposite left thrice OUT: and twice left turn thrice opposite look left
+IN: turn left twice and jump opposite left thrice OUT: and twice left turn thrice opposite jump left
+IN: walk opposite left thrice after turn left twice OUT: after thrice opposite walk left twice left turn
+IN: look opposite left thrice and turn left twice OUT: and thrice opposite look left twice left turn
+IN: jump opposite left thrice and turn left twice OUT: and thrice opposite jump left twice left turn
+IN: turn left twice and turn around left twice OUT: and twice left turn twice around turn left
+IN: turn around left twice and turn left twice OUT: and twice around turn left twice left turn
+IN: turn left twice after turn around left twice OUT: after twice left turn twice around turn left
+IN: run opposite right thrice after turn left twice OUT: after thrice opposite run right twice left turn
+IN: turn left twice after run opposite right thrice OUT: after twice left turn thrice opposite run right
+IN: run opposite right thrice and turn left twice OUT: and thrice opposite run right twice left turn
+IN: turn around left twice after turn left twice OUT: after twice around turn left twice left turn
+IN: turn left twice and run opposite right thrice OUT: and twice left turn thrice opposite run right
+IN: jump opposite right thrice after turn left twice OUT: after thrice opposite jump right twice left turn
+IN: look opposite right thrice and turn left twice OUT: and thrice opposite look right twice left turn
+IN: turn left twice after walk opposite right thrice OUT: after twice left turn thrice opposite walk right
+IN: turn left twice after look opposite right thrice OUT: after twice left turn thrice opposite look right
+IN: walk opposite right thrice after turn left twice OUT: after thrice opposite walk right twice left turn
+IN: look opposite right thrice after turn left twice OUT: after thrice opposite look right twice left turn
+IN: turn left twice and jump opposite right thrice OUT: and twice left turn thrice opposite jump right
+IN: turn left twice and walk opposite right thrice OUT: and twice left turn thrice opposite walk right
+IN: jump opposite right thrice and turn left twice OUT: and thrice opposite jump right twice left turn
+IN: walk opposite right thrice and turn left twice OUT: and thrice opposite walk right twice left turn
+IN: turn left twice and look opposite right thrice OUT: and twice left turn thrice opposite look right
+IN: turn left twice after jump opposite right thrice OUT: after twice left turn thrice opposite jump right
+IN: run opposite left thrice and turn left thrice OUT: and thrice opposite run left thrice left turn
+IN: turn left thrice and run opposite left thrice OUT: and thrice left turn thrice opposite run left
+IN: turn left thrice after run opposite left thrice OUT: after thrice left turn thrice opposite run left
+IN: run opposite left thrice after turn left thrice OUT: after thrice opposite run left thrice left turn
+IN: turn left twice and turn around right twice OUT: and twice left turn twice around turn right
+IN: turn around right twice after turn left twice OUT: after twice around turn right twice left turn
+IN: turn left twice after turn around right twice OUT: after twice left turn twice around turn right
+IN: turn around right twice and turn left twice OUT: and twice around turn right twice left turn
+IN: walk opposite left thrice after turn left thrice OUT: after thrice opposite walk left thrice left turn
+IN: turn left thrice after walk opposite left thrice OUT: after thrice left turn thrice opposite walk left
+IN: turn left thrice and jump opposite left thrice OUT: and thrice left turn thrice opposite jump left
+IN: look opposite left thrice after turn left thrice OUT: after thrice opposite look left thrice left turn
+IN: look opposite left thrice and turn left thrice OUT: and thrice opposite look left thrice left turn
+IN: turn left thrice after look opposite left thrice OUT: after thrice left turn thrice opposite look left
+IN: turn left thrice after jump opposite left thrice OUT: after thrice left turn thrice opposite jump left
+IN: walk opposite left thrice and turn left thrice OUT: and thrice opposite walk left thrice left turn
+IN: turn left thrice and walk opposite left thrice OUT: and thrice left turn thrice opposite walk left
+IN: jump opposite left thrice after turn left thrice OUT: after thrice opposite jump left thrice left turn
+IN: jump opposite left thrice and turn left thrice OUT: and thrice opposite jump left thrice left turn
+IN: turn left thrice and look opposite left thrice OUT: and thrice left turn thrice opposite look left
+IN: turn left thrice after turn around left twice OUT: after thrice left turn twice around turn left
+IN: turn left thrice and run opposite right thrice OUT: and thrice left turn thrice opposite run right
+IN: run opposite right thrice after turn left thrice OUT: after thrice opposite run right thrice left turn
+IN: run opposite right thrice and turn left thrice OUT: and thrice opposite run right thrice left turn
+IN: turn around left twice and turn left thrice OUT: and twice around turn left thrice left turn
+IN: turn left thrice and turn around left twice OUT: and thrice left turn twice around turn left
+IN: turn left thrice after run opposite right thrice OUT: after thrice left turn thrice opposite run right
+IN: turn around left twice after turn left thrice OUT: after twice around turn left thrice left turn
+IN: turn left thrice after walk opposite right thrice OUT: after thrice left turn thrice opposite walk right
+IN: turn left thrice and jump opposite right thrice OUT: and thrice left turn thrice opposite jump right
+IN: jump opposite right thrice after turn left thrice OUT: after thrice opposite jump right thrice left turn
+IN: turn left thrice and look opposite right thrice OUT: and thrice left turn thrice opposite look right
+IN: walk opposite right thrice and turn left thrice OUT: and thrice opposite walk right thrice left turn
+IN: look opposite right thrice after turn left thrice OUT: after thrice opposite look right thrice left turn
+IN: turn left thrice and walk opposite right thrice OUT: and thrice left turn thrice opposite walk right
+IN: jump opposite right thrice and turn left thrice OUT: and thrice opposite jump right thrice left turn
+IN: look opposite right thrice and turn left thrice OUT: and thrice opposite look right thrice left turn
+IN: turn left thrice after look opposite right thrice OUT: after thrice left turn thrice opposite look right
+IN: walk opposite right thrice after turn left thrice OUT: after thrice opposite walk right thrice left turn
+IN: turn left thrice after jump opposite right thrice OUT: after thrice left turn thrice opposite jump right
+IN: turn left thrice and turn around right twice OUT: and thrice left turn twice around turn right
+IN: turn around right twice after turn left thrice OUT: after twice around turn right thrice left turn
+IN: turn around right twice and turn left thrice OUT: and twice around turn right thrice left turn
+IN: turn left thrice after turn around right twice OUT: after thrice left turn twice around turn right
+IN: turn around left thrice and turn left OUT: and thrice around turn left left turn
+IN: turn left and turn around left thrice OUT: and left turn thrice around turn left
+IN: turn left after turn around left thrice OUT: after left turn thrice around turn left
+IN: turn around left thrice after turn left OUT: after thrice around turn left left turn
+IN: run around left twice after turn left OUT: after twice around run left left turn
+IN: turn left and run around left twice OUT: and left turn twice around run left
+IN: turn left after run around left twice OUT: after left turn twice around run left
+IN: run around left twice and turn left OUT: and twice around run left left turn
+IN: turn left and walk around left twice OUT: and left turn twice around walk left
+IN: look around left twice and turn left OUT: and twice around look left left turn
+IN: run around right twice and turn left OUT: and twice around run right left turn
+IN: turn left after walk around left twice OUT: after left turn twice around walk left
+IN: jump around left twice after turn left OUT: after twice around jump left left turn
+IN: turn left and jump around left twice OUT: and left turn twice around jump left
+IN: turn left and run around right twice OUT: and left turn twice around run right
+IN: walk around left twice after turn left OUT: after twice around walk left left turn
+IN: turn left after run around right twice OUT: after left turn twice around run right
+IN: turn left after look around left twice OUT: after left turn twice around look left
+IN: walk around left twice and turn left OUT: and twice around walk left left turn
+IN: run around right twice after turn left OUT: after twice around run right left turn
+IN: turn left and look around left twice OUT: and left turn twice around look left
+IN: turn left after jump around left twice OUT: after left turn twice around jump left
+IN: look around left twice after turn left OUT: after twice around look left left turn
+IN: jump around left twice and turn left OUT: and twice around jump left left turn
+IN: turn left twice after turn around left thrice OUT: after twice left turn thrice around turn left
+IN: run around left twice and turn left twice OUT: and twice around run left twice left turn
+IN: turn around left thrice and turn left twice OUT: and thrice around turn left twice left turn
+IN: turn left and turn around right thrice OUT: and left turn thrice around turn right
+IN: turn left twice and turn around left thrice OUT: and twice left turn thrice around turn left
+IN: turn left after turn around right thrice OUT: after left turn thrice around turn right
+IN: turn around right thrice after turn left OUT: after thrice around turn right left turn
+IN: turn left twice after run around left twice OUT: after twice left turn twice around run left
+IN: turn left twice and run around left twice OUT: and twice left turn twice around run left
+IN: turn around left thrice after turn left twice OUT: after thrice around turn left twice left turn
+IN: turn around right thrice and turn left OUT: and thrice around turn right left turn
+IN: run around left twice after turn left twice OUT: after twice around run left twice left turn
+IN: look around right twice after turn left OUT: after twice around look right left turn
+IN: turn left and look around right twice OUT: and left turn twice around look right
+IN: jump around right twice after turn left OUT: after twice around jump right left turn
+IN: turn left after jump around right twice OUT: after left turn twice around jump right
+IN: jump around right twice and turn left OUT: and twice around jump right left turn
+IN: turn left after look around right twice OUT: after left turn twice around look right
+IN: turn left after walk around right twice OUT: after left turn twice around walk right
+IN: look around right twice and turn left OUT: and twice around look right left turn
+IN: turn left and walk around right twice OUT: and left turn twice around walk right
+IN: walk around right twice and turn left OUT: and twice around walk right left turn
+IN: walk around right twice after turn left OUT: after twice around walk right left turn
+IN: turn left and jump around right twice OUT: and left turn twice around jump right
+IN: run around right twice and turn left twice OUT: and twice around run right twice left turn
+IN: turn left twice after jump around left twice OUT: after twice left turn twice around jump left
+IN: turn left twice after walk around left twice OUT: after twice left turn twice around walk left
+IN: look around left twice after turn left twice OUT: after twice around look left twice left turn
+IN: turn left twice and run around right twice OUT: and twice left turn twice around run right
+IN: turn left twice and look around left twice OUT: and twice left turn twice around look left
+IN: jump around left twice and turn left twice OUT: and twice around jump left twice left turn
+IN: turn left twice and walk around left twice OUT: and twice left turn twice around walk left
+IN: walk around left twice after turn left twice OUT: after twice around walk left twice left turn
+IN: look around left twice and turn left twice OUT: and twice around look left twice left turn
+IN: jump around left twice after turn left twice OUT: after twice around jump left twice left turn
+IN: run around right twice after turn left twice OUT: after twice around run right twice left turn
+IN: turn left twice and jump around left twice OUT: and twice left turn twice around jump left
+IN: turn left twice after look around left twice OUT: after twice left turn twice around look left
+IN: turn left twice after run around right twice OUT: after twice left turn twice around run right
+IN: walk around left twice and turn left twice OUT: and twice around walk left twice left turn
+IN: turn left thrice and turn around left thrice OUT: and thrice left turn thrice around turn left
+IN: run around left twice and turn left thrice OUT: and twice around run left thrice left turn
+IN: turn left twice after turn around right thrice OUT: after twice left turn thrice around turn right
+IN: turn around right thrice after turn left twice OUT: after thrice around turn right twice left turn
+IN: turn around left thrice after turn left thrice OUT: after thrice around turn left thrice left turn
+IN: turn around left thrice and turn left thrice OUT: and thrice around turn left thrice left turn
+IN: turn left twice and turn around right thrice OUT: and twice left turn thrice around turn right
+IN: turn left thrice after run around left twice OUT: after thrice left turn twice around run left
+IN: turn left thrice and run around left twice OUT: and thrice left turn twice around run left
+IN: turn left thrice after turn around left thrice OUT: after thrice left turn thrice around turn left
+IN: run around left twice after turn left thrice OUT: after twice around run left thrice left turn
+IN: turn around right thrice and turn left twice OUT: and thrice around turn right twice left turn
+IN: walk around right twice after turn left twice OUT: after twice around walk right twice left turn
+IN: turn left twice and jump around right twice OUT: and twice left turn twice around jump right
+IN: jump around right twice after turn left twice OUT: after twice around jump right twice left turn
+IN: jump around right twice and turn left twice OUT: and twice around jump right twice left turn
+IN: turn left twice and walk around right twice OUT: and twice left turn twice around walk right
+IN: look around right twice after turn left twice OUT: after twice around look right twice left turn
+IN: turn left twice after walk around right twice OUT: after twice left turn twice around walk right
+IN: walk around right twice and turn left twice OUT: and twice around walk right twice left turn
+IN: turn left twice after look around right twice OUT: after twice left turn twice around look right
+IN: look around right twice and turn left twice OUT: and twice around look right twice left turn
+IN: turn left twice and look around right twice OUT: and twice left turn twice around look right
+IN: turn left twice after jump around right twice OUT: after twice left turn twice around jump right
+IN: turn left thrice after run around right twice OUT: after thrice left turn twice around run right
+IN: run around right twice and turn left thrice OUT: and twice around run right thrice left turn
+IN: run around right twice after turn left thrice OUT: after twice around run right thrice left turn
+IN: jump around left twice after turn left thrice OUT: after twice around jump left thrice left turn
+IN: turn left thrice and walk around left twice OUT: and thrice left turn twice around walk left
+IN: turn left thrice after walk around left twice OUT: after thrice left turn twice around walk left
+IN: look around left twice after turn left thrice OUT: after twice around look left thrice left turn
+IN: look around left twice and turn left thrice OUT: and twice around look left thrice left turn
+IN: turn left thrice and look around left twice OUT: and thrice left turn twice around look left
+IN: walk around left twice after turn left thrice OUT: after twice around walk left thrice left turn
+IN: turn left thrice after look around left twice OUT: after thrice left turn twice around look left
+IN: turn left thrice after jump around left twice OUT: after thrice left turn twice around jump left
+IN: turn left thrice and jump around left twice OUT: and thrice left turn twice around jump left
+IN: turn left thrice and run around right twice OUT: and thrice left turn twice around run right
+IN: walk around left twice and turn left thrice OUT: and twice around walk left thrice left turn
+IN: jump around left twice and turn left thrice OUT: and twice around jump left thrice left turn
+IN: turn left thrice and turn around right thrice OUT: and thrice left turn thrice around turn right
+IN: turn left thrice after turn around right thrice OUT: after thrice left turn thrice around turn right
+IN: turn around right thrice and turn left thrice OUT: and thrice around turn right thrice left turn
+IN: turn around right thrice after turn left thrice OUT: after thrice around turn right thrice left turn
+IN: turn left thrice and walk around right twice OUT: and thrice left turn twice around walk right
+IN: look around right twice and turn left thrice OUT: and twice around look right thrice left turn
+IN: jump around right twice and turn left thrice OUT: and twice around jump right thrice left turn
+IN: turn left thrice and jump around right twice OUT: and thrice left turn twice around jump right
+IN: look around right twice after turn left thrice OUT: after twice around look right thrice left turn
+IN: jump around right twice after turn left thrice OUT: after twice around jump right thrice left turn
+IN: walk around right twice and turn left thrice OUT: and twice around walk right thrice left turn
+IN: turn left thrice after jump around right twice OUT: after thrice left turn twice around jump right
+IN: walk around right twice after turn left thrice OUT: after twice around walk right thrice left turn
+IN: turn left thrice after walk around right twice OUT: after thrice left turn twice around walk right
+IN: turn left thrice and look around right twice OUT: and thrice left turn twice around look right
+IN: turn left thrice after look around right twice OUT: after thrice left turn twice around look right
+IN: run around left thrice after turn left OUT: after thrice around run left left turn
+IN: turn left and run around left thrice OUT: and left turn thrice around run left
+IN: run around left thrice and turn left OUT: and thrice around run left left turn
+IN: turn left after run around left thrice OUT: after left turn thrice around run left
+IN: look around left thrice after turn left OUT: after thrice around look left left turn
+IN: run around right thrice and turn left OUT: and thrice around run right left turn
+IN: run around right thrice after turn left OUT: after thrice around run right left turn
+IN: turn left after run around right thrice OUT: after left turn thrice around run right
+IN: run around left thrice and turn left twice OUT: and thrice around run left twice left turn
+IN: walk around left thrice and turn left OUT: and thrice around walk left left turn
+IN: turn left after jump around left thrice OUT: after left turn thrice around jump left
+IN: turn left twice and run around left thrice OUT: and twice left turn thrice around run left
+IN: turn left twice after run around left thrice OUT: after twice left turn thrice around run left
+IN: run around left thrice after turn left twice OUT: after thrice around run left twice left turn
+IN: jump around left thrice and turn left OUT: and thrice around jump left left turn
+IN: turn left after look around left thrice OUT: after left turn thrice around look left
+IN: turn left and jump around left thrice OUT: and left turn thrice around jump left
+IN: turn left and look around left thrice OUT: and left turn thrice around look left
+IN: jump around left thrice after turn left OUT: after thrice around jump left left turn
+IN: turn left and walk around left thrice OUT: and left turn thrice around walk left
+IN: turn left after walk around left thrice OUT: after left turn thrice around walk left
+IN: walk around left thrice after turn left OUT: after thrice around walk left left turn
+IN: look around left thrice and turn left OUT: and thrice around look left left turn
+IN: turn left and run around right thrice OUT: and left turn thrice around run right
+IN: turn left twice after look around left thrice OUT: after twice left turn thrice around look left
+IN: jump around right thrice after turn left OUT: after thrice around jump right left turn
+IN: look around left thrice after turn left twice OUT: after thrice around look left twice left turn
+IN: turn left after jump around right thrice OUT: after left turn thrice around jump right
+IN: turn left twice and jump around left thrice OUT: and twice left turn thrice around jump left
+IN: look around left thrice and turn left twice OUT: and thrice around look left twice left turn
+IN: run around left thrice after turn left thrice OUT: after thrice around run left thrice left turn
+IN: run around right thrice and turn left twice OUT: and thrice around run right twice left turn
+IN: turn left twice and run around right thrice OUT: and twice left turn thrice around run right
+IN: turn left twice and walk around left thrice OUT: and twice left turn thrice around walk left
+IN: turn left and look around right thrice OUT: and left turn thrice around look right
+IN: look around right thrice and turn left OUT: and thrice around look right left turn
+IN: turn left twice after walk around left thrice OUT: after twice left turn thrice around walk left
+IN: walk around left thrice and turn left twice OUT: and thrice around walk left twice left turn
+IN: jump around right thrice and turn left OUT: and thrice around jump right left turn
+IN: turn left twice after run around right thrice OUT: after twice left turn thrice around run right
+IN: turn left and walk around right thrice OUT: and left turn thrice around walk right
+IN: turn left after look around right thrice OUT: after left turn thrice around look right
+IN: walk around left thrice after turn left twice OUT: after thrice around walk left twice left turn
+IN: turn left twice and look around left thrice OUT: and twice left turn thrice around look left
+IN: jump around left thrice after turn left twice OUT: after thrice around jump left twice left turn
+IN: walk around right thrice after turn left OUT: after thrice around walk right left turn
+IN: look around right thrice after turn left OUT: after thrice around look right left turn
+IN: walk around right thrice and turn left OUT: and thrice around walk right left turn
+IN: turn left thrice and run around left thrice OUT: and thrice left turn thrice around run left
+IN: run around left thrice and turn left thrice OUT: and thrice around run left thrice left turn
+IN: turn left twice after jump around left thrice OUT: after twice left turn thrice around jump left
+IN: turn left after walk around right thrice OUT: after left turn thrice around walk right
+IN: run around right thrice after turn left twice OUT: after thrice around run right twice left turn
+IN: turn left thrice after run around left thrice OUT: after thrice left turn thrice around run left
+IN: jump around left thrice and turn left twice OUT: and thrice around jump left twice left turn
+IN: turn left and jump around right thrice OUT: and left turn thrice around jump right
+IN: jump around right thrice and turn left twice OUT: and thrice around jump right twice left turn
+IN: walk around right thrice and turn left twice OUT: and thrice around walk right twice left turn
+IN: run around right thrice after turn left thrice OUT: after thrice around run right thrice left turn
+IN: look around left thrice and turn left thrice OUT: and thrice around look left thrice left turn
+IN: turn left thrice and look around left thrice OUT: and thrice left turn thrice around look left
+IN: look around left thrice after turn left thrice OUT: after thrice around look left thrice left turn
+IN: turn left twice after walk around right thrice OUT: after twice left turn thrice around walk right
+IN: turn left twice and jump around right thrice OUT: and twice left turn thrice around jump right
+IN: jump around right thrice after turn left twice OUT: after thrice around jump right twice left turn
+IN: turn left thrice after run around right thrice OUT: after thrice left turn thrice around run right
+IN: run around right thrice and turn left thrice OUT: and thrice around run right thrice left turn
+IN: turn left thrice after look around left thrice OUT: after thrice left turn thrice around look left
+IN: jump around left thrice after turn left thrice OUT: after thrice around jump left thrice left turn
+IN: turn left thrice after walk around left thrice OUT: after thrice left turn thrice around walk left
+IN: turn left thrice and run around right thrice OUT: and thrice left turn thrice around run right
+IN: turn left twice and walk around right thrice OUT: and twice left turn thrice around walk right
+IN: walk around left thrice after turn left thrice OUT: after thrice around walk left thrice left turn
+IN: walk around right thrice after turn left twice OUT: after thrice around walk right twice left turn
+IN: turn left twice after look around right thrice OUT: after twice left turn thrice around look right
+IN: turn left twice after jump around right thrice OUT: after twice left turn thrice around jump right
+IN: look around right thrice after turn left twice OUT: after thrice around look right twice left turn
+IN: turn left thrice and jump around left thrice OUT: and thrice left turn thrice around jump left
+IN: turn left thrice after jump around left thrice OUT: after thrice left turn thrice around jump left
+IN: walk around left thrice and turn left thrice OUT: and thrice around walk left thrice left turn
+IN: turn left thrice and walk around left thrice OUT: and thrice left turn thrice around walk left
+IN: turn left twice and look around right thrice OUT: and twice left turn thrice around look right
+IN: look around right thrice and turn left twice OUT: and thrice around look right twice left turn
+IN: jump around left thrice and turn left thrice OUT: and thrice around jump left thrice left turn
+IN: turn left thrice and jump around right thrice OUT: and thrice left turn thrice around jump right
+IN: walk around right thrice and turn left thrice OUT: and thrice around walk right thrice left turn
+IN: jump around right thrice and turn left thrice OUT: and thrice around jump right thrice left turn
+IN: turn left thrice after jump around right thrice OUT: after thrice left turn thrice around jump right
+IN: jump around right thrice after turn left thrice OUT: after thrice around jump right thrice left turn
+IN: turn left thrice after walk around right thrice OUT: after thrice left turn thrice around walk right
+IN: look around right thrice after turn left thrice OUT: after thrice around look right thrice left turn
+IN: turn left thrice after look around right thrice OUT: after thrice left turn thrice around look right
+IN: turn left thrice and look around right thrice OUT: and thrice left turn thrice around look right
+IN: walk around right thrice after turn left thrice OUT: after thrice around walk right thrice left turn
+IN: look around right thrice and turn left thrice OUT: and thrice around look right thrice left turn
+IN: turn left thrice and walk around right thrice OUT: and thrice left turn thrice around walk right
