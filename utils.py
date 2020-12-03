@@ -304,7 +304,7 @@ def test_intermediate_reps():
         if output != o:
             assert False
 
-def make_split(phrase):
+def make_split(phrase, path):
     tasks = import_data('scan/SCAN-master/tasks.txt')
 
     def in_train(task):
@@ -314,7 +314,8 @@ def make_split(phrase):
     train_tasks = [task for task in tasks if in_train(task)]
     test_tasks = [task for task in tasks if not in_train(tasks)]
 
-    export_tasks(tasks, path)
+    export_tasks(train_tasks, path + '_train.txt')
+    export_tasks(test_tasks, path + '_test.txt')
 
 
 def generate_intermediate_tasks(path, new_path):
@@ -357,4 +358,4 @@ def import_data(path):
 
 
 if __name__ == '__main__':
-    make_split('jump')
+    make_split('jump', 'scan/SCAN-master/jump')

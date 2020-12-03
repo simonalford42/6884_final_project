@@ -76,11 +76,8 @@ Model Architecture
 class EncoderRNN(nn.Module):
     def __init__(self, device=None, input_size=None, hidden_size=None, dropout=.5):
         super(EncoderRNN, self).__init__()
-        pdb.set_trace()
         self.hidden_size = hidden_size
         self.device = device
-        print('deviceE: {}'.format(device))
-        print('input_sizeE: {}'.format(input_size))
 
         self.embedding = nn.Embedding(input_size, hidden_size)
         self.rnn = nn.GRU(hidden_size, hidden_size)
@@ -139,7 +136,7 @@ class EncoderLSTM(nn.Module):
         return output, (hidden, cell)
 
     def initHidden(self):
-        return (torch.zeros(1, 1, self.hidden_size, device=device), torch.zeros(1, 1, self.hidden_size, device=self.device))
+        return (torch.zeros(1, 1, self.hidden_size, device=self.device), torch.zeros(1, 1, self.hidden_size, device=self.device))
 
 
 class DecoderLSTM(nn.Module):
@@ -162,7 +159,7 @@ class DecoderLSTM(nn.Module):
         return output, (hidden, cell)
 
     def initHidden(self):
-        return (torch.zeros(1, 1, self.hidden_size, device=device), torch.zeros(1, 1, self.hidden_size, device=self.device))
+        return (torch.zeros(1, 1, self.hidden_size, device=self.device), torch.zeros(1, 1, self.hidden_size, device=self.device))
 
 class AttnDecoderRNN(nn.Module):
     def __init__(self, device, hidden_size, output_size, dropout_p=0.1, max_length=MAX_LENGTH):
@@ -206,8 +203,8 @@ class AttnDecoderRNN(nn.Module):
 Training 
 """
 
-def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer,
-        decoder_optimizer, criterion, device, mode):
+def train(device, input_tensor, target_tensor, encoder, decoder, model, encoder_optimizer,
+        decoder_optimizer, criterion):
 
     gradient_clip = 5
     teacher_forcing_ratio = 0.5
@@ -225,7 +222,7 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer,
     loss = 0
 
     for ei in range(input_length):
-        if mode == "LSTM":
+        if model == "LSTM":
             encoder_output, encoder_hidden = encoder(
                 input_tensor[ei], *encoder_hidden)
         else:
@@ -242,10 +239,10 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer,
     if use_teacher_forcing:
         # Teacher forcing: Feed the target as the next input
         for di in range(target_length):
-            if mode == "LSTM":
+            if model == "LSTM":
                 decoder_output, decoder_hidden = decoder(
                     decoder_input, *decoder_hidden)
-            elif mode == "GRU_A":
+            elif model == "GRU_A":
                 decoder_output, decoder_hidden, decoder_attention = decoder(
                     decoder_input, decoder_hidden, encoder_outputs)
             else:
@@ -257,10 +254,10 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer,
     else:
         # Without teacher forcing: use its own predictions as the next input
         for di in range(target_length):
-            if mode == "LSTM":
+            if model == "LSTM":
                 decoder_output, decoder_hidden = decoder(
                     decoder_input, *decoder_hidden)
-            elif mode == "GRU_A":
+            elif model == "GRU_A":
                 decoder_output, decoder_hidden, decoder_attention = decoder(
                     decoder_input, decoder_hidden, encoder_outputs)
             else:
@@ -283,10 +280,8 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer,
     return loss.item() / target_length
 
 
-
-
-def trainIters(encoder, decoder, pairs, n_iters, device, print_every=1000, plot_every=100,
-        learning_rate=0.001, mode="GRU"):
+def trainIters(device, encoder, decoder, model, pairs, n_iters, print_every=1000, plot_every=100,
+        learning_rate=0.001):
     print('Starting training')
     start = time.time()
     plot_losses = []
@@ -299,7 +294,7 @@ def trainIters(encoder, decoder, pairs, n_iters, device, print_every=1000, plot_
                       for i in range(n_iters)]
     criterion = nn.NLLLoss()
 
-    evaluateRandomly(encoder, decoder, pairs, device, n = 100)
+    evaluateRandomly(device, encoder, decoder, model, pairs, n = 100)
 
     for iter in range(1, n_iters + 1):
         # print("iter")
@@ -307,9 +302,8 @@ def trainIters(encoder, decoder, pairs, n_iters, device, print_every=1000, plot_
         input_tensor = training_pair[0]
         target_tensor = training_pair[1]
 
-        loss = train(input_tensor, target_tensor, encoder,
-                     decoder, encoder_optimizer, decoder_optimizer, criterion,
-                     device, mode=mode)
+        loss = train(device, input_tensor, target_tensor, encoder,
+                     decoder, model, encoder_optimizer, decoder_optimizer, criterion)
         print_loss_total += loss
         plot_loss_total += loss
 
@@ -319,7 +313,7 @@ def trainIters(encoder, decoder, pairs, n_iters, device, print_every=1000, plot_
             print('Duration (Remaining): %s Iters: (%d %d%%) Loss avg: %.4f' % (timeSince(start, iter / n_iters),
                                          iter, iter / n_iters * 100, print_loss_avg))
 
-            evaluateRandomly(encoder, decoder, pairs, device, n = 100)
+            evaluateRandomly(device, encoder, decoder, model, pairs, n = 100)
 
         if iter % plot_every == 0:
             plot_loss_avg = plot_loss_total / plot_every
@@ -335,7 +329,7 @@ Evaluation
 """
 
 
-def evaluate(encoder, decoder, sentence, device, mode="GRU_A"):
+def evaluate(device, encoder, decoder, model, sentence):
     with torch.no_grad():
         input_tensor = tensorFromSentence(INPUT_LANG, sentence, device)
         input_length = input_tensor.size()[0]
@@ -356,7 +350,7 @@ def evaluate(encoder, decoder, sentence, device, mode="GRU_A"):
         decoder_attentions = torch.zeros(MAX_LENGTH, MAX_LENGTH)
 
         for di in range(MAX_LENGTH):
-            if mode == "GRU_A":
+            if model == "GRU_A":
                 decoder_output, decoder_hidden, decoder_attention = decoder(
                     decoder_input, decoder_hidden, encoder_outputs)
                 decoder_attentions[di] = decoder_attention.data
@@ -377,14 +371,14 @@ def evaluate(encoder, decoder, sentence, device, mode="GRU_A"):
         return decoded_words
 
 
-def evaluateTestSet(encoder, decoder, pairs, device):
+def evaluateTestSet(device, encoder, decoder, model, pairs):
     encoder.eval()
     decoder.eval()
 
     with torch.no_grad():
         hits = 0
         for pair in pairs:
-            output_words = evaluate(encoder, decoder, pair[0], device)
+            output_words = evaluate(device, encoder, decoder, model, pair[0])
             output_sentence = ' '.join(output_words)
             if output_words[-1] == '<EOS>':
                 output_sentence = ' '.join(output_words[:-1])
@@ -405,7 +399,7 @@ def evaluateTestSet(encoder, decoder, pairs, device):
 
 
 
-def evaluateRandomly(encoder, decoder, pairs, device, n=10, verbose=False):
+def evaluateRandomly(device, encoder, decoder, model, pairs, n=10, verbose=False):
     encoder.eval()
     decoder.eval()
 
@@ -416,7 +410,7 @@ def evaluateRandomly(encoder, decoder, pairs, device, n=10, verbose=False):
             if verbose:
                 print('>', pair[0])
                 print('=', pair[1])
-            output_words = evaluate(encoder, decoder, pair[0], device)
+            output_words = evaluate(device, encoder, decoder, model, pair[0])
             output_sentence = ' '.join(output_words)
             if verbose:
                 print('<', output_sentence)
@@ -461,24 +455,17 @@ def scanData(path):
     return pairs
 
 
-def trainTestSplit(train_path, test_path, device, iters=100000):
+def trainTestSplit(device, encoder, decoder, model, train_path, test_path, iters=100000):
     train_path = 'scan/SCAN-master/' + train_path
     test_path = 'scan/SCAN-master/' + test_path
     train_pairs = scanData(train_path)
     test_pairs = scanData(test_path)
 
-    input_size = INPUT_LANG.n_words
-    hidden_size = 200
-    output_size = OUTPUT_LANG.n_words
-
-    encoder = EncoderRNN(input_size, hidden_size, device).to(device)
-    decoder = AttnDecoderRNN(hidden_size, output_size).to(device)
-
-    train_losses = trainIters(encoder, decoder, train_pairs, iters, device, mode="GRU_A")
+    train_losses = trainIters(device, encoder, decoder, model, train_pairs, iters)
     print('Evaluating training split accuracy')
-    train_acc = evaluateTestSet(encoder, decoder, train_pairs, device)
+    train_acc = evaluateTestSet(device, encoder, decoder, model, train_pairs)
     print('Evaluating test split accuracy')
-    test_acc = evaluateTestSet(encoder, decoder, test_pairs, device)
+    test_acc = evaluateTestSet(device, encoder, decoder, model, test_pairs)
 
     checkpoint = {'train_accuracy': train_acc,
             'test_accuracy': test_acc,
@@ -487,27 +474,24 @@ def trainTestSplit(train_path, test_path, device, iters=100000):
     return checkpoint 
 
 
-def model(model, device, hidden_size=200, dropout=0.5, attention=False, n_layers=2):
+def initModel(model, device, hidden_size=200, dropout=0.5, n_layers=2):
     input_size = INPUT_LANG.n_words
     output_size = OUTPUT_LANG.n_words
 
     if model == 'GRU':
-        print('device1: {}'.format(device))
-        print('hidden_size1: {}'.format(hidden_size))
-        pdb.set_trace()
         encoder = EncoderRNN(device=device, input_size=input_size, hidden_size=hidden_size, dropout=dropout).to(device)
-        print('encoder done')
     else:
         encoder = EncoderLSTM(device, input_size, hidden_size, n_layers, dropout)
 
     if model == 'LSTM':
         decoder = DecoderLSTM(device, hidden_size, output_size, n_layers, dropout)
     else: # GRU
-        if attention:
+        if model == 'GRU_A':
             decoder = AttnDecoderRNN(device, hidden_size, output_size, dropout)
         else:
             decoder = DecoderRNN(device, hidden_size, output_size, dropout).to(device)
 
+    print('Initialized model {}'.format(model))
     return encoder, decoder
 
 
@@ -524,14 +508,19 @@ if __name__ == '__main__':
     train_path = 'simple_split/tasks_train_simple.txt'
     test_path = 'simple_split/tasks_test_simple.txt'
 
-    encoder, decoder = model('GRU', DEVICE, hidden_size=50, attention=False, dropout=0.5)
-    # encoder, decoder = model('GRU', DEVICE, hidden_size=50, attention=True, dropout=0.5)
-    # encoder, decoder = model('LSTM', DEVICE, hidden_size=200, dropout=0.5, n_layers=2)
+    # model = 'GRU'
+    # encoder, decoder= initModel('GRU', DEVICE, hidden_size=50, dropout=0.5)
+
+    # model = 'GRU_A'
+    # encoder, decoder = initModel('GRU_A', DEVICE, hidden_size=50, dropout=0.5)
+
+    model = 'LSTM'
+    encoder, decoder = initModel('LSTM', DEVICE, hidden_size=200, dropout=0.5, n_layers=2)
 
     # checkpoint_path = ''
     # loadParameters(encoder, decoder, checkpoint_path)
 
-    checkpoint = trainTestSplit(train_path, test_path, DEVICE, iters=1000)
+    checkpoint = trainTestSplit(DEVICE, encoder, decoder, model, train_path, test_path, iters=100)
     # save_path = 'simple_split_gru.pt'
     # saveModel(encoder, decoder, checkpoint, save_path) 
 
