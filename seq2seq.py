@@ -74,10 +74,13 @@ Model Architecture
 
 
 class EncoderRNN(nn.Module):
-    def __init__(self, input_size, hidden_size, device, dropout=.5):
+    def __init__(self, device=None, input_size=None, hidden_size=None, dropout=.5):
         super(EncoderRNN, self).__init__()
+        pdb.set_trace()
         self.hidden_size = hidden_size
         self.device = device
+        print('deviceE: {}'.format(device))
+        print('input_sizeE: {}'.format(input_size))
 
         self.embedding = nn.Embedding(input_size, hidden_size)
         self.rnn = nn.GRU(hidden_size, hidden_size)
@@ -95,7 +98,7 @@ class EncoderRNN(nn.Module):
 
 
 class DecoderRNN(nn.Module):
-    def __init__(self, hidden_size, output_size, device, dropout=.5):
+    def __init__(self, device, hidden_size, output_size, dropout=.5):
         super(DecoderRNN, self).__init__()
         self.hidden_size = hidden_size
         self.device = device
@@ -118,9 +121,11 @@ class DecoderRNN(nn.Module):
 
 
 class EncoderLSTM(nn.Module):
-    def __init__(self, input_size, hidden_size, n_layers=1, dropout=.5):
+    def __init__(self, device, input_size, hidden_size, n_layers=1, dropout=.5):
         super(EncoderLSTM, self).__init__()
         self.hidden_size = hidden_size
+        self.device = device
+        self.n_layers = n_layers
 
         self.embedding = nn.Embedding(input_size, hidden_size)
         self.rnn = nn.LSTM(hidden_size, hidden_size, n_layers)
@@ -134,13 +139,14 @@ class EncoderLSTM(nn.Module):
         return output, (hidden, cell)
 
     def initHidden(self):
-        return (torch.zeros(1, 1, self.hidden_size, device=device), torch.zeros(1, 1, self.hidden_size, device=device))
+        return (torch.zeros(1, 1, self.hidden_size, device=device), torch.zeros(1, 1, self.hidden_size, device=self.device))
 
 
 class DecoderLSTM(nn.Module):
-    def __init__(self, hidden_size, output_size, n_layers=1, dropout=.5):
+    def __init__(self, device, hidden_size, output_size, n_layers=1, dropout=.5):
         super(DecoderLSTM, self).__init__()
         self.hidden_size = hidden_size
+        self.device = device
 
         self.embedding = nn.Embedding(output_size, hidden_size)
         self.rnn = nn.LSTM(hidden_size, hidden_size, n_layers)
@@ -156,15 +162,16 @@ class DecoderLSTM(nn.Module):
         return output, (hidden, cell)
 
     def initHidden(self):
-        return (torch.zeros(1, 1, self.hidden_size, device=device), torch.zeros(1, 1, self.hidden_size, device=device))
+        return (torch.zeros(1, 1, self.hidden_size, device=device), torch.zeros(1, 1, self.hidden_size, device=self.device))
 
 class AttnDecoderRNN(nn.Module):
-    def __init__(self, hidden_size, output_size, dropout_p=0.1, max_length=MAX_LENGTH):
+    def __init__(self, device, hidden_size, output_size, dropout_p=0.1, max_length=MAX_LENGTH):
         super(AttnDecoderRNN, self).__init__()
         self.hidden_size = hidden_size
         self.output_size = output_size
         self.dropout_p = dropout_p
         self.max_length = max_length
+        self.device = device
 
         self.embedding = nn.Embedding(self.output_size, self.hidden_size)
         self.attn = nn.Linear(self.hidden_size * 2, self.max_length)
@@ -192,7 +199,7 @@ class AttnDecoderRNN(nn.Module):
         return output, hidden, attn_weights
 
     def initHidden(self):
-        return torch.zeros(1, 1, self.hidden_size, device=device)
+        return torch.zeros(1, 1, self.hidden_size, device=self.device)
 
 
 """
@@ -429,7 +436,15 @@ def evaluateRandomly(encoder, decoder, pairs, device, n=10, verbose=False):
 def saveModel(encoder, decoder, checkpoint, path):
     checkpoint['encoder_state_dict'] = encoder.state_dict()
     checkpoint['decoder_state_dict'] = decoder.state_dict()
+    checkpoint['hidden_size'] = encoder.hidden_size
+    checkpoint['dropout'] = encoder.dropout.p
+    try:
+        checkpoint['n_layers'] = encoder.n_layers
+    except AttributeError:
+        pass
+
     torch.save(checkpoint, path)
+    print('Saved model at {}'.format(path))
 
 
 def loadParameters(encoder, decoder, path):
@@ -446,7 +461,7 @@ def scanData(path):
     return pairs
 
 
-def trainTestSplit(train_path, test_path, save_path, device, iters=100000):
+def trainTestSplit(train_path, test_path, device, iters=100000):
     train_path = 'scan/SCAN-master/' + train_path
     test_path = 'scan/SCAN-master/' + test_path
     train_pairs = scanData(train_path)
@@ -469,20 +484,32 @@ def trainTestSplit(train_path, test_path, save_path, device, iters=100000):
             'test_accuracy': test_acc,
             'train_losses': train_losses}
 
-    saveModel(encoder, decoder, checkpoint, save_path)
+    return checkpoint 
 
 
-def loadModel(path, device):
-
+def model(model, device, hidden_size=200, dropout=0.5, attention=False, n_layers=2):
     input_size = INPUT_LANG.n_words
-    hidden_size = 200
     output_size = OUTPUT_LANG.n_words
 
-    encoder = EncoderRNN(input_size, hidden_size, device).to(device)
-    decoder = DecoderRNN(hidden_size, output_size).to(device)
+    if model == 'GRU':
+        print('device1: {}'.format(device))
+        print('hidden_size1: {}'.format(hidden_size))
+        pdb.set_trace()
+        encoder = EncoderRNN(device=device, input_size=input_size, hidden_size=hidden_size, dropout=dropout).to(device)
+        print('encoder done')
+    else:
+        encoder = EncoderLSTM(device, input_size, hidden_size, n_layers, dropout)
 
-    checkpoint = loadParameters(encoder, decoder, path)
-    return encoder, decoder, checkpoint
+    if model == 'LSTM':
+        decoder = DecoderLSTM(device, hidden_size, output_size, n_layers, dropout)
+    else: # GRU
+        if attention:
+            decoder = AttnDecoderRNN(device, hidden_size, output_size, dropout)
+        else:
+            decoder = DecoderRNN(device, hidden_size, output_size, dropout).to(device)
+
+    return encoder, decoder
+
 
 
 def evalSplit(encoder, decoder, split_path, device):
@@ -496,7 +523,17 @@ def evalSplit(encoder, decoder, split_path, device):
 if __name__ == '__main__':
     train_path = 'simple_split/tasks_train_simple.txt'
     test_path = 'simple_split/tasks_test_simple.txt'
-    trainTestSplit(train_path, test_path, 'simple_split2.pt', device=DEVICE)
+
+    encoder, decoder = model('GRU', DEVICE, hidden_size=50, attention=False, dropout=0.5)
+    # encoder, decoder = model('GRU', DEVICE, hidden_size=50, attention=True, dropout=0.5)
+    # encoder, decoder = model('LSTM', DEVICE, hidden_size=200, dropout=0.5, n_layers=2)
+
+    # checkpoint_path = ''
+    # loadParameters(encoder, decoder, checkpoint_path)
+
+    checkpoint = trainTestSplit(train_path, test_path, DEVICE, iters=1000)
+    # save_path = 'simple_split_gru.pt'
+    # saveModel(encoder, decoder, checkpoint, save_path) 
 
     # encoder, decoder, checkpoint = loadModel('simple_split1.pt', DEVICE)
     # print('Evaluating with loaded model')
