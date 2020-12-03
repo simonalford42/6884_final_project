@@ -16,7 +16,7 @@ import matplotlib.ticker as ticker
 import numpy as np
 
 # use full data for determining input/output language, in case splits somehow change it
-full_data = "scan/SCAN-master/tasks.txt"
+full_data = SCAN_DIR + 'tasks.txt'
 INPUT_LANG, OUTPUT_LANG, full_pairs = prepareData('scan_in', 'scan_out', full_data, False)
 # used for train as well as test splits
 # I add one for the <EOS> tag. Not sure if necessary but can't hurt.
@@ -456,8 +456,8 @@ def scanData(path):
 
 
 def trainTestSplit(device, encoder, decoder, model, train_path, test_path, iters=100000):
-    train_path = 'scan/SCAN-master/' + train_path
-    test_path = 'scan/SCAN-master/' + test_path
+    train_path = SCAN_DIR + train_path
+    test_path = SCAN_DIR + test_path
     train_pairs = scanData(train_path)
     test_pairs = scanData(test_path)
 
@@ -478,26 +478,26 @@ def initModel(model, device, hidden_size=200, dropout=0.5, n_layers=2):
     input_size = INPUT_LANG.n_words
     output_size = OUTPUT_LANG.n_words
 
-    if model == 'GRU':
-        encoder = EncoderRNN(device=device, input_size=input_size, hidden_size=hidden_size, dropout=dropout).to(device)
-    else:
-        encoder = EncoderLSTM(device, input_size, hidden_size, n_layers, dropout)
-
     if model == 'LSTM':
+        encoder = EncoderLSTM(device, input_size, hidden_size, n_layers, dropout)
         decoder = DecoderLSTM(device, hidden_size, output_size, n_layers, dropout)
     else: # GRU
+        encoder = EncoderRNN(device=device, input_size=input_size, hidden_size=hidden_size, dropout=dropout).to(device)
+
         if model == 'GRU_A':
             decoder = AttnDecoderRNN(device, hidden_size, output_size, dropout)
         else:
             decoder = DecoderRNN(device, hidden_size, output_size, dropout).to(device)
 
+    encoder = encoder.to(device)
+    decoder = decoder.to(device)
     print('Initialized model {}'.format(model))
     return encoder, decoder
 
 
 
 def evalSplit(encoder, decoder, split_path, device):
-    split_path = 'scan/SCAN-master/' + split_path
+    split_path = SCAN_DIR + split_path
     split_pairs = scanData(split_path)
     pairs = scanData(split_path)
     accuracy = evaluateTestSet(encoder, decoder, pairs, device)
@@ -508,19 +508,19 @@ if __name__ == '__main__':
     train_path = 'simple_split/tasks_train_simple.txt'
     test_path = 'simple_split/tasks_test_simple.txt'
 
-    # model = 'GRU'
-    # encoder, decoder= initModel('GRU', DEVICE, hidden_size=50, dropout=0.5)
+    model = 'GRU'
+    encoder, decoder= initModel('GRU', DEVICE, hidden_size=50, dropout=0.5)
 
     # model = 'GRU_A'
     # encoder, decoder = initModel('GRU_A', DEVICE, hidden_size=50, dropout=0.5)
 
-    model = 'LSTM'
-    encoder, decoder = initModel('LSTM', DEVICE, hidden_size=200, dropout=0.5, n_layers=2)
+    # model = 'LSTM'
+    # encoder, decoder = initModel('LSTM', DEVICE, hidden_size=200, dropout=0.5, n_layers=2)
 
     # checkpoint_path = ''
     # loadParameters(encoder, decoder, checkpoint_path)
 
-    checkpoint = trainTestSplit(DEVICE, encoder, decoder, model, train_path, test_path, iters=100)
+    checkpoint = trainTestSplit(DEVICE, encoder, decoder, model, train_path, test_path, iters=100000)
     # save_path = 'simple_split_gru.pt'
     # saveModel(encoder, decoder, checkpoint, save_path) 
 

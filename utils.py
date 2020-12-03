@@ -6,6 +6,7 @@ import random
 
 import torch
 
+SCAN_DIR = 'scan/SCAN-master/'
 SOS_token = 0
 EOS_token = 1
 
@@ -304,15 +305,28 @@ def test_intermediate_reps():
         if output != o:
             assert False
 
-def make_split(phrase, path):
-    tasks = import_data('scan/SCAN-master/tasks.txt')
+def make_split(phrase, path, percent=10):
+    print('Making split for phrase {}'.format(phrase))
 
     def in_train(task):
-        return phrase in task[0] and phrase != task[0]
+        return phrase not in task[0] or phrase == task[0]
 
-    tasks = import_tasks(path)
+    tasks = import_data(SCAN_DIR + 'tasks.txt')
     train_tasks = [task for task in tasks if in_train(task)]
-    test_tasks = [task for task in tasks if not in_train(tasks)]
+    test_tasks = [task for task in tasks if not in_train(task)]
+
+    # add phrase to be 10% of train tasks
+    phrase_tasks = [t for t in tasks if t[0] == phrase]
+    assert len(phrase_tasks) == 1
+    phrase_task = phrase_tasks[0]
+    print('Phrase task chosen to be: {}'.format(phrase_task))
+    # want to be percent after adding the repeats
+    # y / (y+x) = percent => y (1 - percent) = percent x => y = x (percent / 1 - percent)
+    repeats = int(len(tasks) * percent / (1 - percent))
+    addition = [phrase_task] * repeats
+    print('addition: {}'.format(addition[-10:]))
+    train_tasks += addition
+    print('train_tasks: {}'.format(train_tasks[-10:]))
 
     export_tasks(train_tasks, path + '_train.txt')
     export_tasks(test_tasks, path + '_test.txt')
@@ -332,7 +346,7 @@ def generate_intermediate_tasks(path, new_path):
             f.write(format_line(i, string, polish) + '\n')
 
 
-def import_data(path):
+def import_data(path, simplify_output=False):
     with open(path, 'r') as f:
         lines = f.readlines()
         # remove \n
@@ -341,9 +355,10 @@ def import_data(path):
         tasks = []
         for line in lines:
             # put into "normal" format
-            line = line.replace('I_', '')
-            line = line.replace('TURN_LEFT', 'LTURN')
-            line = line.replace('TURN_RIGHT', 'RTURN')
+            if simplify_output:
+                line = line.replace('I_', '')
+                line = line.replace('TURN_LEFT', 'LTURN')
+                line = line.replace('TURN_RIGHT', 'RTURN')
 
             a = line.index('IN: ') + 4
             b = line.index('OUT: ') - 1
@@ -356,6 +371,15 @@ def import_data(path):
 
     return tasks
 
+def export_tasks(tasks, path):
+    def format_line(i, o):
+        return 'IN: {} OUT: {}'.format(i, o)
+
+    with open(path, 'w+') as f:
+        for (i, o) in tasks:
+            f.write(format_line(i, o) + '\n')
+
+
 
 if __name__ == '__main__':
-    make_split('jump', 'scan/SCAN-master/jump')
+    make_split('jump', SCAN_DIR + 'jump')
