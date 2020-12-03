@@ -1,0 +1,38 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'scan' for 5000 iterations on device cpu, intermediate rep? False, tag 2
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/tasks.txt
+20910 examples. Sample pair: ['run right thrice and look around right', 'I_TURN_RIGHT I_RUN I_TURN_RIGHT I_RUN I_TURN_RIGHT I_RUN I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK']
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/tasks.txt
+20910 examples. Sample pair: ['look right twice and turn left thrice', 'I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT']
+Starting training: 5000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 43s (- 2m 52s) Iters: (1000 20%) Loss avg: 1.2994
+Hits 0/100 test samples
+Duration (Remaining): 1m 45s (- 2m 38s) Iters: (2000 40%) Loss avg: 0.9231
+Hits 1/100 test samples
+Duration (Remaining): 2m 40s (- 1m 46s) Iters: (3000 60%) Loss avg: 0.7207
+Hits 2/100 test samples
+Duration (Remaining): 3m 24s (- 0m 51s) Iters: (4000 80%) Loss avg: 0.6066
+Hits 9/100 test samples

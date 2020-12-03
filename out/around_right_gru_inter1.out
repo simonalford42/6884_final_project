@@ -1,0 +1,45 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'around_right' for 5000 iterations on device cpu, intermediate rep? True, tag 2
+Reading lines...
+Read 15225 sentence pairs
+Trimmed to 15225 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/around_right_train_inter.txt
+15225 examples. Sample pair: ['walk opposite right twice and turn left thrice', 'and twice opposite walk right thrice left turn']
+Reading lines...
+Read 5685 sentence pairs
+Trimmed to 5685 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/around_right_test_inter.txt
+5685 examples. Sample pair: ['run around right twice after jump opposite left twice', 'after twice around run right twice opposite jump left']
+Starting training: 5000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 32s (- 2m 11s) Iters: (1000 20%) Loss avg: 1.4445
+Hits 3/100 test samples
+Duration (Remaining): 1m 4s (- 1m 36s) Iters: (2000 40%) Loss avg: 0.7120
+Hits 11/100 test samples
+Duration (Remaining): 1m 31s (- 1m 1s) Iters: (3000 60%) Loss avg: 0.3228
+Hits 61/100 test samples
+Duration (Remaining): 1m 58s (- 0m 29s) Iters: (4000 80%) Loss avg: 0.1824
+Hits 85/100 test samples
+Duration (Remaining): 2m 26s (- 0m 0s) Iters: (5000 100%) Loss avg: 0.0802
+Hits 98/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 14757/15225 = 0.97%
+Evaluating test split accuracy
+Evaluation accuracy: 205/5685 = 0.04%
+Saved model at saved/around_right_inter_5000_2.pt

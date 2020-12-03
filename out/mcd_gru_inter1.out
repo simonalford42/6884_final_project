@@ -1,0 +1,45 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'mcd' for 5000 iterations on device cpu, intermediate rep? True, tag 2
+Reading lines...
+Read 8365 sentence pairs
+Trimmed to 8365 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/mcd_train_inter.txt
+8365 examples. Sample pair: ['walk twice after walk twice', 'after twice walk twice walk']
+Reading lines...
+Read 8365 sentence pairs
+Trimmed to 8365 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/mcd_test_inter.txt
+8365 examples. Sample pair: ['walk around right after walk opposite left', 'after around walk right opposite walk left']
+Starting training: 5000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 28s (- 1m 53s) Iters: (1000 20%) Loss avg: 1.3704
+Hits 3/100 test samples
+Duration (Remaining): 0m 56s (- 1m 24s) Iters: (2000 40%) Loss avg: 0.5794
+Hits 36/100 test samples
+Duration (Remaining): 1m 23s (- 0m 55s) Iters: (3000 60%) Loss avg: 0.2511
+Hits 85/100 test samples
+Duration (Remaining): 1m 51s (- 0m 27s) Iters: (4000 80%) Loss avg: 0.0873
+Hits 96/100 test samples
+Duration (Remaining): 2m 19s (- 0m 0s) Iters: (5000 100%) Loss avg: 0.0202
+Hits 100/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 8331/8365 = 1.00%
+Evaluating test split accuracy
+Evaluation accuracy: 8331/8365 = 1.00%
+Saved model at saved/mcd_inter_5000_2.pt
