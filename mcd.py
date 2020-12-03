@@ -25,4 +25,4 @@ test_split = [t for i, t in enumerate(tasks) if i in l3]
 print(len(test_split))
 
 export_tasks(train_split, 'scan/SCAN-master/mcd_train.txt')
-export_tasks(train_split, 'scan/SCAN-master/mcd_test.txt')
+export_tasks(test_split, 'scan/SCAN-master/mcd_test.txt')
