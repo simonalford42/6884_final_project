@@ -205,7 +205,6 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer,
     gradient_clip = 5
     teacher_forcing_ratio = 0.5
 
-
     encoder_hidden = encoder.initHidden()
 
     encoder_optimizer.zero_grad()
@@ -272,7 +271,10 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer,
 
 
 
-def trainIters(encoder, decoder, n_iters, print_every=1000, plot_every=100, learning_rate=0.01, mode="GRU"):
+
+def trainIters(encoder, decoder, pairs, n_iters, device, print_every=1000, plot_every=100,
+        learning_rate=0.001, mode="GRU"):
+    print('Starting training')
     start = time.time()
     plot_losses = []
     print_loss_total = 0  # Reset every print_every
