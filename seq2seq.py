@@ -351,7 +351,7 @@ def evaluate(device, encoder, decoder, model, sentence):
         decoder_hidden = encoder_hidden
 
         decoded_words = []
-        decoder_attentions = torch.zeros(MAX_LENGTH, MAX_LENGTH)
+        decoder_attentions = torch.zeros(MAX_LENGTH, MAX_LENGTH, device=device)
 
         for di in range(MAX_LENGTH):
             if model == "GRU_A":
@@ -469,7 +469,7 @@ def trainTestSplit(device, encoder, decoder, model, train_path, test_path, iters
     train_pairs = scanData(train_path)
     test_pairs = scanData(test_path)
 
-    train_losses = trainIters(device, encoder, decoder, model, train_pairs, iters, count_every)
+    train_losses = trainIters(device, encoder, decoder, model, train_pairs, iters)
     print('Evaluating training split accuracy')
     train_acc = evaluateTestSet(device, encoder, decoder, model, train_pairs)
     print('Evaluating test split accuracy')
@@ -516,11 +516,11 @@ if __name__ == '__main__':
     train_path = 'simple_split/tasks_train_simple.txt'
     test_path = 'simple_split/tasks_test_simple.txt'
 
-    model = 'GRU'
-    encoder, decoder= initModel('GRU', DEVICE, hidden_size=50, dropout=0.5)
+    # model = 'GRU'
+    # encoder, decoder= initModel('GRU', DEVICE, hidden_size=50, dropout=0.5)
 
-    # model = 'GRU_A'
-    # encoder, decoder = initModel('GRU_A', DEVICE, hidden_size=50, dropout=0.5)
+    model = 'GRU_A'
+    encoder, decoder = initModel('GRU_A', DEVICE, hidden_size=50, dropout=0.5)
 
     # model = 'LSTM'
     # encoder, decoder = initModel('LSTM', DEVICE, hidden_size=200, dropout=0.5, n_layers=2)
