@@ -496,11 +496,9 @@ def trainTestSplit(device, encoder, decoder, model, train_path, test_path, iters
 
     train_losses = trainIters(device, encoder, decoder, model, train_pairs, iters)
     print('Evaluating training split accuracy')
-    train_acc = evaluateTestSet(device, encoder, decoder, model,
-            train_pairs[0:100])
+    train_acc = evaluateTestSet(device, encoder, decoder, model, train_pairs)
     print('Evaluating test split accuracy')
-    test_acc = evaluateTestSet(device, encoder, decoder, model,
-            test_pairs[0:100])
+    test_acc = evaluateTestSet(device, encoder, decoder, model, test_pairs)
 
     checkpoint = {'train_accuracy': train_acc,
             'test_accuracy': test_acc,
