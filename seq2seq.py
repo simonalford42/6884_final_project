@@ -16,6 +16,8 @@ import argparse
 parser = argparse.ArgumentParser(description='Train on SCAN splits.')
 parser.add_argument('-r', '--inter-rep', dest='inter_rep', action='store_true',
         default=False, help='train to predict intermediate representation, or do traditional SCAN i/o pairs?')
+parser.add_argument('--inter-rep2', dest='inter_rep', action='store_true',
+        default=False, help='train to predict intermediate representation, or do traditional SCAN i/o pairs?')
 parser.add_argument('-s', '--split', type=str, dest='split',
         default='scan', help='desired split name, example: \'scan\' or \'jump_around_right\'')
 parser.add_argument('-m', '--model', type=str, dest='model',
@@ -49,8 +51,9 @@ if not torch.cuda.is_available():
     print('GPU unavailable, training with CPU')
     DEVICE = torch.device('cpu')
 
-DEVICE = torch.device('cuda:{}'.format(args.gpu))
-print('Training on {}'.format(DEVICE))
+else:
+    DEVICE = torch.device('cuda:{}'.format(args.gpu))
+    print('Training on {}'.format(DEVICE))
 
 """
 Helpers
@@ -302,7 +305,7 @@ def train(device, input_tensor, target_tensor, encoder, decoder, model, encoder_
 
 def trainIters(device, encoder, decoder, model, pairs, n_iters, print_every=1000, plot_every=100,
         learning_rate=0.001):
-    print(f"Starting training: {n_iters} iterations")
+    print("Starting training: {} iterations".format(n_iters))
     start = time.time()
     plot_losses = []
     print_loss_total = 0  # Reset every print_every
