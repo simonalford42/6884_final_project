@@ -136,7 +136,7 @@ class EncoderLSTM(nn.Module):
         return output, (hidden, cell)
 
     def initHidden(self):
-        return (torch.zeros(1, 1, self.hidden_size, device=self.device), torch.zeros(1, 1, self.hidden_size, device=self.device))
+        return (torch.zeros(self.n_layers, 1, self.hidden_size, device=self.device), torch.zeros(self.n_layers, 1, self.hidden_size, device=self.device))
 
 
 class DecoderLSTM(nn.Module):
@@ -159,7 +159,7 @@ class DecoderLSTM(nn.Module):
         return output, (hidden, cell)
 
     def initHidden(self):
-        return (torch.zeros(1, 1, self.hidden_size, device=self.device), torch.zeros(1, 1, self.hidden_size, device=self.device))
+        return (torch.zeros(self.n_layers, 1, self.hidden_size, device=self.device), torch.zeros(self.n_layers, 1, self.hidden_size, device=self.device))
 
 class AttnDecoderRNN(nn.Module):
     def __init__(self, device, hidden_size, output_size, dropout_p=0.1, max_length=MAX_LENGTH):
@@ -282,7 +282,7 @@ def train(device, input_tensor, target_tensor, encoder, decoder, model, encoder_
 
 def trainIters(device, encoder, decoder, model, pairs, n_iters, print_every=1000, plot_every=100,
         learning_rate=0.001):
-    print('Starting training')
+    print(f"Starting training: {n_iters} iterations")
     start = time.time()
     plot_losses = []
     print_loss_total = 0  # Reset every print_every
@@ -338,8 +338,12 @@ def evaluate(device, encoder, decoder, model, sentence):
         encoder_outputs = torch.zeros(MAX_LENGTH, encoder.hidden_size, device=device)
 
         for ei in range(input_length):
-            encoder_output, encoder_hidden = encoder(input_tensor[ei],
-                                                     encoder_hidden)
+            if model == "LSTM":
+                encoder_output, encoder_hidden = encoder(input_tensor[ei],
+                                                         *encoder_hidden)
+            else:
+                encoder_output, encoder_hidden = encoder(input_tensor[ei],
+                                                         encoder_hidden)
             encoder_outputs[ei] += encoder_output[0, 0]
 
         decoder_input = torch.tensor([[SOS_token]], device=device)  # SOS
@@ -354,6 +358,9 @@ def evaluate(device, encoder, decoder, model, sentence):
                 decoder_output, decoder_hidden, decoder_attention = decoder(
                     decoder_input, decoder_hidden, encoder_outputs)
                 decoder_attentions[di] = decoder_attention.data
+            elif model == "LSTM":
+                decoder_output, decoder_hidden = decoder(
+                    decoder_input, *decoder_hidden)
             else:
                 decoder_output, decoder_hidden = decoder(
                     decoder_input, decoder_hidden)
@@ -455,13 +462,13 @@ def scanData(path):
     return pairs
 
 
-def trainTestSplit(device, encoder, decoder, model, train_path, test_path, iters=100000):
+def trainTestSplit(device, encoder, decoder, model, train_path, test_path, iters=100000, count_every=1000):
     train_path = 'scan/SCAN-master/' + train_path
     test_path = 'scan/SCAN-master/' + test_path
     train_pairs = scanData(train_path)
     test_pairs = scanData(test_path)
 
-    train_losses = trainIters(device, encoder, decoder, model, train_pairs, iters)
+    train_losses = trainIters(device, encoder, decoder, model, train_pairs, iters, count_every)
     print('Evaluating training split accuracy')
     train_acc = evaluateTestSet(device, encoder, decoder, model, train_pairs)
     print('Evaluating test split accuracy')
@@ -520,7 +527,7 @@ if __name__ == '__main__':
     # checkpoint_path = ''
     # loadParameters(encoder, decoder, checkpoint_path)
 
-    checkpoint = trainTestSplit(DEVICE, encoder, decoder, model, train_path, test_path, iters=100)
+    checkpoint = trainTestSplit(DEVICE, encoder, decoder, model, train_path, test_path, iters=2000, count_every=100)
     # save_path = 'simple_split_gru.pt'
     # saveModel(encoder, decoder, checkpoint, save_path) 
 
