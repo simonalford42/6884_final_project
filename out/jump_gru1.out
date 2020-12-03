@@ -1,0 +1,41 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'jump' for 5000 iterations on device cpu, intermediate rep? False, tag 2
+Reading lines...
+Read 14670 sentence pairs
+Trimmed to 14670 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/jump_train.txt
+14670 examples. Sample pair: ['walk around right thrice after run opposite left thrice', 'I_TURN_LEFT I_TURN_LEFT I_RUN I_TURN_LEFT I_TURN_LEFT I_RUN I_TURN_LEFT I_TURN_LEFT I_RUN I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK']
+Reading lines...
+Read 7706 sentence pairs
+Trimmed to 7706 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/jump_test.txt
+7706 examples. Sample pair: ['jump right thrice and walk around left', 'I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK']
+Starting training: 5000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 36s (- 2m 26s) Iters: (1000 20%) Loss avg: 1.1130
+Hits 12/100 test samples
+Duration (Remaining): 1m 27s (- 2m 10s) Iters: (2000 40%) Loss avg: 0.7650
+Hits 13/100 test samples
+Duration (Remaining): 2m 21s (- 1m 34s) Iters: (3000 60%) Loss avg: 0.5848
+Hits 17/100 test samples
+Duration (Remaining): 3m 2s (- 0m 45s) Iters: (4000 80%) Loss avg: 0.4960
+Hits 13/100 test samples
+Duration (Remaining): 3m 41s (- 0m 0s) Iters: (5000 100%) Loss avg: 0.4696
+Hits 15/100 test samples
+Evaluating training split accuracy
