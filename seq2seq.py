@@ -418,6 +418,8 @@ def evaluateTestSet(device, encoder, decoder, model, pairs):
                 output_sentence = ' '.join(output_words[:-1])
                 if pair[1] == output_sentence:
                     hits += 1
+                print('pair[1]: {}'.format(pair[1]))
+                print('output_sentence: {}'.format(output_sentence))
             else:
                 assert len(output_words) == MAX_LENGTH, str.format(
                         'unexpected length: {} but max is {}',
@@ -445,6 +447,7 @@ def evaluateRandomly(device, encoder, decoder, model, pairs, n=10, verbose=False
                 print('>', pair[0])
                 print('=', pair[1])
             output_words = evaluate(device, encoder, decoder, model, pair[0])
+
             output_sentence = ' '.join(output_words)
             if verbose:
                 print('<', output_sentence)
@@ -481,8 +484,8 @@ def saveModel(encoder, decoder, checkpoint, path):
     print('Saved model at {}'.format(path))
 
 
-def loadParameters(encoder, decoder, path):
-    checkpoint = torch.load(path)
+def loadParameters(encoder, decoder, path, device):
+    checkpoint = torch.load(path, map_location=device)
     encoder.load_state_dict(checkpoint['encoder_state_dict'])
     decoder.load_state_dict(checkpoint['decoder_state_dict'])
     return checkpoint
@@ -537,11 +540,11 @@ def initModel(model, device, hidden_size=200, dropout=0.5, n_layers=2):
 
 
 
-def evalSplit(encoder, decoder, split_path, device):
+def evalSplit(device, encoder, decoder, model, split_path):
     split_path = SCAN_DIR + split_path
     split_pairs = scanData(split_path)
     pairs = scanData(split_path)
-    accuracy = evaluateTestSet(encoder, decoder, pairs, device)
+    accuracy = evaluateTestSet(device, encoder, decoder, model, pairs)
     return accuracy
 
 
@@ -584,7 +587,7 @@ if __name__ == '__main__':
 
     checkpoint = trainTestSplit(DEVICE, encoder, decoder, args.model, train_path, test_path, iters=args.iters)
     save_path = 'saved/{}{}_{}{}.pt'.format(args.split, '_inter' if args.inter_rep else '',
-            args.iters, '_' + args.tag if args.tag else '')
+            # args.iters, '_' + args.tag if args.tag else '')
 
     i = 0
     while os.path.isfile(save_path):
@@ -592,7 +595,7 @@ if __name__ == '__main__':
 
     saveModel(encoder, decoder, checkpoint, save_path) 
 
-    # encoder, decoder, checkpoint = loadModel('simple_split1.pt', DEVICE)
+    # checkpoint = loadParameters(encoder, decoder, 'saved/jump_inter_150000.pt', DEVICE)
     # print('Evaluating with loaded model')
-    # evalSplit(encoder, decoder, test_path, DEVICE)
+    # evalSplit(DEVICE, encoder, decoder, args.model, test_path)
 

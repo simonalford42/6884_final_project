@@ -1,0 +1,55 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'turn_left' for 10000 iterations on device cpu, intermediate rep? True, tag 3
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/turn_left_train_inter.txt
+21890 examples. Sample pair: ['jump left twice after run around left', 'after twice left jump around run left']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/turn_left_test_inter.txt
+1208 examples. Sample pair: ['look after turn left thrice', 'after look thrice left turn']
+Starting training: 10000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 27s (- 4m 5s) Iters: (1000 10%) Loss avg: 1.3515
+Hits 11/100 test samples
+Duration (Remaining): 0m 54s (- 3m 37s) Iters: (2000 20%) Loss avg: 0.6308
+Hits 18/100 test samples
+Duration (Remaining): 1m 22s (- 3m 13s) Iters: (3000 30%) Loss avg: 0.3384
+Hits 32/100 test samples
+Duration (Remaining): 1m 50s (- 2m 46s) Iters: (4000 40%) Loss avg: 0.1803
+Hits 81/100 test samples
+Duration (Remaining): 2m 18s (- 2m 18s) Iters: (5000 50%) Loss avg: 0.0663
+Hits 99/100 test samples
+Duration (Remaining): 2m 47s (- 1m 51s) Iters: (6000 60%) Loss avg: 0.0225
+Hits 100/100 test samples
+Duration (Remaining): 3m 14s (- 1m 23s) Iters: (7000 70%) Loss avg: 0.0237
+Hits 93/100 test samples
+Duration (Remaining): 3m 43s (- 0m 55s) Iters: (8000 80%) Loss avg: 0.0259
+Hits 100/100 test samples
+Duration (Remaining): 4m 12s (- 0m 28s) Iters: (9000 90%) Loss avg: 0.0038
+Hits 100/100 test samples
+Duration (Remaining): 4m 43s (- 0m 0s) Iters: (10000 100%) Loss avg: 0.0230
+Hits 98/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 99/100 = 0.99%
+Evaluating test split accuracy
+Evaluation accuracy: 68/100 = 0.68%
+Saved model at saved/turn_left_inter_10000_3.pt

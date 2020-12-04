@@ -1,0 +1,55 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 14
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'around_right' for 10000 iterations on device cpu, intermediate rep? False, tag None
+Reading lines...
+Read 15225 sentence pairs
+Trimmed to 15225 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 14
+Loaded data from scan/SCAN-master/around_right_train_inter2.txt
+15225 examples. Sample pair: ['jump opposite left after turn opposite left', 'after']
+Reading lines...
+Read 5685 sentence pairs
+Trimmed to 5685 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 7
+Loaded data from scan/SCAN-master/around_right_test_inter2.txt
+5685 examples. Sample pair: ['run around right after look thrice', 'after']
+Starting training: 10000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 34s (- 5m 8s) Iters: (1000 10%) Loss avg: 0.0920
+Hits 98/100 test samples
+Duration (Remaining): 1m 1s (- 4m 5s) Iters: (2000 20%) Loss avg: 0.0139
+Hits 99/100 test samples
+Duration (Remaining): 1m 42s (- 3m 58s) Iters: (3000 30%) Loss avg: 0.0072
+Hits 99/100 test samples
+Duration (Remaining): 2m 11s (- 3m 17s) Iters: (4000 40%) Loss avg: 0.0022
+Hits 100/100 test samples
+Duration (Remaining): 2m 37s (- 2m 37s) Iters: (5000 50%) Loss avg: 0.0028
+Hits 100/100 test samples
+Duration (Remaining): 3m 3s (- 2m 2s) Iters: (6000 60%) Loss avg: 0.0041
+Hits 100/100 test samples
+Duration (Remaining): 3m 25s (- 1m 28s) Iters: (7000 70%) Loss avg: 0.0021
+Hits 100/100 test samples
+Duration (Remaining): 3m 54s (- 0m 58s) Iters: (8000 80%) Loss avg: 0.0000
+Hits 100/100 test samples
+Duration (Remaining): 4m 22s (- 0m 29s) Iters: (9000 90%) Loss avg: 0.0028
+Hits 100/100 test samples
+Duration (Remaining): 4m 46s (- 0m 0s) Iters: (10000 100%) Loss avg: 0.0015
+Hits 100/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 15208/15225 = 1.00%
+Evaluating test split accuracy
+Evaluation accuracy: 5680/5685 = 1.00%
+Saved model at saved/around_right_10000.pt

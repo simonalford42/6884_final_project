@@ -1,0 +1,55 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 14
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'length' for 10000 iterations on device cpu, intermediate rep? False, tag None
+Reading lines...
+Read 16990 sentence pairs
+Trimmed to 16990 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 14
+Loaded data from scan/SCAN-master/length_train_inter2.txt
+16990 examples. Sample pair: ['jump right after run around right', 'after']
+Reading lines...
+Read 3920 sentence pairs
+Trimmed to 3920 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 5
+Loaded data from scan/SCAN-master/length_test_inter2.txt
+3920 examples. Sample pair: ['jump around right thrice and run around right', 'and']
+Starting training: 10000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 24s (- 3m 39s) Iters: (1000 10%) Loss avg: 0.0830
+Hits 100/100 test samples
+Duration (Remaining): 0m 52s (- 3m 30s) Iters: (2000 20%) Loss avg: 0.0203
+Hits 97/100 test samples
+Duration (Remaining): 1m 24s (- 3m 16s) Iters: (3000 30%) Loss avg: 0.0037
+Hits 100/100 test samples
+Duration (Remaining): 1m 59s (- 2m 59s) Iters: (4000 40%) Loss avg: 0.0055
+Hits 100/100 test samples
+Duration (Remaining): 2m 24s (- 2m 24s) Iters: (5000 50%) Loss avg: 0.0026
+Hits 100/100 test samples
+Duration (Remaining): 2m 49s (- 1m 52s) Iters: (6000 60%) Loss avg: 0.0036
+Hits 100/100 test samples
+Duration (Remaining): 3m 19s (- 1m 25s) Iters: (7000 70%) Loss avg: 0.0015
+Hits 100/100 test samples
+Duration (Remaining): 3m 56s (- 0m 59s) Iters: (8000 80%) Loss avg: 0.0002
+Hits 99/100 test samples
+Duration (Remaining): 4m 23s (- 0m 29s) Iters: (9000 90%) Loss avg: 0.0029
+Hits 100/100 test samples
+Duration (Remaining): 4m 52s (- 0m 0s) Iters: (10000 100%) Loss avg: 0.0015
+Hits 100/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 16977/16990 = 1.00%
+Evaluating test split accuracy
+Evaluation accuracy: 3920/3920 = 1.00%
+Saved model at saved/length_10000.pt

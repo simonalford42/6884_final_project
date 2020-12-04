@@ -1,0 +1,55 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'length' for 10000 iterations on device cpu, intermediate rep? True, tag 3
+Reading lines...
+Read 16990 sentence pairs
+Trimmed to 16990 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/length_train_inter.txt
+16990 examples. Sample pair: ['turn right thrice and run around left', 'and thrice right turn around run left']
+Reading lines...
+Read 3920 sentence pairs
+Trimmed to 3920 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/length_test_inter.txt
+3920 examples. Sample pair: ['jump around right thrice and run opposite right', 'and thrice around jump right opposite run right']
+Starting training: 10000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 30s (- 4m 34s) Iters: (1000 10%) Loss avg: 1.4049
+Hits 0/100 test samples
+Duration (Remaining): 1m 2s (- 4m 9s) Iters: (2000 20%) Loss avg: 0.5826
+Hits 30/100 test samples
+Duration (Remaining): 1m 29s (- 3m 28s) Iters: (3000 30%) Loss avg: 0.2254
+Hits 88/100 test samples
+Duration (Remaining): 1m 57s (- 2m 55s) Iters: (4000 40%) Loss avg: 0.0865
+Hits 100/100 test samples
+Duration (Remaining): 2m 23s (- 2m 23s) Iters: (5000 50%) Loss avg: 0.0255
+Hits 100/100 test samples
+Duration (Remaining): 2m 50s (- 1m 53s) Iters: (6000 60%) Loss avg: 0.0113
+Hits 100/100 test samples
+Duration (Remaining): 3m 16s (- 1m 24s) Iters: (7000 70%) Loss avg: 0.0472
+Hits 99/100 test samples
+Duration (Remaining): 3m 44s (- 0m 56s) Iters: (8000 80%) Loss avg: 0.0117
+Hits 100/100 test samples
+Duration (Remaining): 4m 13s (- 0m 28s) Iters: (9000 90%) Loss avg: 0.0022
+Hits 100/100 test samples
+Duration (Remaining): 4m 40s (- 0m 0s) Iters: (10000 100%) Loss avg: 0.0013
+Hits 100/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 97/100 = 0.97%
+Evaluating test split accuracy
+Evaluation accuracy: 100/100 = 1.00%
+Saved model at saved/length_inter_10000_3.pt

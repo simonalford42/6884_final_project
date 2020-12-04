@@ -1,0 +1,139 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'mcd' for 10000 iterations on device cpu, intermediate rep? True, tag 3
+Reading lines...
+Read 8365 sentence pairs
+Trimmed to 8365 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/mcd_train_inter.txt
+8365 examples. Sample pair: ['walk thrice after look opposite left twice', 'after thrice walk twice opposite look left']
+Reading lines...
+Read 1045 sentence pairs
+Trimmed to 1045 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/mcd_test_inter.txt
+1045 examples. Sample pair: ['jump around left twice and jump left', 'and twice around jump left left jump']
+Starting training: 10000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 30s (- 4m 33s) Iters: (1000 10%) Loss avg: 1.4254
+Hits 0/100 test samples
+Duration (Remaining): 1m 2s (- 4m 10s) Iters: (2000 20%) Loss avg: 0.6798
+Hits 10/100 test samples
+Duration (Remaining): 1m 29s (- 3m 29s) Iters: (3000 30%) Loss avg: 0.4001
+Hits 29/100 test samples
+Duration (Remaining): 1m 57s (- 2m 56s) Iters: (4000 40%) Loss avg: 0.1918
+Hits 98/100 test samples
+Duration (Remaining): 2m 24s (- 2m 24s) Iters: (5000 50%) Loss avg: 0.0676
+Hits 99/100 test samples
+Duration (Remaining): 2m 51s (- 1m 54s) Iters: (6000 60%) Loss avg: 0.0281
+Hits 97/100 test samples
+Duration (Remaining): 3m 17s (- 1m 24s) Iters: (7000 70%) Loss avg: 0.0244
+Hits 99/100 test samples
+Duration (Remaining): 3m 45s (- 0m 56s) Iters: (8000 80%) Loss avg: 0.0262
+Hits 100/100 test samples
+Duration (Remaining): 4m 14s (- 0m 28s) Iters: (9000 90%) Loss avg: 0.0107
+Hits 100/100 test samples
+Duration (Remaining): 4m 41s (- 0m 0s) Iters: (10000 100%) Loss avg: 0.0641
+Hits 99/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 99/100 = 0.99%
+Evaluating test split accuracy
+Evaluation accuracy: 13/100 = 0.13%
+Saved model at saved/mcd_inter_10000_3.pt
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'mcd' for 10000 iterations on device cpu, intermediate rep? True, tag 5
+Reading lines...
+Read 8365 sentence pairs
+Trimmed to 8365 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/mcd_train_inter.txt
+8365 examples. Sample pair: ['turn right twice and look opposite left twice', 'and twice right turn twice opposite look left']
+Reading lines...
+Read 1045 sentence pairs
+Trimmed to 1045 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/mcd_test_inter.txt
+1045 examples. Sample pair: ['jump around right thrice and jump opposite right thrice', 'and thrice around jump right thrice opposite jump right']
+Starting training: 10000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 38s (- 5m 46s) Iters: (1000 10%) Loss avg: 1.4174
+Hits 1/100 test samples
+Duration (Remaining): 1m 16s (- 5m 6s) Iters: (2000 20%) Loss avg: 0.5950
+Hits 41/100 test samples
+Duration (Remaining): 1m 56s (- 4m 31s) Iters: (3000 30%) Loss avg: 0.2039
+Hits 98/100 test samples
+Duration (Remaining): 2m 36s (- 3m 54s) Iters: (4000 40%) Loss avg: 0.0459
+Hits 99/100 test samples
+Duration (Remaining): 3m 17s (- 3m 17s) Iters: (5000 50%) Loss avg: 0.0126
+Hits 100/100 test samples
+Duration (Remaining): 4m 5s (- 2m 43s) Iters: (6000 60%) Loss avg: 0.0344
+Hits 97/100 test samples
+Duration (Remaining): 4m 46s (- 2m 2s) Iters: (7000 70%) Loss avg: 0.0103
+Hits 100/100 test samples
+Duration (Remaining): 5m 21s (- 1m 20s) Iters: (8000 80%) Loss avg: 0.0025
+Hits 100/100 test samples
+Duration (Remaining): 5m 59s (- 0m 39s) Iters: (9000 90%) Loss avg: 0.0014
+Hits 100/100 test samples
+Duration (Remaining): 6m 41s (- 0m 0s) Iters: (10000 100%) Loss avg: 0.0007
+Hits 100/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 8364/8365 = 1.00%
+Evaluating test split accuracy
+Evaluation accuracy: 147/1045 = 0.14%
+Saved model at saved/mcd_inter_10000_5_(0).pt
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 14
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'mcd' for 10000 iterations on device cpu, intermediate rep? False, tag 5
+Reading lines...
+Read 8365 sentence pairs
+Trimmed to 8365 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/mcd_train_inter2.txt
+8365 examples. Sample pair: ['run opposite right and walk around left thrice', 'and']
+Reading lines...
+Read 1045 sentence pairs
+Trimmed to 1045 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 9
+Loaded data from scan/SCAN-master/mcd_test_inter2.txt
+1045 examples. Sample pair: ['jump opposite right thrice after turn right', 'after']
+Starting training: 10000 iterations

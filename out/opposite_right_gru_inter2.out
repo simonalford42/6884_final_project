@@ -1,0 +1,55 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'opposite_right' for 10000 iterations on device cpu, intermediate rep? True, tag 3
+Reading lines...
+Read 15225 sentence pairs
+Trimmed to 15225 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/opposite_right_train_inter.txt
+15225 examples. Sample pair: ['walk opposite left thrice after look left', 'after thrice opposite walk left left look']
+Reading lines...
+Read 5685 sentence pairs
+Trimmed to 5685 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/opposite_right_test_inter.txt
+5685 examples. Sample pair: ['run opposite right after look right thrice', 'after opposite run right thrice right look']
+Starting training: 10000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 44s (- 6m 36s) Iters: (1000 10%) Loss avg: 1.4068
+Hits 2/100 test samples
+Duration (Remaining): 1m 21s (- 5m 27s) Iters: (2000 20%) Loss avg: 0.6479
+Hits 12/100 test samples
+Duration (Remaining): 1m 49s (- 4m 14s) Iters: (3000 30%) Loss avg: 0.3424
+Hits 49/100 test samples
+Duration (Remaining): 2m 16s (- 3m 25s) Iters: (4000 40%) Loss avg: 0.1616
+Hits 94/100 test samples
+Duration (Remaining): 2m 42s (- 2m 42s) Iters: (5000 50%) Loss avg: 0.0663
+Hits 96/100 test samples
+Duration (Remaining): 3m 10s (- 2m 6s) Iters: (6000 60%) Loss avg: 0.0237
+Hits 96/100 test samples
+Duration (Remaining): 3m 37s (- 1m 33s) Iters: (7000 70%) Loss avg: 0.0128
+Hits 99/100 test samples
+Duration (Remaining): 4m 11s (- 1m 2s) Iters: (8000 80%) Loss avg: 0.0325
+Hits 98/100 test samples
+Duration (Remaining): 4m 42s (- 0m 31s) Iters: (9000 90%) Loss avg: 0.0047
+Hits 99/100 test samples
+Duration (Remaining): 5m 14s (- 0m 0s) Iters: (10000 100%) Loss avg: 0.0137
+Hits 99/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 92/100 = 0.92%
+Evaluating test split accuracy
+Evaluation accuracy: 39/100 = 0.39%
+Saved model at saved/opposite_right_inter_10000_3.pt

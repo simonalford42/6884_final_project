@@ -1,0 +1,189 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'jump' for 5000 iterations on device cpu, intermediate rep? True, tag 3
+Reading lines...
+Read 14670 sentence pairs
+Trimmed to 14670 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_train_inter.txt
+14670 examples. Sample pair: ['run around right and walk around right twice', 'and around run right twice around walk right']
+Reading lines...
+Read 7706 sentence pairs
+Trimmed to 7706 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_test_inter.txt
+7706 examples. Sample pair: ['jump left thrice and walk around right twice', 'and thrice left jump twice around walk right']
+Starting training: 5000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 30s (- 2m 3s) Iters: (1000 20%) Loss avg: 1.3361
+Hits 17/100 test samples
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'jump' for 5000 iterations on device cpu, intermediate rep? True, tag 3
+Reading lines...
+Read 14670 sentence pairs
+Trimmed to 14670 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_train_inter.txt
+14670 examples. Sample pair: ['jump', 'jump']
+Reading lines...
+Read 7706 sentence pairs
+Trimmed to 7706 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_test_inter.txt
+7706 examples. Sample pair: ['look opposite right twice after jump around left thrice', 'after twice opposite look right thrice around jump left']
+Starting training: 5000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 1m 15s (- 1m 53s) Iters: (2000 40%) Loss avg: 0.6607
+Hits 23/100 test samples
+Duration (Remaining): 0m 44s (- 2m 57s) Iters: (1000 20%) Loss avg: 1.2973
+Hits 14/100 test samples
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'jump' for 5000 iterations on device cpu, intermediate rep? True, tag 3
+Reading lines...
+Read 14670 sentence pairs
+Trimmed to 14670 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_train_inter.txt
+14670 examples. Sample pair: ['walk around left after walk opposite right', 'after around walk left opposite walk right']
+Reading lines...
+Read 7706 sentence pairs
+Trimmed to 7706 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_test_inter.txt
+7706 examples. Sample pair: ['jump left thrice and turn around left twice', 'and thrice left jump twice around turn left']
+Starting training: 5000 iterations
+Hits 0/100 test samples
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'jump' for 5000 iterations on device cpu, intermediate rep? True, tag 3
+Reading lines...
+Read 14670 sentence pairs
+Trimmed to 14670 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_train_inter.txt
+14670 examples. Sample pair: ['run right twice and walk around right', 'and twice right run around walk right']
+Reading lines...
+Read 7706 sentence pairs
+Trimmed to 7706 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_test_inter.txt
+7706 examples. Sample pair: ['look around left after jump right twice', 'after around look left twice right jump']
+Starting training: 5000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 26s (- 1m 46s) Iters: (1000 20%) Loss avg: 1.2647
+Hits 15/100 test samples
+Duration (Remaining): 0m 51s (- 1m 17s) Iters: (2000 40%) Loss avg: 0.5846
+Hits 24/100 test samples
+Duration (Remaining): 1m 17s (- 0m 51s) Iters: (3000 60%) Loss avg: 0.2988
+Hits 81/100 test samples
+Duration (Remaining): 1m 43s (- 0m 25s) Iters: (4000 80%) Loss avg: 0.1125
+Hits 99/100 test samples
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'jump' for 10000 iterations on device cpu, intermediate rep? True, tag 3
+Reading lines...
+Read 14670 sentence pairs
+Trimmed to 14670 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_train_inter.txt
+14670 examples. Sample pair: ['look thrice and run around left twice', 'and thrice look twice around run left']
+Reading lines...
+Read 7706 sentence pairs
+Trimmed to 7706 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_test_inter.txt
+7706 examples. Sample pair: ['jump left twice and jump opposite right thrice', 'and twice left jump thrice opposite jump right']
+Starting training: 10000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 26s (- 4m 2s) Iters: (1000 10%) Loss avg: 1.3321
+Hits 13/100 test samples
+Duration (Remaining): 0m 53s (- 3m 34s) Iters: (2000 20%) Loss avg: 0.6475
+Hits 32/100 test samples
+Duration (Remaining): 1m 28s (- 3m 26s) Iters: (3000 30%) Loss avg: 0.3141
+Hits 73/100 test samples
+Duration (Remaining): 1m 55s (- 2m 53s) Iters: (4000 40%) Loss avg: 0.1353
+Hits 91/100 test samples
+Duration (Remaining): 2m 23s (- 2m 23s) Iters: (5000 50%) Loss avg: 0.0373
+Hits 100/100 test samples
+Duration (Remaining): 2m 50s (- 1m 53s) Iters: (6000 60%) Loss avg: 0.0118
+Hits 100/100 test samples
+Duration (Remaining): 3m 18s (- 1m 25s) Iters: (7000 70%) Loss avg: 0.0113
+Hits 100/100 test samples
+Duration (Remaining): 3m 48s (- 0m 57s) Iters: (8000 80%) Loss avg: 0.0275
+Hits 98/100 test samples
+Duration (Remaining): 4m 15s (- 0m 28s) Iters: (9000 90%) Loss avg: 0.0045
+Hits 100/100 test samples
+Duration (Remaining): 4m 42s (- 0m 0s) Iters: (10000 100%) Loss avg: 0.0018
+Hits 100/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 99/100 = 0.99%
+Evaluating test split accuracy
+Evaluation accuracy: 0/100 = 0.00%
+Saved model at saved/jump_inter_10000_3.pt

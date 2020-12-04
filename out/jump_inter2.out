@@ -1,0 +1,55 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 14
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'jump' for 10000 iterations on device cpu, intermediate rep? False, tag None
+Reading lines...
+Read 14670 sentence pairs
+Trimmed to 14670 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 14
+Loaded data from scan/SCAN-master/jump_train_inter2.txt
+14670 examples. Sample pair: ['walk around left thrice after look opposite right thrice', 'after']
+Reading lines...
+Read 7706 sentence pairs
+Trimmed to 7706 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 10
+Loaded data from scan/SCAN-master/jump_test_inter2.txt
+7706 examples. Sample pair: ['jump around right twice and turn opposite right', 'and']
+Starting training: 10000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 30s (- 4m 30s) Iters: (1000 10%) Loss avg: 0.1043
+Hits 98/100 test samples
+Duration (Remaining): 0m 59s (- 3m 58s) Iters: (2000 20%) Loss avg: 0.0106
+Hits 100/100 test samples
+Duration (Remaining): 1m 29s (- 3m 28s) Iters: (3000 30%) Loss avg: 0.0024
+Hits 100/100 test samples
+Duration (Remaining): 1m 56s (- 2m 55s) Iters: (4000 40%) Loss avg: 0.0016
+Hits 100/100 test samples
+Duration (Remaining): 2m 24s (- 2m 24s) Iters: (5000 50%) Loss avg: 0.0089
+Hits 100/100 test samples
+Duration (Remaining): 2m 51s (- 1m 54s) Iters: (6000 60%) Loss avg: 0.0065
+Hits 99/100 test samples
+Duration (Remaining): 3m 16s (- 1m 24s) Iters: (7000 70%) Loss avg: 0.0032
+Hits 100/100 test samples
+Duration (Remaining): 3m 41s (- 0m 55s) Iters: (8000 80%) Loss avg: 0.0035
+Hits 100/100 test samples
+Duration (Remaining): 4m 8s (- 0m 27s) Iters: (9000 90%) Loss avg: 0.0001
+Hits 100/100 test samples
+Duration (Remaining): 4m 32s (- 0m 0s) Iters: (10000 100%) Loss avg: 0.0000
+Hits 100/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 14659/14670 = 1.00%
+Evaluating test split accuracy
+Evaluation accuracy: 7702/7706 = 1.00%
+Saved model at saved/jump_10000.pt
