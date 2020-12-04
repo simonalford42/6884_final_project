@@ -1,0 +1,335 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Training on cuda:2
+Initialized model GRU
+Training SCAN model GRU on split 'jump_around_right' for 150000 iterations on device cuda:2, intermediate rep? False, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/jump_around_right_train.txt
+21890 examples. Sample pair: ['run thrice after walk opposite left twice', 'I_TURN_LEFT I_TURN_LEFT I_WALK I_TURN_LEFT I_TURN_LEFT I_WALK I_RUN I_RUN I_RUN']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/jump_around_right_test.txt
+1208 examples. Sample pair: ['run opposite left and jump around right', 'I_TURN_LEFT I_TURN_LEFT I_RUN I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP']
+Starting training: 150000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 3m 30s (- 522m 45s) Iters: (1000 0%) Loss avg: 1.2229
+Hits 7/100 test samples
+Duration (Remaining): 5m 58s (- 442m 43s) Iters: (2000 1%) Loss avg: 0.8503
+Hits 8/100 test samples
+Duration (Remaining): 8m 25s (- 412m 31s) Iters: (3000 2%) Loss avg: 0.6999
+Hits 16/100 test samples
+Duration (Remaining): 10m 45s (- 392m 35s) Iters: (4000 2%) Loss avg: 0.5542
+Hits 22/100 test samples
+Duration (Remaining): 13m 6s (- 379m 55s) Iters: (5000 3%) Loss avg: 0.5161
+Hits 22/100 test samples
+Duration (Remaining): 15m 24s (- 369m 48s) Iters: (6000 4%) Loss avg: 0.4520
+Hits 18/100 test samples
+Duration (Remaining): 17m 32s (- 358m 27s) Iters: (7000 4%) Loss avg: 0.4046
+Hits 19/100 test samples
+Duration (Remaining): 19m 40s (- 349m 6s) Iters: (8000 5%) Loss avg: 0.3865
+Hits 37/100 test samples
+Duration (Remaining): 21m 41s (- 339m 52s) Iters: (9000 6%) Loss avg: 0.3612
+Hits 34/100 test samples
+Duration (Remaining): 23m 47s (- 333m 3s) Iters: (10000 6%) Loss avg: 0.3521
+Hits 37/100 test samples
+Duration (Remaining): 25m 51s (- 326m 50s) Iters: (11000 7%) Loss avg: 0.3098
+Hits 35/100 test samples
+Duration (Remaining): 27m 56s (- 321m 18s) Iters: (12000 8%) Loss avg: 0.3056
+Hits 40/100 test samples
+Duration (Remaining): 29m 59s (- 316m 3s) Iters: (13000 8%) Loss avg: 0.2801
+Hits 43/100 test samples
+Duration (Remaining): 32m 2s (- 311m 15s) Iters: (14000 9%) Loss avg: 0.2702
+Hits 48/100 test samples
+Duration (Remaining): 34m 5s (- 306m 49s) Iters: (15000 10%) Loss avg: 0.2404
+Hits 47/100 test samples
+Duration (Remaining): 36m 12s (- 303m 13s) Iters: (16000 10%) Loss avg: 0.2332
+Hits 46/100 test samples
+Duration (Remaining): 38m 16s (- 299m 28s) Iters: (17000 11%) Loss avg: 0.2366
+Hits 45/100 test samples
+Duration (Remaining): 40m 22s (- 296m 1s) Iters: (18000 12%) Loss avg: 0.2074
+Hits 48/100 test samples
+Duration (Remaining): 42m 25s (- 292m 31s) Iters: (19000 12%) Loss avg: 0.1974
+Hits 60/100 test samples
+Duration (Remaining): 44m 35s (- 289m 49s) Iters: (20000 13%) Loss avg: 0.1755
+Hits 56/100 test samples
+Duration (Remaining): 46m 42s (- 286m 58s) Iters: (21000 14%) Loss avg: 0.1714
+Hits 53/100 test samples
+Duration (Remaining): 48m 48s (- 283m 59s) Iters: (22000 14%) Loss avg: 0.1716
+Hits 60/100 test samples
+Duration (Remaining): 50m 55s (- 281m 10s) Iters: (23000 15%) Loss avg: 0.1441
+Hits 67/100 test samples
+Duration (Remaining): 53m 1s (- 278m 22s) Iters: (24000 16%) Loss avg: 0.1511
+Hits 61/100 test samples
+Duration (Remaining): 55m 5s (- 275m 25s) Iters: (25000 16%) Loss avg: 0.1455
+Hits 62/100 test samples
+Duration (Remaining): 57m 12s (- 272m 50s) Iters: (26000 17%) Loss avg: 0.1452
+Hits 64/100 test samples
+Duration (Remaining): 59m 16s (- 270m 1s) Iters: (27000 18%) Loss avg: 0.1273
+Hits 62/100 test samples
+Duration (Remaining): 61m 23s (- 267m 31s) Iters: (28000 18%) Loss avg: 0.1237
+Hits 59/100 test samples
+Duration (Remaining): 63m 30s (- 264m 59s) Iters: (29000 19%) Loss avg: 0.1192
+Hits 70/100 test samples
+Duration (Remaining): 65m 38s (- 262m 35s) Iters: (30000 20%) Loss avg: 0.1315
+Hits 57/100 test samples
+Duration (Remaining): 67m 47s (- 260m 14s) Iters: (31000 20%) Loss avg: 0.1187
+Hits 76/100 test samples
+Duration (Remaining): 69m 54s (- 257m 46s) Iters: (32000 21%) Loss avg: 0.1106
+Hits 67/100 test samples
+Duration (Remaining): 71m 58s (- 255m 12s) Iters: (33000 22%) Loss avg: 0.1189
+Hits 54/100 test samples
+Duration (Remaining): 74m 4s (- 252m 43s) Iters: (34000 22%) Loss avg: 0.1154
+Hits 67/100 test samples
+Duration (Remaining): 76m 9s (- 250m 14s) Iters: (35000 23%) Loss avg: 0.1111
+Hits 68/100 test samples
+Duration (Remaining): 78m 15s (- 247m 47s) Iters: (36000 24%) Loss avg: 0.1070
+Hits 69/100 test samples
+Duration (Remaining): 80m 18s (- 245m 16s) Iters: (37000 24%) Loss avg: 0.0969
+Hits 71/100 test samples
+Duration (Remaining): 82m 23s (- 242m 51s) Iters: (38000 25%) Loss avg: 0.1008
+Hits 76/100 test samples
+Duration (Remaining): 84m 28s (- 240m 25s) Iters: (39000 26%) Loss avg: 0.0857
+Hits 77/100 test samples
+Duration (Remaining): 86m 34s (- 238m 3s) Iters: (40000 26%) Loss avg: 0.0935
+Hits 57/100 test samples
+Duration (Remaining): 88m 41s (- 235m 47s) Iters: (41000 27%) Loss avg: 0.0916
+Hits 82/100 test samples
+Duration (Remaining): 90m 47s (- 233m 26s) Iters: (42000 28%) Loss avg: 0.0852
+Hits 73/100 test samples
+Duration (Remaining): 92m 52s (- 231m 7s) Iters: (43000 28%) Loss avg: 0.1016
+Hits 78/100 test samples
+Duration (Remaining): 94m 58s (- 228m 47s) Iters: (44000 29%) Loss avg: 0.0776
+Hits 80/100 test samples
+Duration (Remaining): 97m 3s (- 226m 27s) Iters: (45000 30%) Loss avg: 0.0783
+Hits 70/100 test samples
+Duration (Remaining): 99m 7s (- 224m 7s) Iters: (46000 30%) Loss avg: 0.0712
+Hits 71/100 test samples
+Duration (Remaining): 101m 11s (- 221m 45s) Iters: (47000 31%) Loss avg: 0.0735
+Hits 78/100 test samples
+Duration (Remaining): 103m 16s (- 219m 27s) Iters: (48000 32%) Loss avg: 0.0658
+Hits 87/100 test samples
+Duration (Remaining): 105m 22s (- 217m 12s) Iters: (49000 32%) Loss avg: 0.0712
+Hits 84/100 test samples
+Duration (Remaining): 107m 34s (- 215m 8s) Iters: (50000 33%) Loss avg: 0.0862
+Hits 85/100 test samples
+Duration (Remaining): 109m 44s (- 213m 0s) Iters: (51000 34%) Loss avg: 0.0639
+Hits 84/100 test samples
+Duration (Remaining): 111m 53s (- 210m 52s) Iters: (52000 34%) Loss avg: 0.0566
+Hits 73/100 test samples
+Duration (Remaining): 114m 3s (- 208m 45s) Iters: (53000 35%) Loss avg: 0.0620
+Hits 83/100 test samples
+Duration (Remaining): 116m 14s (- 206m 39s) Iters: (54000 36%) Loss avg: 0.0577
+Hits 86/100 test samples
+Duration (Remaining): 118m 23s (- 204m 30s) Iters: (55000 36%) Loss avg: 0.0656
+Hits 80/100 test samples
+Duration (Remaining): 120m 37s (- 202m 29s) Iters: (56000 37%) Loss avg: 0.0670
+Hits 85/100 test samples
+Duration (Remaining): 122m 49s (- 200m 24s) Iters: (57000 38%) Loss avg: 0.0613
+Hits 84/100 test samples
+Duration (Remaining): 124m 59s (- 198m 15s) Iters: (58000 38%) Loss avg: 0.0590
+Hits 88/100 test samples
+Duration (Remaining): 127m 10s (- 196m 9s) Iters: (59000 39%) Loss avg: 0.0537
+Hits 91/100 test samples
+Duration (Remaining): 129m 20s (- 194m 0s) Iters: (60000 40%) Loss avg: 0.0476
+Hits 78/100 test samples
+Duration (Remaining): 131m 32s (- 191m 55s) Iters: (61000 40%) Loss avg: 0.0518
+Hits 80/100 test samples
+Duration (Remaining): 133m 43s (- 189m 48s) Iters: (62000 41%) Loss avg: 0.0408
+Hits 77/100 test samples
+Duration (Remaining): 135m 54s (- 187m 41s) Iters: (63000 42%) Loss avg: 0.0447
+Hits 74/100 test samples
+Duration (Remaining): 138m 5s (- 185m 33s) Iters: (64000 42%) Loss avg: 0.0373
+Hits 90/100 test samples
+Duration (Remaining): 140m 16s (- 183m 26s) Iters: (65000 43%) Loss avg: 0.0611
+Hits 87/100 test samples
+Duration (Remaining): 142m 28s (- 181m 20s) Iters: (66000 44%) Loss avg: 0.0367
+Hits 78/100 test samples
+Duration (Remaining): 144m 40s (- 179m 13s) Iters: (67000 44%) Loss avg: 0.0335
+Hits 94/100 test samples
+Duration (Remaining): 146m 55s (- 177m 10s) Iters: (68000 45%) Loss avg: 0.0358
+Hits 91/100 test samples
+Duration (Remaining): 149m 6s (- 175m 2s) Iters: (69000 46%) Loss avg: 0.0417
+Hits 94/100 test samples
+Duration (Remaining): 151m 14s (- 172m 51s) Iters: (70000 46%) Loss avg: 0.0485
+Hits 93/100 test samples
+Duration (Remaining): 153m 26s (- 170m 44s) Iters: (71000 47%) Loss avg: 0.0543
+Hits 84/100 test samples
+Duration (Remaining): 155m 37s (- 168m 36s) Iters: (72000 48%) Loss avg: 0.0313
+Hits 89/100 test samples
+Duration (Remaining): 157m 50s (- 166m 29s) Iters: (73000 48%) Loss avg: 0.0322
+Hits 92/100 test samples
+Duration (Remaining): 159m 57s (- 164m 17s) Iters: (74000 49%) Loss avg: 0.0211
+Hits 90/100 test samples
+Duration (Remaining): 162m 7s (- 162m 7s) Iters: (75000 50%) Loss avg: 0.0369
+Hits 92/100 test samples
+Duration (Remaining): 164m 16s (- 159m 57s) Iters: (76000 50%) Loss avg: 0.0342
+Hits 94/100 test samples
+Duration (Remaining): 166m 27s (- 157m 48s) Iters: (77000 51%) Loss avg: 0.0353
+Hits 87/100 test samples
+Duration (Remaining): 168m 39s (- 155m 41s) Iters: (78000 52%) Loss avg: 0.0180
+Hits 91/100 test samples
+Duration (Remaining): 170m 53s (- 153m 34s) Iters: (79000 52%) Loss avg: 0.0539
+Hits 76/100 test samples
+Duration (Remaining): 173m 5s (- 151m 27s) Iters: (80000 53%) Loss avg: 0.0307
+Hits 83/100 test samples
+Duration (Remaining): 175m 16s (- 149m 18s) Iters: (81000 54%) Loss avg: 0.0212
+Hits 89/100 test samples
+Duration (Remaining): 177m 28s (- 147m 10s) Iters: (82000 54%) Loss avg: 0.0192
+Hits 88/100 test samples
+Duration (Remaining): 179m 39s (- 145m 1s) Iters: (83000 55%) Loss avg: 0.0249
+Hits 97/100 test samples
+Duration (Remaining): 181m 50s (- 142m 52s) Iters: (84000 56%) Loss avg: 0.0262
+Hits 92/100 test samples
+Duration (Remaining): 183m 54s (- 140m 38s) Iters: (85000 56%) Loss avg: 0.0229
+Hits 85/100 test samples
+Duration (Remaining): 186m 5s (- 138m 28s) Iters: (86000 57%) Loss avg: 0.0239
+Hits 71/100 test samples
+Duration (Remaining): 188m 9s (- 136m 15s) Iters: (87000 57%) Loss avg: 0.0239
+Hits 96/100 test samples
+Duration (Remaining): 190m 12s (- 134m 0s) Iters: (88000 58%) Loss avg: 0.0228
+Hits 94/100 test samples
+Duration (Remaining): 192m 14s (- 131m 45s) Iters: (89000 59%) Loss avg: 0.0305
+Hits 97/100 test samples
+Duration (Remaining): 194m 17s (- 129m 31s) Iters: (90000 60%) Loss avg: 0.0192
+Hits 96/100 test samples
+Duration (Remaining): 196m 21s (- 127m 18s) Iters: (91000 60%) Loss avg: 0.0223
+Hits 79/100 test samples
+Duration (Remaining): 198m 27s (- 125m 6s) Iters: (92000 61%) Loss avg: 0.0181
+Hits 95/100 test samples
+Duration (Remaining): 200m 29s (- 122m 53s) Iters: (93000 62%) Loss avg: 0.0215
+Hits 95/100 test samples
+Duration (Remaining): 202m 29s (- 120m 38s) Iters: (94000 62%) Loss avg: 0.0254
+Hits 92/100 test samples
+Duration (Remaining): 204m 31s (- 118m 24s) Iters: (95000 63%) Loss avg: 0.0261
+Hits 83/100 test samples
+Duration (Remaining): 206m 35s (- 116m 12s) Iters: (96000 64%) Loss avg: 0.0306
+Hits 100/100 test samples
+Duration (Remaining): 208m 39s (- 114m 0s) Iters: (97000 64%) Loss avg: 0.0108
+Hits 96/100 test samples
+Duration (Remaining): 210m 42s (- 111m 48s) Iters: (98000 65%) Loss avg: 0.0133
+Hits 96/100 test samples
+Duration (Remaining): 212m 55s (- 109m 41s) Iters: (99000 66%) Loss avg: 0.0374
+Hits 93/100 test samples
+Duration (Remaining): 214m 57s (- 107m 28s) Iters: (100000 66%) Loss avg: 0.0209
+Hits 92/100 test samples
+Duration (Remaining): 217m 1s (- 105m 17s) Iters: (101000 67%) Loss avg: 0.0119
+Hits 99/100 test samples
+Duration (Remaining): 219m 5s (- 103m 6s) Iters: (102000 68%) Loss avg: 0.0332
+Hits 93/100 test samples
+Duration (Remaining): 221m 7s (- 100m 54s) Iters: (103000 68%) Loss avg: 0.0166
+Hits 97/100 test samples
+Duration (Remaining): 223m 11s (- 98m 43s) Iters: (104000 69%) Loss avg: 0.0129
+Hits 88/100 test samples
+Duration (Remaining): 225m 16s (- 96m 32s) Iters: (105000 70%) Loss avg: 0.0402
+Hits 98/100 test samples
+Duration (Remaining): 227m 18s (- 94m 21s) Iters: (106000 70%) Loss avg: 0.0103
+Hits 91/100 test samples
+Duration (Remaining): 229m 24s (- 92m 11s) Iters: (107000 71%) Loss avg: 0.0119
+Hits 99/100 test samples
+Duration (Remaining): 231m 28s (- 90m 1s) Iters: (108000 72%) Loss avg: 0.0132
+Hits 97/100 test samples
+Duration (Remaining): 233m 33s (- 87m 51s) Iters: (109000 72%) Loss avg: 0.0152
+Hits 98/100 test samples
+Duration (Remaining): 235m 14s (- 85m 32s) Iters: (110000 73%) Loss avg: 0.0226
+Hits 98/100 test samples
+Duration (Remaining): 236m 3s (- 82m 56s) Iters: (111000 74%) Loss avg: 0.0314
+Hits 99/100 test samples
+Duration (Remaining): 237m 9s (- 80m 27s) Iters: (112000 74%) Loss avg: 0.0053
+Hits 99/100 test samples
+Duration (Remaining): 237m 58s (- 77m 55s) Iters: (113000 75%) Loss avg: 0.0064
+Hits 90/100 test samples
+Duration (Remaining): 238m 48s (- 75m 24s) Iters: (114000 76%) Loss avg: 0.0216
+Hits 99/100 test samples
+Duration (Remaining): 239m 38s (- 72m 56s) Iters: (115000 76%) Loss avg: 0.0113
+Hits 96/100 test samples
+Duration (Remaining): 240m 23s (- 70m 27s) Iters: (116000 77%) Loss avg: 0.0037
+Hits 99/100 test samples
+Duration (Remaining): 241m 6s (- 68m 0s) Iters: (117000 78%) Loss avg: 0.0099
+Hits 99/100 test samples
+Duration (Remaining): 241m 49s (- 65m 34s) Iters: (118000 78%) Loss avg: 0.0128
+Hits 100/100 test samples
+Duration (Remaining): 242m 32s (- 63m 10s) Iters: (119000 79%) Loss avg: 0.0231
+Hits 96/100 test samples
+Duration (Remaining): 243m 14s (- 60m 48s) Iters: (120000 80%) Loss avg: 0.0175
+Hits 96/100 test samples
+Duration (Remaining): 243m 55s (- 58m 27s) Iters: (121000 80%) Loss avg: 0.0138
+Hits 98/100 test samples
+Duration (Remaining): 244m 37s (- 56m 8s) Iters: (122000 81%) Loss avg: 0.0046
+Hits 99/100 test samples
+Duration (Remaining): 245m 18s (- 53m 50s) Iters: (123000 82%) Loss avg: 0.0368
+Hits 91/100 test samples
+Duration (Remaining): 245m 55s (- 51m 33s) Iters: (124000 82%) Loss avg: 0.0125
+Hits 94/100 test samples
+Duration (Remaining): 246m 53s (- 49m 22s) Iters: (125000 83%) Loss avg: 0.0440
+Hits 96/100 test samples
+Duration (Remaining): 247m 35s (- 47m 9s) Iters: (126000 84%) Loss avg: 0.0251
+Hits 99/100 test samples
+Duration (Remaining): 248m 11s (- 44m 56s) Iters: (127000 84%) Loss avg: 0.0041
+Hits 98/100 test samples
+Duration (Remaining): 248m 55s (- 42m 47s) Iters: (128000 85%) Loss avg: 0.0096
+Hits 99/100 test samples
+Duration (Remaining): 249m 39s (- 40m 38s) Iters: (129000 86%) Loss avg: 0.0219
+Hits 99/100 test samples
+Duration (Remaining): 250m 26s (- 38m 31s) Iters: (130000 86%) Loss avg: 0.0239
+Hits 98/100 test samples
+Duration (Remaining): 251m 10s (- 36m 25s) Iters: (131000 87%) Loss avg: 0.0085
+Hits 96/100 test samples
+Duration (Remaining): 251m 45s (- 34m 19s) Iters: (132000 88%) Loss avg: 0.0037
+Hits 86/100 test samples
+Duration (Remaining): 252m 21s (- 32m 15s) Iters: (133000 88%) Loss avg: 0.0031
+Hits 100/100 test samples
+Duration (Remaining): 252m 56s (- 30m 12s) Iters: (134000 89%) Loss avg: 0.0245
+Hits 89/100 test samples
+Duration (Remaining): 253m 31s (- 28m 10s) Iters: (135000 90%) Loss avg: 0.0110
+Hits 99/100 test samples
+Duration (Remaining): 254m 7s (- 26m 9s) Iters: (136000 90%) Loss avg: 0.0391
+Hits 97/100 test samples
+Duration (Remaining): 254m 49s (- 24m 10s) Iters: (137000 91%) Loss avg: 0.0120
+Hits 99/100 test samples
+Duration (Remaining): 255m 30s (- 22m 13s) Iters: (138000 92%) Loss avg: 0.0133
+Hits 95/100 test samples
+Duration (Remaining): 256m 12s (- 20m 16s) Iters: (139000 92%) Loss avg: 0.0102
+Hits 100/100 test samples
+Duration (Remaining): 256m 56s (- 18m 21s) Iters: (140000 93%) Loss avg: 0.0024
+Hits 100/100 test samples
+Duration (Remaining): 257m 38s (- 16m 26s) Iters: (141000 94%) Loss avg: 0.0363
+Hits 100/100 test samples
+Duration (Remaining): 258m 21s (- 14m 33s) Iters: (142000 94%) Loss avg: 0.0095
+Hits 100/100 test samples
+Duration (Remaining): 258m 55s (- 12m 40s) Iters: (143000 95%) Loss avg: 0.0022
+Hits 100/100 test samples
+Duration (Remaining): 259m 29s (- 10m 48s) Iters: (144000 96%) Loss avg: 0.0085
+Hits 98/100 test samples
+Duration (Remaining): 260m 5s (- 8m 58s) Iters: (145000 96%) Loss avg: 0.0329
+Hits 96/100 test samples
+Duration (Remaining): 260m 40s (- 7m 8s) Iters: (146000 97%) Loss avg: 0.0068
+Hits 100/100 test samples
+Duration (Remaining): 261m 15s (- 5m 19s) Iters: (147000 98%) Loss avg: 0.0350
+Hits 95/100 test samples
+Duration (Remaining): 261m 50s (- 3m 32s) Iters: (148000 98%) Loss avg: 0.0219
+Hits 100/100 test samples
+Duration (Remaining): 262m 25s (- 1m 45s) Iters: (149000 99%) Loss avg: 0.0032
+Hits 99/100 test samples
+Duration (Remaining): 262m 59s (- 0m 0s) Iters: (150000 100%) Loss avg: 0.0032
+Hits 100/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 21850/21890 = 1.00%
+Evaluating test split accuracy
+Evaluation accuracy: 1200/1208 = 0.99%
+Saved model at saved/jump_around_right_150000.pt

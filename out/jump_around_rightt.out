@@ -1,0 +1,382 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Training on cuda:3
+Initialized model GRU
+Training SCAN model GRU on split 'jump_around_right' for 2000 iterations on device cuda:3, intermediate rep? True, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_around_right_train_inter.txt
+21890 examples. Sample pair: ['run opposite left after run right twice', 'after opposite run left twice right run']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_around_right_test_inter.txt
+1208 examples. Sample pair: ['jump around right thrice and look around right thrice', 'and thrice around jump right thrice around look right']
+Starting training: 2000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 31s (- 0m 31s) Iters: (1000 50%) Loss avg: 1.3514
+Hits 10/100 test samples
+Duration (Remaining): 1m 3s (- 0m 0s) Iters: (2000 100%) Loss avg: 0.7393
+Hits 28/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 5/100 = 0.05%
+Evaluating test split accuracy
+Evaluation accuracy: 8/100 = 0.08%
+Saved model at saved/jump_around_right_inter_2000.pt
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Training on cuda:3
+Initialized model GRU
+Training SCAN model GRU on split 'jump_around_right' for 2000 iterations on device cuda:3, intermediate rep? False, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/jump_around_right_train.txt
+21890 examples. Sample pair: ['jump right thrice after look opposite left twice', 'I_TURN_LEFT I_TURN_LEFT I_LOOK I_TURN_LEFT I_TURN_LEFT I_LOOK I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/jump_around_right_test.txt
+1208 examples. Sample pair: ['jump around right twice and jump around left twice', 'I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP']
+Starting training: 2000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 45s (- 0m 45s) Iters: (1000 50%) Loss avg: 1.2154
+Hits 9/100 test samples
+Duration (Remaining): 1m 29s (- 0m 0s) Iters: (2000 100%) Loss avg: 0.8504
+Hits 11/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 12/100 = 0.12%
+Evaluating test split accuracy
+Evaluation accuracy: 0/100 = 0.00%
+Saved model at saved/jump_around_right_2000.pt
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Training on cuda:2
+Initialized model GRU
+Training SCAN model GRU on split 'jump_around_right' for 2000 iterations on device cuda:2, intermediate rep? True, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_around_right_train_inter.txt
+21890 examples. Sample pair: ['walk thrice and jump opposite right thrice', 'and thrice walk thrice opposite jump right']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_around_right_test_inter.txt
+1208 examples. Sample pair: ['jump around right twice and turn opposite right thrice', 'and twice around jump right thrice opposite turn right']
+Starting training: 2000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 3m 52s (- 3m 52s) Iters: (1000 50%) Loss avg: 1.3355
+Hits 8/100 test samples
+Duration (Remaining): 8m 11s (- 0m 0s) Iters: (2000 100%) Loss avg: 0.6655
+Hits 35/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 10/100 = 0.10%
+Evaluating test split accuracy
+Evaluation accuracy: 31/100 = 0.31%
+Saved model at saved/jump_around_right_inter_2000.pt
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Training on cuda:2
+Initialized model GRU
+Training SCAN model GRU on split 'jump_around_right' for 2000 iterations on device cuda:2, intermediate rep? False, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/jump_around_right_train.txt
+21890 examples. Sample pair: ['look right thrice after turn left twice', 'I_TURN_LEFT I_TURN_LEFT I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/jump_around_right_test.txt
+1208 examples. Sample pair: ['look around right after jump around right twice', 'I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK']
+Starting training: 2000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 6m 1s (- 6m 1s) Iters: (1000 50%) Loss avg: 1.2519
+Hits 0/100 test samples
+Duration (Remaining): 11m 12s (- 0m 0s) Iters: (2000 100%) Loss avg: 0.8625
+Hits 11/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 12/100 = 0.12%
+Evaluating test split accuracy
+Evaluation accuracy: 0/100 = 0.00%
+Saved model at saved/jump_around_right_2000.pt
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Training on cuda:2
+Initialized model GRU_A
+Training SCAN model GRU_A on split 'jump_around_right' for 2000 iterations on device cuda:2, intermediate rep? True, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_around_right_train_inter.txt
+21890 examples. Sample pair: ['run around left twice after run twice', 'after twice around run left twice run']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_around_right_test_inter.txt
+1208 examples. Sample pair: ['turn left and jump around right twice', 'and left turn twice around jump right']
+Starting training: 2000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 6m 0s (- 6m 0s) Iters: (1000 50%) Loss avg: 0.9670
+Hits 69/100 test samples
+Duration (Remaining): 11m 22s (- 0m 0s) Iters: (2000 100%) Loss avg: 0.2029
+Hits 96/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 32/100 = 0.32%
+Evaluating test split accuracy
+Evaluation accuracy: 68/100 = 0.68%
+Saved model at saved/jump_around_right_inter_2000.pt
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Training on cuda:2
+Initialized model GRU_A
+Training SCAN model GRU_A on split 'jump_around_right' for 2000 iterations on device cuda:2, intermediate rep? False, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/jump_around_right_train.txt
+21890 examples. Sample pair: ['jump around right', 'I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/jump_around_right_test.txt
+1208 examples. Sample pair: ['run opposite left thrice after jump around right', 'I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_LEFT I_TURN_LEFT I_RUN I_TURN_LEFT I_TURN_LEFT I_RUN I_TURN_LEFT I_TURN_LEFT I_RUN']
+Starting training: 2000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 9m 36s (- 9m 36s) Iters: (1000 50%) Loss avg: 1.2051
+Hits 8/100 test samples
+Duration (Remaining): 12m 19s (- 0m 0s) Iters: (2000 100%) Loss avg: 0.8873
+Hits 7/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 11/100 = 0.11%
+Evaluating test split accuracy
+Evaluation accuracy: 0/100 = 0.00%
+Saved model at saved/jump_around_right_2000.pt
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Training on cuda:2
+Initialized model GRU
+Training SCAN model GRU on split 'jump_around_right' for 1000 iterations on device cuda:2, intermediate rep? True, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_around_right_train_inter.txt
+21890 examples. Sample pair: ['walk right thrice after look opposite left', 'after thrice right walk opposite look left']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_around_right_test_inter.txt
+1208 examples. Sample pair: ['walk opposite left twice and jump around right thrice', 'and twice opposite walk left thrice around jump right']
+Starting training: 1000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 1m 45s (- 0m 0s) Iters: (1000 100%) Loss avg: 1.3568
+Hits 13/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 0/100 = 0.00%
+Evaluating test split accuracy
+Evaluation accuracy: 6/100 = 0.06%
+Saved model at saved/jump_around_right_inter_1000.pt
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Training on cuda:2
+Initialized model GRU
+Training SCAN model GRU on split 'jump_around_right' for 1000 iterations on device cuda:2, intermediate rep? False, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/jump_around_right_train.txt
+21890 examples. Sample pair: ['walk around right and run around right', 'I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_RUN I_TURN_RIGHT I_RUN I_TURN_RIGHT I_RUN I_TURN_RIGHT I_RUN']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/jump_around_right_test.txt
+1208 examples. Sample pair: ['turn opposite right and jump around right', 'I_TURN_RIGHT I_TURN_RIGHT I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP']
+Starting training: 1000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 1m 55s (- 0m 0s) Iters: (1000 100%) Loss avg: 1.2266
+Hits 0/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 0/100 = 0.00%
+Evaluating test split accuracy
+Evaluation accuracy: 3/100 = 0.03%
+Saved model at saved/jump_around_right_1000.pt
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Training on cuda:2
+Initialized model GRU_A
+Training SCAN model GRU_A on split 'jump_around_right' for 1000 iterations on device cuda:2, intermediate rep? True, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_around_right_train_inter.txt
+21890 examples. Sample pair: ['look around right after turn right', 'after around look right right turn']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_around_right_test_inter.txt
+1208 examples. Sample pair: ['run right after jump around right', 'after right run around jump right']
+Starting training: 1000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 2m 42s (- 0m 0s) Iters: (1000 100%) Loss avg: 0.9665
+Hits 63/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 2/100 = 0.02%
+Evaluating test split accuracy
+Evaluation accuracy: 22/100 = 0.22%
+Saved model at saved/jump_around_right_inter_1000.pt
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Training on cuda:2
+Initialized model GRU_A
+Training SCAN model GRU_A on split 'jump_around_right' for 1000 iterations on device cuda:2, intermediate rep? False, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/jump_around_right_train.txt
+21890 examples. Sample pair: ['look opposite right thrice after turn opposite right', 'I_TURN_RIGHT I_TURN_RIGHT I_TURN_RIGHT I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_TURN_RIGHT I_LOOK']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/jump_around_right_test.txt
+1208 examples. Sample pair: ['run opposite right after jump around right thrice', 'I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_TURN_RIGHT I_RUN']
+Starting training: 1000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 3m 13s (- 0m 0s) Iters: (1000 100%) Loss avg: 1.2167
+Hits 11/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 1/100 = 0.01%
+Evaluating test split accuracy
+Evaluation accuracy: 2/100 = 0.02%
+Saved model at saved/jump_around_right_1000.pt

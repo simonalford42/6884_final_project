@@ -1,0 +1,382 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Training on cuda:2
+Initialized model GRU
+Training SCAN model GRU on split 'turn_left' for 2000 iterations on device cuda:2, intermediate rep? True, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/turn_left_train_inter.txt
+21890 examples. Sample pair: ['jump opposite left and turn opposite left', 'and opposite jump left opposite turn left']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/turn_left_test_inter.txt
+1208 examples. Sample pair: ['turn left thrice and look around right', 'and thrice left turn around look right']
+Starting training: 2000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 31s (- 0m 31s) Iters: (1000 50%) Loss avg: 1.3425
+Hits 10/100 test samples
+Duration (Remaining): 1m 4s (- 0m 0s) Iters: (2000 100%) Loss avg: 0.5180
+Hits 44/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 93/100 = 0.93%
+Evaluating test split accuracy
+Evaluation accuracy: 21/100 = 0.21%
+Saved model at saved/turn_left_inter_2000.pt
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Training on cuda:2
+Initialized model GRU
+Training SCAN model GRU on split 'turn_left' for 2000 iterations on device cuda:2, intermediate rep? False, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/turn_left_train.txt
+21890 examples. Sample pair: ['jump and run left twice', 'I_JUMP I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/turn_left_test.txt
+1208 examples. Sample pair: ['look left and turn left thrice', 'I_TURN_LEFT I_LOOK I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT']
+Starting training: 2000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 43s (- 0m 43s) Iters: (1000 50%) Loss avg: 1.2545
+Hits 8/100 test samples
+Duration (Remaining): 1m 29s (- 0m 0s) Iters: (2000 100%) Loss avg: 0.8527
+Hits 7/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 13/100 = 0.13%
+Evaluating test split accuracy
+Evaluation accuracy: 4/100 = 0.04%
+Saved model at saved/turn_left_2000.pt
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Training on cuda:2
+Initialized model GRU
+Training SCAN model GRU on split 'turn_left' for 2000 iterations on device cuda:2, intermediate rep? True, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/turn_left_train_inter.txt
+21890 examples. Sample pair: ['look opposite right and jump right thrice', 'and opposite look right thrice right jump']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/turn_left_test_inter.txt
+1208 examples. Sample pair: ['turn left twice and turn opposite right twice', 'and twice left turn twice opposite turn right']
+Starting training: 2000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 3m 54s (- 3m 54s) Iters: (1000 50%) Loss avg: 1.3507
+Hits 10/100 test samples
+Duration (Remaining): 8m 16s (- 0m 0s) Iters: (2000 100%) Loss avg: 0.6498
+Hits 13/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 95/100 = 0.95%
+Evaluating test split accuracy
+Evaluation accuracy: 0/100 = 0.00%
+Saved model at saved/turn_left_inter_2000.pt
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Training on cuda:2
+Initialized model GRU
+Training SCAN model GRU on split 'turn_left' for 2000 iterations on device cuda:2, intermediate rep? False, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/turn_left_train.txt
+21890 examples. Sample pair: ['look left and jump around left twice', 'I_TURN_LEFT I_LOOK I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/turn_left_test.txt
+1208 examples. Sample pair: ['look around right thrice and turn left thrice', 'I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT']
+Starting training: 2000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 5m 37s (- 5m 37s) Iters: (1000 50%) Loss avg: 1.2330
+Hits 6/100 test samples
+Duration (Remaining): 10m 39s (- 0m 0s) Iters: (2000 100%) Loss avg: 0.8301
+Hits 13/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 16/100 = 0.16%
+Evaluating test split accuracy
+Evaluation accuracy: 8/100 = 0.08%
+Saved model at saved/turn_left_2000.pt
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Training on cuda:2
+Initialized model GRU_A
+Training SCAN model GRU_A on split 'turn_left' for 2000 iterations on device cuda:2, intermediate rep? True, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/turn_left_train_inter.txt
+21890 examples. Sample pair: ['jump right thrice and look around right thrice', 'and thrice right jump thrice around look right']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/turn_left_test_inter.txt
+1208 examples. Sample pair: ['turn left and walk right twice', 'and left turn twice right walk']
+Starting training: 2000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 6m 4s (- 6m 4s) Iters: (1000 50%) Loss avg: 0.8640
+Hits 80/100 test samples
+Duration (Remaining): 11m 19s (- 0m 0s) Iters: (2000 100%) Loss avg: 0.1691
+Hits 99/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 93/100 = 0.93%
+Evaluating test split accuracy
+Evaluation accuracy: 14/100 = 0.14%
+Saved model at saved/turn_left_inter_2000.pt
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Training on cuda:2
+Initialized model GRU_A
+Training SCAN model GRU_A on split 'turn_left' for 2000 iterations on device cuda:2, intermediate rep? False, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/turn_left_train.txt
+21890 examples. Sample pair: ['walk opposite left and run around right thrice', 'I_TURN_LEFT I_TURN_LEFT I_WALK I_TURN_RIGHT I_RUN I_TURN_RIGHT I_RUN I_TURN_RIGHT I_RUN I_TURN_RIGHT I_RUN I_TURN_RIGHT I_RUN I_TURN_RIGHT I_RUN I_TURN_RIGHT I_RUN I_TURN_RIGHT I_RUN I_TURN_RIGHT I_RUN I_TURN_RIGHT I_RUN I_TURN_RIGHT I_RUN I_TURN_RIGHT I_RUN']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/turn_left_test.txt
+1208 examples. Sample pair: ['look left twice and turn left', 'I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT']
+Starting training: 2000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 9m 4s (- 9m 4s) Iters: (1000 50%) Loss avg: 1.2842
+Hits 8/100 test samples
+Duration (Remaining): 12m 9s (- 0m 0s) Iters: (2000 100%) Loss avg: 0.8910
+Hits 10/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 2/100 = 0.02%
+Evaluating test split accuracy
+Evaluation accuracy: 4/100 = 0.04%
+Saved model at saved/turn_left_2000.pt
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Training on cuda:2
+Initialized model GRU
+Training SCAN model GRU on split 'turn_left' for 1000 iterations on device cuda:2, intermediate rep? True, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/turn_left_train_inter.txt
+21890 examples. Sample pair: ['walk around left and turn right thrice', 'and around walk left thrice right turn']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/turn_left_test_inter.txt
+1208 examples. Sample pair: ['walk opposite left and turn left thrice', 'and opposite walk left thrice left turn']
+Starting training: 1000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 1m 41s (- 0m 0s) Iters: (1000 100%) Loss avg: 1.3465
+Hits 5/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 93/100 = 0.93%
+Evaluating test split accuracy
+Evaluation accuracy: 0/100 = 0.00%
+Saved model at saved/turn_left_inter_1000.pt
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Training on cuda:2
+Initialized model GRU
+Training SCAN model GRU on split 'turn_left' for 1000 iterations on device cuda:2, intermediate rep? False, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/turn_left_train.txt
+21890 examples. Sample pair: ['run left thrice and turn opposite left twice', 'I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/turn_left_test.txt
+1208 examples. Sample pair: ['walk opposite left after turn left twice', 'I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_WALK']
+Starting training: 1000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 1m 57s (- 0m 0s) Iters: (1000 100%) Loss avg: 1.2589
+Hits 12/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 8/100 = 0.08%
+Evaluating test split accuracy
+Evaluation accuracy: 4/100 = 0.04%
+Saved model at saved/turn_left_1000.pt
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Training on cuda:2
+Initialized model GRU_A
+Training SCAN model GRU_A on split 'turn_left' for 1000 iterations on device cuda:2, intermediate rep? True, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/turn_left_train_inter.txt
+21890 examples. Sample pair: ['run left twice after jump left thrice', 'after twice left run thrice left jump']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/turn_left_test_inter.txt
+1208 examples. Sample pair: ['walk left thrice after turn left', 'after thrice left walk left turn']
+Starting training: 1000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 2m 43s (- 0m 0s) Iters: (1000 100%) Loss avg: 0.9399
+Hits 82/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 93/100 = 0.93%
+Evaluating test split accuracy
+Evaluation accuracy: 5/100 = 0.05%
+Saved model at saved/turn_left_inter_1000.pt
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Training on cuda:2
+Initialized model GRU_A
+Training SCAN model GRU_A on split 'turn_left' for 1000 iterations on device cuda:2, intermediate rep? False, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/turn_left_train.txt
+21890 examples. Sample pair: ['run around right after look around right', 'I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_RUN I_TURN_RIGHT I_RUN I_TURN_RIGHT I_RUN I_TURN_RIGHT I_RUN']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 8
+Loaded data from scan/SCAN-master/turn_left_test.txt
+1208 examples. Sample pair: ['jump around right twice after turn left thrice', 'I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP']
+Starting training: 1000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 3m 13s (- 0m 0s) Iters: (1000 100%) Loss avg: 1.2803
+Hits 4/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 2/100 = 0.02%
+Evaluating test split accuracy
+Evaluation accuracy: 0/100 = 0.00%
+Saved model at saved/turn_left_1000.pt
