@@ -587,7 +587,7 @@ if __name__ == '__main__':
 
     checkpoint = trainTestSplit(DEVICE, encoder, decoder, args.model, train_path, test_path, iters=args.iters)
     save_path = 'saved/{}{}_{}{}.pt'.format(args.split, '_inter' if args.inter_rep else '',
-            # args.iters, '_' + args.tag if args.tag else '')
+            args.iters, '_' + args.tag if args.tag else '')
 
     i = 0
     while os.path.isfile(save_path):
