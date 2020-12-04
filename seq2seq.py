@@ -18,7 +18,7 @@ import argparse
 parser = argparse.ArgumentParser(description='Train on SCAN splits.')
 parser.add_argument('-r', '--inter-rep', dest='inter_rep', action='store_true',
         default=False, help='train to predict intermediate representation, or do traditional SCAN i/o pairs?')
-parser.add_argument('--inter-rep2', dest='inter_rep', action='store_true',
+parser.add_argument('--inter-rep2', dest='inter_rep2', action='store_true',
         default=False, help='train to predict intermediate representation, or do traditional SCAN i/o pairs?')
 parser.add_argument('-s', '--split', type=str, dest='split',
         default='scan', help='desired split name, example: \'scan\' or \'jump_around_right\'')
@@ -34,8 +34,12 @@ parser.add_argument('-t', '--tag', type=str, dest='tag',
 args = parser.parse_args()
 
 # use full data for determining input/output language, in case splits somehow change it
-if args.inter_rep:
-    full_data = SCAN_DIR + 'tasks_inter.txt'
+if args.inter_rep or args.inter_rep2:
+    if args.inter_rep2:
+        full_data = SCAN_DIR + 'tasks_inter2.txt'
+    else:
+        full_data = SCAN_DIR + 'tasks_inter.txt'
+
     INPUT_LANG, OUTPUT_LANG, full_pairs = prepareData('scan_in', 'scan_out', full_data, False)
     # used for train as well as test splits
     # I add one for the <EOS> tag. Not sure if necessary but can't hurt.
@@ -501,9 +505,9 @@ def trainTestSplit(device, encoder, decoder, model, train_path, test_path, iters
 
     train_losses = trainIters(device, encoder, decoder, model, train_pairs, iters)
     print('Evaluating training split accuracy')
-    train_acc = evaluateTestSet(device, encoder, decoder, model, train_pairs[0:100])
+    train_acc = evaluateTestSet(device, encoder, decoder, model, train_pairs)
     print('Evaluating test split accuracy')
-    test_acc = evaluateTestSet(device, encoder, decoder, model, test_pairs[0:100])
+    test_acc = evaluateTestSet(device, encoder, decoder, model, test_pairs)
 
     checkpoint = {'train_accuracy': train_acc,
             'test_accuracy': test_acc,
@@ -551,6 +555,10 @@ if __name__ == '__main__':
         else:
             train_path = 'tasks.txt'
             test_path = 'tasks.txt'
+        if args.inter_rep2:
+            train_path = 'tasks_inter2.txt'
+            test_path = 'tasks_inter2.txt'
+
     else:
         if args.inter_rep:
             train_path = args.split + '_train_inter.txt'
@@ -558,6 +566,9 @@ if __name__ == '__main__':
         else:
             train_path = args.split + '_train.txt'
             test_path = args.split + '_test.txt'
+        if args.inter_rep2:
+            train_path = args.split + '_train_inter2.txt'
+            test_path = args.split + '_test_inter2.txt'
 
     if args.model == 'GRU':
         encoder, decoder= initModel('GRU', DEVICE, hidden_size=100, dropout=0.1)
