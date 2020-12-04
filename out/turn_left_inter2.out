@@ -1,0 +1,55 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 14
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'turn_left' for 10000 iterations on device cpu, intermediate rep? False, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 14
+Loaded data from scan/SCAN-master/turn_left_train_inter2.txt
+21890 examples. Sample pair: ['jump opposite right and turn right thrice', 'and']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 6
+Loaded data from scan/SCAN-master/turn_left_test_inter2.txt
+1208 examples. Sample pair: ['run twice after turn left', 'after']
+Starting training: 10000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 35s (- 5m 22s) Iters: (1000 10%) Loss avg: 0.1023
+Hits 99/100 test samples
+Duration (Remaining): 1m 4s (- 4m 19s) Iters: (2000 20%) Loss avg: 0.0114
+Hits 99/100 test samples
+Duration (Remaining): 1m 34s (- 3m 41s) Iters: (3000 30%) Loss avg: 0.0024
+Hits 100/100 test samples
+Duration (Remaining): 2m 1s (- 3m 2s) Iters: (4000 40%) Loss avg: 0.0076
+Hits 100/100 test samples
+Duration (Remaining): 2m 26s (- 2m 26s) Iters: (5000 50%) Loss avg: 0.0003
+Hits 100/100 test samples
+Duration (Remaining): 2m 49s (- 1m 53s) Iters: (6000 60%) Loss avg: 0.0036
+Hits 100/100 test samples
+Duration (Remaining): 3m 12s (- 1m 22s) Iters: (7000 70%) Loss avg: 0.0032
+Hits 100/100 test samples
+Duration (Remaining): 3m 35s (- 0m 53s) Iters: (8000 80%) Loss avg: 0.0025
+Hits 100/100 test samples
+Duration (Remaining): 4m 4s (- 0m 27s) Iters: (9000 90%) Loss avg: 0.0024
+Hits 99/100 test samples
+Duration (Remaining): 4m 39s (- 0m 0s) Iters: (10000 100%) Loss avg: 0.0020
+Hits 100/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 21875/21890 = 1.00%
+Evaluating test split accuracy
+Evaluation accuracy: 1208/1208 = 1.00%
+Saved model at saved/turn_left_10000.pt
