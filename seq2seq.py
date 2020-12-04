@@ -41,16 +41,15 @@ if args.inter_rep or args.inter_rep2:
         full_data = SCAN_DIR + 'tasks_inter.txt'
 
     INPUT_LANG, OUTPUT_LANG, full_pairs = prepareData('scan_in', 'scan_out', full_data, False)
-    # used for train as well as test splits
-    # I add one for the <EOS> tag. Not sure if necessary but can't hurt.
-    MAX_LENGTH = max(len(pair[1].split(' ')) for pair in full_pairs) + 1
 else:
     # use full data for determining input/output language, in case splits somehow change it
     full_data = SCAN_DIR + 'tasks.txt'
     INPUT_LANG, OUTPUT_LANG, full_pairs = prepareData('scan_in', 'scan_out', full_data, False)
-    # used for train as well as test splits
-    # I add one for the <EOS> tag. Not sure if necessary but can't hurt.
-    MAX_LENGTH = max(len(pair[1].split(' ')) for pair in full_pairs) + 1
+
+# used for train as well as test splits
+# I add one for the <EOS> tag. Not sure if necessary but can't hurt.
+# MAX_LENGTH needs to account for input length too!
+MAX_LENGTH = max(max(len(pair[1].split(' ')), len(pair[0].split(' '))) for pair in full_pairs) + 1
 
 
 if not torch.cuda.is_available():
