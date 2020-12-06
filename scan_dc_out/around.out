@@ -1,0 +1,105 @@
+CUDA is available?: False
+using cuda?: False
+Running EC on polestar @ 2020-12-04 02:34:07.361186 with 1 CPUs and parameters:
+	 noConsolidation  =  True
+	 iterations  =  1
+	 enumerationTimeout  =  60000
+	 useRecognitionModel  =  False
+	 topk_use_only_likelihood  =  False
+	 pseudoCounts  =  30.0
+	 aic  =  0.0
+	 structurePenalty  =  0.0
+	 arity  =  4
+	 taskReranker  =  unsolved
+	 storeTaskMetrics  =  True
+	 rewriteTaskMetrics  =  False
+	 maximumFrontier  =  10
+	 solver  =  python
+	 topK  =  1
+	 evaluationTimeout  =  1.0
+	 cuda  =  False
+
+Currently using this much memory: 138706944
+Currently using this much memory: 138706944
+Using a waking task batch of size: 1
+Disabling parallelism on the Python side because we only have one job.
+If you are using ocaml, there could still be parallelism.
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 0.000000 <= MDL < 1.500000. Timeout 60000.000000.
+totalNumberOfPrograms: 0, 	time: 0.0002574920654296875
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 1.500000 <= MDL < 3.000000. Timeout 59999.997629.
+totalNumberOfPrograms: 2, 	time: 0.0008196830749511719
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 3.000000 <= MDL < 4.500000. Timeout 59999.995883.
+totalNumberOfPrograms: 2, 	time: 0.0018770694732666016
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 4.500000 <= MDL < 6.000000. Timeout 59999.993062.
+totalNumberOfPrograms: 12, 	time: 0.00821828842163086
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 6.000000 <= MDL < 7.500000. Timeout 59999.984026.
+totalNumberOfPrograms: 32, 	time: 0.029159069061279297
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 7.500000 <= MDL < 9.000000. Timeout 59999.953997.
+totalNumberOfPrograms: 102, 	time: 0.12535548210144043
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 9.000000 <= MDL < 10.500000. Timeout 59999.827778.
+totalNumberOfPrograms: 404, 	time: 0.5501832962036133
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 10.500000 <= MDL < 12.000000. Timeout 59999.276654.
+totalNumberOfPrograms: 1322, 	time: 2.660388946533203
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 12.000000 <= MDL < 13.500000. Timeout 59996.614338.
+totalNumberOfPrograms: 5512, 	time: 12.808813571929932
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 13.500000 <= MDL < 15.000000. Timeout 59983.773219.
+Traceback (most recent call last):
+  File "bin/scan.py", line 50, in <module>
+    for i, result in enumerate(generator):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/dreamcoder.py", line 410, in ecIterator
+    evaluationTimeout=evaluationTimeout)
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/dreamcoder.py", line 560, in default_wake_generative
+    evaluationTimeout=evaluationTimeout)
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/enumeration.py", line 169, in multicoreEnumeration
+    likelihoodModel=likelihoodModel)
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/enumeration.py", line 63, in <lambda>
+    a, **k: f(*a, **k)
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/enumeration.py", line 240, in _f
+    r = f(*a, **k)
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/enumeration.py", line 377, in solveForTask_python
+    lowerBound=lowerBound, upperBound=upperBound)
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/enumeration.py", line 420, in enumerateForTasks
+    lowerBound=previousBudget):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/grammar.py", line 469, in enumeration
+    maximumDepth=maximumDepth):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/grammar.py", line 486, in enumeration
+    maximumDepth=maximumDepth - 1):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/grammar.py", line 516, in enumerateApplication
+    maximumDepth=maximumDepth):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/grammar.py", line 469, in enumeration
+    maximumDepth=maximumDepth):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/grammar.py", line 486, in enumeration
+    maximumDepth=maximumDepth - 1):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/grammar.py", line 527, in enumerateApplication
+    argumentIndex=argumentIndex + 1):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/grammar.py", line 516, in enumerateApplication
+    maximumDepth=maximumDepth):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/grammar.py", line 486, in enumeration
+    maximumDepth=maximumDepth - 1):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/grammar.py", line 516, in enumerateApplication
+    maximumDepth=maximumDepth):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/grammar.py", line 486, in enumeration
+    maximumDepth=maximumDepth - 1):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/grammar.py", line 527, in enumerateApplication
+    argumentIndex=argumentIndex + 1):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/grammar.py", line 516, in enumerateApplication
+    maximumDepth=maximumDepth):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/grammar.py", line 486, in enumeration
+    maximumDepth=maximumDepth - 1):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/grammar.py", line 527, in enumerateApplication
+    argumentIndex=argumentIndex + 1):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/grammar.py", line 516, in enumerateApplication
+    maximumDepth=maximumDepth):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/grammar.py", line 486, in enumeration
+    maximumDepth=maximumDepth - 1):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/grammar.py", line 516, in enumerateApplication
+    maximumDepth=maximumDepth):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/grammar.py", line 469, in enumeration
+    maximumDepth=maximumDepth):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/grammar.py", line 474, in enumeration
+    normalize=True)
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/grammar.py", line 140, in buildCandidates
+    newContext = newContext.unify(t.returns(), request)
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/type.py", line 73, in returns
+    def returns(self):
+KeyboardInterrupt

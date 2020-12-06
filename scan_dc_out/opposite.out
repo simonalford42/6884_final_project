@@ -1,0 +1,59 @@
+CUDA is available?: False
+using cuda?: False
+Running EC on polestar @ 2020-12-04 02:31:08.536156 with 1 CPUs and parameters:
+	 noConsolidation  =  True
+	 iterations  =  1
+	 enumerationTimeout  =  60000
+	 useRecognitionModel  =  False
+	 topk_use_only_likelihood  =  False
+	 pseudoCounts  =  30.0
+	 aic  =  0.0
+	 structurePenalty  =  0.0
+	 arity  =  4
+	 taskReranker  =  unsolved
+	 storeTaskMetrics  =  True
+	 rewriteTaskMetrics  =  False
+	 maximumFrontier  =  10
+	 solver  =  python
+	 topK  =  1
+	 evaluationTimeout  =  1.0
+	 cuda  =  False
+
+Currently using this much memory: 138702848
+Currently using this much memory: 138702848
+Using a waking task batch of size: 1
+Disabling parallelism on the Python side because we only have one job.
+If you are using ocaml, there could still be parallelism.
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 0.000000 <= MDL < 1.500000. Timeout 60000.000000.
+totalNumberOfPrograms: 0, 	time: 0.00016260147094726562
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 1.500000 <= MDL < 3.000000. Timeout 59999.995025.
+totalNumberOfPrograms: 2, 	time: 0.0018687248229980469
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 3.000000 <= MDL < 4.500000. Timeout 59999.992264.
+totalNumberOfPrograms: 2, 	time: 0.0019996166229248047
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 4.500000 <= MDL < 6.000000. Timeout 59999.989483.
+totalNumberOfPrograms: 8, 	time: 0.011255979537963867
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 6.000000 <= MDL < 7.500000. Timeout 59999.977354.
+totalNumberOfPrograms: 24, 	time: 0.05223369598388672
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 7.500000 <= MDL < 9.000000. Timeout 59999.923848.
+Solved task opposite with program (lambda (concat (translate (right $0 opposite)) (concat (translate (right $0 opposite)) (translate (left $0 opposite)))))
+dt: 0.09493875503540039
+PANIC! Exception in child worker: 
+Traceback (most recent call last):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/enumeration.py", line 240, in _f
+    r = f(*a, **k)
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/enumeration.py", line 377, in solveForTask_python
+    lowerBound=lowerBound, upperBound=upperBound)
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/enumeration.py", line 452, in enumerateForTasks
+    assert False
+AssertionError
+
+Traceback (most recent call last):
+  File "bin/scan.py", line 50, in <module>
+    for i, result in enumerate(generator):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/dreamcoder.py", line 410, in ecIterator
+    evaluationTimeout=evaluationTimeout)
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/dreamcoder.py", line 560, in default_wake_generative
+    evaluationTimeout=evaluationTimeout)
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/enumeration.py", line 188, in multicoreEnumeration
+    assert False
+AssertionError

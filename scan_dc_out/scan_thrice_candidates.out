@@ -1,0 +1,191 @@
+CUDA is available?: False
+using cuda?: False
+Running EC on polestar @ 2020-11-29 14:11:04.578226 with 1 CPUs and parameters:
+	 noConsolidation  =  False
+	 iterations  =  1
+	 enumerationTimeout  =  1
+	 useRecognitionModel  =  False
+	 topk_use_only_likelihood  =  False
+	 pseudoCounts  =  30.0
+	 aic  =  0.0
+	 structurePenalty  =  0.0
+	 arity  =  4
+	 taskReranker  =  unsolved
+	 storeTaskMetrics  =  True
+	 rewriteTaskMetrics  =  False
+	 maximumFrontier  =  10
+	 solver  =  ocaml
+	 topK  =  1
+	 evaluationTimeout  =  1.0
+	 cuda  =  False
+
+Currently using this much memory: 138457088
+Currently using this much memory: 138457088
+Using a waking task batch of size: 24
+Disabling parallelism on the Python side because we only have one job.
+If you are using ocaml, there could still be parallelism.
+(python) Launching tstr -> tstr (24 tasks) w/ 1 CPUs. 0.000000 <= MDL < 1.500000. Timeout 1.000000.
+	(ocaml: 1 CPUs. shatter: 1. |fringe| = 1. |finished| = 0.)
+(python) Launching tstr -> tstr (24 tasks) w/ 1 CPUs. 1.500000 <= MDL < 3.000000. Timeout 0.814714.
+	(ocaml: 1 CPUs. shatter: 1. |fringe| = 1. |finished| = 0.)
+(python) Launching tstr -> tstr (24 tasks) w/ 1 CPUs. 3.000000 <= MDL < 4.500000. Timeout 0.774446.
+	(ocaml: 1 CPUs. shatter: 1. |fringe| = 1. |finished| = 0.)
+(python) Launching tstr -> tstr (24 tasks) w/ 1 CPUs. 4.500000 <= MDL < 6.000000. Timeout 0.739429.
+	(ocaml: 1 CPUs. shatter: 1. |fringe| = 1. |finished| = 0.)
+(python) Launching tstr -> tstr (24 tasks) w/ 1 CPUs. 6.000000 <= MDL < 7.500000. Timeout 0.697275.
+	(ocaml: 1 CPUs. shatter: 1. |fringe| = 1. |finished| = 0.)
+(python) Launching tstr -> tstr (24 tasks) w/ 1 CPUs. 7.500000 <= MDL < 9.000000. Timeout 0.663614.
+	(ocaml: 1 CPUs. shatter: 1. |fringe| = 1. |finished| = 0.)
+(python) Launching tstr -> tstr (24 tasks) w/ 1 CPUs. 9.000000 <= MDL < 10.500000. Timeout 0.601382.
+	(ocaml: 1 CPUs. shatter: 1. |fringe| = 1. |finished| = 0.)
+We enumerated this many programs, for each task:
+	 [1555, 1555, 1555, 1555, 1555, 1555, 1555, 1555, 1555, 1555, 1555, 1555, 1555, 1555, 1555, 1555, 1555, 1555, 1555, 1555, 1555, 1555, 1555, 1555]
+Total solved before augmenting SCAN solutions: 6
+Generative model enumeration results:
+HIT 0: run thrice w/ (lambda (SCAN_RUN (SCAN_RUN (SCAN_RUN $0)))) ; log prior = -7.783641 ; log likelihood = 0.000000
+HIT 1: jump thrice w/ (lambda (SCAN_JUMP (SCAN_JUMP (SCAN_JUMP $0)))) ; log prior = -7.783641 ; log likelihood = 0.000000
+HIT 2: look thrice w/ (lambda (SCAN_LOOK (SCAN_LOOK (SCAN_LOOK $0)))) ; log prior = -7.783641 ; log likelihood = 0.000000
+HIT 3: walk thrice w/ (lambda (SCAN_WALK (SCAN_WALK (SCAN_WALK $0)))) ; log prior = -7.783641 ; log likelihood = 0.000000
+HIT 4: turn left thrice w/ (lambda (SCAN_LTURN (SCAN_LTURN (SCAN_LTURN $0)))) ; log prior = -7.783641 ; log likelihood = 0.000000
+HIT 5: turn right thrice w/ (lambda (SCAN_RTURN (SCAN_RTURN (SCAN_RTURN $0)))) ; log prior = -7.783641 ; log likelihood = 0.000000
+HIT 6: run left thrice w/ (lambda (SCAN_LTURN (SCAN_RUN (SCAN_LTURN (SCAN_RUN (SCAN_LTURN (SCAN_RUN $0))))))) ; log prior = -13.621371 ; log likelihood = 0.000000
+HIT 7: run right thrice w/ (lambda (SCAN_RTURN (SCAN_RUN (SCAN_RTURN (SCAN_RUN (SCAN_RTURN (SCAN_RUN $0))))))) ; log prior = -13.621371 ; log likelihood = 0.000000
+HIT 8: walk right thrice w/ (lambda (SCAN_RTURN (SCAN_WALK (SCAN_RTURN (SCAN_WALK (SCAN_RTURN (SCAN_WALK $0))))))) ; log prior = -13.621371 ; log likelihood = 0.000000
+HIT 9: look right thrice w/ (lambda (SCAN_RTURN (SCAN_LOOK (SCAN_RTURN (SCAN_LOOK (SCAN_RTURN (SCAN_LOOK $0))))))) ; log prior = -13.621371 ; log likelihood = 0.000000
+HIT 10: walk left thrice w/ (lambda (SCAN_LTURN (SCAN_WALK (SCAN_LTURN (SCAN_WALK (SCAN_LTURN (SCAN_WALK $0))))))) ; log prior = -13.621371 ; log likelihood = 0.000000
+HIT 11: look left thrice w/ (lambda (SCAN_LTURN (SCAN_LOOK (SCAN_LTURN (SCAN_LOOK (SCAN_LTURN (SCAN_LOOK $0))))))) ; log prior = -13.621371 ; log likelihood = 0.000000
+HIT 12: jump left thrice w/ (lambda (SCAN_LTURN (SCAN_JUMP (SCAN_LTURN (SCAN_JUMP (SCAN_LTURN (SCAN_JUMP $0))))))) ; log prior = -13.621371 ; log likelihood = 0.000000
+HIT 13: jump right thrice w/ (lambda (SCAN_RTURN (SCAN_JUMP (SCAN_RTURN (SCAN_JUMP (SCAN_RTURN (SCAN_JUMP $0))))))) ; log prior = -13.621371 ; log likelihood = 0.000000
+HIT 14: turn opposite right thrice w/ (lambda (SCAN_RTURN (SCAN_RTURN (SCAN_RTURN (SCAN_RTURN (SCAN_RTURN (SCAN_RTURN $0))))))) ; log prior = -13.621371 ; log likelihood = 0.000000
+HIT 15: turn opposite left thrice w/ (lambda (SCAN_LTURN (SCAN_LTURN (SCAN_LTURN (SCAN_LTURN (SCAN_LTURN (SCAN_LTURN $0))))))) ; log prior = -13.621371 ; log likelihood = 0.000000
+HIT 16: run opposite right thrice w/ (lambda (SCAN_RTURN (SCAN_RTURN (SCAN_RUN (SCAN_RTURN (SCAN_RTURN (SCAN_RUN (SCAN_RTURN (SCAN_RTURN (SCAN_RUN $0)))))))))) ; log prior = -19.459101 ; log likelihood = 0.000000
+HIT 17: run opposite left thrice w/ (lambda (SCAN_LTURN (SCAN_LTURN (SCAN_RUN (SCAN_LTURN (SCAN_LTURN (SCAN_RUN (SCAN_LTURN (SCAN_LTURN (SCAN_RUN $0)))))))))) ; log prior = -19.459101 ; log likelihood = 0.000000
+HIT 18: look opposite right thrice w/ (lambda (SCAN_RTURN (SCAN_RTURN (SCAN_LOOK (SCAN_RTURN (SCAN_RTURN (SCAN_LOOK (SCAN_RTURN (SCAN_RTURN (SCAN_LOOK $0)))))))))) ; log prior = -19.459101 ; log likelihood = 0.000000
+HIT 19: look opposite left thrice w/ (lambda (SCAN_LTURN (SCAN_LTURN (SCAN_LOOK (SCAN_LTURN (SCAN_LTURN (SCAN_LOOK (SCAN_LTURN (SCAN_LTURN (SCAN_LOOK $0)))))))))) ; log prior = -19.459101 ; log likelihood = 0.000000
+HIT 20: walk opposite left thrice w/ (lambda (SCAN_LTURN (SCAN_LTURN (SCAN_WALK (SCAN_LTURN (SCAN_LTURN (SCAN_WALK (SCAN_LTURN (SCAN_LTURN (SCAN_WALK $0)))))))))) ; log prior = -19.459101 ; log likelihood = 0.000000
+HIT 21: jump opposite left thrice w/ (lambda (SCAN_LTURN (SCAN_LTURN (SCAN_JUMP (SCAN_LTURN (SCAN_LTURN (SCAN_JUMP (SCAN_LTURN (SCAN_LTURN (SCAN_JUMP $0)))))))))) ; log prior = -19.459101 ; log likelihood = 0.000000
+HIT 22: walk opposite right thrice w/ (lambda (SCAN_RTURN (SCAN_RTURN (SCAN_WALK (SCAN_RTURN (SCAN_RTURN (SCAN_WALK (SCAN_RTURN (SCAN_RTURN (SCAN_WALK $0)))))))))) ; log prior = -19.459101 ; log likelihood = 0.000000
+HIT 23: jump opposite right thrice w/ (lambda (SCAN_RTURN (SCAN_RTURN (SCAN_JUMP (SCAN_RTURN (SCAN_RTURN (SCAN_JUMP (SCAN_RTURN (SCAN_RTURN (SCAN_JUMP $0)))))))))) ; log prior = -19.459101 ; log likelihood = 0.000000
+Hits 24/24 tasks
+Average description length of a program solving a task: 14.107849 nats
+Generative model average:  0 sec.	median: 0 	max: 0 	standard deviation 0
+Currently using this much memory: 139440128
+Frontiers discovered top down: 24
+Total frontiers: 24
+Currently using this much memory: 139440128
+Showing the top 5 programs in each frontier being sent to the compressor:
+0: run thrice
+0.00	(lambda (SCAN_RUN (SCAN_RUN (SCAN_RUN $0))))
+
+1: jump thrice
+0.00	(lambda (SCAN_JUMP (SCAN_JUMP (SCAN_JUMP $0))))
+
+2: look thrice
+0.00	(lambda (SCAN_LOOK (SCAN_LOOK (SCAN_LOOK $0))))
+
+3: walk thrice
+0.00	(lambda (SCAN_WALK (SCAN_WALK (SCAN_WALK $0))))
+
+4: turn left thrice
+0.00	(lambda (SCAN_LTURN (SCAN_LTURN (SCAN_LTURN $0))))
+
+5: turn right thrice
+0.00	(lambda (SCAN_RTURN (SCAN_RTURN (SCAN_RTURN $0))))
+
+6: run left thrice
+0.00	(lambda (SCAN_LTURN (SCAN_RUN (SCAN_LTURN (SCAN_RUN (SCAN_LTURN (SCAN_RUN $0)))))))
+
+7: run right thrice
+0.00	(lambda (SCAN_RTURN (SCAN_RUN (SCAN_RTURN (SCAN_RUN (SCAN_RTURN (SCAN_RUN $0)))))))
+
+8: walk right thrice
+0.00	(lambda (SCAN_RTURN (SCAN_WALK (SCAN_RTURN (SCAN_WALK (SCAN_RTURN (SCAN_WALK $0)))))))
+
+9: look right thrice
+0.00	(lambda (SCAN_RTURN (SCAN_LOOK (SCAN_RTURN (SCAN_LOOK (SCAN_RTURN (SCAN_LOOK $0)))))))
+
+10: walk left thrice
+0.00	(lambda (SCAN_LTURN (SCAN_WALK (SCAN_LTURN (SCAN_WALK (SCAN_LTURN (SCAN_WALK $0)))))))
+
+11: look left thrice
+0.00	(lambda (SCAN_LTURN (SCAN_LOOK (SCAN_LTURN (SCAN_LOOK (SCAN_LTURN (SCAN_LOOK $0)))))))
+
+12: jump left thrice
+0.00	(lambda (SCAN_LTURN (SCAN_JUMP (SCAN_LTURN (SCAN_JUMP (SCAN_LTURN (SCAN_JUMP $0)))))))
+
+13: jump right thrice
+0.00	(lambda (SCAN_RTURN (SCAN_JUMP (SCAN_RTURN (SCAN_JUMP (SCAN_RTURN (SCAN_JUMP $0)))))))
+
+14: turn opposite right thrice
+0.00	(lambda (SCAN_RTURN (SCAN_RTURN (SCAN_RTURN (SCAN_RTURN (SCAN_RTURN (SCAN_RTURN $0)))))))
+
+15: turn opposite left thrice
+0.00	(lambda (SCAN_LTURN (SCAN_LTURN (SCAN_LTURN (SCAN_LTURN (SCAN_LTURN (SCAN_LTURN $0)))))))
+
+16: run opposite right thrice
+0.00	(lambda (SCAN_RTURN (SCAN_RTURN (SCAN_RUN (SCAN_RTURN (SCAN_RTURN (SCAN_RUN (SCAN_RTURN (SCAN_RTURN (SCAN_RUN $0))))))))))
+
+17: run opposite left thrice
+0.00	(lambda (SCAN_LTURN (SCAN_LTURN (SCAN_RUN (SCAN_LTURN (SCAN_LTURN (SCAN_RUN (SCAN_LTURN (SCAN_LTURN (SCAN_RUN $0))))))))))
+
+18: look opposite right thrice
+0.00	(lambda (SCAN_RTURN (SCAN_RTURN (SCAN_LOOK (SCAN_RTURN (SCAN_RTURN (SCAN_LOOK (SCAN_RTURN (SCAN_RTURN (SCAN_LOOK $0))))))))))
+
+19: look opposite left thrice
+0.00	(lambda (SCAN_LTURN (SCAN_LTURN (SCAN_LOOK (SCAN_LTURN (SCAN_LTURN (SCAN_LOOK (SCAN_LTURN (SCAN_LTURN (SCAN_LOOK $0))))))))))
+
+20: walk opposite left thrice
+0.00	(lambda (SCAN_LTURN (SCAN_LTURN (SCAN_WALK (SCAN_LTURN (SCAN_LTURN (SCAN_WALK (SCAN_LTURN (SCAN_LTURN (SCAN_WALK $0))))))))))
+
+21: jump opposite left thrice
+0.00	(lambda (SCAN_LTURN (SCAN_LTURN (SCAN_JUMP (SCAN_LTURN (SCAN_LTURN (SCAN_JUMP (SCAN_LTURN (SCAN_LTURN (SCAN_JUMP $0))))))))))
+
+22: walk opposite right thrice
+0.00	(lambda (SCAN_RTURN (SCAN_RTURN (SCAN_WALK (SCAN_RTURN (SCAN_RTURN (SCAN_WALK (SCAN_RTURN (SCAN_RTURN (SCAN_WALK $0))))))))))
+
+23: jump opposite right thrice
+0.00	(lambda (SCAN_RTURN (SCAN_RTURN (SCAN_JUMP (SCAN_RTURN (SCAN_RTURN (SCAN_JUMP (SCAN_RTURN (SCAN_RTURN (SCAN_JUMP $0))))))))))
+
+Compression message saved to: compressionMessages/2020-11-29T14:11:05.200168
+Compression backend will run for most 20 iterations
+Total number of candidates: 2824734
+Constructed version spaces and coalesced candidates in 34.1923m.
+Trimmed down the beam, have only 300 best candidates (M)
+Rewrote topK in 27.6868m.
+Initial score: -322.702507
+ (M)New frontiers length 300 Scored candidates (M) in 646.459ms.
+candidate primitive (M)
+	#(lambda (lambda (SCAN_LTURN ($1 (SCAN_LTURN ($1 (SCAN_LTURN ($1 $0)))))))) : (tstr -> tstr) -> tstr -> tstr
+candidate primitive (M)
+	#(lambda (lambda (SCAN_LTURN ($1 (SCAN_LTURN ($1 (SCAN_LTURN ($1 $0)))))))) : (tstr -> tstr) -> tstr -> tstr
+Scored candidates2 (M) in 0.0214577ms.
+Improved score to -275.075531 (dScore=47.626976) w/ new primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1)))))))) : tstr -> (tstr -> tstr) -> tstr
+Induced a grammar in 4404.1 seconds
+Traceback (most recent call last):
+  File "/usr/local/conda/lib/python3.7/subprocess.py", line 964, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/local/conda/lib/python3.7/subprocess.py", line 1715, in _communicate
+    ready = selector.select(timeout)
+  File "/usr/local/conda/lib/python3.7/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "bin/scan.py", line 46, in <module>
+    for i, result in enumerate(generator):
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/dreamcoder.py", line 470, in ecIterator
+    iteration=j)
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/dreamcoder.py", line 698, in consolidate
+    backend=compressor, CPUs=CPUs, iteration=iteration)
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/compression.py", line 41, in induceGrammar
+    g, newFrontiers = ocamlInduce(*args, **kwargs)
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/compression.py", line 107, in ocamlInduce
+    response, error = process.communicate(bytes(message, encoding="utf-8"))
+  File "/usr/local/conda/lib/python3.7/subprocess.py", line 975, in communicate
+    self._wait(timeout=sigint_timeout)
+  File "/usr/local/conda/lib/python3.7/subprocess.py", line 1647, in _wait
+    time.sleep(delay)
+KeyboardInterrupt

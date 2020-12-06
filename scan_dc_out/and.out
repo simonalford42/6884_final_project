@@ -1,0 +1,56 @@
+CUDA is available?: False
+using cuda?: False
+Running EC on polestar @ 2020-12-04 02:08:18.867948 with 1 CPUs and parameters:
+	 noConsolidation  =  True
+	 iterations  =  1
+	 enumerationTimeout  =  5
+	 useRecognitionModel  =  False
+	 topk_use_only_likelihood  =  False
+	 pseudoCounts  =  30.0
+	 aic  =  0.0
+	 structurePenalty  =  0.0
+	 arity  =  4
+	 taskReranker  =  unsolved
+	 storeTaskMetrics  =  True
+	 rewriteTaskMetrics  =  False
+	 maximumFrontier  =  10
+	 solver  =  python
+	 topK  =  1
+	 evaluationTimeout  =  1.0
+	 cuda  =  False
+
+Currently using this much memory: 143761408
+Currently using this much memory: 143761408
+Using a waking task batch of size: 1
+Disabling parallelism on the Python side because we only have one job.
+If you are using ocaml, there could still be parallelism.
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 0.000000 <= MDL < 1.500000. Timeout 5.000000.
+totalNumberOfPrograms: 0, 	time: 0.00020360946655273438
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 1.500000 <= MDL < 3.000000. Timeout 4.772027.
+totalNumberOfPrograms: 0, 	time: 0.0007786750793457031
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 3.000000 <= MDL < 4.500000. Timeout 4.550180.
+totalNumberOfPrograms: 14, 	time: 0.004431962966918945
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 4.500000 <= MDL < 6.000000. Timeout 4.312205.
+totalNumberOfPrograms: 0, 	time: 0.012591361999511719
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 6.000000 <= MDL < 7.500000. Timeout 4.091068.
+totalNumberOfPrograms: 0, 	time: 0.06374955177307129
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 7.500000 <= MDL < 9.000000. Timeout 3.831439.
+totalNumberOfPrograms: 14, 	time: 0.20422005653381348
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 9.000000 <= MDL < 10.500000. Timeout 3.426642.
+Solved task and with program (lambda (concat (translate (left $0 and)) (translate (right $0 and))))
+dt: 1.8080313205718994
+totalNumberOfPrograms: 392, 	time: 1.1199233531951904
+(python) Launching input -> tout (1 tasks) w/ 1 CPUs. 10.500000 <= MDL < 12.000000. Timeout 2.110879.
+totalNumberOfPrograms: 1, 	time: 3.617920398712158
+We enumerated this many programs, for each task:
+	 [421]
+Generative model enumeration results:
+HIT and w/ (lambda (concat (translate (left $0 and)) (translate (right $0 and)))) ; log prior = -10.106428 ; log likelihood = 0.000000
+Hits 1/1 tasks
+Average description length of a program solving a task: 10.106428 nats
+Generative model average:  2 sec.	median: 2 	max: 2 	standard deviation 0
+Currently using this much memory: 156692480
+Frontiers discovered top down: 1
+Total frontiers: 1
+Skipping consolidation.
+ecIterator count 0
