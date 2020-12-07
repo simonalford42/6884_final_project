@@ -1,0 +1,1966 @@
+CUDA is available?: False
+using cuda?: False
+Running EC on polestar @ 2020-12-07 00:47:05.790688 with 1 CPUs and parameters:
+	 noConsolidation  =  False
+	 iterations  =  1
+	 enumerationTimeout  =  1
+	 useRecognitionModel  =  False
+	 topk_use_only_likelihood  =  False
+	 pseudoCounts  =  30.0
+	 aic  =  0.0
+	 structurePenalty  =  0.0
+	 arity  =  4
+	 taskReranker  =  unsolved
+	 storeTaskMetrics  =  True
+	 rewriteTaskMetrics  =  False
+	 maximumFrontier  =  10
+	 solver  =  python
+	 topK  =  1
+	 evaluationTimeout  =  1.0
+	 cuda  =  False
+
+Currently using this much memory: 138719232
+Currently using this much memory: 138719232
+Using a waking task batch of size: 14
+Disabling parallelism on the Python side because we only have one job.
+If you are using ocaml, there could still be parallelism.
+(python) Launching str -> str (14 tasks) w/ 1 CPUs. 0.000000 <= MDL < 1.500000. Timeout 1.000000.
+totalNumberOfPrograms: 0, 	time: 0.00026106834411621094
+(python) Launching str -> str (14 tasks) w/ 1 CPUs. 1.500000 <= MDL < 3.000000. Timeout 0.993536.
+totalNumberOfPrograms: 1, 	time: 0.002027273178100586
+(python) Launching str -> str (14 tasks) w/ 1 CPUs. 3.000000 <= MDL < 4.500000. Timeout 0.985923.
+totalNumberOfPrograms: 6, 	time: 0.010483026504516602
+(python) Launching str -> str (14 tasks) w/ 1 CPUs. 4.500000 <= MDL < 6.000000. Timeout 0.970651.
+totalNumberOfPrograms: 36, 	time: 0.04530835151672363
+(python) Launching str -> str (14 tasks) w/ 1 CPUs. 6.000000 <= MDL < 7.500000. Timeout 0.921652.
+totalNumberOfPrograms: 0, 	time: 0.009840250015258789
+(python) Launching str -> str (14 tasks) w/ 1 CPUs. 7.500000 <= MDL < 9.000000. Timeout 0.908473.
+Solved task 4: turn left thrice with program (lambda (SCAN_LTURN (SCAN_LTURN (SCAN_LTURN $0))))
+Solved task 5: turn right thrice with program (lambda (SCAN_RTURN (SCAN_RTURN (SCAN_RTURN $0))))
+Solved task 3: walk thrice with program (lambda (SCAN_WALK (SCAN_WALK (SCAN_WALK $0))))
+Solved task 1: jump thrice with program (lambda (SCAN_JUMP (SCAN_JUMP (SCAN_JUMP $0))))
+Solved task 2: look thrice with program (lambda (SCAN_LOOK (SCAN_LOOK (SCAN_LOOK $0))))
+Solved task 0: run thrice with program (lambda (SCAN_RUN (SCAN_RUN (SCAN_RUN $0))))
+totalNumberOfPrograms: 216, 	time: 0.17343401908874512
+(python) Launching str -> str (14 tasks) w/ 1 CPUs. 9.000000 <= MDL < 10.500000. Timeout 0.730664.
+totalNumberOfPrograms: 1074, 	time: 0.7313854694366455
+We enumerated this many programs, for each task:
+	 [1333, 1333, 1333, 1333, 1333, 1333, 1333, 1333, 1333, 1333, 1333, 1333, 1333, 1333]
+Total solved before augmenting SCAN solutions: 6
+Generative model enumeration results:
+HIT 0: run thrice w/ (lambda (SCAN_RUN (SCAN_RUN (SCAN_RUN $0)))) ; log prior = -7.783641 ; log likelihood = 0.000000
+HIT 1: jump thrice w/ (lambda (SCAN_JUMP (SCAN_JUMP (SCAN_JUMP $0)))) ; log prior = -7.783641 ; log likelihood = 0.000000
+HIT 2: look thrice w/ (lambda (SCAN_LOOK (SCAN_LOOK (SCAN_LOOK $0)))) ; log prior = -7.783641 ; log likelihood = 0.000000
+HIT 3: walk thrice w/ (lambda (SCAN_WALK (SCAN_WALK (SCAN_WALK $0)))) ; log prior = -7.783641 ; log likelihood = 0.000000
+HIT 4: turn left thrice w/ (lambda (SCAN_LTURN (SCAN_LTURN (SCAN_LTURN $0)))) ; log prior = -7.783641 ; log likelihood = 0.000000
+HIT 5: turn right thrice w/ (lambda (SCAN_RTURN (SCAN_RTURN (SCAN_RTURN $0)))) ; log prior = -7.783641 ; log likelihood = 0.000000
+HIT 6: run left thrice w/ (lambda (SCAN_LTURN (SCAN_RUN (SCAN_LTURN (SCAN_RUN (SCAN_LTURN (SCAN_RUN $0))))))) ; log prior = -13.621371 ; log likelihood = 0.000000
+HIT 7: run right thrice w/ (lambda (SCAN_RTURN (SCAN_RUN (SCAN_RTURN (SCAN_RUN (SCAN_RTURN (SCAN_RUN $0))))))) ; log prior = -13.621371 ; log likelihood = 0.000000
+HIT 8: walk right thrice w/ (lambda (SCAN_RTURN (SCAN_WALK (SCAN_RTURN (SCAN_WALK (SCAN_RTURN (SCAN_WALK $0))))))) ; log prior = -13.621371 ; log likelihood = 0.000000
+HIT 9: look right thrice w/ (lambda (SCAN_RTURN (SCAN_LOOK (SCAN_RTURN (SCAN_LOOK (SCAN_RTURN (SCAN_LOOK $0))))))) ; log prior = -13.621371 ; log likelihood = 0.000000
+HIT 10: walk left thrice w/ (lambda (SCAN_LTURN (SCAN_WALK (SCAN_LTURN (SCAN_WALK (SCAN_LTURN (SCAN_WALK $0))))))) ; log prior = -13.621371 ; log likelihood = 0.000000
+HIT 11: look left thrice w/ (lambda (SCAN_LTURN (SCAN_LOOK (SCAN_LTURN (SCAN_LOOK (SCAN_LTURN (SCAN_LOOK $0))))))) ; log prior = -13.621371 ; log likelihood = 0.000000
+HIT 12: jump left thrice w/ (lambda (SCAN_LTURN (SCAN_JUMP (SCAN_LTURN (SCAN_JUMP (SCAN_LTURN (SCAN_JUMP $0))))))) ; log prior = -13.621371 ; log likelihood = 0.000000
+HIT 13: jump right thrice w/ (lambda (SCAN_RTURN (SCAN_JUMP (SCAN_RTURN (SCAN_JUMP (SCAN_RTURN (SCAN_JUMP $0))))))) ; log prior = -13.621371 ; log likelihood = 0.000000
+Hits 14/14 tasks
+Average description length of a program solving a task: 11.119487 nats
+Generative model average:  0 sec.	median: 0 	max: 0 	standard deviation 0
+Currently using this much memory: 139575296
+Frontiers discovered top down: 14
+Total frontiers: 14
+Currently using this much memory: 139575296
+Showing the top 5 programs in each frontier being sent to the compressor:
+0: run thrice
+0.00	(lambda (SCAN_RUN (SCAN_RUN (SCAN_RUN $0))))
+
+1: jump thrice
+0.00	(lambda (SCAN_JUMP (SCAN_JUMP (SCAN_JUMP $0))))
+
+2: look thrice
+0.00	(lambda (SCAN_LOOK (SCAN_LOOK (SCAN_LOOK $0))))
+
+3: walk thrice
+0.00	(lambda (SCAN_WALK (SCAN_WALK (SCAN_WALK $0))))
+
+4: turn left thrice
+0.00	(lambda (SCAN_LTURN (SCAN_LTURN (SCAN_LTURN $0))))
+
+5: turn right thrice
+0.00	(lambda (SCAN_RTURN (SCAN_RTURN (SCAN_RTURN $0))))
+
+6: run left thrice
+0.00	(lambda (SCAN_LTURN (SCAN_RUN (SCAN_LTURN (SCAN_RUN (SCAN_LTURN (SCAN_RUN $0)))))))
+
+7: run right thrice
+0.00	(lambda (SCAN_RTURN (SCAN_RUN (SCAN_RTURN (SCAN_RUN (SCAN_RTURN (SCAN_RUN $0)))))))
+
+8: walk right thrice
+0.00	(lambda (SCAN_RTURN (SCAN_WALK (SCAN_RTURN (SCAN_WALK (SCAN_RTURN (SCAN_WALK $0)))))))
+
+9: look right thrice
+0.00	(lambda (SCAN_RTURN (SCAN_LOOK (SCAN_RTURN (SCAN_LOOK (SCAN_RTURN (SCAN_LOOK $0)))))))
+
+10: walk left thrice
+0.00	(lambda (SCAN_LTURN (SCAN_WALK (SCAN_LTURN (SCAN_WALK (SCAN_LTURN (SCAN_WALK $0)))))))
+
+11: look left thrice
+0.00	(lambda (SCAN_LTURN (SCAN_LOOK (SCAN_LTURN (SCAN_LOOK (SCAN_LTURN (SCAN_LOOK $0)))))))
+
+12: jump left thrice
+0.00	(lambda (SCAN_LTURN (SCAN_JUMP (SCAN_LTURN (SCAN_JUMP (SCAN_LTURN (SCAN_JUMP $0)))))))
+
+13: jump right thrice
+0.00	(lambda (SCAN_RTURN (SCAN_JUMP (SCAN_RTURN (SCAN_JUMP (SCAN_RTURN (SCAN_JUMP $0)))))))
+
+Compression message saved to: compressionMessages/2020-12-07T00:47:06.831509
+Compression backend will run for most 20 iterations
+Total number of candidates: 92376
+Constructed version spaces and coalesced candidates in 1.49176m.
+Trimmed down the beam, have only 300 best candidates (M)
+Rewrote topK in 1.40233m.
+Initial score: -154.523725
+ (M)New frontiers length 300 Scored candidates (M) in 208.174ms.
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $0)))))))) : (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_LTURN ($1 (SCAN_LTURN ($1 (SCAN_LTURN ($1 $0)))))))) : (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($2 ($1 ($2 (SCAN_LTURN ($2 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($2 (SCAN_LTURN ($2 (SCAN_LTURN ($1 $0))))))))) : (str -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($2 (SCAN_LTURN ($2 ($1 ($2 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($2 (SCAN_LTURN ($1 (SCAN_LTURN ($2 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($2 (SCAN_LTURN ($1 (SCAN_LTURN ($1 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($1 (SCAN_LTURN ($1 ($2 ($1 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($2 ($1 ($2 (SCAN_RTURN ($2 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($1 ($2 ($1 (SCAN_RTURN ($1 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($1 ($2 ($1 (SCAN_LTURN ($1 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($1 ($2 ($1 ($2 ($1 $0))))))))) : (str -> t0) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($2 (SCAN_LTURN ($2 ($1 ($2 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($1 ($2 ($1 (SCAN_LTURN ($1 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($2 (SCAN_LTURN ($2 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($2 ($1 ($2 $0))))))))) : (t0 -> str) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1)))))))) : str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 ($2 ($1 (SCAN_RTURN ($1 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 ($2 ($1 ($2 ($1 $0))))))))) : (str -> t0) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($0 (SCAN_LTURN ($0 $1)))))))) : str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($2 (SCAN_RTURN ($2 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($2 (SCAN_RTURN ($1 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($2 $0))))))))) : (t0 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 ($2 ($1 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($2 ($1 ($2 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($2 (SCAN_LTURN ($2 (SCAN_LTURN ($2 $0))))))))) : (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($1 (SCAN_LTURN ($1 (SCAN_LTURN ($1 $0))))))))) : (str -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($2 (SCAN_RTURN ($1 $0))))))))) : (str -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($2 ($1 ($2 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($1 (SCAN_RTURN ($2 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($1 (SCAN_RTURN ($1 ($2 ($1 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($2 (SCAN_RTURN ($2 $0))))))))) : (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($2 (SCAN_RTURN ($2 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($2 ($1 ($2 $0))))))))) : (t0 -> str) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($1 (SCAN_LTURN ($2 (SCAN_LTURN ($2 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($1 (SCAN_LTURN ($2 (SCAN_LTURN ($1 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($1 (SCAN_LTURN ($1 (SCAN_LTURN ($2 $0))))))))) : (t0 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($1 (SCAN_LTURN ($1 ($2 ($1 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $0))))))))) : (str -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1)))))))) : str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda ($1 ($2 (SCAN_LTURN ($2 (SCAN_LTURN ($2 $0))))))))) SCAN_LTURN)) : (((str -> str) -> (str -> t0) -> str -> t0) -> (str -> str) -> t1) -> t1
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda ($1 ($2 (SCAN_LTURN ($2 ($1 ($2 $0))))))))) SCAN_LTURN)) : (((str -> str) -> (str -> str) -> str -> str) -> (str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda ($1 ($2 ($1 ($2 (SCAN_LTURN ($2 $0))))))))) SCAN_LTURN)) : (((str -> str) -> (str -> str) -> str -> str) -> (str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda ($1 ($2 ($1 ($2 ($1 ($2 $0))))))))) SCAN_LTURN)) : (((t0 -> t1) -> (t1 -> t0) -> t0 -> t0) -> (str -> str) -> t2) -> t2
+candidate primitive (M)
+	#(lambda (lambda (SCAN_LTURN ($1 (lambda (lambda ($1 (SCAN_LTURN ($1 (SCAN_LTURN ($1 $0))))))) $0)))) : (((str -> str) -> str -> str) -> t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda (SCAN_LTURN ($2 (SCAN_LTURN ($2 ($1 ($2 $0))))))))) SCAN_LTURN)) : (((str -> str) -> (str -> str) -> str -> str) -> (str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($2 (SCAN_LTURN ($2 $0))))))))) SCAN_LTURN)) : (((str -> str) -> (str -> str) -> str -> str) -> (str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($2 ($1 ($2 $0))))))))) SCAN_LTURN)) : (((t0 -> str) -> (str -> t0) -> t0 -> str) -> (str -> str) -> t1) -> t1
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($2 (SCAN_RTURN ($2 $0))))))))) SCAN_RTURN)) : (((str -> str) -> (str -> t0) -> str -> t0) -> (str -> str) -> t1) -> t1
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($2 ($1 ($2 $0))))))))) SCAN_RTURN)) : (((str -> str) -> (str -> str) -> str -> str) -> (str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda ($1 ($2 ($1 ($2 (SCAN_RTURN ($2 $0))))))))) SCAN_RTURN)) : (((str -> str) -> (str -> str) -> str -> str) -> (str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda ($1 ($2 ($1 ($2 ($1 ($2 $0))))))))) SCAN_RTURN)) : (((t0 -> t1) -> (t1 -> t0) -> t0 -> t0) -> (str -> str) -> t2) -> t2
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($0 ($1 (SCAN_LTURN ($1 (SCAN_LTURN ($1 $2)))))))) SCAN_LTURN))) : (((str -> str) -> (str -> t0) -> t0) -> (str -> str) -> t1) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($0 ($1 (SCAN_LTURN ($1 ($0 ($1 $2)))))))) SCAN_LTURN))) : (((str -> str) -> (str -> str) -> str) -> (str -> str) -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($0 ($1 ($0 ($1 (SCAN_LTURN ($1 $2)))))))) SCAN_LTURN))) : (((str -> str) -> (str -> str) -> str) -> (str -> str) -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($0 ($1 ($0 ($1 ($0 ($1 $2)))))))) SCAN_LTURN))) : (((t0 -> t1) -> (t1 -> t0) -> t0) -> (str -> str) -> t2) -> t0 -> t2
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $0)))))))) $0))) : (((str -> str) -> str -> str) -> t0 -> t1) -> t0 -> t1
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 ($0 ($1 $2)))))))) SCAN_RTURN))) : (((str -> str) -> (str -> str) -> str) -> (str -> str) -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_RTURN ($1 ($0 ($1 (SCAN_RTURN ($1 $2)))))))) SCAN_RTURN))) : (((str -> str) -> (str -> str) -> str) -> (str -> str) -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_RTURN ($1 ($0 ($1 ($0 ($1 $2)))))))) SCAN_RTURN))) : (((t0 -> str) -> (str -> t0) -> str) -> (str -> str) -> t1) -> t0 -> t1
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1)))))))))) : (((str -> str) -> str) -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $0)))))))))) : (((str -> str) -> str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (SCAN_LTURN ($1 (SCAN_LTURN ($1 (SCAN_LTURN ($1 $0)))))))))) : (((str -> str) -> str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (SCAN_LTURN ($1 (lambda (lambda ($1 (SCAN_LTURN ($1 ($0 ($1 $2))))))) SCAN_LTURN)))) : (((str -> str) -> (str -> str) -> str) -> (str -> str) -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_LTURN ($1 (lambda (lambda ($1 ($0 ($1 (SCAN_LTURN ($1 $2))))))) SCAN_LTURN)))) : (((str -> str) -> (str -> str) -> str) -> (str -> str) -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_LTURN ($1 (lambda (lambda ($1 ($0 ($1 ($0 ($1 $2))))))) SCAN_LTURN)))) : (((t0 -> t1) -> (t1 -> t0) -> t1) -> (str -> str) -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($2 ($1 ($2 $0))))))))) SCAN_RTURN)) : (((str -> str) -> (str -> str) -> str -> str) -> (str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($2 (SCAN_RTURN ($2 $0))))))))) SCAN_RTURN)) : (((str -> str) -> (str -> str) -> str -> str) -> (str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($2 ($1 ($2 $0))))))))) SCAN_RTURN)) : (((t0 -> str) -> (str -> t0) -> t0 -> str) -> (str -> str) -> t1) -> t1
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($0 ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $2)))))))) SCAN_RTURN))) : (((str -> str) -> (str -> t0) -> t0) -> (str -> str) -> t1) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($0 ($1 (SCAN_RTURN ($1 ($0 ($1 $2)))))))) SCAN_RTURN))) : (((str -> str) -> (str -> str) -> str) -> (str -> str) -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($0 ($1 ($0 ($1 (SCAN_RTURN ($1 $2)))))))) SCAN_RTURN))) : (((str -> str) -> (str -> str) -> str) -> (str -> str) -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($0 ($1 ($0 ($1 ($0 ($1 $2)))))))) SCAN_RTURN))) : (((t0 -> t1) -> (t1 -> t0) -> t0) -> (str -> str) -> t2) -> t0 -> t2
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($0 (SCAN_LTURN ($0 $1)))))))))) : (((str -> str) -> str) -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1)))))))))) : (((str -> str) -> str) -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($0 (SCAN_LTURN ($0 $1)))))))) : str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_LTURN ($1 (SCAN_LTURN ($1 (SCAN_LTURN ($1 $0)))))))) $0))) : (((str -> str) -> str -> str) -> t0 -> t1) -> t0 -> t1
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda (lambda ($1 (SCAN_RTURN ($1 ($0 ($1 $2))))))) SCAN_RTURN)))) : (((str -> str) -> (str -> str) -> str) -> (str -> str) -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda (lambda ($1 ($0 ($1 (SCAN_RTURN ($1 $2))))))) SCAN_RTURN)))) : (((str -> str) -> (str -> str) -> str) -> (str -> str) -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda (lambda ($1 ($0 ($1 ($0 ($1 $2))))))) SCAN_RTURN)))) : (((t0 -> t1) -> (t1 -> t0) -> t1) -> (str -> str) -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_LTURN ($1 (lambda ($0 (SCAN_LTURN ($0 (SCAN_LTURN ($0 $1)))))))))) : (((str -> str) -> str) -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_LTURN ($1 (SCAN_LTURN ($1 ($0 ($1 $2)))))))) SCAN_LTURN))) : (((str -> str) -> (str -> str) -> str) -> (str -> str) -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_LTURN ($1 ($0 ($1 (SCAN_LTURN ($1 $2)))))))) SCAN_LTURN))) : (((str -> str) -> (str -> str) -> str) -> (str -> str) -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_LTURN ($1 ($0 ($1 ($0 ($1 $2)))))))) SCAN_LTURN))) : (((t0 -> str) -> (str -> t0) -> str) -> (str -> str) -> t1) -> t0 -> t1
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda (lambda ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $0))))))) $0)))) : (((str -> str) -> str -> str) -> t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($1 (SCAN_RTURN ($0 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($1 $2))))))))) : t0 -> (t0 -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 ($1 ($0 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 ($3 ($1 (SCAN_LTURN ($2 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> str) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 ($3 ($2 (SCAN_LTURN ($2 $0)))))))))) : (str -> str) -> (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 ($1 ($3 (SCAN_RTURN ($3 $0)))))))))) : (str -> str) -> (str -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($3 ($2 (SCAN_RTURN ($1 $0)))))))))) : (str -> str) -> (str -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($3 ($2 ($3 ($1 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (t1 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($3 ($2 ($1 ($2 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($3 ($1 (SCAN_RTURN ($2 $0)))))))))) : (t0 -> t1) -> (t1 -> str) -> (str -> t0) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($3 ($1 (SCAN_RTURN ($1 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($3 ($1 ($3 ($2 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($3 ($1 ($3 ($1 $0)))))))))) : (t0 -> t1) -> (t1 -> str) -> (t1 -> t0) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 ($1 ($3 (SCAN_LTURN ($3 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 (SCAN_RTURN ($1 (SCAN_RTURN ($2 $0)))))))))) : (str -> t0) -> (str -> str) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $0)))))))))) : (t0 -> t1) -> (str -> t0) -> (str -> str) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($2 ($3 (SCAN_LTURN ($3 $0)))))))))) : (str -> str) -> (str -> t0) -> (t0 -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($2 ($3 (SCAN_LTURN ($1 $0)))))))))) : (str -> t0) -> (t0 -> t1) -> (t1 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($2 ($3 ($2 ($3 $0)))))))))) : (t0 -> t1) -> (t1 -> t0) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($2 ($3 ($2 ($1 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($2 ($1 (SCAN_LTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($2 ($1 ($3 ($1 $0)))))))))) : (str -> t0) -> (str -> t0) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($2 ($1 ($2 ($3 $0)))))))))) : (t0 -> str) -> (str -> t1) -> (t1 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($2 ($3 ($2 (SCAN_LTURN ($1 $0)))))))))) : (str -> str) -> (str -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($2 ($3 ($2 ($3 ($1 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (t1 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($2 ($3 ($2 ($1 ($2 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($2 ($3 ($1 (SCAN_LTURN ($2 $0)))))))))) : (t0 -> t1) -> (t1 -> str) -> (str -> t0) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($2 ($3 ($1 (SCAN_LTURN ($1 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($2 ($3 ($1 ($3 ($2 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($2 ($3 ($1 ($3 ($1 $0)))))))))) : (t0 -> t1) -> (t1 -> str) -> (t1 -> t0) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 (SCAN_RTURN ($1 ($3 ($2 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_LTURN ($2 ($3 ($2 $0)))))))))) : (str -> str) -> (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 (SCAN_RTURN ($3 (SCAN_RTURN ($2 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> t1) -> t0 -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 (SCAN_RTURN ($2 (SCAN_RTURN ($3 $0)))))))))) : (str -> str) -> (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 (SCAN_RTURN ($2 (SCAN_RTURN ($2 $0)))))))))) : (str -> t0) -> (str -> str) -> (t0 -> t1) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 (SCAN_LTURN ($1 ($2 ($1 $0)))))))))) : (str -> t0) -> (str -> str) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 (SCAN_LTURN ($2 ($3 ($1 $0)))))))))) : (str -> str) -> (str -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 (SCAN_RTURN ($2 (SCAN_RTURN ($2 $0)))))))))) : (t0 -> t1) -> (str -> str) -> (str -> t0) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 (SCAN_RTURN ($2 (SCAN_RTURN ($1 $0)))))))))) : (str -> t0) -> (str -> str) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 ($1 ($2 (SCAN_RTURN ($2 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($0 ($1 ($0 (SCAN_RTURN ($0 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 (SCAN_LTURN ($2 (SCAN_LTURN ($2 $0)))))))))) : (t0 -> t1) -> (str -> str) -> (str -> t0) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 (SCAN_LTURN ($2 (SCAN_LTURN ($1 $0)))))))))) : (str -> t0) -> (str -> str) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($3 (SCAN_RTURN ($3 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> t0) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($3 (SCAN_RTURN ($2 $0)))))))))) : (str -> t0) -> (t1 -> str) -> (t0 -> t1) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($3 ($1 ($3 $0)))))))))) : (t0 -> t1) -> (t0 -> str) -> (t1 -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($3 ($1 ($2 $0)))))))))) : (t0 -> str) -> (t0 -> str) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($2 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($2 ($3 ($2 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($2 ($1 ($3 $0)))))))))) : (t0 -> str) -> (t1 -> str) -> (str -> t1) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 ($3 ($1 (SCAN_RTURN ($1 $0)))))))))) : (str -> str) -> (str -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_LTURN ($3 (SCAN_LTURN ($3 $0)))))))))) : (str -> str) -> (str -> t0) -> (t0 -> t1) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_LTURN ($3 (SCAN_LTURN ($2 $0)))))))))) : (str -> str) -> (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 (SCAN_RTURN ($2 ($3 ($2 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> str) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 (SCAN_RTURN ($2 ($3 ($1 $0)))))))))) : (t0 -> t1) -> (t1 -> str) -> (str -> t0) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($1 (SCAN_RTURN ($1 ($0 ($1 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 (SCAN_LTURN ($1 (SCAN_LTURN ($2 $0)))))))))) : (str -> t0) -> (str -> str) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 (SCAN_LTURN ($1 (SCAN_LTURN ($1 $0)))))))))) : (t0 -> t1) -> (str -> t0) -> (str -> str) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 ($1 ($0 (SCAN_RTURN ($0 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 ($1 ($0 ($1 ($0 $2))))))))) : t0 -> (str -> t0) -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($3 ($1 ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> t0) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($3 ($1 ($2 $0)))))))))) : (t0 -> str) -> (str -> t1) -> (t1 -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($3 (SCAN_RTURN ($1 $0)))))))))) : (str -> str) -> (str -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($3 ($1 ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($3 ($1 ($2 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> t0) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($2 ($3 ($1 $0)))))))))) : (t0 -> str) -> (str -> str) -> (t1 -> t0) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($2 ($1 ($3 $0)))))))))) : (t0 -> t1) -> (str -> str) -> (t1 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($1 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($1 ($3 ($2 $0)))))))))) : (str -> t0) -> (str -> str) -> (t0 -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($1 ($3 ($1 $0)))))))))) : (str -> t0) -> (str -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 ($0 ($1 (SCAN_RTURN ($1 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 ($0 ($1 ($0 ($1 $2))))))))) : t0 -> (t0 -> str) -> (str -> t0) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($3 (SCAN_LTURN ($3 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> t0) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($3 (SCAN_LTURN ($2 $0)))))))))) : (str -> t0) -> (t1 -> str) -> (t0 -> t1) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($3 ($1 ($3 $0)))))))))) : (t0 -> t1) -> (t0 -> str) -> (t1 -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($3 ($1 ($2 $0)))))))))) : (t0 -> str) -> (t0 -> str) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($2 (SCAN_LTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($2 ($3 ($2 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($2 ($1 ($3 $0)))))))))) : (t0 -> str) -> (t1 -> str) -> (str -> t1) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 (SCAN_RTURN ($1 ($2 ($3 $0)))))))))) : (str -> t0) -> (t0 -> t1) -> (t1 -> str) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 (SCAN_RTURN ($1 ($2 ($1 $0)))))))))) : (str -> str) -> (str -> t0) -> (t0 -> str) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($1 ($0 ($1 (SCAN_LTURN ($1 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($1 ($0 ($1 ($0 ($1 $2))))))))) : t0 -> (t0 -> str) -> (str -> t0) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 ($3 ($2 (SCAN_LTURN ($1 $0)))))))))) : (str -> t0) -> (str -> str) -> (t0 -> str) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 (SCAN_RTURN ($2 ($3 ($1 $0)))))))))) : (str -> str) -> (str -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($0 $2))))))))) : t0 -> (str -> str) -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 ($0 ($1 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($0 (SCAN_RTURN ($1 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 (SCAN_RTURN ($1 ($3 ($1 $0)))))))))) : (str -> str) -> (str -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 ($2 ($3 (SCAN_RTURN ($3 $0)))))))))) : (str -> str) -> (str -> t0) -> (t0 -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 ($2 ($3 (SCAN_RTURN ($1 $0)))))))))) : (str -> t0) -> (t0 -> t1) -> (t1 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 ($2 ($3 ($2 ($3 $0)))))))))) : (t0 -> t1) -> (t1 -> t0) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 ($2 ($3 ($2 ($1 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 ($2 ($1 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 ($2 ($1 ($3 ($1 $0)))))))))) : (str -> t0) -> (str -> t0) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 ($2 ($1 ($2 ($3 $0)))))))))) : (t0 -> str) -> (str -> t1) -> (t1 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 (SCAN_LTURN ($2 (SCAN_LTURN ($1 $0)))))))))) : (str -> t0) -> (str -> str) -> (t1 -> str) -> t1 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 ($2 ($3 (SCAN_LTURN ($1 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (t1 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 ($2 ($1 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (t1 -> str) -> (str -> t1) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 ($2 ($3 (SCAN_RTURN ($3 $0)))))))))) : (str -> str) -> (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 (SCAN_RTURN ($3 ($2 ($3 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (str -> str) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 (SCAN_RTURN ($3 ($2 ($1 $0)))))))))) : (t0 -> str) -> (t1 -> t0) -> (str -> t1) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 (SCAN_LTURN ($3 (SCAN_LTURN ($2 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> t1) -> t0 -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 ($1 ($2 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> t0) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($0 (SCAN_LTURN ($0 ($1 ($0 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 ($2 ($3 (SCAN_RTURN ($1 $0)))))))))) : (str -> str) -> (str -> t0) -> (t0 -> str) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 ($2 ($3 (SCAN_LTURN ($1 $0)))))))))) : (str -> str) -> (str -> t0) -> (t0 -> str) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 ($3 ($1 (SCAN_RTURN ($1 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 ($2 ($3 (SCAN_RTURN ($3 $0)))))))))) : (str -> str) -> (str -> t0) -> (t0 -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 (SCAN_RTURN ($1 (SCAN_RTURN ($3 $0)))))))))) : (str -> str) -> (str -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $0)))))))))) : (str -> t0) -> (t0 -> t1) -> (str -> str) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_LTURN ($2 (SCAN_LTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> t1) -> t0 -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 ($1 ($3 (SCAN_LTURN ($3 $0)))))))))) : (str -> str) -> (str -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 (SCAN_LTURN ($3 (SCAN_LTURN ($1 $0)))))))))) : (str -> str) -> (str -> t0) -> (t1 -> str) -> t1 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 (SCAN_LTURN ($3 ($1 ($2 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 (SCAN_RTURN ($1 ($2 ($1 $0)))))))))) : (str -> t0) -> (str -> str) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 (SCAN_LTURN ($1 ($3 ($2 $0)))))))))) : (t0 -> t1) -> (str -> t0) -> (t1 -> str) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 (SCAN_LTURN ($1 ($3 ($1 $0)))))))))) : (str -> t0) -> (str -> str) -> (t0 -> str) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 (SCAN_LTURN ($1 (SCAN_LTURN ($2 $0)))))))))) : (str -> t0) -> (t1 -> str) -> (str -> str) -> t1 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 ($3 ($1 (SCAN_LTURN ($1 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 (SCAN_RTURN ($1 ($3 ($2 $0)))))))))) : (t0 -> t1) -> (str -> t0) -> (t1 -> str) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 (SCAN_RTURN ($1 ($3 ($1 $0)))))))))) : (str -> t0) -> (str -> str) -> (t0 -> str) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($0 ($1 ($0 (SCAN_LTURN ($0 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($3 ($2 ($3 (SCAN_LTURN ($1 $0)))))))))) : (str -> str) -> (str -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($3 ($2 ($3 ($2 ($1 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (t1 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($3 ($2 ($3 ($1 ($3 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($3 ($2 ($1 (SCAN_LTURN ($3 $0)))))))))) : (t0 -> str) -> (t1 -> t0) -> (str -> t1) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($3 ($2 ($1 (SCAN_LTURN ($1 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($3 ($2 ($1 ($2 ($3 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($3 ($2 ($1 ($2 ($1 $0)))))))))) : (t0 -> str) -> (t1 -> t0) -> (t0 -> t1) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 ($2 ($1 (SCAN_LTURN ($1 $0)))))))))) : (str -> t0) -> (str -> str) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 ($3 ($2 (SCAN_RTURN ($1 $0)))))))))) : (str -> t0) -> (str -> str) -> (t0 -> str) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 ($3 ($2 (SCAN_RTURN ($1 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (t1 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1))))))) : str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($3 (SCAN_RTURN ($2 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($3 ($2 ($3 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($3 ($2 ($1 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($2 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($2 ($3 ($2 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($2 ($3 ($1 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 ($3 ($2 $0)))))))))) : (t0 -> str) -> (t1 -> t0) -> (str -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 ($2 ($3 $0)))))))))) : (t0 -> t1) -> (t1 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 ($1 ($2 (SCAN_LTURN ($2 $0)))))))))) : (str -> t0) -> (str -> str) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_LTURN ($3 ($1 ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> t0) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_LTURN ($3 ($1 ($2 $0)))))))))) : (t0 -> str) -> (str -> t1) -> (t1 -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 ($3 ($1 (SCAN_RTURN ($2 $0)))))))))) : (t0 -> str) -> (t1 -> str) -> (str -> t0) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 (SCAN_RTURN ($2 ($1 ($2 $0)))))))))) : (str -> t0) -> (str -> str) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 (SCAN_RTURN ($3 ($2 ($3 $0)))))))))) : (str -> str) -> (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 ($2 ($3 (SCAN_RTURN ($1 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (t1 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($1 ($3 (SCAN_RTURN ($2 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($1 ($3 ($2 ($3 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($1 ($3 ($1 ($2 $0)))))))))) : (t0 -> str) -> (t1 -> str) -> (str -> t0) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($1 ($2 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> t1) -> (t1 -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($1 ($2 (SCAN_RTURN ($2 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> t0) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($1 ($2 ($1 ($3 $0)))))))))) : (t0 -> str) -> (t0 -> str) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($1 ($2 ($1 ($2 $0)))))))))) : (t0 -> str) -> (t0 -> t1) -> (t1 -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_LTURN ($2 ($1 ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 ($1 ($3 (SCAN_RTURN ($2 $0)))))))))) : (str -> t0) -> (t1 -> str) -> (t0 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($3 ($1 ($3 (SCAN_LTURN ($2 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($3 ($1 ($3 ($2 ($3 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($3 ($1 ($3 ($1 ($2 $0)))))))))) : (t0 -> str) -> (t1 -> str) -> (str -> t0) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($3 ($1 ($2 (SCAN_LTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> t1) -> (t1 -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($3 ($1 ($2 (SCAN_LTURN ($2 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> t0) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($3 ($1 ($2 ($1 ($3 $0)))))))))) : (t0 -> str) -> (t0 -> str) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($3 ($1 ($2 ($1 ($2 $0)))))))))) : (t0 -> str) -> (t0 -> t1) -> (t1 -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 ($1 ($2 (SCAN_LTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> t0) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 ($1 ($2 (SCAN_RTURN ($2 $0)))))))))) : (str -> t0) -> (str -> str) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($1 ($0 ($1 (SCAN_RTURN ($1 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 ($1 ($3 (SCAN_RTURN ($3 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 ($2 ($3 (SCAN_LTURN ($3 $0)))))))))) : (str -> str) -> (str -> t0) -> (t0 -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 (SCAN_RTURN ($3 (SCAN_RTURN ($1 $0)))))))))) : (str -> str) -> (str -> t0) -> (t1 -> str) -> t1 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($3 (SCAN_RTURN ($3 $0)))))))))) : (str -> str) -> (str -> t0) -> (t0 -> t1) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($3 (SCAN_RTURN ($2 $0)))))))))) : (str -> str) -> (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 ($1 ($2 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> t1) -> (t1 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($1 (SCAN_LTURN ($1 ($0 ($1 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 (SCAN_LTURN ($1 (SCAN_LTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> t1) -> (str -> str) -> t0 -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 ($3 ($2 (SCAN_LTURN ($1 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (t1 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($0 (SCAN_LTURN ($0 (SCAN_LTURN ($0 $2))))))))) : str -> (str -> t0) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 (SCAN_RTURN ($3 ($1 ($3 $0)))))))))) : (str -> str) -> (str -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($1 (SCAN_LTURN ($1 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($1 (SCAN_LTURN ($0 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($0 (SCAN_LTURN ($1 $2))))))))) : t0 -> (t0 -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($0 ($1 ($0 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 (SCAN_LTURN ($3 ($2 ($3 $0)))))))))) : (str -> str) -> (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 ($1 ($3 (SCAN_RTURN ($2 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> t0) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 (SCAN_LTURN ($3 (SCAN_LTURN ($3 $0)))))))))) : (str -> str) -> (t0 -> t1) -> (str -> t0) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 (SCAN_LTURN ($3 (SCAN_LTURN ($1 $0)))))))))) : (str -> str) -> (str -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($2 $0)))))))))) : (str -> t0) -> (t1 -> str) -> (str -> str) -> t1 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 ($2 ($3 (SCAN_LTURN ($3 $0)))))))))) : (str -> str) -> (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> t1) -> (str -> str) -> t0 -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 (SCAN_LTURN ($3 (SCAN_LTURN ($2 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 (SCAN_LTURN ($3 ($2 ($3 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 (SCAN_LTURN ($3 ($2 ($1 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 (SCAN_LTURN ($2 (SCAN_LTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 (SCAN_LTURN ($2 ($3 ($2 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 (SCAN_LTURN ($2 ($3 ($1 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 (SCAN_LTURN ($1 ($3 ($2 $0)))))))))) : (t0 -> str) -> (t1 -> t0) -> (str -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 (SCAN_LTURN ($1 ($2 ($3 $0)))))))))) : (t0 -> t1) -> (t1 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 ($1 ($2 (SCAN_LTURN ($2 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($3 ($2 (SCAN_LTURN ($2 $0)))))))))) : (str -> t0) -> (str -> str) -> (t0 -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($3 ($2 (SCAN_LTURN ($1 $0)))))))))) : (t0 -> t1) -> (str -> t0) -> (t1 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($3 ($2 ($3 ($2 $0)))))))))) : (t0 -> t1) -> (t1 -> t0) -> (t1 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($3 ($2 ($3 ($1 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($3 ($1 (SCAN_LTURN ($2 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($3 ($1 ($3 ($2 $0)))))))))) : (str -> t0) -> (t1 -> str) -> (t0 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($3 ($1 ($2 ($1 $0)))))))))) : (str -> t0) -> (str -> t0) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 (SCAN_RTURN ($2 ($1 ($3 $0)))))))))) : (str -> t0) -> (t1 -> str) -> (t0 -> t1) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 (SCAN_RTURN ($2 ($1 ($2 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> t0) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($2 ($3 (SCAN_RTURN ($1 $0)))))))))) : (str -> str) -> (str -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($2 ($3 ($2 ($1 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (t1 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($2 ($3 ($1 ($3 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($2 ($1 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (t1 -> t0) -> (str -> t1) -> t0 -> str
+Scored candidates2 (M) in 0.0164509ms.
+Improved score to -139.937152 (dScore=14.586573) w/ new primitive (M)
+	#(lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($0 (SCAN_LTURN ($0 $1)))))))) : str -> (str -> str) -> str
+rewrote all of the frontiers (M) in 1.25456m.
+Completed one step of memory consolidation in 4.28152m.
+New primitive is used 4 times in the best programs in each of the frontiers.
+Here is where it is used:
+  (lambda (#(lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($0 (SCAN_LTURN ($0 $1)))))))) $0 (lambda (SCAN_RUN $0))))
+  (lambda (#(lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($0 (SCAN_LTURN ($0 $1)))))))) $0 (lambda (SCAN_WALK $0))))
+  (lambda (#(lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($0 (SCAN_LTURN ($0 $1)))))))) $0 (lambda (SCAN_LOOK $0))))
+  (lambda (#(lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($0 (SCAN_LTURN ($0 $1)))))))) $0 (lambda (SCAN_JUMP $0))))
+Total number of candidates: 19568
+Constructed version spaces and coalesced candidates in 53.9967s.
+Trimmed down the beam, have only 300 best candidates (M)
+Rewrote topK in 52.6397s.
+Initial score: -139.937152
+ (M)New frontiers length 300 Scored candidates (M) in 170.422ms.
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $0)))))))) : (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1)))))))) : str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 ($2 ($1 (SCAN_RTURN ($1 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 ($2 ($1 ($2 ($1 $0))))))))) : (str -> t0) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($2 (SCAN_RTURN ($2 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($2 (SCAN_RTURN ($1 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($2 $0))))))))) : (t0 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 ($2 ($1 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($2 ($1 ($2 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($2 ($1 ($2 (SCAN_RTURN ($2 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($2 (SCAN_RTURN ($1 $0))))))))) : (str -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($2 ($1 ($2 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($1 (SCAN_RTURN ($2 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($1 (SCAN_RTURN ($1 ($2 ($1 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($2 (SCAN_RTURN ($2 $0))))))))) : (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($1 ($2 ($1 (SCAN_RTURN ($1 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($2 (SCAN_RTURN ($2 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($2 ($1 ($2 $0))))))))) : (t0 -> str) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $0))))))))) : (str -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1)))))))) : str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($2 ($1 ($2 $0))))))))) SCAN_RTURN)) : (((str -> str) -> (str -> str) -> str -> str) -> (str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($2 (SCAN_RTURN ($2 $0))))))))) SCAN_RTURN)) : (((str -> str) -> (str -> str) -> str -> str) -> (str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($2 ($1 ($2 $0))))))))) SCAN_RTURN)) : (((t0 -> str) -> (str -> t0) -> t0 -> str) -> (str -> str) -> t1) -> t1
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($0 ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $2)))))))) SCAN_RTURN))) : (((str -> str) -> (str -> t0) -> t0) -> (str -> str) -> t1) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($0 ($1 (SCAN_RTURN ($1 ($0 ($1 $2)))))))) SCAN_RTURN))) : (((str -> str) -> (str -> str) -> str) -> (str -> str) -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($0 ($1 ($0 ($1 (SCAN_RTURN ($1 $2)))))))) SCAN_RTURN))) : (((str -> str) -> (str -> str) -> str) -> (str -> str) -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($0 ($1 ($0 ($1 ($0 ($1 $2)))))))) SCAN_RTURN))) : (((t0 -> t1) -> (t1 -> t0) -> t0) -> (str -> str) -> t2) -> t0 -> t2
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1)))))))))) : (((str -> str) -> str) -> str) -> str -> str
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($2 (SCAN_RTURN ($2 $0))))))))) SCAN_RTURN)) : (((str -> str) -> (str -> t0) -> str -> t0) -> (str -> str) -> t1) -> t1
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($2 ($1 ($2 $0))))))))) SCAN_RTURN)) : (((str -> str) -> (str -> str) -> str -> str) -> (str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda ($1 ($2 ($1 ($2 (SCAN_RTURN ($2 $0))))))))) SCAN_RTURN)) : (((str -> str) -> (str -> str) -> str -> str) -> (str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda ($1 ($2 ($1 ($2 ($1 ($2 $0))))))))) SCAN_RTURN)) : (((t0 -> t1) -> (t1 -> t0) -> t0 -> t0) -> (str -> str) -> t2) -> t2
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $0)))))))) $0))) : (((str -> str) -> str -> str) -> t0 -> t1) -> t0 -> t1
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 ($0 ($1 $2)))))))) SCAN_RTURN))) : (((str -> str) -> (str -> str) -> str) -> (str -> str) -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_RTURN ($1 ($0 ($1 (SCAN_RTURN ($1 $2)))))))) SCAN_RTURN))) : (((str -> str) -> (str -> str) -> str) -> (str -> str) -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_RTURN ($1 ($0 ($1 ($0 ($1 $2)))))))) SCAN_RTURN))) : (((t0 -> str) -> (str -> t0) -> str) -> (str -> str) -> t1) -> t0 -> t1
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1)))))))))) : (((str -> str) -> str) -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda (lambda ($1 (SCAN_RTURN ($1 ($0 ($1 $2))))))) SCAN_RTURN)))) : (((str -> str) -> (str -> str) -> str) -> (str -> str) -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda (lambda ($1 ($0 ($1 (SCAN_RTURN ($1 $2))))))) SCAN_RTURN)))) : (((str -> str) -> (str -> str) -> str) -> (str -> str) -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda (lambda ($1 ($0 ($1 ($0 ($1 $2))))))) SCAN_RTURN)))) : (((t0 -> t1) -> (t1 -> t0) -> t1) -> (str -> str) -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $0)))))))))) : (((str -> str) -> str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda (lambda ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $0))))))) $0)))) : (((str -> str) -> str -> str) -> t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 ($1 ($2 (SCAN_RTURN ($2 $0)))))))))) : (str -> t0) -> (str -> str) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($1 ($0 ($1 (SCAN_RTURN ($1 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 ($1 ($3 (SCAN_RTURN ($3 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($1 (SCAN_RTURN ($0 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($1 $2))))))))) : t0 -> (t0 -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 ($1 ($0 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 (SCAN_RTURN ($3 (SCAN_RTURN ($1 $0)))))))))) : (str -> str) -> (str -> t0) -> (t1 -> str) -> t1 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($3 (SCAN_RTURN ($3 $0)))))))))) : (str -> str) -> (str -> t0) -> (t0 -> t1) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($3 (SCAN_RTURN ($2 $0)))))))))) : (str -> str) -> (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 ($1 ($3 (SCAN_RTURN ($3 $0)))))))))) : (str -> str) -> (str -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($3 ($2 (SCAN_RTURN ($1 $0)))))))))) : (str -> str) -> (str -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($3 ($2 ($3 ($1 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (t1 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($3 ($2 ($1 ($2 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($3 ($1 (SCAN_RTURN ($2 $0)))))))))) : (t0 -> t1) -> (t1 -> str) -> (str -> t0) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($3 ($1 (SCAN_RTURN ($1 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($3 ($1 ($3 ($2 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($3 ($1 ($3 ($1 $0)))))))))) : (t0 -> t1) -> (t1 -> str) -> (t1 -> t0) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 ($1 ($2 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> t1) -> (t1 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 (SCAN_RTURN ($1 (SCAN_RTURN ($2 $0)))))))))) : (str -> t0) -> (str -> str) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $0)))))))))) : (t0 -> t1) -> (str -> t0) -> (str -> str) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 (SCAN_RTURN ($1 ($3 ($2 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 (SCAN_RTURN ($3 ($1 ($3 $0)))))))))) : (str -> str) -> (str -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 (SCAN_RTURN ($3 (SCAN_RTURN ($2 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> t1) -> t0 -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 (SCAN_RTURN ($2 (SCAN_RTURN ($3 $0)))))))))) : (str -> str) -> (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 (SCAN_RTURN ($2 (SCAN_RTURN ($2 $0)))))))))) : (str -> t0) -> (str -> str) -> (t0 -> t1) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 ($1 ($3 (SCAN_RTURN ($2 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> t0) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 (SCAN_RTURN ($2 (SCAN_RTURN ($2 $0)))))))))) : (t0 -> t1) -> (str -> str) -> (str -> t0) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 (SCAN_RTURN ($2 (SCAN_RTURN ($1 $0)))))))))) : (str -> t0) -> (str -> str) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($2 $0)))))))))) : (str -> t0) -> (t1 -> str) -> (str -> str) -> t1 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 ($1 ($2 (SCAN_RTURN ($2 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($0 ($1 ($0 (SCAN_RTURN ($0 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($3 (SCAN_RTURN ($3 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> t0) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($3 (SCAN_RTURN ($2 $0)))))))))) : (str -> t0) -> (t1 -> str) -> (t0 -> t1) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($3 ($1 ($3 $0)))))))))) : (t0 -> t1) -> (t0 -> str) -> (t1 -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($3 ($1 ($2 $0)))))))))) : (t0 -> str) -> (t0 -> str) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($2 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($2 ($3 ($2 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 ($1 ($2 ($1 ($3 $0)))))))))) : (t0 -> str) -> (t1 -> str) -> (str -> t1) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 ($3 ($1 (SCAN_RTURN ($1 $0)))))))))) : (str -> str) -> (str -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> t1) -> (str -> str) -> t0 -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 (SCAN_RTURN ($2 ($1 ($3 $0)))))))))) : (str -> t0) -> (t1 -> str) -> (t0 -> t1) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 (SCAN_RTURN ($2 ($1 ($2 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> t0) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 (SCAN_RTURN ($2 ($3 ($2 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> str) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 (SCAN_RTURN ($2 ($3 ($1 $0)))))))))) : (t0 -> t1) -> (t1 -> str) -> (str -> t0) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($2 ($3 (SCAN_RTURN ($1 $0)))))))))) : (str -> str) -> (str -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($2 ($3 ($2 ($1 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (t1 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($2 ($3 ($1 ($3 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($2 ($1 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (t1 -> t0) -> (str -> t1) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($2 ($1 (SCAN_RTURN ($1 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($2 ($1 ($2 ($3 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($2 ($1 ($2 ($1 $0)))))))))) : (t0 -> str) -> (t1 -> t0) -> (t0 -> t1) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($1 (SCAN_RTURN ($1 ($0 ($1 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 ($1 ($0 (SCAN_RTURN ($0 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 ($1 ($0 ($1 ($0 $2))))))))) : t0 -> (str -> t0) -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($3 ($1 ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> t0) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($3 ($1 ($2 $0)))))))))) : (t0 -> str) -> (str -> t1) -> (t1 -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($3 (SCAN_RTURN ($1 $0)))))))))) : (str -> str) -> (str -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($3 ($1 ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($3 ($1 ($2 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> t0) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($2 ($3 ($1 $0)))))))))) : (t0 -> str) -> (str -> str) -> (t1 -> t0) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($2 ($1 ($3 $0)))))))))) : (t0 -> t1) -> (str -> str) -> (t1 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($1 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($1 ($3 ($2 $0)))))))))) : (str -> t0) -> (str -> str) -> (t0 -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($1 ($3 ($1 $0)))))))))) : (str -> t0) -> (str -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 ($0 ($1 (SCAN_RTURN ($1 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 ($0 ($1 ($0 ($1 $2))))))))) : t0 -> (t0 -> str) -> (str -> t0) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 ($3 ($2 (SCAN_RTURN ($2 $0)))))))))) : (str -> t0) -> (str -> str) -> (t0 -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 (SCAN_RTURN ($1 ($2 ($3 $0)))))))))) : (str -> t0) -> (t0 -> t1) -> (t1 -> str) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 (SCAN_RTURN ($1 ($2 ($1 $0)))))))))) : (str -> str) -> (str -> t0) -> (t0 -> str) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 (SCAN_RTURN ($2 ($3 ($1 $0)))))))))) : (str -> str) -> (str -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($0 $2))))))))) : t0 -> (str -> str) -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 ($0 ($1 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($0 (SCAN_RTURN ($1 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 (SCAN_RTURN ($1 ($3 ($1 $0)))))))))) : (str -> str) -> (str -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 (SCAN_RTURN ($2 (SCAN_RTURN ($1 $0)))))))))) : (str -> t0) -> (str -> str) -> (t1 -> str) -> t1 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 ($2 ($3 (SCAN_RTURN ($3 $0)))))))))) : (str -> str) -> (str -> t0) -> (t0 -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 ($2 ($3 (SCAN_RTURN ($1 $0)))))))))) : (str -> t0) -> (t0 -> t1) -> (t1 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 ($2 ($3 ($2 ($3 $0)))))))))) : (t0 -> t1) -> (t1 -> t0) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 ($2 ($3 ($2 ($1 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 ($2 ($1 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 ($2 ($1 ($3 ($1 $0)))))))))) : (str -> t0) -> (str -> t0) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 ($2 ($1 ($2 ($3 $0)))))))))) : (t0 -> str) -> (str -> t1) -> (t1 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 ($2 ($1 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (t1 -> str) -> (str -> t1) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($0 (SCAN_RTURN ($0 ($1 ($0 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 ($2 ($3 (SCAN_RTURN ($3 $0)))))))))) : (str -> str) -> (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 (SCAN_RTURN ($3 ($2 ($3 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (str -> str) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 (SCAN_RTURN ($3 ($2 ($1 $0)))))))))) : (t0 -> str) -> (t1 -> t0) -> (str -> t1) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 ($1 ($2 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> t0) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 ($2 ($3 (SCAN_RTURN ($1 $0)))))))))) : (str -> str) -> (str -> t0) -> (t0 -> str) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 ($3 ($1 (SCAN_RTURN ($1 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 ($2 ($3 (SCAN_RTURN ($3 $0)))))))))) : (str -> str) -> (str -> t0) -> (t0 -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 (SCAN_RTURN ($1 (SCAN_RTURN ($3 $0)))))))))) : (str -> str) -> (str -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $0)))))))))) : (str -> t0) -> (t0 -> t1) -> (str -> str) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($2 ($1 ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 (SCAN_RTURN ($3 ($2 ($1 $0)))))))))) : (str -> str) -> (t0 -> str) -> (t1 -> t0) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 (SCAN_RTURN ($3 ($1 ($2 $0)))))))))) : (str -> str) -> (t0 -> t1) -> (t1 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 (SCAN_RTURN ($2 (SCAN_RTURN ($1 $0)))))))))) : (str -> str) -> (str -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 (SCAN_RTURN ($2 ($1 ($3 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> t0) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 (SCAN_RTURN ($2 ($1 ($2 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 (SCAN_RTURN ($1 (SCAN_RTURN ($2 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 (SCAN_RTURN ($1 ($2 ($3 $0)))))))))) : (str -> str) -> (str -> t0) -> (t0 -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 (SCAN_RTURN ($1 ($2 ($1 $0)))))))))) : (str -> str) -> (str -> t0) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 ($3 ($1 (SCAN_RTURN ($2 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> str) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 ($2 ($1 (SCAN_RTURN ($1 $0)))))))))) : (str -> t0) -> (str -> str) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 (SCAN_RTURN ($1 ($2 ($1 $0)))))))))) : (str -> t0) -> (str -> str) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 (SCAN_RTURN ($3 ($2 ($1 $0)))))))))) : (str -> str) -> (str -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($2 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> t1) -> t0 -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 (SCAN_RTURN ($3 ($1 ($2 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 ($2 ($1 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (str -> str) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $2))))))))) : str -> (str -> str) -> (str -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 (SCAN_RTURN ($1 ($3 ($2 $0)))))))))) : (t0 -> t1) -> (str -> t0) -> (t1 -> str) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 (SCAN_RTURN ($1 ($3 ($1 $0)))))))))) : (str -> t0) -> (str -> str) -> (t0 -> str) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $2))))))))) : str -> (str -> t0) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 ($3 ($2 (SCAN_RTURN ($1 $0)))))))))) : (str -> t0) -> (str -> str) -> (t0 -> str) -> t0 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 ($3 ($2 (SCAN_RTURN ($1 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (t1 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1))))))) : str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($3 (SCAN_RTURN ($2 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($3 ($2 ($3 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($3 ($2 ($1 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($2 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($2 ($3 ($2 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($2 ($3 ($1 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 ($3 ($2 $0)))))))))) : (t0 -> str) -> (t1 -> t0) -> (str -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 ($2 ($3 $0)))))))))) : (t0 -> t1) -> (t1 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 (SCAN_RTURN ($1 ($2 ($3 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($1 ($3 ($1 (SCAN_RTURN ($2 $0)))))))))) : (t0 -> str) -> (t1 -> str) -> (str -> t0) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($2 ($3 ($2 $0)))))))))) : (str -> str) -> (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($3 ($2 (SCAN_RTURN ($2 ($1 ($2 $0)))))))))) : (str -> t0) -> (str -> str) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 (SCAN_RTURN ($3 ($2 ($3 $0)))))))))) : (str -> str) -> (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 ($2 ($3 (SCAN_RTURN ($1 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (t1 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 (SCAN_RTURN ($3 (SCAN_RTURN ($3 $0)))))))))) : (str -> str) -> (t0 -> t1) -> (str -> t0) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 (SCAN_RTURN ($3 (SCAN_RTURN ($1 $0)))))))))) : (str -> str) -> (str -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($3 ($2 ($1 (SCAN_RTURN ($1 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($1 ($3 (SCAN_RTURN ($2 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($1 ($3 ($2 ($3 $0)))))))))) : (t0 -> str) -> (str -> t0) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($1 ($3 ($1 ($2 $0)))))))))) : (t0 -> str) -> (t1 -> str) -> (str -> t0) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($1 ($2 (SCAN_RTURN ($3 $0)))))))))) : (t0 -> str) -> (str -> t1) -> (t1 -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($1 ($2 (SCAN_RTURN ($2 $0)))))))))) : (t0 -> str) -> (str -> str) -> (str -> t0) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($1 ($2 ($1 ($3 $0)))))))))) : (t0 -> str) -> (t0 -> str) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($3 ($1 ($2 ($1 ($2 $0)))))))))) : (t0 -> str) -> (t0 -> t1) -> (t1 -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 ($3 ($2 (SCAN_RTURN ($2 $0)))))))))) : (str -> t0) -> (str -> str) -> (t0 -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 ($3 ($2 (SCAN_RTURN ($1 $0)))))))))) : (t0 -> t1) -> (str -> t0) -> (t1 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 ($3 ($2 ($3 ($2 $0)))))))))) : (t0 -> t1) -> (t1 -> t0) -> (t1 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 ($3 ($2 ($3 ($1 $0)))))))))) : (str -> t0) -> (t0 -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 ($3 ($1 (SCAN_RTURN ($2 $0)))))))))) : (str -> str) -> (t0 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 ($3 ($1 ($3 ($2 $0)))))))))) : (str -> t0) -> (t1 -> str) -> (t0 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($1 ($3 ($1 ($2 ($1 $0)))))))))) : (str -> t0) -> (str -> t0) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 ($3 ($2 (SCAN_RTURN ($2 $0)))))))))) : (str -> str) -> (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($3 ($1 ($3 (SCAN_RTURN ($2 $0)))))))))) : (str -> t0) -> (t1 -> str) -> (t0 -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 ($1 (lambda (SCAN_RTURN ($3 (SCAN_RTURN ($0 $1))))))))))) : (str -> str) -> (((t0 -> str) -> str) -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 ($1 (lambda (SCAN_RTURN ($3 ($0 ($3 $1))))))))))) : (t0 -> str) -> (((str -> t0) -> str) -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 ($1 (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($3 $1))))))))))) : (t0 -> str) -> (((str -> str) -> str) -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 ($1 (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1))))))))))) : (t0 -> str) -> (((str -> str) -> str) -> t0) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 ($1 (lambda ($0 ($3 (SCAN_RTURN ($3 $1))))))))))) : (str -> str) -> (((str -> t0) -> t0) -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 ($1 (lambda ($0 ($3 ($0 ($3 $1))))))))))) : (t0 -> str) -> (((str -> t0) -> t0) -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($2 (SCAN_RTURN ($2 $1))))))))))) : (((str -> str) -> str) -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($2 (SCAN_RTURN ($0 $1))))))))))) : (((str -> str) -> str) -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($2 $1))))))))))) : (((str -> str) -> str) -> t0) -> (t1 -> str) -> t1 -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 ($2 ($0 $1))))))))))) : (((str -> str) -> str) -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (lambda (SCAN_RTURN ($0 ($2 ($0 (SCAN_RTURN ($0 $1))))))))))) : (((str -> str) -> str) -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (lambda (SCAN_RTURN ($0 ($2 ($0 ($2 ($0 $1))))))))))) : (((t0 -> str) -> str) -> t1) -> (str -> t0) -> t0 -> t1
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN $1))))))) : str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda (lambda ($1 ($3 ($1 ($3 (SCAN_RTURN ($3 $0))))))))))) : (str -> str) -> (((str -> str) -> str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($2 (SCAN_RTURN ($0 $1))))))))))) : (((t0 -> str) -> str) -> t1) -> (str -> str) -> t0 -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($2 ($0 ($2 $1))))))))))) : (((str -> str) -> str) -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($0 (SCAN_RTURN ($2 $1))))))))))) : (((str -> str) -> str) -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1))))))))))) : (((str -> str) -> str) -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($1 ($0 ($1 (SCAN_RTURN ($1 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda ($1 ($2 ($1 ($2 (SCAN_RTURN ($2 $0))))))))))) : (((str -> str) -> (str -> str) -> str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($1 (lambda ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1))))))))))) : (t0 -> t1) -> (((str -> str) -> str) -> t0) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 ($2 (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($0 $1))))))))))) : (((t0 -> str) -> str) -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 ($2 (lambda (SCAN_RTURN ($2 ($0 ($2 $1))))))))))) : (((str -> t0) -> str) -> t0) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 ($2 (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($2 $1))))))))))) : (((str -> str) -> str) -> t0) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 ($2 (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1))))))))))) : (((str -> str) -> str) -> t0) -> (t0 -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 ($2 (lambda ($0 ($2 (SCAN_RTURN ($2 $1))))))))))) : (((str -> t0) -> t0) -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 ($2 (lambda ($0 ($2 ($0 ($2 $1))))))))))) : (((str -> t0) -> t0) -> t0) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda (lambda ($0 ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $3)))))))) SCAN_RTURN))) : str -> (((str -> str) -> (str -> t0) -> t0) -> (str -> str) -> t1) -> t1
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda (lambda ($0 ($1 (SCAN_RTURN ($1 ($0 ($1 $3)))))))) SCAN_RTURN))) : str -> (((str -> str) -> (str -> str) -> str) -> (str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda (lambda ($0 ($1 ($0 ($1 (SCAN_RTURN ($1 $3)))))))) SCAN_RTURN))) : str -> (((str -> str) -> (str -> str) -> str) -> (str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda (lambda ($0 ($1 ($0 ($1 ($0 ($1 $3)))))))) SCAN_RTURN))) : t0 -> (((t0 -> t1) -> (t1 -> t0) -> t0) -> (str -> str) -> t2) -> t2
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (lambda ($0 ($2 (SCAN_RTURN ($2 ($0 ($2 $1))))))))))) : (((str -> str) -> str) -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 (lambda ($3 ($0 ($3 ($0 (SCAN_RTURN ($0 $1))))))))))) : (str -> str) -> (((str -> str) -> str) -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (lambda ($0 ($2 ($0 ($2 (SCAN_RTURN ($2 $1))))))))))) : (((str -> str) -> str) -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda (lambda (SCAN_RTURN ($1 ($3 ($1 (SCAN_RTURN ($1 $0))))))))))) : (str -> str) -> (((str -> str) -> str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda (lambda (SCAN_RTURN ($1 ($3 ($1 ($3 ($1 $0))))))))))) : (str -> t0) -> (((t0 -> str) -> t0 -> str) -> t1) -> t1
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($2 ($1 (SCAN_RTURN ($1 ($2 ($1 $0))))))))))) : (((str -> str) -> str -> str) -> t0) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($2 (lambda ($0 (SCAN_RTURN ($0 ($2 ($0 $1))))))))))) : (((str -> str) -> str) -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($2 (SCAN_RTURN ($2 $0))))))))))) : (((str -> str) -> (str -> str) -> str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($2 (SCAN_RTURN ($1 $0))))))))))) : (((str -> str) -> (str -> str) -> str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($2 $0))))))))))) : (((t0 -> str) -> (str -> str) -> t0 -> str) -> t1) -> t1
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 ($2 ($1 $0))))))))))) : (((str -> str) -> (str -> str) -> str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1))))))))) : (((str -> str) -> str) -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1))))))))) : (str -> t0) -> str -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($2 (SCAN_RTURN ($2 $0))))))))))) : (((str -> str) -> str -> str) -> t0) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($2 (SCAN_RTURN ($1 $0))))))))))) : (((str -> str) -> str -> str) -> t0) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($2 $0))))))))))) : (((str -> str) -> t0 -> str) -> t1) -> (t0 -> str) -> t1
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($0 $2))))))))))) : (((str -> str) -> (t0 -> str) -> str) -> t1) -> t0 -> t1
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 ($2 ($1 $0))))))))))) : (((str -> str) -> str -> str) -> t0) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 ($0 ($1 $2))))))))))) : (((str -> str) -> (str -> str) -> str) -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($0 (SCAN_RTURN ($1 $2))))))))))) : (((str -> str) -> (str -> str) -> str) -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $2))))))))))) : (((str -> str) -> (str -> str) -> str) -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $2))))))))) : str -> (str -> t0) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($1 (SCAN_RTURN ($1 ($0 ($1 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($0 (SCAN_RTURN ($0 ($2 ($0 $1))))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($2 (SCAN_RTURN ($1 $0))))))))))) : (((t0 -> str) -> t0 -> str) -> t1) -> (str -> str) -> t1
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($2 ($1 ($2 $0))))))))))) : (((str -> str) -> str -> str) -> t0) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($1 (SCAN_RTURN ($2 $0))))))))))) : (((str -> str) -> str -> str) -> t0) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $0))))))))))) : (((str -> str) -> str -> str) -> t0) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($2 (lambda ($0 $1))))))))))) : (((t0 -> t1) -> t1) -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($0 $2))))))))) : t0 -> (str -> str) -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 ($2 (lambda (SCAN_RTURN ($0 $1))))))))))) : (((t0 -> str) -> str) -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 ($2 (lambda ($0 ($2 $1))))))))))) : (((str -> t0) -> t0) -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($1 ($0 ($1 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($0 (SCAN_RTURN ($1 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($2 (SCAN_RTURN ($2 $0))))))))))) : (((str -> str) -> (str -> t0) -> str -> t0) -> t1) -> t1
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $2)))))))))) : str -> (((str -> str) -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($0 ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $2))))))))))) : (((str -> str) -> (str -> t0) -> t0) -> t1) -> str -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 (lambda ($2 (SCAN_RTURN ($2 (SCAN_RTURN ($0 $1))))))))))) : (((t0 -> str) -> str) -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 (lambda ($2 (SCAN_RTURN ($2 ($0 ($2 $1))))))))))) : (((str -> str) -> str) -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 (lambda ($2 (SCAN_RTURN ($0 (SCAN_RTURN ($2 $1))))))))))) : (((str -> str) -> str) -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 (lambda ($2 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1))))))))))) : (((str -> str) -> t0) -> str) -> (str -> t0) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 (lambda ($2 ($0 ($2 (SCAN_RTURN ($2 $1))))))))))) : (((str -> str) -> str) -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 (lambda ($2 ($0 ($2 ($0 ($2 $1))))))))))) : (((t0 -> t1) -> t0) -> str) -> (t1 -> t0) -> t1 -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda (lambda ($1 (SCAN_RTURN ($1 (SCAN_RTURN ($0 $2))))))))))) : (((str -> str) -> (t0 -> str) -> str) -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda (lambda ($1 (SCAN_RTURN ($1 ($0 ($1 $2))))))))))) : (((str -> str) -> (str -> str) -> str) -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda (lambda ($1 (SCAN_RTURN ($0 (SCAN_RTURN ($1 $2))))))))))) : (((str -> str) -> (str -> str) -> str) -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda (lambda ($1 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $2))))))))))) : (((str -> t0) -> (str -> str) -> t0) -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda (lambda ($1 ($0 ($1 (SCAN_RTURN ($1 $2))))))))))) : (((str -> str) -> (str -> str) -> str) -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda (lambda ($1 ($0 ($1 ($0 ($1 $2))))))))))) : (((t0 -> t1) -> (t1 -> t0) -> t1) -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda (lambda ($0 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $2))))))))))) : (((str -> str) -> (str -> t0) -> t0) -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda (lambda ($0 (SCAN_RTURN ($1 (SCAN_RTURN ($0 $2))))))))))) : (((str -> str) -> (str -> str) -> str) -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda (lambda ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($1 $2))))))))))) : (((t0 -> str) -> (str -> str) -> str) -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda (lambda ($0 (SCAN_RTURN ($0 ($1 ($0 $2))))))))))) : (((str -> str) -> (str -> str) -> str) -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda (lambda ($0 ($1 ($0 (SCAN_RTURN ($0 $2))))))))))) : (((str -> str) -> (str -> str) -> str) -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (lambda (lambda ($0 ($1 ($0 ($1 ($0 $2))))))))))) : (((t0 -> t1) -> (t1 -> t0) -> t0) -> str) -> t1 -> str
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda ($2 ($1 ($2 ($1 (SCAN_RTURN ($1 $0))))))))))) : (((str -> str) -> (str -> str) -> str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 ($2 ($0 (SCAN_RTURN ($0 $1))))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 ($2 ($0 ($2 ($0 $1))))))))) : (str -> t0) -> t0 -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($1 ($2 (SCAN_RTURN ($2 (SCAN_RTURN ($2 $0))))))))))) : (((str -> t0) -> str -> t0) -> t1) -> (str -> str) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 (lambda ($3 ($0 (SCAN_RTURN ($0 ($3 ($0 $1))))))))))) : (str -> str) -> (((str -> str) -> str) -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda (lambda ($1 ($3 (SCAN_RTURN ($3 ($1 ($3 $0))))))))))) : (str -> str) -> (((str -> str) -> str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($2 (SCAN_RTURN ($2 $1))))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($2 (SCAN_RTURN ($0 $1))))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($1 (SCAN_RTURN ($0 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($2 $1))))))))) : (t0 -> str) -> t0 -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($1 $2))))))))) : t0 -> (t0 -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 ($2 ($0 $1))))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 ($1 ($0 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($1 (lambda ($0 ($3 ($0 (SCAN_RTURN ($0 $1))))))))))) : (str -> str) -> (((str -> str) -> str) -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($0 ($1 ($0 (SCAN_RTURN ($0 $2))))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 (lambda (SCAN_RTURN ($3 (SCAN_RTURN ($3 (SCAN_RTURN ($0 $1))))))))))) : (str -> str) -> (((t0 -> str) -> str) -> t1) -> t0 -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 (lambda (SCAN_RTURN ($3 (SCAN_RTURN ($3 ($0 ($3 $1))))))))))) : (str -> str) -> (((str -> str) -> str) -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 (lambda (SCAN_RTURN ($3 (SCAN_RTURN ($0 (SCAN_RTURN ($3 $1))))))))))) : (str -> str) -> (((str -> str) -> str) -> t0) -> str -> t0
+Scored candidates2 (M) in 0.0162125ms.
+Improved score to -122.387178 (dScore=17.549974) w/ new primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1)))))))) : str -> (str -> str) -> str
+rewrote all of the frontiers (M) in 47.2677s.
+Completed one step of memory consolidation in 2.62713m.
+New primitive is used 4 times in the best programs in each of the frontiers.
+Here is where it is used:
+  (lambda (#(lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1)))))))) $0 (lambda (SCAN_RUN $0))))
+  (lambda (#(lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1)))))))) $0 (lambda (SCAN_WALK $0))))
+  (lambda (#(lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1)))))))) $0 (lambda (SCAN_LOOK $0))))
+  (lambda (#(lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($0 $1)))))))) $0 (lambda (SCAN_JUMP $0))))
+Total number of candidates: 3552
+Constructed version spaces and coalesced candidates in 3.9213s.
+Trimmed down the beam, have only 297 best candidates (M)
+Rewrote topK in 3.93758s.
+Initial score: -122.387178
+ (M)New frontiers length 297 Scored candidates (M) in 161.129ms.
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda ($2 $0 $1)))) (lambda (SCAN_JUMP $0)))) : (((t0 -> t1 -> t2) -> t1 -> t0 -> t2) -> (str -> str) -> t3) -> t3
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($1 $0))) $0 (lambda (SCAN_JUMP $0))))) : (((t0 -> t1) -> t0 -> t1) -> t2 -> (str -> str) -> t3) -> t2 -> t3
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda ($0 $1)) (lambda (SCAN_JUMP $0))))) : (((t0 -> t1) -> t1) -> (str -> str) -> t2) -> t0 -> t2
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($1 $2 $0))) (lambda (SCAN_JUMP $0))))) : (((t0 -> t1 -> t2) -> t1 -> t2) -> (str -> str) -> t3) -> t0 -> t3
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda ($0 $1)) (lambda (SCAN_WALK $0))))) : (((t0 -> t1) -> t1) -> (str -> str) -> t2) -> t0 -> t2
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda ($0 $1)) (lambda (SCAN_RUN $0))))) : (((t0 -> t1) -> t1) -> (str -> str) -> t2) -> t0 -> t2
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($1 $0))) $0 (lambda (SCAN_RUN $0))))) : (((t0 -> t1) -> t0 -> t1) -> t2 -> (str -> str) -> t3) -> t2 -> t3
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($1 $2 $0))) (lambda (SCAN_WALK $0))))) : (((t0 -> t1 -> t2) -> t1 -> t2) -> (str -> str) -> t3) -> t0 -> t3
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda ($2 $0 $1)))) (lambda (SCAN_RUN $0)))) : (((t0 -> t1 -> t2) -> t1 -> t0 -> t2) -> (str -> str) -> t3) -> t3
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda ($2 $0 $1)))) (lambda (SCAN_WALK $0)))) : (((t0 -> t1 -> t2) -> t1 -> t0 -> t2) -> (str -> str) -> t3) -> t3
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($1 $2 $0))) (lambda (SCAN_LOOK $0))))) : (((t0 -> t1 -> t2) -> t1 -> t2) -> (str -> str) -> t3) -> t0 -> t3
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($1 $2 $0))) (lambda (SCAN_RUN $0))))) : (((t0 -> t1 -> t2) -> t1 -> t2) -> (str -> str) -> t3) -> t0 -> t3
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($1 $0))) $0 (lambda (SCAN_WALK $0))))) : (((t0 -> t1) -> t0 -> t1) -> t2 -> (str -> str) -> t3) -> t2 -> t3
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda ($0 $1)) (lambda (SCAN_LOOK $0))))) : (((t0 -> t1) -> t1) -> (str -> str) -> t2) -> t0 -> t2
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($1 $0))) $0 (lambda (SCAN_LOOK $0))))) : (((t0 -> t1) -> t0 -> t1) -> t2 -> (str -> str) -> t3) -> t2 -> t3
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda (lambda ($2 $0 $1)))) (lambda (SCAN_LOOK $0)))) : (((t0 -> t1 -> t2) -> t1 -> t0 -> t2) -> (str -> str) -> t3) -> t3
+candidate primitive (M)
+	#(lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN $1))))) : str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN $1))))) : str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($0 (lambda (lambda ($1 $0))) (SCAN_RTURN ($0 (lambda (lambda ($1 $0))) (SCAN_RTURN ($0 (lambda (lambda ($1 $0))) $1)))))))) : str -> (((t0 -> t1) -> t0 -> t1) -> str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_LTURN ($0 (lambda (lambda ($1 $0))) (SCAN_LTURN ($0 (lambda (lambda ($1 $0))) (SCAN_LTURN ($0 (lambda (lambda ($1 $0))) $1)))))))) : str -> (((t0 -> t1) -> t0 -> t1) -> str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda (lambda ($1 $0))) $1 (lambda (SCAN_JUMP $0))))) : t0 -> (((t1 -> t2) -> t1 -> t2) -> t0 -> (str -> str) -> t3) -> t3
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda (lambda ($1 $0))) $1 (lambda (SCAN_RUN $0))))) : t0 -> (((t1 -> t2) -> t1 -> t2) -> t0 -> (str -> str) -> t3) -> t3
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda ($0 $2)) (lambda (SCAN_LOOK $0))))) : t0 -> (((t0 -> t1) -> t1) -> (str -> str) -> t2) -> t2
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda ($0 $2)) (lambda (SCAN_WALK $0))))) : t0 -> (((t0 -> t1) -> t1) -> (str -> str) -> t2) -> t2
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda ($0 $2)) (lambda (SCAN_RUN $0))))) : t0 -> (((t0 -> t1) -> t1) -> (str -> str) -> t2) -> t2
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda (lambda ($1 $3 $0))) (lambda (SCAN_RUN $0))))) : t0 -> (((t0 -> t1 -> t2) -> t1 -> t2) -> (str -> str) -> t3) -> t3
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda (lambda ($1 $3 $0))) (lambda (SCAN_WALK $0))))) : t0 -> (((t0 -> t1 -> t2) -> t1 -> t2) -> (str -> str) -> t3) -> t3
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda (lambda ($1 $3 $0))) (lambda (SCAN_LOOK $0))))) : t0 -> (((t0 -> t1 -> t2) -> t1 -> t2) -> (str -> str) -> t3) -> t3
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda (lambda ($1 $0))) $1 (lambda (SCAN_LOOK $0))))) : t0 -> (((t1 -> t2) -> t1 -> t2) -> t0 -> (str -> str) -> t3) -> t3
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda (lambda ($1 $3 $0))) (lambda (SCAN_JUMP $0))))) : t0 -> (((t0 -> t1 -> t2) -> t1 -> t2) -> (str -> str) -> t3) -> t3
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda ($0 $2)) (lambda (SCAN_JUMP $0))))) : t0 -> (((t0 -> t1) -> t1) -> (str -> str) -> t2) -> t2
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda (lambda ($1 $0))) $1 (lambda (SCAN_WALK $0))))) : t0 -> (((t1 -> t2) -> t1 -> t2) -> t0 -> (str -> str) -> t3) -> t3
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($0 ($2 ($0 (SCAN_LTURN ($1 $3)))))))))) : t0 -> (t1 -> str) -> (t0 -> str) -> (str -> t1) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 (SCAN_RTURN ($0 ($2 $1))))))) : (t0 -> str) -> t0 -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($0 ($1 ($0 (SCAN_RTURN ($2 $3)))))))))) : t0 -> (t0 -> str) -> (t1 -> str) -> (str -> t1) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($1 SCAN_LOOK ($0 ($1 SCAN_LOOK ($0 ($1 SCAN_LOOK $2))))))))) : t0 -> ((str -> str) -> t0 -> t1) -> (t1 -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (SCAN_LTURN ($1 (SCAN_LTURN $0))))))) : (str -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 ($0 (SCAN_RTURN ($1 $3))))))))) : t0 -> (t1 -> t0) -> (t0 -> str) -> (str -> t1) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 (SCAN_LTURN ($1 ($0 ($1 $2)))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (SCAN_LTURN ($2 ($1 ($2 $0)))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 (SCAN_LTURN ($2 ($1 ($0 $3))))))))) : t0 -> (str -> str) -> (t1 -> str) -> (t0 -> t1) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (SCAN_LTURN ($0 (SCAN_LTURN ($2 $1)))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 (SCAN_LTURN ($0 (SCAN_LTURN ($1 $3))))))))) : t0 -> (str -> t1) -> (t0 -> str) -> (str -> str) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (SCAN_LTURN ($0 (SCAN_LTURN ($0 $1)))))))) : (str -> t0) -> str -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 ($1 (SCAN_RTURN ($0 $3))))))))) : t0 -> (t1 -> str) -> (str -> t1) -> (t0 -> str) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($0 ($1 ($0 (SCAN_RTURN ($2 $3)))))))))) : t0 -> (t0 -> str) -> (t1 -> str) -> (str -> t1) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($1 (SCAN_RTURN ($1 $2))))))) : str -> (str -> str) -> (str -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($0 (SCAN_RTURN ($0 $2))))))) : str -> (str -> t0) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($2 $0))))))) : (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($0 (SCAN_RTURN ($0 ($2 ($1 $3)))))))))) : t0 -> (str -> str) -> (t0 -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($0 (SCAN_RTURN ($0 ($2 ($0 $1))))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 (SCAN_RTURN ($1 ($0 $2))))))) : t0 -> (str -> str) -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 ($1 ($0 (SCAN_LTURN ($2 $3))))))))) : t0 -> (t0 -> str) -> (t1 -> str) -> (str -> t1) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($1 (SCAN_LTURN ($1 ($2 ($1 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 (SCAN_LTURN ($1 ($2 ($0 $3)))))))))) : t0 -> (str -> str) -> (str -> str) -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda ($0 (lambda (SCAN_RUN $0)) (lambda (SCAN_RUN $0)))) : ((str -> str) -> (str -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 (SCAN_LTURN ($1 ($2 ($1 $0)))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 (SCAN_LTURN ($1 ($2 ($0 $3))))))))) : t0 -> (t1 -> str) -> (str -> str) -> (t0 -> t1) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($2 ($1 (SCAN_LTURN ($1 $0)))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 ($1 (SCAN_LTURN ($2 ($0 ($2 $3)))))))))) : t0 -> (t0 -> str) -> (str -> str) -> (str -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 ($1 (SCAN_LTURN ($2 ($0 ($1 $3)))))))))) : str -> (t0 -> str) -> (str -> t1) -> (t1 -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($0 (SCAN_LTURN ($0 $1))))))) : (str -> t0) -> str -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 SCAN_RUN ($0 ($1 SCAN_RUN $2)))))) : t0 -> ((str -> str) -> t0 -> t1) -> (t1 -> t0) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($2 (SCAN_RTURN ($2 ($0 $1)))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($2 ($0 ($2 (SCAN_RTURN $1)))))))) : (str -> t0) -> str -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($0 (lambda (lambda ($1 $0))) (SCAN_RTURN ($0 (lambda (lambda ($1 $0))) (SCAN_RTURN ($0 (lambda (lambda ($1 $0))) $1)))))))) : str -> (((t0 -> t1) -> t0 -> t1) -> str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 $0 (SCAN_RTURN ($1 $0 $2))))))) : str -> (t0 -> str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_LTURN ($0 (lambda ($0 (SCAN_LTURN ($0 (SCAN_LTURN ($0 $2)))))))))) : str -> (((str -> str) -> str) -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_LTURN ($0 (lambda ($0 (SCAN_LTURN ($0 $2)))))))) : str -> (((str -> str) -> str) -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($1 SCAN_JUMP ($0 ($1 SCAN_JUMP ($0 ($1 SCAN_JUMP $2))))))))) : t0 -> ((str -> str) -> t0 -> t1) -> (t1 -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 (SCAN_LTURN ($1 ($2 ($1 $3))))))))) : t0 -> (str -> t0) -> (t0 -> str) -> (str -> t1) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 (SCAN_LTURN ($1 ($2 ($0 $3))))))))) : str -> (t0 -> t1) -> (t1 -> str) -> (str -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($0 (SCAN_RTURN ($2 (SCAN_RTURN ($2 $3)))))))))) : str -> (str -> str) -> (t0 -> t1) -> (str -> t0) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($0 (SCAN_RTURN ($2 (SCAN_RTURN ($0 $3)))))))))) : str -> (str -> str) -> (str -> t0) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 ($2 (SCAN_LTURN ($2 ($1 ($2 $3)))))))))) : str -> (str -> str) -> (str -> str) -> (str -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($1 $2 $0))) (lambda (SCAN_WALK $0))))) : (((t0 -> t1 -> t2) -> t1 -> t2) -> (str -> str) -> t3) -> t0 -> t3
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($0 SCAN_RUN ($1 ($0 SCAN_RUN ($1 ($0 SCAN_RUN $2))))))))) : t0 -> (t1 -> t0) -> ((str -> str) -> t0 -> t1) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 (SCAN_RTURN ($1 ($2 $0))))))) : (t0 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 ($1 ($0 (SCAN_LTURN ($2 $3)))))))))) : t0 -> (t0 -> str) -> (str -> t0) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 (SCAN_RTURN ($0 (SCAN_RTURN $2))))))) : str -> (str -> t0) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda ($0 (SCAN_LTURN ($0 ($1 $0)))))) : ((str -> str) -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 ($0 (SCAN_LTURN ($2 $3))))))))) : t0 -> (t0 -> str) -> (t1 -> t0) -> (str -> t1) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 SCAN_LOOK ($1 ($0 SCAN_LOOK ($1 ($0 SCAN_LOOK $2)))))))) : t0 -> (t1 -> t0) -> ((str -> str) -> t0 -> t1) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 ($0 (SCAN_RTURN ($0 $3))))))))) : str -> (str -> t0) -> (t0 -> t1) -> (str -> str) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 ($1 (SCAN_LTURN ($1 (SCAN_LTURN ($2 $3)))))))))) : t0 -> (t0 -> str) -> (str -> str) -> (str -> t1) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 ($2 ($0 ($2 (SCAN_LTURN ($1 $3)))))))))) : t0 -> (str -> t1) -> (t0 -> str) -> (t1 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 ($1 ($0 (SCAN_RTURN ($2 $3))))))))) : t0 -> (t0 -> str) -> (t1 -> str) -> (str -> t1) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 ($1 (SCAN_RTURN ($2 (SCAN_RTURN ($2 $3)))))))))) : str -> (str -> str) -> (str -> t0) -> (t0 -> t1) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 ($1 (SCAN_RTURN ($2 (SCAN_RTURN ($1 $3)))))))))) : str -> (str -> str) -> (str -> str) -> (str -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_LTURN ($0 (SCAN_LTURN ($2 $3)))))))))) : str -> (str -> str) -> (str -> t0) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_LTURN ($0 (SCAN_LTURN ($0 $3)))))))))) : str -> (str -> t0) -> (t0 -> t1) -> (str -> str) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($1 (SCAN_RTURN ($1 (SCAN_RTURN $2)))))))) : str -> (str -> str) -> (str -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 (SCAN_RTURN ($0 ($2 ($1 $3))))))))) : t0 -> (t1 -> str) -> (t0 -> t1) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 (SCAN_RTURN ($0 ($1 ($0 $2)))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 (SCAN_RTURN ($0 ($2 ($0 $1)))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 (SCAN_LTURN ($1 ($0 ($2 $3))))))))) : str -> (str -> t0) -> (t1 -> str) -> (t0 -> t1) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 (SCAN_LTURN ($1 ($0 ($1 $3))))))))) : t0 -> (str -> t1) -> (t0 -> str) -> (str -> t0) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($0 (SCAN_RTURN ($0 ($2 $1)))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 (SCAN_RTURN ($1 (SCAN_RTURN ($2 $3))))))))) : t0 -> (t0 -> str) -> (str -> str) -> (str -> t1) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($2 (SCAN_LTURN ($2 $0))))))) : (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($0 SCAN_WALK ($1 ($0 SCAN_WALK ($1 ($0 SCAN_WALK $2))))))))) : t0 -> (t1 -> t0) -> ((str -> str) -> t0 -> t1) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 (SCAN_LTURN ($0 (SCAN_LTURN ($1 $2)))))))) : t0 -> (t0 -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 (SCAN_LTURN ($0 (SCAN_LTURN ($2 $1)))))))) : (t0 -> str) -> t0 -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 (SCAN_LTURN ($0 (SCAN_LTURN ($1 $2)))))))) : t0 -> (t0 -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda ($0 (SCAN_LTURN ($0 (SCAN_LTURN ($1 $0))))))) : ((str -> str) -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda ($0 (SCAN_LTURN ($0 (SCAN_LTURN ($0 $2))))))))) : str -> (((str -> str) -> str) -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (SCAN_LTURN ($2 ($1 $0))))))) : (str -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 ($2 ($1 ($2 (SCAN_RTURN ($2 $3)))))))))) : str -> (str -> str) -> (str -> str) -> (str -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($0 ($2 ($1 (SCAN_RTURN ($1 $3)))))))))) : str -> (str -> t0) -> (str -> str) -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($0 ($2 ($1 (SCAN_RTURN ($0 $3)))))))))) : t0 -> (t1 -> t0) -> (str -> t1) -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($0 ($2 ($1 ($2 ($1 $3)))))))))) : t0 -> (t1 -> t0) -> (t0 -> t1) -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($0 ($2 ($1 ($2 ($0 $3)))))))))) : t0 -> (str -> t0) -> (t0 -> str) -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($0 ($2 ($0 (SCAN_RTURN ($1 $3)))))))))) : t0 -> (str -> str) -> (t0 -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 ($2 ($0 (SCAN_RTURN ($0 $1))))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 ($2 ($0 (SCAN_RTURN $1)))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($0 ($2 ($0 ($2 ($1 $3)))))))))) : t0 -> (str -> t1) -> (t0 -> str) -> (t1 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 ($2 ($0 ($2 ($0 $1))))))))) : (str -> t0) -> t0 -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 ($2 ($0 ($2 $1)))))))) : (str -> t0) -> str -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($0 ($2 ($0 ($1 ($0 $3)))))))))) : t0 -> (str -> t0) -> (str -> t0) -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($0 (SCAN_RTURN ($0 $2))))))) : str -> (str -> t0) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda ($0 (SCAN_RTURN ($0 (SCAN_RTURN $1)))))) : str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($0 ($1 ($0 (SCAN_LTURN ($2 $3)))))))))) : t0 -> (t0 -> str) -> (t1 -> str) -> (str -> t1) -> str
+candidate primitive (M)
+	#(lambda (lambda ($0 (lambda ($0 $2)) (lambda (SCAN_WALK $0))))) : t0 -> (((t0 -> t1) -> t1) -> (str -> str) -> t2) -> t2
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($2 (SCAN_LTURN ($2 $1))))))) : (str -> str) -> str -> (str -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 (SCAN_RTURN ($2 (SCAN_RTURN ($2 $1)))))))) : (str -> str) -> str -> (str -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 (SCAN_RTURN ($2 (SCAN_RTURN ($1 $3))))))))) : t0 -> (str -> str) -> (t0 -> str) -> (str -> t1) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 (SCAN_RTURN ($2 (SCAN_RTURN ($0 $1)))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 ($2 ($0 (SCAN_RTURN ($1 $3)))))))))) : t0 -> (str -> t0) -> (t0 -> str) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 (SCAN_LTURN ($0 ($1 ($2 $3))))))))) : str -> (str -> t0) -> (t0 -> t1) -> (t1 -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 (SCAN_LTURN ($0 ($1 ($0 $3))))))))) : t0 -> (str -> t1) -> (str -> t0) -> (t0 -> str) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($0 (SCAN_LTURN ($1 $2))))))) : t0 -> (t0 -> str) -> (str -> t0) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($2 $0))))))) : (t0 -> str) -> (str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($1 ($2 ($0 (SCAN_LTURN ($0 $3)))))))))) : str -> (str -> t0) -> (t0 -> str) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 ($0 (SCAN_RTURN ($0 $3))))))))) : str -> (str -> t0) -> (t0 -> t1) -> (str -> str) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 ($1 ($0 (SCAN_RTURN ($2 $3))))))))) : t0 -> (t0 -> str) -> (t1 -> str) -> (str -> t1) -> t1
+candidate primitive (M)
+	#(lambda (lambda ($1 (SCAN_LTURN ($1 ($0 $1)))))) : (str -> str) -> ((str -> str) -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($0 (SCAN_RTURN ($2 ($1 ($2 $3)))))))))) : t0 -> (t0 -> str) -> (str -> t0) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($0 (SCAN_RTURN ($2 ($1 ($0 $3)))))))))) : str -> (t0 -> str) -> (t1 -> t0) -> (str -> t1) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($1 SCAN_RUN ($0 ($1 SCAN_RUN $2))))))) : t0 -> ((str -> str) -> t0 -> t1) -> (t1 -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($1 $0))))))) : (str -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($2 (SCAN_RTURN ($0 $1))))))) : (str -> str) -> t0 -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 $1 (SCAN_RTURN ($0 $1 (SCAN_RTURN ($0 $1 $2)))))))) : str -> t0 -> (t0 -> str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($0 ($2 ($0 (SCAN_RTURN $1)))))))) : (t0 -> str) -> str -> (str -> t0) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($2 ($0 ($2 (SCAN_LTURN ($2 $1))))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($0 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $3)))))))))) : str -> (t0 -> t1) -> (str -> str) -> (str -> t0) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($0 (SCAN_RTURN ($1 (SCAN_RTURN ($0 $3)))))))))) : str -> (str -> t0) -> (str -> str) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($2 ($0 (SCAN_RTURN ($0 $1)))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($2 (SCAN_LTURN ($2 (SCAN_LTURN $0)))))))) : (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 ($2 ($1 (SCAN_LTURN ($0 $3))))))))) : t0 -> (t1 -> t0) -> (str -> t1) -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 ($2 ($1 (SCAN_RTURN ($1 $3))))))))) : str -> (str -> t0) -> (str -> str) -> (t0 -> t1) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 (SCAN_LTURN ($1 ($0 ($2 $3))))))))) : t0 -> (t0 -> t1) -> (str -> str) -> (t1 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 (SCAN_LTURN ($1 ($0 ($1 $2)))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($1 SCAN_RTURN)))))) : ((str -> str) -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($0 ($2 ($0 (SCAN_LTURN ($1 $3)))))))))) : t0 -> (t1 -> str) -> (t0 -> str) -> (str -> t1) -> str
+candidate primitive (M)
+	#(lambda (lambda ($0 (SCAN_RTURN ($0 ($1 SCAN_RTURN)))))) : ((str -> str) -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (lambda ($1 $0))) $0 (lambda (SCAN_JUMP $0))))) : (((t0 -> t1) -> t0 -> t1) -> t2 -> (str -> str) -> t3) -> t2 -> t3
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 (SCAN_RTURN ($2 (SCAN_RTURN $0))))))) : (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 ($1 ($0 ($2 (SCAN_RTURN ($1 $3)))))))))) : t0 -> (str -> str) -> (t0 -> str) -> (str -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($2 ($1 (SCAN_RTURN ($1 $0)))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($0 (SCAN_RTURN ($0 (SCAN_RTURN $1)))))))) : (str -> t0) -> str -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 ($2 ($1 ($2 (SCAN_RTURN ($2 $3)))))))))) : str -> (str -> str) -> (str -> str) -> (str -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($2 $3)))))))))) : t0 -> (t0 -> str) -> (str -> t1) -> (str -> str) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 SCAN_LOOK ($0 ($1 SCAN_LOOK ($0 ($1 SCAN_LOOK $2)))))))) : t0 -> ((str -> str) -> t0 -> t1) -> (t1 -> t0) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (SCAN_LTURN ($1 (SCAN_LTURN ($2 $0)))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (SCAN_LTURN ($1 (SCAN_LTURN ($1 $0)))))))) : (str -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 (SCAN_LTURN ($1 (SCAN_LTURN ($0 $3))))))))) : t0 -> (str -> t1) -> (str -> str) -> (t0 -> str) -> t1
+candidate primitive (M)
+	#(lambda ($0 (lambda (lambda ($0 $1))) (lambda (SCAN_JUMP $0)))) : ((t0 -> (t0 -> t1) -> t1) -> (str -> str) -> t2) -> t2
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($0 (SCAN_LTURN ($0 ($2 ($0 $3)))))))))) : str -> (str -> str) -> (str -> t0) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (SCAN_RTURN ($2 ($0 ($2 $1)))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 (SCAN_RTURN ($2 ($0 ($1 $3))))))))) : t0 -> (str -> str) -> (t0 -> t1) -> (t1 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda ($1 $0)) (lambda (SCAN_LOOK $0))))) : ((t0 -> t1) -> (str -> str) -> t2) -> (t0 -> t1) -> t2
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 ($2 ($0 ($1 (SCAN_LTURN ($2 $3)))))))))) : t0 -> (t0 -> str) -> (str -> str) -> (str -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($1 (SCAN_RTURN ($0 SCAN_RTURN)))))) : (str -> str) -> ((str -> str) -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 (SCAN_RTURN ($2 (SCAN_RTURN $0))))))) : (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($0 (SCAN_LTURN ($0 ($1 ($0 $3)))))))))) : str -> (str -> t0) -> (str -> str) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 (SCAN_LTURN ($2 ($1 ($2 $3))))))))) : t0 -> (t0 -> str) -> (str -> t0) -> (str -> t1) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 (SCAN_LTURN ($2 ($1 ($0 $3))))))))) : str -> (t0 -> str) -> (t1 -> t0) -> (str -> t1) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($0 ($1 ($0 (SCAN_LTURN $2)))))))) : str -> (t0 -> str) -> (str -> t0) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($1 (SCAN_RTURN ($1 ($2 $0)))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($2 (SCAN_LTURN ($2 $1))))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($2 (SCAN_LTURN ($1 $3)))))))))) : t0 -> (str -> str) -> (t0 -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($2 (SCAN_LTURN ($0 $1))))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($2 (SCAN_LTURN $1)))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($2 ($1 ($2 $3)))))))))) : t0 -> (t0 -> str) -> (str -> t0) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($2 ($1 ($0 $3)))))))))) : str -> (t0 -> str) -> (str -> t0) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($1 (SCAN_LTURN ($2 $3)))))))))) : t0 -> (t0 -> str) -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($1 (SCAN_LTURN $2)))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($1 ($2 ($1 $3)))))))))) : t0 -> (str -> t0) -> (t0 -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($1 ($2 ($0 $3)))))))))) : str -> (str -> t0) -> (t0 -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($1 ($0 $2)))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($0 (SCAN_LTURN ($2 $1))))))))) : (t0 -> str) -> t0 -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($0 (SCAN_LTURN ($1 $0)))))))) : ((str -> str) -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($0 (SCAN_LTURN $1))))))) : str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($0 ($2 ($1 $3)))))))))) : t0 -> (t1 -> str) -> (t0 -> t1) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($0 ($2 ($0 $1))))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($0 ($2 $1)))))))) : (t0 -> str) -> t0 -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($0 ($1 SCAN_LTURN))))))) : ((str -> str) -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($0 ($1 ($2 $3)))))))))) : t0 -> (t0 -> t1) -> (t1 -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($0 ($1 $2)))))))) : t0 -> (t0 -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_LTURN ($0 (SCAN_LTURN ($0 ($1 $0))))))) : ((str -> str) -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda ($1 (lambda (SCAN_LOOK $0)) (lambda ($0 $1))))) : ((str -> str) -> ((t0 -> t1) -> t1) -> t2) -> t0 -> t2
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($1 (SCAN_RTURN ($0 $2))))))) : t0 -> (str -> t0) -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($0 (SCAN_RTURN ($1 (SCAN_RTURN ($1 $3)))))))))) : str -> (t0 -> t1) -> (str -> str) -> (str -> t0) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($0 (SCAN_RTURN ($1 (SCAN_RTURN ($0 $3)))))))))) : str -> (str -> t0) -> (str -> str) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($0 ($1 (SCAN_LTURN ($2 $3))))))))) : t0 -> (t0 -> str) -> (str -> t1) -> (t1 -> t0) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($1 (SCAN_LTURN ($1 $2))))))) : str -> (str -> str) -> (str -> t0) -> t0
+candidate primitive (M)
+	#(lambda ($0 ($0 SCAN_JUMP))) : ((str -> str) -> str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($0 ($2 (SCAN_LTURN ($2 $3)))))))))) : str -> (str -> str) -> (t0 -> str) -> (str -> t0) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($0 ($2 (SCAN_LTURN ($1 $3)))))))))) : t0 -> (str -> t1) -> (t0 -> str) -> (t1 -> t0) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($0 ($2 ($0 ($2 $3)))))))))) : t0 -> (t0 -> t1) -> (t0 -> str) -> (t1 -> t0) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($0 ($2 ($0 ($1 $3)))))))))) : t0 -> (t0 -> str) -> (t0 -> str) -> (str -> t0) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($0 ($1 (SCAN_LTURN ($2 $3)))))))))) : t0 -> (t0 -> str) -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($1 ($0 ($1 (SCAN_LTURN $2)))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($0 ($1 ($2 ($1 $3)))))))))) : t0 -> (str -> t0) -> (t0 -> str) -> (str -> t0) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($0 ($1 ($0 ($2 $3)))))))))) : t0 -> (t0 -> str) -> (t1 -> str) -> (str -> t1) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($1 ($0 ($1 ($0 $2)))))))) : str -> (t0 -> str) -> (str -> t0) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 (SCAN_LTURN ($1 (SCAN_LTURN $2))))))) : str -> (str -> str) -> (str -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($2 ($0 (SCAN_LTURN ($0 $1)))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($2 (SCAN_LTURN ($2 ($1 $0)))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($1 ($2 ($1 (SCAN_LTURN ($1 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($2 ($1 (SCAN_LTURN ($0 $3)))))))))) : t0 -> (str -> str) -> (str -> str) -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($1 ($2 ($1 (SCAN_LTURN $0)))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($1 ($2 ($1 ($2 ($1 $0))))))))) : (str -> t0) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($2 ($1 ($2 ($0 $3)))))))))) : t0 -> (str -> t1) -> (t1 -> str) -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($1 ($2 ($1 ($2 $0)))))))) : (str -> t0) -> (t0 -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($2 ($1 ($0 ($1 $3)))))))))) : t0 -> (str -> t0) -> (t0 -> str) -> (str -> t0) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($2 ($0 (SCAN_LTURN ($1 $3)))))))))) : t0 -> (t1 -> t0) -> (t0 -> str) -> (str -> t1) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($2 ($0 (SCAN_LTURN ($0 $3)))))))))) : str -> (str -> t0) -> (t0 -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($2 ($0 ($2 ($1 $3)))))))))) : t0 -> (str -> t0) -> (t0 -> str) -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($1 ($2 ($0 ($2 ($0 $3)))))))))) : t0 -> (t1 -> t0) -> (t0 -> str) -> (t0 -> t1) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (SCAN_LTURN ($1 (SCAN_LTURN ($2 $0)))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (SCAN_LTURN ($1 (SCAN_LTURN ($1 $0)))))))) : (str -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 (SCAN_LTURN ($1 (SCAN_LTURN ($0 $3))))))))) : t0 -> (str -> t1) -> (str -> str) -> (t0 -> str) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($0 ($1 ($0 (SCAN_RTURN $2)))))))) : str -> (t0 -> str) -> (str -> t0) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 ($1 (SCAN_LTURN ($1 ($2 ($1 $3)))))))))) : str -> (str -> str) -> (str -> str) -> (str -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 ($1 (SCAN_LTURN ($0 $3))))))))) : t0 -> (t1 -> str) -> (str -> t1) -> (t0 -> str) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($2 ($1 (SCAN_RTURN $0))))))) : (t0 -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 SCAN_WALK ($0 ($1 SCAN_WALK $2)))))) : t0 -> ((str -> str) -> t0 -> t1) -> (t1 -> t0) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 (SCAN_LTURN ($2 (SCAN_LTURN $0))))))) : (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($0 (SCAN_RTURN ($1 ($2 ($1 $3)))))))))) : t0 -> (str -> t0) -> (t0 -> str) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($0 (SCAN_RTURN ($1 ($2 ($0 $3)))))))))) : str -> (t0 -> t1) -> (t1 -> str) -> (str -> t0) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($2 ($1 ($2 (SCAN_RTURN ($2 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda ($0 (SCAN_LTURN ($0 ($1 SCAN_LTURN)))))) : ((str -> str) -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda ($0 ($0 SCAN_LOOK))) : ((str -> str) -> str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($2 (SCAN_LTURN ($2 $0))))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($2 (SCAN_LTURN ($0 $3)))))))))) : t0 -> (str -> str) -> (str -> str) -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($2 (SCAN_LTURN $0)))))))) : (str -> str) -> (str -> str) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($2 ($1 ($2 $0))))))))) : (t0 -> str) -> (str -> t0) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($2 ($1 ($0 $3)))))))))) : t0 -> (t1 -> str) -> (str -> t1) -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($2 ($1 $0)))))))) : (t0 -> str) -> (str -> t0) -> str -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($2 ($0 ($2 $3)))))))))) : t0 -> (t0 -> str) -> (str -> t0) -> (str -> t0) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($0 (SCAN_LTURN ($2 $3)))))))))) : t0 -> (t0 -> str) -> (t1 -> t0) -> (str -> t1) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($0 (SCAN_LTURN ($0 $3)))))))))) : str -> (t0 -> str) -> (str -> t0) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($0 ($1 ($2 $3)))))))))) : t0 -> (t0 -> str) -> (str -> t0) -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_LTURN ($2 ($1 ($0 ($1 ($0 $3)))))))))) : t0 -> (t0 -> str) -> (t1 -> t0) -> (t0 -> t1) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($1 ($0 (SCAN_LTURN ($1 $2)))))))) : t0 -> (t0 -> str) -> (str -> t0) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_LTURN ($1 ($0 (SCAN_LTURN ($0 $2)))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($0 ($1 ($0 (SCAN_LTURN $2)))))))) : str -> (t0 -> str) -> (str -> t0) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($1 (SCAN_LTURN ($1 (SCAN_LTURN $0)))))))) : (str -> t0) -> (str -> str) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($2 ($0 (SCAN_LTURN $1))))))) : (t0 -> str) -> str -> (str -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 ($0 ($2 ($0 (SCAN_LTURN ($0 $1))))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($1 ($2 (SCAN_LTURN ($2 (SCAN_LTURN ($2 $0))))))))) : (str -> str) -> (str -> t0) -> str -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_LTURN ($2 (SCAN_LTURN ($0 $3)))))))))) : t0 -> (str -> str) -> (str -> t1) -> (t0 -> str) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 ($2 ($0 (SCAN_RTURN $1))))))) : (t0 -> str) -> str -> (str -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 ($1 ($0 (SCAN_LTURN ($2 $3))))))))) : t0 -> (t0 -> str) -> (t1 -> str) -> (str -> t1) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 ($1 (SCAN_RTURN ($2 ($0 ($2 $3)))))))))) : t0 -> (t0 -> str) -> (str -> str) -> (str -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 ($1 (SCAN_RTURN ($2 ($0 ($1 $3)))))))))) : str -> (t0 -> str) -> (str -> t1) -> (t1 -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($2 (SCAN_RTURN ($2 $1))))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($2 (SCAN_RTURN ($1 $3)))))))))) : t0 -> (str -> str) -> (t0 -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($2 (SCAN_RTURN ($0 $1))))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($2 (SCAN_RTURN $1)))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($2 ($1 ($2 $3)))))))))) : t0 -> (t0 -> str) -> (str -> t0) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($2 ($1 ($0 $3)))))))))) : str -> (t0 -> str) -> (str -> t0) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($1 (SCAN_RTURN ($2 $3)))))))))) : t0 -> (t0 -> str) -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($1 (SCAN_RTURN $2)))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($1 ($2 ($1 $3)))))))))) : t0 -> (str -> t0) -> (t0 -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($1 ($2 ($0 $3)))))))))) : str -> (str -> t0) -> (t0 -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($1 ($0 $2)))))))) : str -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($2 $1))))))))) : (t0 -> str) -> t0 -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN ($1 $0)))))))) : ((str -> str) -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 (SCAN_RTURN $1))))))) : str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 ($2 ($1 $3)))))))))) : t0 -> (t1 -> str) -> (t0 -> t1) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 ($2 ($0 $1))))))))) : (str -> str) -> str -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 ($2 $1)))))))) : (t0 -> str) -> t0 -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 ($1 SCAN_RTURN))))))) : ((str -> str) -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 ($1 ($2 $3)))))))))) : t0 -> (t0 -> t1) -> (t1 -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 ($1 $2)))))))) : t0 -> (t0 -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (SCAN_RTURN ($0 (SCAN_RTURN ($0 ($1 $0))))))) : ((str -> str) -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($0 (SCAN_RTURN ($1 ($0 $2))))))) : str -> (t0 -> str) -> (str -> t0) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (SCAN_RTURN ($1 $0 (SCAN_RTURN ($1 $0 $2))))))) : str -> (t0 -> str -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($0 ($1 (SCAN_RTURN ($1 ($0 ($2 $3)))))))))) : t0 -> (t0 -> str) -> (str -> str) -> (str -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($0 ($1 ($2 $3)))))))))) : str -> (str -> t0) -> (t0 -> t1) -> (t1 -> str) -> t1
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($1 ($2 (SCAN_RTURN ($0 ($1 ($0 $3)))))))))) : t0 -> (str -> str) -> (str -> t0) -> (t0 -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($0 ($1 ($0 (SCAN_RTURN ($0 $3)))))))))) : str -> (str -> t0) -> (str -> str) -> (str -> str) -> t0
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (SCAN_RTURN ($2 (SCAN_RTURN ($1 $0)))))))) : (str -> str) -> (t0 -> str) -> t0 -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda ($2 (SCAN_RTURN ($2 (SCAN_RTURN ($0 $1)))))))) : (str -> str) -> t0 -> (t0 -> str) -> str
+candidate primitive (M)
+	#(lambda (lambda (lambda (lambda ($2 ($0 ($1 (SCAN_RTURN ($2 $3))))))))) : t0 -> (t0 -> str) -> (str -> t1) -> (t1 -> t0) -> str
+Uncaught exception:
+  
+  (Invalid_argument "List.nth_exn 297 called on list of length 297")
+
+Raised at file "pervasives.ml", line 33, characters 20-45
+Called from file "src/list.ml" (inlined), line 116, characters 4-84
+Called from file "compression.ml", line 879, characters 18-53
+Called from file "compression.ml", line 1105, characters 50-77
+Called from file "compression.ml" (inlined), line 1112, characters 25-109
+Called from file "utils.ml" (inlined), line 195, characters 21-32
+Called from file "compression.ml", line 1111, characters 12-175
+Called from file "compression.ml" (inlined), line 1120, characters 8-43
+Called from file "compression.ml" (inlined), line 1123, characters 6-34
+Called from file "utils.ml" (inlined), line 195, characters 21-32
+Called from file "compression.ml" (inlined), line 1122, characters 2-86
+Called from file "compression.ml", line 1192, characters 9-121

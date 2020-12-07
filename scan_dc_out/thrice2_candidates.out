@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "bin/scan.py", line 2, in <module>
+    from dreamcoder.domains.scan.make_tasks import make_tasks, import_data, tstr, tscan_input, make_single_task
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/__init__.py", line 29, in <module>
+    from dreamcoder import dreamcoder
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/dreamcoder.py", line 6, in <module>
+    from dreamcoder.recognition import *
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/recognition.py", line 1, in <module>
+    from dreamcoder.enumeration import *
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/enumeration.py", line 1, in <module>
+    from dreamcoder.likelihoodModel import AllOrNothingLikelihoodModel
+  File "/rdma/vast-rdma/vast/cbmm/salford/neurosymbolic-modules/ec/bin/../dreamcoder/likelihoodModel.py", line 338, in <module>
+    import torch
+  File "/usr/local/conda/lib/python3.7/site-packages/torch/__init__.py", line 44, in <module>
+    import numpy as _np
+  File "/usr/local/conda/lib/python3.7/site-packages/numpy/__init__.py", line 236, in <module>
+    __mkl_version__ = "{MajorVersion}.{UpdateVersion}".format(**mkl.get_version())
+KeyboardInterrupt
