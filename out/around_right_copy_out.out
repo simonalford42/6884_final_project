@@ -1,0 +1,109 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 8
+scan_out 8
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'around_right' for 10000 iterations on device cpu, variant copy_out, tag None
+Reading lines...
+Read 15225 sentence pairs
+Trimmed to 15225 sentence pairs
+Counting words...
+Counted words:
+scan_in 8
+scan_out 8
+Loaded data from scan/SCAN-master/around_right_train_copy_out.txt
+15225 examples. Sample pair: ['I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK', 'I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK']
+Reading lines...
+Read 5685 sentence pairs
+Trimmed to 5685 sentence pairs
+Counting words...
+Counted words:
+scan_in 8
+scan_out 8
+Loaded data from scan/SCAN-master/around_right_test_copy_out.txt
+5685 examples. Sample pair: ['I_TURN_LEFT I_JUMP I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK', 'I_TURN_LEFT I_JUMP I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK I_TURN_RIGHT I_LOOK']
+Starting training: 10000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 36s (- 5m 29s) Iters: (1000 10%) Loss avg: 1.1702
+Hits 0/100 test samples
+Duration (Remaining): 1m 13s (- 4m 54s) Iters: (2000 20%) Loss avg: 0.8167
+Hits 2/100 test samples
+Duration (Remaining): 1m 48s (- 4m 13s) Iters: (3000 30%) Loss avg: 0.6866
+Hits 6/100 test samples
+Duration (Remaining): 2m 28s (- 3m 43s) Iters: (4000 40%) Loss avg: 0.5780
+Hits 11/100 test samples
+Duration (Remaining): 3m 15s (- 3m 15s) Iters: (5000 50%) Loss avg: 0.5015
+Hits 25/100 test samples
+Duration (Remaining): 3m 56s (- 2m 37s) Iters: (6000 60%) Loss avg: 0.4483
+Hits 18/100 test samples
+Duration (Remaining): 4m 37s (- 1m 59s) Iters: (7000 70%) Loss avg: 0.3883
+Hits 32/100 test samples
+Duration (Remaining): 5m 18s (- 1m 19s) Iters: (8000 80%) Loss avg: 0.3617
+Hits 25/100 test samples
+Duration (Remaining): 6m 1s (- 0m 40s) Iters: (9000 90%) Loss avg: 0.3502
+Hits 19/100 test samples
+Duration (Remaining): 6m 36s (- 0m 0s) Iters: (10000 100%) Loss avg: 0.3187
+Hits 40/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 5352/15225 = 0.35%
+Evaluating test split accuracy
+Evaluation accuracy: 350/5685 = 0.06%
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 8
+scan_out 8
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'around_right' for 10000 iterations on device cpu, variant copy_out, tag None
+Reading lines...
+Read 15225 sentence pairs
+Trimmed to 15225 sentence pairs
+Counting words...
+Counted words:
+scan_in 8
+scan_out 8
+Loaded data from scan/SCAN-master/around_right_train_copy_out.txt
+15225 examples. Sample pair: ['I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_TURN_LEFT I_JUMP I_TURN_LEFT I_TURN_LEFT I_JUMP I_TURN_LEFT I_TURN_LEFT I_JUMP', 'I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_RUN I_TURN_LEFT I_TURN_LEFT I_JUMP I_TURN_LEFT I_TURN_LEFT I_JUMP I_TURN_LEFT I_TURN_LEFT I_JUMP']
+Reading lines...
+Read 5685 sentence pairs
+Trimmed to 5685 sentence pairs
+Counting words...
+Counted words:
+scan_in 8
+scan_out 8
+Loaded data from scan/SCAN-master/around_right_test_copy_out.txt
+5685 examples. Sample pair: ['I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK', 'I_TURN_LEFT I_WALK I_TURN_LEFT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK']
+Starting training: 10000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 40s (- 6m 5s) Iters: (1000 10%) Loss avg: 1.2109
+Hits 0/100 test samples
+Duration (Remaining): 1m 19s (- 5m 19s) Iters: (2000 20%) Loss avg: 0.8020
+Hits 0/100 test samples
+Duration (Remaining): 1m 58s (- 4m 36s) Iters: (3000 30%) Loss avg: 0.6211
+Hits 8/100 test samples
+Duration (Remaining): 2m 36s (- 3m 54s) Iters: (4000 40%) Loss avg: 0.5139
+Hits 17/100 test samples
+Duration (Remaining): 3m 16s (- 3m 16s) Iters: (5000 50%) Loss avg: 0.4855
+Hits 29/100 test samples
+Duration (Remaining): 4m 6s (- 2m 44s) Iters: (6000 60%) Loss avg: 0.4367
+Hits 30/100 test samples
+Duration (Remaining): 4m 56s (- 2m 7s) Iters: (7000 70%) Loss avg: 0.3938
+Hits 43/100 test samples
+Duration (Remaining): 5m 48s (- 1m 27s) Iters: (8000 80%) Loss avg: 0.3758
+Hits 43/100 test samples
+Duration (Remaining): 6m 35s (- 0m 43s) Iters: (9000 90%) Loss avg: 0.3354
+Hits 41/100 test samples
+Duration (Remaining): 7m 27s (- 0m 0s) Iters: (10000 100%) Loss avg: 0.3152
+Hits 39/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 6240/15225 = 0.41%
+Evaluating test split accuracy
+Evaluation accuracy: 244/5685 = 0.04%
+Saved model at saved/around_right_copy_out_10000.pt

@@ -1,0 +1,164 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 8
+scan_out 8
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'scan' for 10000 iterations on device cpu, variant copy_out, tag None
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 8
+scan_out 8
+Loaded data from scan/SCAN-master/tasks_copy_out.txt
+20910 examples. Sample pair: ['I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_RIGHT I_TURN_RIGHT I_JUMP', 'I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_RIGHT I_TURN_RIGHT I_JUMP']
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 8
+scan_out 8
+Loaded data from scan/SCAN-master/tasks_copy_out.txt
+20910 examples. Sample pair: ['I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP', 'I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP']
+Starting training: 10000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 43s (- 6m 30s) Iters: (1000 10%) Loss avg: 1.1882
+Hits 0/100 test samples
+Duration (Remaining): 1m 31s (- 6m 7s) Iters: (2000 20%) Loss avg: 0.8196
+Hits 3/100 test samples
+Duration (Remaining): 2m 20s (- 5m 27s) Iters: (3000 30%) Loss avg: 0.6765
+Hits 0/100 test samples
+Duration (Remaining): 3m 11s (- 4m 46s) Iters: (4000 40%) Loss avg: 0.5737
+Hits 10/100 test samples
+Duration (Remaining): 4m 1s (- 4m 1s) Iters: (5000 50%) Loss avg: 0.5151
+Hits 7/100 test samples
+Duration (Remaining): 4m 43s (- 3m 8s) Iters: (6000 60%) Loss avg: 0.4600
+Hits 16/100 test samples
+Duration (Remaining): 5m 32s (- 2m 22s) Iters: (7000 70%) Loss avg: 0.4388
+Hits 15/100 test samples
+Duration (Remaining): 6m 15s (- 1m 33s) Iters: (8000 80%) Loss avg: 0.4067
+Hits 27/100 test samples
+Duration (Remaining): 6m 56s (- 0m 46s) Iters: (9000 90%) Loss avg: 0.3718
+Hits 25/100 test samples
+Duration (Remaining): 7m 37s (- 0m 0s) Iters: (10000 100%) Loss avg: 0.3872
+Hits 32/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 5815/20910 = 0.28%
+Evaluating test split accuracy
+Evaluation accuracy: 5815/20910 = 0.28%
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 8
+scan_out 8
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'scan' for 10000 iterations on device cpu, variant copy_out, tag None
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 8
+scan_out 8
+Loaded data from scan/SCAN-master/tasks_copy_out.txt
+20910 examples. Sample pair: ['I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_JUMP', 'I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_JUMP']
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 8
+scan_out 8
+Loaded data from scan/SCAN-master/tasks_copy_out.txt
+20910 examples. Sample pair: ['I_TURN_LEFT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK', 'I_TURN_LEFT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK']
+Starting training: 10000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 1m 14s (- 11m 12s) Iters: (1000 10%) Loss avg: 1.1948
+Hits 0/100 test samples
+Duration (Remaining): 2m 28s (- 9m 52s) Iters: (2000 20%) Loss avg: 0.8119
+Hits 0/100 test samples
+Duration (Remaining): 3m 38s (- 8m 29s) Iters: (3000 30%) Loss avg: 0.6915
+Hits 1/100 test samples
+Duration (Remaining): 4m 45s (- 7m 8s) Iters: (4000 40%) Loss avg: 0.5836
+Hits 6/100 test samples
+Duration (Remaining): 5m 56s (- 5m 56s) Iters: (5000 50%) Loss avg: 0.5436
+Hits 9/100 test samples
+Duration (Remaining): 7m 7s (- 4m 45s) Iters: (6000 60%) Loss avg: 0.5062
+Hits 19/100 test samples
+Duration (Remaining): 19m 59s (- 8m 34s) Iters: (7000 70%) Loss avg: 0.4484
+Hits 15/100 test samples
+Duration (Remaining): 20m 55s (- 5m 13s) Iters: (8000 80%) Loss avg: 0.4128
+Hits 18/100 test samples
+Duration (Remaining): 21m 52s (- 2m 25s) Iters: (9000 90%) Loss avg: 0.4130
+Hits 32/100 test samples
+Duration (Remaining): 23m 3s (- 0m 0s) Iters: (10000 100%) Loss avg: 0.3818
+Hits 26/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 5637/20910 = 0.27%
+Evaluating test split accuracy
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 8
+scan_out 8
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'scan' for 10000 iterations on device cpu, variant copy_out, tag None
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 8
+scan_out 8
+Loaded data from scan/SCAN-master/tasks_copy_out.txt
+20910 examples. Sample pair: ['I_RUN I_RUN I_TURN_LEFT I_TURN_LEFT I_WALK I_TURN_LEFT I_TURN_LEFT I_WALK', 'I_RUN I_RUN I_TURN_LEFT I_TURN_LEFT I_WALK I_TURN_LEFT I_TURN_LEFT I_WALK']
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 8
+scan_out 8
+Loaded data from scan/SCAN-master/tasks_copy_out.txt
+20910 examples. Sample pair: ['I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_WALK I_WALK', 'I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_TURN_RIGHT I_WALK I_WALK I_WALK']
+Starting training: 10000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 1m 18s (- 11m 50s) Iters: (1000 10%) Loss avg: 1.2073
+Hits 0/100 test samples
+Evaluation accuracy: 5637/20910 = 0.27%
+Saved model at saved/scan_copy_out_10000.pt
+Duration (Remaining): 2m 9s (- 8m 38s) Iters: (2000 20%) Loss avg: 0.8449
+Hits 3/100 test samples
+Duration (Remaining): 2m 53s (- 6m 45s) Iters: (3000 30%) Loss avg: 0.6695
+Hits 4/100 test samples
+Duration (Remaining): 3m 40s (- 5m 30s) Iters: (4000 40%) Loss avg: 0.6075
+Hits 7/100 test samples
+Duration (Remaining): 4m 27s (- 4m 27s) Iters: (5000 50%) Loss avg: 0.5445
+Hits 10/100 test samples
+Duration (Remaining): 5m 10s (- 3m 27s) Iters: (6000 60%) Loss avg: 0.4676
+Hits 14/100 test samples
+Duration (Remaining): 5m 55s (- 2m 32s) Iters: (7000 70%) Loss avg: 0.4292
+Hits 20/100 test samples
+Duration (Remaining): 6m 51s (- 1m 42s) Iters: (8000 80%) Loss avg: 0.4044
+Hits 25/100 test samples
+Duration (Remaining): 7m 35s (- 0m 50s) Iters: (9000 90%) Loss avg: 0.3658
+Hits 31/100 test samples
+Duration (Remaining): 8m 20s (- 0m 0s) Iters: (10000 100%) Loss avg: 0.3821
+Hits 16/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 4337/20910 = 0.21%
+Evaluating test split accuracy
+Evaluation accuracy: 4337/20910 = 0.21%
+Saved model at saved/scan_copy_out_10000_(0).pt

@@ -1,0 +1,55 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'mcd' for 10000 iterations on device cpu, intermediate rep? False, tag None
+Reading lines...
+Read 8365 sentence pairs
+Trimmed to 8365 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/mcd_train_copy.txt
+8365 examples. Sample pair: ['walk left twice and turn left thrice', 'walk left twice and turn left thrice']
+Reading lines...
+Read 1045 sentence pairs
+Trimmed to 1045 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/mcd_test_copy.txt
+1045 examples. Sample pair: ['look opposite right thrice and jump opposite right thrice', 'look opposite right thrice and jump opposite right thrice']
+Starting training: 10000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 24s (- 3m 37s) Iters: (1000 10%) Loss avg: 1.3459
+Hits 19/100 test samples
+Duration (Remaining): 0m 47s (- 3m 8s) Iters: (2000 20%) Loss avg: 0.2562
+Hits 97/100 test samples
+Duration (Remaining): 1m 10s (- 2m 44s) Iters: (3000 30%) Loss avg: 0.0634
+Hits 100/100 test samples
+Duration (Remaining): 1m 36s (- 2m 24s) Iters: (4000 40%) Loss avg: 0.0112
+Hits 100/100 test samples
+Duration (Remaining): 2m 1s (- 2m 1s) Iters: (5000 50%) Loss avg: 0.0273
+Hits 100/100 test samples
+Duration (Remaining): 2m 26s (- 1m 37s) Iters: (6000 60%) Loss avg: 0.0062
+Hits 100/100 test samples
+Duration (Remaining): 2m 51s (- 1m 13s) Iters: (7000 70%) Loss avg: 0.0022
+Hits 100/100 test samples
+Duration (Remaining): 3m 16s (- 0m 49s) Iters: (8000 80%) Loss avg: 0.0033
+Hits 100/100 test samples
+Duration (Remaining): 3m 41s (- 0m 24s) Iters: (9000 90%) Loss avg: 0.0293
+Hits 100/100 test samples
+Duration (Remaining): 4m 7s (- 0m 0s) Iters: (10000 100%) Loss avg: 0.0021
+Hits 100/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 8365/8365 = 1.00%
+Evaluating test split accuracy
+Evaluation accuracy: 309/1045 = 0.30%
+Saved model at saved/mcd_10000_(0).pt

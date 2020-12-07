@@ -1,0 +1,55 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'turn_left' for 10000 iterations on device cpu, intermediate rep? False, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/turn_left_train_copy.txt
+21890 examples. Sample pair: ['jump opposite left twice and jump right', 'jump opposite left twice and jump right']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/turn_left_test_copy.txt
+1208 examples. Sample pair: ['walk thrice after turn left', 'walk thrice after turn left']
+Starting training: 10000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 25s (- 3m 50s) Iters: (1000 10%) Loss avg: 1.3360
+Hits 14/100 test samples
+Duration (Remaining): 0m 52s (- 3m 31s) Iters: (2000 20%) Loss avg: 0.4825
+Hits 45/100 test samples
+Duration (Remaining): 1m 21s (- 3m 10s) Iters: (3000 30%) Loss avg: 0.1195
+Hits 97/100 test samples
+Duration (Remaining): 2m 3s (- 3m 5s) Iters: (4000 40%) Loss avg: 0.0399
+Hits 100/100 test samples
+Duration (Remaining): 2m 35s (- 2m 35s) Iters: (5000 50%) Loss avg: 0.0095
+Hits 100/100 test samples
+Duration (Remaining): 3m 12s (- 2m 8s) Iters: (6000 60%) Loss avg: 0.0034
+Hits 100/100 test samples
+Duration (Remaining): 3m 36s (- 1m 32s) Iters: (7000 70%) Loss avg: 0.0278
+Hits 97/100 test samples
+Duration (Remaining): 4m 1s (- 1m 0s) Iters: (8000 80%) Loss avg: 0.0046
+Hits 100/100 test samples
+Duration (Remaining): 4m 24s (- 0m 29s) Iters: (9000 90%) Loss avg: 0.0013
+Hits 100/100 test samples
+Duration (Remaining): 4m 49s (- 0m 0s) Iters: (10000 100%) Loss avg: 0.0020
+Hits 100/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 21889/21890 = 1.00%
+Evaluating test split accuracy
+Evaluation accuracy: 1208/1208 = 1.00%
+Saved model at saved/turn_left_10000_(0).pt

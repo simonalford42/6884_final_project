@@ -1,0 +1,55 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+GPU unavailable, training with CPU
+Initialized model GRU
+Training SCAN model GRU on split 'jump_around_right' for 10000 iterations on device cpu, intermediate rep? False, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_around_right_train_copy.txt
+21890 examples. Sample pair: ['turn around right twice after jump opposite left thrice', 'turn around right twice after jump opposite left thrice']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_around_right_test_copy.txt
+1208 examples. Sample pair: ['look opposite left thrice and jump around right', 'look opposite left thrice and jump around right']
+Starting training: 10000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 26s (- 3m 56s) Iters: (1000 10%) Loss avg: 1.3909
+Hits 15/100 test samples
+Duration (Remaining): 0m 51s (- 3m 26s) Iters: (2000 20%) Loss avg: 0.5262
+Hits 76/100 test samples
+Duration (Remaining): 1m 24s (- 3m 17s) Iters: (3000 30%) Loss avg: 0.1043
+Hits 100/100 test samples
+Duration (Remaining): 1m 55s (- 2m 53s) Iters: (4000 40%) Loss avg: 0.0215
+Hits 100/100 test samples
+Duration (Remaining): 2m 23s (- 2m 23s) Iters: (5000 50%) Loss avg: 0.0258
+Hits 100/100 test samples
+Duration (Remaining): 2m 46s (- 1m 51s) Iters: (6000 60%) Loss avg: 0.0053
+Hits 100/100 test samples
+Duration (Remaining): 3m 11s (- 1m 22s) Iters: (7000 70%) Loss avg: 0.0203
+Hits 100/100 test samples
+Duration (Remaining): 3m 37s (- 0m 54s) Iters: (8000 80%) Loss avg: 0.0022
+Hits 100/100 test samples
+Duration (Remaining): 4m 2s (- 0m 26s) Iters: (9000 90%) Loss avg: 0.0248
+Hits 99/100 test samples
+Duration (Remaining): 4m 29s (- 0m 0s) Iters: (10000 100%) Loss avg: 0.0019
+Hits 100/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 21887/21890 = 1.00%
+Evaluating test split accuracy
+Evaluation accuracy: 1206/1208 = 1.00%
+Saved model at saved/jump_around_right_10000_(0).pt

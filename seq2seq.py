@@ -16,10 +16,8 @@ import numpy as np
 import argparse
 
 parser = argparse.ArgumentParser(description='Train on SCAN splits.')
-parser.add_argument('-r', '--inter-rep', dest='inter_rep', action='store_true',
-        default=False, help='train to predict intermediate representation, or do traditional SCAN i/o pairs?')
-parser.add_argument('--inter-rep2', dest='inter_rep2', action='store_true',
-        default=False, help='train to predict intermediate representation, or do traditional SCAN i/o pairs?')
+parser.add_argument('-v', '--variant', dest='variant', default='default',
+        help='type of split. One of default, inter, inter2, copy, copy_out')
 parser.add_argument('-s', '--split', type=str, dest='split',
         default='scan', help='desired split name, example: \'scan\' or \'jump_around_right\'')
 parser.add_argument('-m', '--model', type=str, dest='model',
@@ -33,18 +31,25 @@ parser.add_argument('-t', '--tag', type=str, dest='tag',
 
 args = parser.parse_args()
 
-# use full data for determining input/output language, in case splits somehow change it
-if args.inter_rep or args.inter_rep2:
-    if args.inter_rep2:
-        full_data = SCAN_DIR + 'tasks_inter2.txt'
-    else:
-        full_data = SCAN_DIR + 'tasks_inter.txt'
+assert args.variant in ['default', 'inter', 'inter2', 'copy', 'copy_out'], 'invalid argument'
 
-    INPUT_LANG, OUTPUT_LANG, full_pairs = prepareData('scan_in', 'scan_out', full_data, False)
-else:
-    # use full data for determining input/output language, in case splits somehow change it
-    full_data = SCAN_DIR + 'tasks.txt'
-    INPUT_LANG, OUTPUT_LANG, full_pairs = prepareData('scan_in', 'scan_out', full_data, False)
+def data_suffix(variant):
+    if variant == 'default':
+        return '.txt'
+    elif variant == 'inter':
+        return '_inter.txt'
+    elif variant == 'inter2':
+        return '_inter2.txt'
+    elif variant == 'copy':
+        return '_copy.txt'
+    elif variant == 'copy_out':
+        return '_copy_out.txt'
+    else:
+        assert False, 'invalid variant'
+
+# use full data for determining input/output language, in case splits somehow change it
+full_data = SCAN_DIR + 'tasks' + data_suffix(args.variant)
+INPUT_LANG, OUTPUT_LANG, full_pairs = prepareData('scan_in', 'scan_out', full_data, False)
 
 # used for train as well as test splits
 # I add one for the <EOS> tag. Not sure if necessary but can't hurt.
@@ -418,8 +423,6 @@ def evaluateTestSet(device, encoder, decoder, model, pairs):
                 output_sentence = ' '.join(output_words[:-1])
                 if pair[1] == output_sentence:
                     hits += 1
-                print('pair[1]: {}'.format(pair[1]))
-                print('output_sentence: {}'.format(output_sentence))
             else:
                 assert len(output_words) == MAX_LENGTH, str.format(
                         'unexpected length: {} but max is {}',
@@ -551,26 +554,11 @@ def evalSplit(device, encoder, decoder, model, split_path):
 if __name__ == '__main__':
     assert args.split in ['jump', 'turn_left', 'jump_around_right', 'around_right', 'opposite_right', 'length', 'mcd', 'scan']
     if args.split == 'scan':
-        if args.inter_rep:
-            train_path = 'tasks_inter.txt'
-            test_path = 'tasks_inter.txt'
-        else:
-            train_path = 'tasks.txt'
-            test_path = 'tasks.txt'
-        if args.inter_rep2:
-            train_path = 'tasks_inter2.txt'
-            test_path = 'tasks_inter2.txt'
-
+        train_path = 'tasks' + data_suffix(args.variant)
+        test_path = train_path
     else:
-        if args.inter_rep:
-            train_path = args.split + '_train_inter.txt'
-            test_path = args.split + '_test_inter.txt'
-        else:
-            train_path = args.split + '_train.txt'
-            test_path = args.split + '_test.txt'
-        if args.inter_rep2:
-            train_path = args.split + '_train_inter2.txt'
-            test_path = args.split + '_test_inter2.txt'
+        train_path = args.split + '_train' + data_suffix(args.variant)
+        test_path = args.split + '_test' + data_suffix(args.variant)
 
     if args.model == 'GRU':
         encoder, decoder= initModel('GRU', DEVICE, hidden_size=100, dropout=0.1)
@@ -583,10 +571,10 @@ if __name__ == '__main__':
     # checkpoint_path = ''
     # loadParameters(encoder, decoder, checkpoint_path)
 
-    print('Training SCAN model {} on split \'{}\' for {} iterations on device {}, intermediate rep? {}, tag {}'.format(args.model, args.split, args.iters, DEVICE, args.inter_rep, args.tag))
+    print('Training SCAN model {} on split \'{}\' for {} iterations on device {}, variant {}, tag {}'.format(args.model, args.split, args.iters, DEVICE, args.variant, args.tag))
 
     checkpoint = trainTestSplit(DEVICE, encoder, decoder, args.model, train_path, test_path, iters=args.iters)
-    save_path = 'saved/{}{}_{}{}.pt'.format(args.split, '_inter' if args.inter_rep else '',
+    save_path = 'saved/{}_{}_{}{}.pt'.format(args.split, args.variant,
             args.iters, '_' + args.tag if args.tag else '')
 
     i = 0

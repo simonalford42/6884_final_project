@@ -1,0 +1,118 @@
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+GPU unavailable, training with CPU
+Initialized model GRU_A
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+GPU unavailable, training with CPU
+Initialized model GRU_A
+Training SCAN model GRU_A on split 'jump_around_right' for 10000 iterations on device cpu, variant copy, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_around_right_train_copy.txt
+21890 examples. Sample pair: ['walk right after look around right twice', 'walk right after look around right twice']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 15
+scan_out 15
+Loaded data from scan/SCAN-master/jump_around_right_test_copy.txt
+1208 examples. Sample pair: ['jump around right twice after run around right twice', 'jump around right twice after run around right twice']
+Starting training: 10000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 0m 37s (- 5m 39s) Iters: (1000 10%) Loss avg: 0.4775
+Hits 97/100 test samples
+Duration (Remaining): 1m 13s (- 4m 55s) Iters: (2000 20%) Loss avg: 0.0116
+Hits 100/100 test samples
+Duration (Remaining): 1m 52s (- 4m 22s) Iters: (3000 30%) Loss avg: 0.0364
+Hits 99/100 test samples
+Duration (Remaining): 2m 39s (- 3m 59s) Iters: (4000 40%) Loss avg: 0.0069
+Hits 94/100 test samples
+Duration (Remaining): 3m 21s (- 3m 21s) Iters: (5000 50%) Loss avg: 0.0144
+Hits 100/100 test samples
+Duration (Remaining): 4m 7s (- 2m 45s) Iters: (6000 60%) Loss avg: 0.0006
+Hits 100/100 test samples
+Duration (Remaining): 4m 55s (- 2m 6s) Iters: (7000 70%) Loss avg: 0.0119
+Hits 94/100 test samples
+Duration (Remaining): 5m 42s (- 1m 25s) Iters: (8000 80%) Loss avg: 0.0065
+Hits 100/100 test samples
+Duration (Remaining): 6m 25s (- 0m 42s) Iters: (9000 90%) Loss avg: 0.0003
+Hits 100/100 test samples
+Duration (Remaining): 7m 23s (- 0m 0s) Iters: (10000 100%) Loss avg: 0.0002
+Hits 100/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 21890/21890 = 1.00%
+Evaluating test split accuracy
+Evaluation accuracy: 1208/1208 = 1.00%
+Reading lines...
+Read 20910 sentence pairs
+Trimmed to 20910 sentence pairs
+Counting words...
+Counted words:
+scan_in 8
+scan_out 8
+GPU unavailable, training with CPU
+Initialized model GRU_A
+Training SCAN model GRU_A on split 'jump_around_right' for 10000 iterations on device cpu, variant copy_out, tag None
+Reading lines...
+Read 21890 sentence pairs
+Trimmed to 21890 sentence pairs
+Counting words...
+Counted words:
+scan_in 8
+scan_out 8
+Loaded data from scan/SCAN-master/jump_around_right_train_copy_out.txt
+21890 examples. Sample pair: ['I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_RUN', 'I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_JUMP I_TURN_LEFT I_RUN']
+Reading lines...
+Read 1208 sentence pairs
+Trimmed to 1208 sentence pairs
+Counting words...
+Counted words:
+scan_in 8
+scan_out 8
+Loaded data from scan/SCAN-master/jump_around_right_test_copy_out.txt
+1208 examples. Sample pair: ['I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK', 'I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_JUMP I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK I_TURN_LEFT I_LOOK']
+Starting training: 10000 iterations
+Hits 0/100 test samples
+Duration (Remaining): 1m 7s (- 10m 7s) Iters: (1000 10%) Loss avg: 0.9703
+Hits 8/100 test samples
+Duration (Remaining): 2m 11s (- 8m 46s) Iters: (2000 20%) Loss avg: 0.5398
+Hits 15/100 test samples
+Duration (Remaining): 3m 21s (- 7m 50s) Iters: (3000 30%) Loss avg: 0.4101
+Hits 29/100 test samples
+Duration (Remaining): 4m 30s (- 6m 46s) Iters: (4000 40%) Loss avg: 0.2851
+Hits 43/100 test samples
+Duration (Remaining): 5m 26s (- 5m 26s) Iters: (5000 50%) Loss avg: 0.2218
+Hits 40/100 test samples
+Duration (Remaining): 6m 18s (- 4m 12s) Iters: (6000 60%) Loss avg: 0.1832
+Hits 61/100 test samples
+Duration (Remaining): 7m 9s (- 3m 4s) Iters: (7000 70%) Loss avg: 0.1430
+Hits 54/100 test samples
+Duration (Remaining): 8m 4s (- 2m 1s) Iters: (8000 80%) Loss avg: 0.1141
+Hits 62/100 test samples
+Duration (Remaining): 8m 56s (- 0m 59s) Iters: (9000 90%) Loss avg: 0.1168
+Hits 64/100 test samples
+Duration (Remaining): 9m 56s (- 0m 0s) Iters: (10000 100%) Loss avg: 0.0876
+Hits 80/100 test samples
+Evaluating training split accuracy
+Evaluation accuracy: 16005/21890 = 0.73%
+Evaluating test split accuracy
+Evaluation accuracy: 403/1208 = 0.33%
+Saved model at saved/jump_around_right_copy_out_10000_(0).pt

@@ -333,6 +333,30 @@ def make_split(phrase, path, percent=0.1):
     export_tasks(train_tasks, path + '_train.txt')
     export_tasks(test_tasks, path + '_test.txt')
 
+
+def generate_copy_tasks(path):
+    new_path = path + '_copy.txt'
+    tasks = import_data(SCAN_DIR + path + '.txt')
+
+    def format_line(i, o):
+        return 'IN: {} OUT: {}'.format(i, o)
+
+    with open(SCAN_DIR + new_path, 'w+') as f:
+        for (i, o) in tasks:
+            f.write(format_line(i, i) + '\n')
+
+def generate_copy_out_tasks(path):
+    new_path = path + '_copy_out.txt'
+    tasks = import_data(SCAN_DIR + path + '.txt')
+
+    def format_line(i, o):
+        return 'IN: {} OUT: {}'.format(i, o)
+
+    with open(SCAN_DIR + new_path, 'w+') as f:
+        for (i, o) in tasks:
+            f.write(format_line(o, o) + '\n')
+
+
 def generate_intermediate2_tasks(path):
     new_path = path + '_inter2.txt'
     tasks = import_data(SCAN_DIR + path + '.txt')
@@ -407,8 +431,11 @@ if __name__ == '__main__':
     # make_split('around right', SCAN_DIR + 'around_right')
     # make_split('opposite right', SCAN_DIR + 'opposite_right')
 
-    generate_intermediate2_tasks('tasks')
+    generate_copy_out_tasks('tasks')
+    generate_copy_tasks('tasks')
     for split in ['jump', 'turn_left', 'jump_around_right', 'around_right',
             'opposite_right', 'mcd', 'length']:
-        generate_intermediate2_tasks(split + '_train')
-        generate_intermediate2_tasks(split + '_test')
+        generate_copy_out_tasks(split + '_train')
+        generate_copy_out_tasks(split + '_test')
+        generate_copy_tasks(split + '_train')
+        generate_copy_tasks(split + '_test')

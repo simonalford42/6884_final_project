@@ -1,0 +1,1208 @@
+IN: run after jump around right OUT: run after jump around right
+IN: jump around right after run OUT: jump around right after run
+IN: run and jump around right OUT: run and jump around right
+IN: jump around right and run OUT: jump around right and run
+IN: walk after jump around right OUT: walk after jump around right
+IN: walk and jump around right OUT: walk and jump around right
+IN: jump and jump around right OUT: jump and jump around right
+IN: jump around right and look OUT: jump around right and look
+IN: jump after jump around right OUT: jump after jump around right
+IN: jump around right and jump OUT: jump around right and jump
+IN: look and jump around right OUT: look and jump around right
+IN: jump around right after walk OUT: jump around right after walk
+IN: jump around right after look OUT: jump around right after look
+IN: look after jump around right OUT: look after jump around right
+IN: jump around right after jump OUT: jump around right after jump
+IN: jump around right and walk OUT: jump around right and walk
+IN: run twice and jump around right OUT: run twice and jump around right
+IN: jump around right after run twice OUT: jump around right after run twice
+IN: turn left and jump around right OUT: turn left and jump around right
+IN: turn left after jump around right OUT: turn left after jump around right
+IN: jump around right and turn left OUT: jump around right and turn left
+IN: run twice after jump around right OUT: run twice after jump around right
+IN: jump around right and run twice OUT: jump around right and run twice
+IN: jump around right after turn left OUT: jump around right after turn left
+IN: jump around right after turn right OUT: jump around right after turn right
+IN: turn right and jump around right OUT: turn right and jump around right
+IN: turn right after jump around right OUT: turn right after jump around right
+IN: jump around right and turn right OUT: jump around right and turn right
+IN: look twice and jump around right OUT: look twice and jump around right
+IN: jump twice and jump around right OUT: jump twice and jump around right
+IN: jump twice after jump around right OUT: jump twice after jump around right
+IN: jump around right after look twice OUT: jump around right after look twice
+IN: walk twice and jump around right OUT: walk twice and jump around right
+IN: look twice after jump around right OUT: look twice after jump around right
+IN: jump around right and walk twice OUT: jump around right and walk twice
+IN: jump around right and look twice OUT: jump around right and look twice
+IN: jump around right and jump twice OUT: jump around right and jump twice
+IN: jump around right after jump twice OUT: jump around right after jump twice
+IN: jump around right after walk twice OUT: jump around right after walk twice
+IN: walk twice after jump around right OUT: walk twice after jump around right
+IN: run left after jump around right OUT: run left after jump around right
+IN: run thrice and jump around right OUT: run thrice and jump around right
+IN: jump around right and run left OUT: jump around right and run left
+IN: jump around right and run thrice OUT: jump around right and run thrice
+IN: run thrice after jump around right OUT: run thrice after jump around right
+IN: jump around right after run thrice OUT: jump around right after run thrice
+IN: run left and jump around right OUT: run left and jump around right
+IN: jump around right after run left OUT: jump around right after run left
+IN: jump around right and walk left OUT: jump around right and walk left
+IN: jump around right after run right OUT: jump around right after run right
+IN: look left after jump around right OUT: look left after jump around right
+IN: jump around right and run right OUT: jump around right and run right
+IN: walk left and jump around right OUT: walk left and jump around right
+IN: look left and jump around right OUT: look left and jump around right
+IN: jump around right after jump left OUT: jump around right after jump left
+IN: jump left and jump around right OUT: jump left and jump around right
+IN: jump around right after look left OUT: jump around right after look left
+IN: walk left after jump around right OUT: walk left after jump around right
+IN: run right and jump around right OUT: run right and jump around right
+IN: jump left after jump around right OUT: jump left after jump around right
+IN: jump around right and look left OUT: jump around right and look left
+IN: run right after jump around right OUT: run right after jump around right
+IN: jump around right and jump left OUT: jump around right and jump left
+IN: jump around right after walk left OUT: jump around right after walk left
+IN: jump right and jump around right OUT: jump right and jump around right
+IN: jump around right and walk right OUT: jump around right and walk right
+IN: jump around right after walk right OUT: jump around right after walk right
+IN: jump around right after look right OUT: jump around right after look right
+IN: jump around right and look right OUT: jump around right and look right
+IN: jump around right and jump right OUT: jump around right and jump right
+IN: look right after jump around right OUT: look right after jump around right
+IN: jump around right after jump right OUT: jump around right after jump right
+IN: jump right after jump around right OUT: jump right after jump around right
+IN: walk right after jump around right OUT: walk right after jump around right
+IN: look right and jump around right OUT: look right and jump around right
+IN: walk right and jump around right OUT: walk right and jump around right
+IN: look thrice after jump around right OUT: look thrice after jump around right
+IN: walk thrice and jump around right OUT: walk thrice and jump around right
+IN: jump around right and jump thrice OUT: jump around right and jump thrice
+IN: jump thrice and jump around right OUT: jump thrice and jump around right
+IN: walk thrice after jump around right OUT: walk thrice after jump around right
+IN: jump around right and look thrice OUT: jump around right and look thrice
+IN: jump around right after jump thrice OUT: jump around right after jump thrice
+IN: jump around right and walk thrice OUT: jump around right and walk thrice
+IN: look thrice and jump around right OUT: look thrice and jump around right
+IN: jump around right after walk thrice OUT: jump around right after walk thrice
+IN: jump thrice after jump around right OUT: jump thrice after jump around right
+IN: jump around right after look thrice OUT: jump around right after look thrice
+IN: turn opposite left after jump around right OUT: turn opposite left after jump around right
+IN: jump around right after turn opposite left OUT: jump around right after turn opposite left
+IN: jump around right after turn left twice OUT: jump around right after turn left twice
+IN: jump around right and turn left twice OUT: jump around right and turn left twice
+IN: turn left twice after jump around right OUT: turn left twice after jump around right
+IN: jump around right and turn opposite left OUT: jump around right and turn opposite left
+IN: turn opposite left and jump around right OUT: turn opposite left and jump around right
+IN: turn left twice and jump around right OUT: turn left twice and jump around right
+IN: jump around right and turn right twice OUT: jump around right and turn right twice
+IN: turn right twice after jump around right OUT: turn right twice after jump around right
+IN: jump around right and turn opposite right OUT: jump around right and turn opposite right
+IN: turn right twice and jump around right OUT: turn right twice and jump around right
+IN: turn opposite right and jump around right OUT: turn opposite right and jump around right
+IN: jump around right after turn opposite right OUT: jump around right after turn opposite right
+IN: jump around right after turn right twice OUT: jump around right after turn right twice
+IN: turn opposite right after jump around right OUT: turn opposite right after jump around right
+IN: jump around right and run opposite left OUT: jump around right and run opposite left
+IN: jump around right after run opposite left OUT: jump around right after run opposite left
+IN: run opposite left after jump around right OUT: run opposite left after jump around right
+IN: run opposite left and jump around right OUT: run opposite left and jump around right
+IN: jump around right after look opposite left OUT: jump around right after look opposite left
+IN: walk opposite left and jump around right OUT: walk opposite left and jump around right
+IN: jump opposite left and jump around right OUT: jump opposite left and jump around right
+IN: jump around right and jump opposite left OUT: jump around right and jump opposite left
+IN: walk opposite left after jump around right OUT: walk opposite left after jump around right
+IN: jump around right after jump opposite left OUT: jump around right after jump opposite left
+IN: look opposite left after jump around right OUT: look opposite left after jump around right
+IN: jump around right after walk opposite left OUT: jump around right after walk opposite left
+IN: jump opposite left after jump around right OUT: jump opposite left after jump around right
+IN: look opposite left and jump around right OUT: look opposite left and jump around right
+IN: jump around right and walk opposite left OUT: jump around right and walk opposite left
+IN: jump around right and look opposite left OUT: jump around right and look opposite left
+IN: jump around right and run opposite right OUT: jump around right and run opposite right
+IN: run opposite right and jump around right OUT: run opposite right and jump around right
+IN: jump around right after run opposite right OUT: jump around right after run opposite right
+IN: run opposite right after jump around right OUT: run opposite right after jump around right
+IN: look opposite right and jump around right OUT: look opposite right and jump around right
+IN: jump around right after jump opposite right OUT: jump around right after jump opposite right
+IN: jump around right and walk opposite right OUT: jump around right and walk opposite right
+IN: jump around right after walk opposite right OUT: jump around right after walk opposite right
+IN: jump around right and look opposite right OUT: jump around right and look opposite right
+IN: jump opposite right after jump around right OUT: jump opposite right after jump around right
+IN: jump around right and jump opposite right OUT: jump around right and jump opposite right
+IN: look opposite right after jump around right OUT: look opposite right after jump around right
+IN: walk opposite right after jump around right OUT: walk opposite right after jump around right
+IN: walk opposite right and jump around right OUT: walk opposite right and jump around right
+IN: jump opposite right and jump around right OUT: jump opposite right and jump around right
+IN: jump around right after look opposite right OUT: jump around right after look opposite right
+IN: run left twice after jump around right OUT: run left twice after jump around right
+IN: turn left thrice and jump around right OUT: turn left thrice and jump around right
+IN: jump around right after turn left thrice OUT: jump around right after turn left thrice
+IN: turn left thrice after jump around right OUT: turn left thrice after jump around right
+IN: jump around right after run left twice OUT: jump around right after run left twice
+IN: jump around right and turn left thrice OUT: jump around right and turn left thrice
+IN: jump around right and run left twice OUT: jump around right and run left twice
+IN: run left twice and jump around right OUT: run left twice and jump around right
+IN: jump around right after jump left twice OUT: jump around right after jump left twice
+IN: jump around right and walk left twice OUT: jump around right and walk left twice
+IN: jump around right after look left twice OUT: jump around right after look left twice
+IN: jump around right after run right twice OUT: jump around right after run right twice
+IN: run right twice after jump around right OUT: run right twice after jump around right
+IN: walk left twice after jump around right OUT: walk left twice after jump around right
+IN: jump around right and jump left twice OUT: jump around right and jump left twice
+IN: run right twice and jump around right OUT: run right twice and jump around right
+IN: jump left twice after jump around right OUT: jump left twice after jump around right
+IN: jump left twice and jump around right OUT: jump left twice and jump around right
+IN: walk left twice and jump around right OUT: walk left twice and jump around right
+IN: jump around right and run right twice OUT: jump around right and run right twice
+IN: jump around right and look left twice OUT: jump around right and look left twice
+IN: look left twice and jump around right OUT: look left twice and jump around right
+IN: jump around right after walk left twice OUT: jump around right after walk left twice
+IN: look left twice after jump around right OUT: look left twice after jump around right
+IN: jump around right and turn right thrice OUT: jump around right and turn right thrice
+IN: jump around right after turn right thrice OUT: jump around right after turn right thrice
+IN: turn right thrice and jump around right OUT: turn right thrice and jump around right
+IN: turn right thrice after jump around right OUT: turn right thrice after jump around right
+IN: look right twice and jump around right OUT: look right twice and jump around right
+IN: jump around right after jump right twice OUT: jump around right after jump right twice
+IN: walk right twice and jump around right OUT: walk right twice and jump around right
+IN: jump around right after walk right twice OUT: jump around right after walk right twice
+IN: look right twice after jump around right OUT: look right twice after jump around right
+IN: jump around right after look right twice OUT: jump around right after look right twice
+IN: jump around right and walk right twice OUT: jump around right and walk right twice
+IN: jump right twice after jump around right OUT: jump right twice after jump around right
+IN: walk right twice after jump around right OUT: walk right twice after jump around right
+IN: jump around right and jump right twice OUT: jump around right and jump right twice
+IN: jump right twice and jump around right OUT: jump right twice and jump around right
+IN: jump around right and look right twice OUT: jump around right and look right twice
+IN: jump around right and turn opposite left twice OUT: jump around right and turn opposite left twice
+IN: jump around right after turn opposite left twice OUT: jump around right after turn opposite left twice
+IN: turn around left and jump around right OUT: turn around left and jump around right
+IN: turn opposite left twice and jump around right OUT: turn opposite left twice and jump around right
+IN: jump around right after turn around left OUT: jump around right after turn around left
+IN: jump around right and turn around left OUT: jump around right and turn around left
+IN: turn opposite left twice after jump around right OUT: turn opposite left twice after jump around right
+IN: turn around left after jump around right OUT: turn around left after jump around right
+IN: jump around right and turn around right OUT: jump around right and turn around right
+IN: turn around right after jump around right OUT: turn around right after jump around right
+IN: turn opposite right twice and jump around right OUT: turn opposite right twice and jump around right
+IN: jump around right and turn opposite right twice OUT: jump around right and turn opposite right twice
+IN: jump around right after turn around right OUT: jump around right after turn around right
+IN: turn opposite right twice after jump around right OUT: turn opposite right twice after jump around right
+IN: turn around right and jump around right OUT: turn around right and jump around right
+IN: jump around right after turn opposite right twice OUT: jump around right after turn opposite right twice
+IN: jump around right after run left thrice OUT: jump around right after run left thrice
+IN: run left thrice after jump around right OUT: run left thrice after jump around right
+IN: jump around right and run left thrice OUT: jump around right and run left thrice
+IN: run left thrice and jump around right OUT: run left thrice and jump around right
+IN: run right thrice after jump around right OUT: run right thrice after jump around right
+IN: jump around right after look left thrice OUT: jump around right after look left thrice
+IN: jump around right and look left thrice OUT: jump around right and look left thrice
+IN: look left thrice and jump around right OUT: look left thrice and jump around right
+IN: jump left thrice and jump around right OUT: jump left thrice and jump around right
+IN: jump around right and run right thrice OUT: jump around right and run right thrice
+IN: walk left thrice after jump around right OUT: walk left thrice after jump around right
+IN: look left thrice after jump around right OUT: look left thrice after jump around right
+IN: walk left thrice and jump around right OUT: walk left thrice and jump around right
+IN: jump left thrice after jump around right OUT: jump left thrice after jump around right
+IN: jump around right after run right thrice OUT: jump around right after run right thrice
+IN: jump around right and jump left thrice OUT: jump around right and jump left thrice
+IN: jump around right after jump left thrice OUT: jump around right after jump left thrice
+IN: run right thrice and jump around right OUT: run right thrice and jump around right
+IN: jump around right and walk left thrice OUT: jump around right and walk left thrice
+IN: jump around right after walk left thrice OUT: jump around right after walk left thrice
+IN: jump around right after walk right thrice OUT: jump around right after walk right thrice
+IN: jump around right after look right thrice OUT: jump around right after look right thrice
+IN: walk right thrice and jump around right OUT: walk right thrice and jump around right
+IN: jump around right after jump right thrice OUT: jump around right after jump right thrice
+IN: jump around right and jump right thrice OUT: jump around right and jump right thrice
+IN: look right thrice and jump around right OUT: look right thrice and jump around right
+IN: jump around right and run opposite left twice OUT: jump around right and run opposite left twice
+IN: jump right thrice and jump around right OUT: jump right thrice and jump around right
+IN: jump around right and look right thrice OUT: jump around right and look right thrice
+IN: jump right thrice after jump around right OUT: jump right thrice after jump around right
+IN: run opposite left twice after jump around right OUT: run opposite left twice after jump around right
+IN: jump around right after run opposite left twice OUT: jump around right after run opposite left twice
+IN: run opposite left twice and jump around right OUT: run opposite left twice and jump around right
+IN: jump around right and walk right thrice OUT: jump around right and walk right thrice
+IN: look right thrice after jump around right OUT: look right thrice after jump around right
+IN: walk right thrice after jump around right OUT: walk right thrice after jump around right
+IN: look opposite left twice and jump around right OUT: look opposite left twice and jump around right
+IN: walk opposite left twice and jump around right OUT: walk opposite left twice and jump around right
+IN: jump around right and look opposite left twice OUT: jump around right and look opposite left twice
+IN: jump around right after walk opposite left twice OUT: jump around right after walk opposite left twice
+IN: jump around right and walk opposite left twice OUT: jump around right and walk opposite left twice
+IN: jump opposite left twice after jump around right OUT: jump opposite left twice after jump around right
+IN: jump around right and jump opposite left twice OUT: jump around right and jump opposite left twice
+IN: look opposite left twice after jump around right OUT: look opposite left twice after jump around right
+IN: jump around right after jump opposite left twice OUT: jump around right after jump opposite left twice
+IN: walk opposite left twice after jump around right OUT: walk opposite left twice after jump around right
+IN: jump opposite left twice and jump around right OUT: jump opposite left twice and jump around right
+IN: jump around right after look opposite left twice OUT: jump around right after look opposite left twice
+IN: jump around right and run opposite right twice OUT: jump around right and run opposite right twice
+IN: run opposite right twice and jump around right OUT: run opposite right twice and jump around right
+IN: run opposite right twice after jump around right OUT: run opposite right twice after jump around right
+IN: jump around right after run opposite right twice OUT: jump around right after run opposite right twice
+IN: jump around right after look opposite right twice OUT: jump around right after look opposite right twice
+IN: jump opposite right twice and jump around right OUT: jump opposite right twice and jump around right
+IN: jump opposite right twice after jump around right OUT: jump opposite right twice after jump around right
+IN: jump around right and look opposite right twice OUT: jump around right and look opposite right twice
+IN: walk opposite right twice after jump around right OUT: walk opposite right twice after jump around right
+IN: jump around right after walk opposite right twice OUT: jump around right after walk opposite right twice
+IN: jump around right after jump opposite right twice OUT: jump around right after jump opposite right twice
+IN: jump around right and walk opposite right twice OUT: jump around right and walk opposite right twice
+IN: look opposite right twice and jump around right OUT: look opposite right twice and jump around right
+IN: jump around right and jump opposite right twice OUT: jump around right and jump opposite right twice
+IN: walk opposite right twice and jump around right OUT: walk opposite right twice and jump around right
+IN: look opposite right twice after jump around right OUT: look opposite right twice after jump around right
+IN: jump around right after turn opposite left thrice OUT: jump around right after turn opposite left thrice
+IN: jump around right and turn opposite left thrice OUT: jump around right and turn opposite left thrice
+IN: jump around right and run around left OUT: jump around right and run around left
+IN: run around left after jump around right OUT: run around left after jump around right
+IN: jump around right after run around left OUT: jump around right after run around left
+IN: turn opposite left thrice and jump around right OUT: turn opposite left thrice and jump around right
+IN: turn opposite left thrice after jump around right OUT: turn opposite left thrice after jump around right
+IN: run around left and jump around right OUT: run around left and jump around right
+IN: look around left after jump around right OUT: look around left after jump around right
+IN: walk around left and jump around right OUT: walk around left and jump around right
+IN: jump around right and run around right OUT: jump around right and run around right
+IN: jump around left and jump around right OUT: jump around left and jump around right
+IN: walk around left after jump around right OUT: walk around left after jump around right
+IN: jump around right after look around left OUT: jump around right after look around left
+IN: jump around right and look around left OUT: jump around right and look around left
+IN: jump around right and jump around left OUT: jump around right and jump around left
+IN: jump around right and walk around left OUT: jump around right and walk around left
+IN: jump around right after jump around left OUT: jump around right after jump around left
+IN: run around right and jump around right OUT: run around right and jump around right
+IN: jump around right after walk around left OUT: jump around right after walk around left
+IN: look around left and jump around right OUT: look around left and jump around right
+IN: run around right after jump around right OUT: run around right after jump around right
+IN: jump around left after jump around right OUT: jump around left after jump around right
+IN: jump around right after run around right OUT: jump around right after run around right
+IN: turn opposite right thrice and jump around right OUT: turn opposite right thrice and jump around right
+IN: turn opposite right thrice after jump around right OUT: turn opposite right thrice after jump around right
+IN: jump around right and turn opposite right thrice OUT: jump around right and turn opposite right thrice
+IN: jump around right after turn opposite right thrice OUT: jump around right after turn opposite right thrice
+IN: jump around right and walk around right OUT: jump around right and walk around right
+IN: look around right after jump around right OUT: look around right after jump around right
+IN: jump around right and jump around right OUT: jump around right and jump around right
+IN: walk around right after jump around right OUT: walk around right after jump around right
+IN: jump around right after look around right OUT: jump around right after look around right
+IN: jump around right after jump around right OUT: jump around right after jump around right
+IN: walk around right and jump around right OUT: walk around right and jump around right
+IN: jump around right twice OUT: jump around right twice
+IN: jump around right and look around right OUT: jump around right and look around right
+IN: jump around right after walk around right OUT: jump around right after walk around right
+IN: look around right and jump around right OUT: look around right and jump around right
+IN: run after jump around right twice OUT: run after jump around right twice
+IN: run and jump around right twice OUT: run and jump around right twice
+IN: jump around right twice after run OUT: jump around right twice after run
+IN: jump around right twice and run OUT: jump around right twice and run
+IN: jump around right twice after walk OUT: jump around right twice after walk
+IN: walk and jump around right twice OUT: walk and jump around right twice
+IN: jump around right twice and walk OUT: jump around right twice and walk
+IN: jump after jump around right twice OUT: jump after jump around right twice
+IN: jump around right twice and jump OUT: jump around right twice and jump
+IN: walk after jump around right twice OUT: walk after jump around right twice
+IN: jump around right twice and look OUT: jump around right twice and look
+IN: look and jump around right twice OUT: look and jump around right twice
+IN: jump around right twice after look OUT: jump around right twice after look
+IN: look after jump around right twice OUT: look after jump around right twice
+IN: jump around right twice after jump OUT: jump around right twice after jump
+IN: jump and jump around right twice OUT: jump and jump around right twice
+IN: run opposite left thrice and jump around right OUT: run opposite left thrice and jump around right
+IN: jump around right and run opposite left thrice OUT: jump around right and run opposite left thrice
+IN: run opposite left thrice after jump around right OUT: run opposite left thrice after jump around right
+IN: jump around right after run opposite left thrice OUT: jump around right after run opposite left thrice
+IN: run twice after jump around right twice OUT: run twice after jump around right twice
+IN: jump around right twice after turn left OUT: jump around right twice after turn left
+IN: jump around right twice after run twice OUT: jump around right twice after run twice
+IN: turn left after jump around right twice OUT: turn left after jump around right twice
+IN: jump around right twice and turn left OUT: jump around right twice and turn left
+IN: run twice and jump around right twice OUT: run twice and jump around right twice
+IN: jump around right twice and run twice OUT: jump around right twice and run twice
+IN: turn left and jump around right twice OUT: turn left and jump around right twice
+IN: turn right and jump around right twice OUT: turn right and jump around right twice
+IN: jump around right and jump opposite left thrice OUT: jump around right and jump opposite left thrice
+IN: jump around right and walk opposite left thrice OUT: jump around right and walk opposite left thrice
+IN: look opposite left thrice and jump around right OUT: look opposite left thrice and jump around right
+IN: walk opposite left thrice and jump around right OUT: walk opposite left thrice and jump around right
+IN: jump opposite left thrice and jump around right OUT: jump opposite left thrice and jump around right
+IN: jump around right after walk opposite left thrice OUT: jump around right after walk opposite left thrice
+IN: turn right after jump around right twice OUT: turn right after jump around right twice
+IN: jump around right twice and turn right OUT: jump around right twice and turn right
+IN: jump around right after jump opposite left thrice OUT: jump around right after jump opposite left thrice
+IN: jump around right after look opposite left thrice OUT: jump around right after look opposite left thrice
+IN: look opposite left thrice after jump around right OUT: look opposite left thrice after jump around right
+IN: jump around right and look opposite left thrice OUT: jump around right and look opposite left thrice
+IN: jump around right twice after turn right OUT: jump around right twice after turn right
+IN: walk opposite left thrice after jump around right OUT: walk opposite left thrice after jump around right
+IN: jump opposite left thrice after jump around right OUT: jump opposite left thrice after jump around right
+IN: walk twice and jump around right twice OUT: walk twice and jump around right twice
+IN: jump twice and jump around right twice OUT: jump twice and jump around right twice
+IN: jump around right twice after look twice OUT: jump around right twice after look twice
+IN: jump around right twice and look twice OUT: jump around right twice and look twice
+IN: jump around right twice and jump twice OUT: jump around right twice and jump twice
+IN: look twice after jump around right twice OUT: look twice after jump around right twice
+IN: jump around right twice and walk twice OUT: jump around right twice and walk twice
+IN: walk twice after jump around right twice OUT: walk twice after jump around right twice
+IN: jump around right twice after walk twice OUT: jump around right twice after walk twice
+IN: jump around right twice after jump twice OUT: jump around right twice after jump twice
+IN: jump twice after jump around right twice OUT: jump twice after jump around right twice
+IN: look twice and jump around right twice OUT: look twice and jump around right twice
+IN: jump around right and run opposite right thrice OUT: jump around right and run opposite right thrice
+IN: run opposite right thrice after jump around right OUT: run opposite right thrice after jump around right
+IN: turn around left twice after jump around right OUT: turn around left twice after jump around right
+IN: jump around right after turn around left twice OUT: jump around right after turn around left twice
+IN: run opposite right thrice and jump around right OUT: run opposite right thrice and jump around right
+IN: turn around left twice and jump around right OUT: turn around left twice and jump around right
+IN: jump around right after run opposite right thrice OUT: jump around right after run opposite right thrice
+IN: jump around right and turn around left twice OUT: jump around right and turn around left twice
+IN: run left after jump around right twice OUT: run left after jump around right twice
+IN: jump around right twice and run left OUT: jump around right twice and run left
+IN: jump around right twice and run thrice OUT: jump around right twice and run thrice
+IN: run left and jump around right twice OUT: run left and jump around right twice
+IN: run thrice and jump around right twice OUT: run thrice and jump around right twice
+IN: jump around right twice after run thrice OUT: jump around right twice after run thrice
+IN: jump around right twice after run left OUT: jump around right twice after run left
+IN: run thrice after jump around right twice OUT: run thrice after jump around right twice
+IN: jump opposite right thrice after jump around right OUT: jump opposite right thrice after jump around right
+IN: jump around right twice and run right OUT: jump around right twice and run right
+IN: jump opposite right thrice and jump around right OUT: jump opposite right thrice and jump around right
+IN: run right after jump around right twice OUT: run right after jump around right twice
+IN: jump left and jump around right twice OUT: jump left and jump around right twice
+IN: jump around right twice after run right OUT: jump around right twice after run right
+IN: jump around right twice and walk left OUT: jump around right twice and walk left
+IN: jump around right twice after jump left OUT: jump around right twice after jump left
+IN: walk left and jump around right twice OUT: walk left and jump around right twice
+IN: walk opposite right thrice and jump around right OUT: walk opposite right thrice and jump around right
+IN: run right and jump around right twice OUT: run right and jump around right twice
+IN: jump around right and look opposite right thrice OUT: jump around right and look opposite right thrice
+IN: jump around right after walk opposite right thrice OUT: jump around right after walk opposite right thrice
+IN: jump around right twice and look left OUT: jump around right twice and look left
+IN: jump around right twice and jump left OUT: jump around right twice and jump left
+IN: jump around right and walk opposite right thrice OUT: jump around right and walk opposite right thrice
+IN: look opposite right thrice and jump around right OUT: look opposite right thrice and jump around right
+IN: look left and jump around right twice OUT: look left and jump around right twice
+IN: jump around right and jump opposite right thrice OUT: jump around right and jump opposite right thrice
+IN: walk left after jump around right twice OUT: walk left after jump around right twice
+IN: jump around right after jump opposite right thrice OUT: jump around right after jump opposite right thrice
+IN: jump around right twice after walk left OUT: jump around right twice after walk left
+IN: jump around right twice after look left OUT: jump around right twice after look left
+IN: jump around right after look opposite right thrice OUT: jump around right after look opposite right thrice
+IN: walk opposite right thrice after jump around right OUT: walk opposite right thrice after jump around right
+IN: look left after jump around right twice OUT: look left after jump around right twice
+IN: jump left after jump around right twice OUT: jump left after jump around right twice
+IN: look opposite right thrice after jump around right OUT: look opposite right thrice after jump around right
+IN: jump around right twice and jump right OUT: jump around right twice and jump right
+IN: jump around right twice after walk right OUT: jump around right twice after walk right
+IN: jump right after jump around right twice OUT: jump right after jump around right twice
+IN: jump around right twice after jump right OUT: jump around right twice after jump right
+IN: jump around right twice after look right OUT: jump around right twice after look right
+IN: jump right and jump around right twice OUT: jump right and jump around right twice
+IN: look right and jump around right twice OUT: look right and jump around right twice
+IN: jump around right twice and walk right OUT: jump around right twice and walk right
+IN: look right after jump around right twice OUT: look right after jump around right twice
+IN: jump around right twice and look right OUT: jump around right twice and look right
+IN: walk right after jump around right twice OUT: walk right after jump around right twice
+IN: walk right and jump around right twice OUT: walk right and jump around right twice
+IN: jump around right twice after jump thrice OUT: jump around right twice after jump thrice
+IN: walk thrice and jump around right twice OUT: walk thrice and jump around right twice
+IN: look thrice and jump around right twice OUT: look thrice and jump around right twice
+IN: jump thrice after jump around right twice OUT: jump thrice after jump around right twice
+IN: jump around right twice and look thrice OUT: jump around right twice and look thrice
+IN: jump thrice and jump around right twice OUT: jump thrice and jump around right twice
+IN: jump around right twice and jump thrice OUT: jump around right twice and jump thrice
+IN: jump around right twice and walk thrice OUT: jump around right twice and walk thrice
+IN: look thrice after jump around right twice OUT: look thrice after jump around right twice
+IN: jump around right twice after walk thrice OUT: jump around right twice after walk thrice
+IN: walk thrice after jump around right twice OUT: walk thrice after jump around right twice
+IN: jump around right twice after look thrice OUT: jump around right twice after look thrice
+IN: jump around right twice and turn opposite left OUT: jump around right twice and turn opposite left
+IN: turn around right twice and jump around right OUT: turn around right twice and jump around right
+IN: turn left twice and jump around right twice OUT: turn left twice and jump around right twice
+IN: jump around right twice after turn left twice OUT: jump around right twice after turn left twice
+IN: jump around right twice and turn left twice OUT: jump around right twice and turn left twice
+IN: jump around right after turn around right twice OUT: jump around right after turn around right twice
+IN: turn around right twice after jump around right OUT: turn around right twice after jump around right
+IN: turn opposite left and jump around right twice OUT: turn opposite left and jump around right twice
+IN: jump around right and turn around right twice OUT: jump around right and turn around right twice
+IN: turn opposite left after jump around right twice OUT: turn opposite left after jump around right twice
+IN: jump around right twice after turn opposite left OUT: jump around right twice after turn opposite left
+IN: turn left twice after jump around right twice OUT: turn left twice after jump around right twice
+IN: turn opposite right and jump around right twice OUT: turn opposite right and jump around right twice
+IN: turn right twice after jump around right twice OUT: turn right twice after jump around right twice
+IN: jump around right twice after turn opposite right OUT: jump around right twice after turn opposite right
+IN: turn right twice and jump around right twice OUT: turn right twice and jump around right twice
+IN: jump around right twice and turn opposite right OUT: jump around right twice and turn opposite right
+IN: jump around right twice and turn right twice OUT: jump around right twice and turn right twice
+IN: turn opposite right after jump around right twice OUT: turn opposite right after jump around right twice
+IN: jump around right twice after turn right twice OUT: jump around right twice after turn right twice
+IN: jump around right twice after run opposite left OUT: jump around right twice after run opposite left
+IN: jump around right twice and run opposite left OUT: jump around right twice and run opposite left
+IN: run opposite left after jump around right twice OUT: run opposite left after jump around right twice
+IN: run opposite left and jump around right twice OUT: run opposite left and jump around right twice
+IN: jump around right twice and look opposite left OUT: jump around right twice and look opposite left
+IN: look opposite left after jump around right twice OUT: look opposite left after jump around right twice
+IN: walk opposite left and jump around right twice OUT: walk opposite left and jump around right twice
+IN: jump around right twice after look opposite left OUT: jump around right twice after look opposite left
+IN: jump around right twice after walk opposite left OUT: jump around right twice after walk opposite left
+IN: jump around right twice and walk opposite left OUT: jump around right twice and walk opposite left
+IN: look opposite left and jump around right twice OUT: look opposite left and jump around right twice
+IN: jump opposite left and jump around right twice OUT: jump opposite left and jump around right twice
+IN: jump around right twice after jump opposite left OUT: jump around right twice after jump opposite left
+IN: jump opposite left after jump around right twice OUT: jump opposite left after jump around right twice
+IN: walk opposite left after jump around right twice OUT: walk opposite left after jump around right twice
+IN: jump around right twice and jump opposite left OUT: jump around right twice and jump opposite left
+IN: run opposite right after jump around right twice OUT: run opposite right after jump around right twice
+IN: run opposite right and jump around right twice OUT: run opposite right and jump around right twice
+IN: jump around right twice and run opposite right OUT: jump around right twice and run opposite right
+IN: jump around right twice after run opposite right OUT: jump around right twice after run opposite right
+IN: jump around right twice and jump opposite right OUT: jump around right twice and jump opposite right
+IN: look opposite right after jump around right twice OUT: look opposite right after jump around right twice
+IN: jump around right twice and walk opposite right OUT: jump around right twice and walk opposite right
+IN: jump opposite right and jump around right twice OUT: jump opposite right and jump around right twice
+IN: jump around right twice after walk opposite right OUT: jump around right twice after walk opposite right
+IN: jump around right twice and look opposite right OUT: jump around right twice and look opposite right
+IN: jump opposite right after jump around right twice OUT: jump opposite right after jump around right twice
+IN: walk opposite right after jump around right twice OUT: walk opposite right after jump around right twice
+IN: look opposite right and jump around right twice OUT: look opposite right and jump around right twice
+IN: jump around right twice after look opposite right OUT: jump around right twice after look opposite right
+IN: walk opposite right and jump around right twice OUT: walk opposite right and jump around right twice
+IN: jump around right twice after jump opposite right OUT: jump around right twice after jump opposite right
+IN: jump around right twice after run left twice OUT: jump around right twice after run left twice
+IN: run left twice and jump around right twice OUT: run left twice and jump around right twice
+IN: jump around right twice and turn left thrice OUT: jump around right twice and turn left thrice
+IN: turn left thrice and jump around right twice OUT: turn left thrice and jump around right twice
+IN: run left twice after jump around right twice OUT: run left twice after jump around right twice
+IN: jump around right twice after turn left thrice OUT: jump around right twice after turn left thrice
+IN: turn left thrice after jump around right twice OUT: turn left thrice after jump around right twice
+IN: jump around right twice and run left twice OUT: jump around right twice and run left twice
+IN: jump around right twice after walk left twice OUT: jump around right twice after walk left twice
+IN: jump around right twice after jump left twice OUT: jump around right twice after jump left twice
+IN: run right twice after jump around right twice OUT: run right twice after jump around right twice
+IN: walk left twice after jump around right twice OUT: walk left twice after jump around right twice
+IN: walk left twice and jump around right twice OUT: walk left twice and jump around right twice
+IN: jump around right twice and look left twice OUT: jump around right twice and look left twice
+IN: run right twice and jump around right twice OUT: run right twice and jump around right twice
+IN: jump around right twice and walk left twice OUT: jump around right twice and walk left twice
+IN: jump left twice and jump around right twice OUT: jump left twice and jump around right twice
+IN: jump around right twice after run right twice OUT: jump around right twice after run right twice
+IN: jump around right twice and jump left twice OUT: jump around right twice and jump left twice
+IN: look left twice after jump around right twice OUT: look left twice after jump around right twice
+IN: jump left twice after jump around right twice OUT: jump left twice after jump around right twice
+IN: look left twice and jump around right twice OUT: look left twice and jump around right twice
+IN: jump around right twice after look left twice OUT: jump around right twice after look left twice
+IN: jump around right twice and run right twice OUT: jump around right twice and run right twice
+IN: turn right thrice and jump around right twice OUT: turn right thrice and jump around right twice
+IN: turn right thrice after jump around right twice OUT: turn right thrice after jump around right twice
+IN: jump around right twice after turn right thrice OUT: jump around right twice after turn right thrice
+IN: jump around right twice and turn right thrice OUT: jump around right twice and turn right thrice
+IN: jump right twice and jump around right twice OUT: jump right twice and jump around right twice
+IN: look right twice and jump around right twice OUT: look right twice and jump around right twice
+IN: jump around right twice after walk right twice OUT: jump around right twice after walk right twice
+IN: jump around right twice and walk right twice OUT: jump around right twice and walk right twice
+IN: jump around right twice and look right twice OUT: jump around right twice and look right twice
+IN: look right twice after jump around right twice OUT: look right twice after jump around right twice
+IN: jump around right twice and jump right twice OUT: jump around right twice and jump right twice
+IN: walk right twice after jump around right twice OUT: walk right twice after jump around right twice
+IN: jump around right twice after look right twice OUT: jump around right twice after look right twice
+IN: walk right twice and jump around right twice OUT: walk right twice and jump around right twice
+IN: jump right twice after jump around right twice OUT: jump right twice after jump around right twice
+IN: jump around right twice after jump right twice OUT: jump around right twice after jump right twice
+IN: jump around right twice after turn opposite left twice OUT: jump around right twice after turn opposite left twice
+IN: turn opposite left twice after jump around right twice OUT: turn opposite left twice after jump around right twice
+IN: jump around right twice and turn around left OUT: jump around right twice and turn around left
+IN: jump around right twice after turn around left OUT: jump around right twice after turn around left
+IN: jump around right twice and turn opposite left twice OUT: jump around right twice and turn opposite left twice
+IN: turn around left and jump around right twice OUT: turn around left and jump around right twice
+IN: turn opposite left twice and jump around right twice OUT: turn opposite left twice and jump around right twice
+IN: turn around left after jump around right twice OUT: turn around left after jump around right twice
+IN: jump around right twice after turn around right OUT: jump around right twice after turn around right
+IN: jump around right twice and turn around right OUT: jump around right twice and turn around right
+IN: turn around right after jump around right twice OUT: turn around right after jump around right twice
+IN: turn around right and jump around right twice OUT: turn around right and jump around right twice
+IN: jump around right twice and turn opposite right twice OUT: jump around right twice and turn opposite right twice
+IN: turn opposite right twice after jump around right twice OUT: turn opposite right twice after jump around right twice
+IN: jump around right twice after turn opposite right twice OUT: jump around right twice after turn opposite right twice
+IN: turn opposite right twice and jump around right twice OUT: turn opposite right twice and jump around right twice
+IN: jump around right twice after run left thrice OUT: jump around right twice after run left thrice
+IN: run left thrice after jump around right twice OUT: run left thrice after jump around right twice
+IN: run left thrice and jump around right twice OUT: run left thrice and jump around right twice
+IN: jump around right twice and run left thrice OUT: jump around right twice and run left thrice
+IN: jump left thrice and jump around right twice OUT: jump left thrice and jump around right twice
+IN: walk left thrice after jump around right twice OUT: walk left thrice after jump around right twice
+IN: jump around right twice and jump left thrice OUT: jump around right twice and jump left thrice
+IN: run right thrice after jump around right twice OUT: run right thrice after jump around right twice
+IN: look left thrice after jump around right twice OUT: look left thrice after jump around right twice
+IN: jump around right twice and look left thrice OUT: jump around right twice and look left thrice
+IN: look left thrice and jump around right twice OUT: look left thrice and jump around right twice
+IN: jump around right twice and walk left thrice OUT: jump around right twice and walk left thrice
+IN: jump around right twice after run right thrice OUT: jump around right twice after run right thrice
+IN: run right thrice and jump around right twice OUT: run right thrice and jump around right twice
+IN: jump around right twice and run right thrice OUT: jump around right twice and run right thrice
+IN: jump around right twice after jump left thrice OUT: jump around right twice after jump left thrice
+IN: walk left thrice and jump around right twice OUT: walk left thrice and jump around right twice
+IN: jump around right twice after look left thrice OUT: jump around right twice after look left thrice
+IN: jump left thrice after jump around right twice OUT: jump left thrice after jump around right twice
+IN: jump around right twice after walk left thrice OUT: jump around right twice after walk left thrice
+IN: jump right thrice and jump around right twice OUT: jump right thrice and jump around right twice
+IN: walk right thrice and jump around right twice OUT: walk right thrice and jump around right twice
+IN: jump around right twice after run opposite left twice OUT: jump around right twice after run opposite left twice
+IN: jump around right twice and run opposite left twice OUT: jump around right twice and run opposite left twice
+IN: walk right thrice after jump around right twice OUT: walk right thrice after jump around right twice
+IN: jump right thrice after jump around right twice OUT: jump right thrice after jump around right twice
+IN: jump around right twice and look right thrice OUT: jump around right twice and look right thrice
+IN: look right thrice after jump around right twice OUT: look right thrice after jump around right twice
+IN: jump around right twice after jump right thrice OUT: jump around right twice after jump right thrice
+IN: jump around right twice and walk right thrice OUT: jump around right twice and walk right thrice
+IN: run opposite left twice after jump around right twice OUT: run opposite left twice after jump around right twice
+IN: jump around right twice and jump right thrice OUT: jump around right twice and jump right thrice
+IN: jump around right twice after look right thrice OUT: jump around right twice after look right thrice
+IN: look right thrice and jump around right twice OUT: look right thrice and jump around right twice
+IN: jump around right twice after walk right thrice OUT: jump around right twice after walk right thrice
+IN: run opposite left twice and jump around right twice OUT: run opposite left twice and jump around right twice
+IN: look opposite left twice and jump around right twice OUT: look opposite left twice and jump around right twice
+IN: jump around right twice and look opposite left twice OUT: jump around right twice and look opposite left twice
+IN: jump around right twice and walk opposite left twice OUT: jump around right twice and walk opposite left twice
+IN: jump around right twice after walk opposite left twice OUT: jump around right twice after walk opposite left twice
+IN: jump around right twice and jump opposite left twice OUT: jump around right twice and jump opposite left twice
+IN: jump around right twice after jump opposite left twice OUT: jump around right twice after jump opposite left twice
+IN: walk opposite left twice and jump around right twice OUT: walk opposite left twice and jump around right twice
+IN: walk opposite left twice after jump around right twice OUT: walk opposite left twice after jump around right twice
+IN: jump opposite left twice after jump around right twice OUT: jump opposite left twice after jump around right twice
+IN: jump opposite left twice and jump around right twice OUT: jump opposite left twice and jump around right twice
+IN: jump around right twice after look opposite left twice OUT: jump around right twice after look opposite left twice
+IN: look opposite left twice after jump around right twice OUT: look opposite left twice after jump around right twice
+IN: run opposite right twice after jump around right twice OUT: run opposite right twice after jump around right twice
+IN: run around left twice and jump around right OUT: run around left twice and jump around right
+IN: turn around left thrice after jump around right OUT: turn around left thrice after jump around right
+IN: jump around right after turn around left thrice OUT: jump around right after turn around left thrice
+IN: turn around left thrice and jump around right OUT: turn around left thrice and jump around right
+IN: jump around right and turn around left thrice OUT: jump around right and turn around left thrice
+IN: run around left twice after jump around right OUT: run around left twice after jump around right
+IN: jump around right twice after run opposite right twice OUT: jump around right twice after run opposite right twice
+IN: run opposite right twice and jump around right twice OUT: run opposite right twice and jump around right twice
+IN: jump around right twice and run opposite right twice OUT: jump around right twice and run opposite right twice
+IN: jump around right and run around left twice OUT: jump around right and run around left twice
+IN: jump around right after run around left twice OUT: jump around right after run around left twice
+IN: jump around right twice and look opposite right twice OUT: jump around right twice and look opposite right twice
+IN: jump around right twice after look opposite right twice OUT: jump around right twice after look opposite right twice
+IN: jump around right twice and jump opposite right twice OUT: jump around right twice and jump opposite right twice
+IN: walk opposite right twice and jump around right twice OUT: walk opposite right twice and jump around right twice
+IN: look opposite right twice after jump around right twice OUT: look opposite right twice after jump around right twice
+IN: jump opposite right twice after jump around right twice OUT: jump opposite right twice after jump around right twice
+IN: look opposite right twice and jump around right twice OUT: look opposite right twice and jump around right twice
+IN: jump opposite right twice and jump around right twice OUT: jump opposite right twice and jump around right twice
+IN: jump around right twice and walk opposite right twice OUT: jump around right twice and walk opposite right twice
+IN: walk opposite right twice after jump around right twice OUT: walk opposite right twice after jump around right twice
+IN: jump around right twice after walk opposite right twice OUT: jump around right twice after walk opposite right twice
+IN: jump around right twice after jump opposite right twice OUT: jump around right twice after jump opposite right twice
+IN: jump around right and walk around left twice OUT: jump around right and walk around left twice
+IN: run around left and jump around right twice OUT: run around left and jump around right twice
+IN: jump around right and look around left twice OUT: jump around right and look around left twice
+IN: jump around right and jump around left twice OUT: jump around right and jump around left twice
+IN: turn opposite left thrice and jump around right twice OUT: turn opposite left thrice and jump around right twice
+IN: jump around right after jump around left twice OUT: jump around right after jump around left twice
+IN: jump around right twice and run around left OUT: jump around right twice and run around left
+IN: walk around left twice and jump around right OUT: walk around left twice and jump around right
+IN: jump around left twice and jump around right OUT: jump around left twice and jump around right
+IN: jump around right after look around left twice OUT: jump around right after look around left twice
+IN: jump around right twice after turn opposite left thrice OUT: jump around right twice after turn opposite left thrice
+IN: jump around right twice and turn opposite left thrice OUT: jump around right twice and turn opposite left thrice
+IN: jump around right after run around right twice OUT: jump around right after run around right twice
+IN: run around left after jump around right twice OUT: run around left after jump around right twice
+IN: jump around left twice after jump around right OUT: jump around left twice after jump around right
+IN: jump around right twice after run around left OUT: jump around right twice after run around left
+IN: look around left twice after jump around right OUT: look around left twice after jump around right
+IN: jump around right after walk around left twice OUT: jump around right after walk around left twice
+IN: run around right twice and jump around right OUT: run around right twice and jump around right
+IN: jump around right and run around right twice OUT: jump around right and run around right twice
+IN: walk around left twice after jump around right OUT: walk around left twice after jump around right
+IN: look around left twice and jump around right OUT: look around left twice and jump around right
+IN: turn opposite left thrice after jump around right twice OUT: turn opposite left thrice after jump around right twice
+IN: run around right twice after jump around right OUT: run around right twice after jump around right
+IN: walk around left and jump around right twice OUT: walk around left and jump around right twice
+IN: jump around right after turn around right thrice OUT: jump around right after turn around right thrice
+IN: jump around right twice after run around right OUT: jump around right twice after run around right
+IN: jump around left and jump around right twice OUT: jump around left and jump around right twice
+IN: turn around right thrice after jump around right OUT: turn around right thrice after jump around right
+IN: look around left and jump around right twice OUT: look around left and jump around right twice
+IN: jump around right twice after look around left OUT: jump around right twice after look around left
+IN: run around right after jump around right twice OUT: run around right after jump around right twice
+IN: jump around right twice after walk around left OUT: jump around right twice after walk around left
+IN: run around right and jump around right twice OUT: run around right and jump around right twice
+IN: turn around right thrice and jump around right OUT: turn around right thrice and jump around right
+IN: jump around right twice after jump around left OUT: jump around right twice after jump around left
+IN: jump around left after jump around right twice OUT: jump around left after jump around right twice
+IN: jump around right twice and look around left OUT: jump around right twice and look around left
+IN: jump around right twice and jump around left OUT: jump around right twice and jump around left
+IN: look around left after jump around right twice OUT: look around left after jump around right twice
+IN: jump around right twice and run around right OUT: jump around right twice and run around right
+IN: jump around right twice and walk around left OUT: jump around right twice and walk around left
+IN: walk around left after jump around right twice OUT: walk around left after jump around right twice
+IN: jump around right and turn around right thrice OUT: jump around right and turn around right thrice
+IN: jump around right twice after turn opposite right thrice OUT: jump around right twice after turn opposite right thrice
+IN: turn opposite right thrice and jump around right twice OUT: turn opposite right thrice and jump around right twice
+IN: turn opposite right thrice after jump around right twice OUT: turn opposite right thrice after jump around right twice
+IN: jump around right twice and turn opposite right thrice OUT: jump around right twice and turn opposite right thrice
+IN: look around right and jump around right twice OUT: look around right and jump around right twice
+IN: look around right after jump around right twice OUT: look around right after jump around right twice
+IN: jump around right twice and jump around right OUT: jump around right twice and jump around right
+IN: walk around right twice after jump around right OUT: walk around right twice after jump around right
+IN: jump around right after jump around right twice OUT: jump around right after jump around right twice
+IN: jump around right twice and look around right OUT: jump around right twice and look around right
+IN: look around right twice and jump around right OUT: look around right twice and jump around right
+IN: jump around right and walk around right twice OUT: jump around right and walk around right twice
+IN: jump around right after walk around right twice OUT: jump around right after walk around right twice
+IN: walk around right after jump around right twice OUT: walk around right after jump around right twice
+IN: look around right twice after jump around right OUT: look around right twice after jump around right
+IN: jump around right twice after walk around right OUT: jump around right twice after walk around right
+IN: jump around right twice and walk around right OUT: jump around right twice and walk around right
+IN: jump around right and look around right twice OUT: jump around right and look around right twice
+IN: jump around right twice after look around right OUT: jump around right twice after look around right
+IN: jump around right after look around right twice OUT: jump around right after look around right twice
+IN: jump around right twice after jump around right OUT: jump around right twice after jump around right
+IN: jump around right and jump around right twice OUT: jump around right and jump around right twice
+IN: walk around right twice and jump around right OUT: walk around right twice and jump around right
+IN: jump around right thrice OUT: jump around right thrice
+IN: walk around right and jump around right twice OUT: walk around right and jump around right twice
+IN: run and jump around right thrice OUT: run and jump around right thrice
+IN: jump around right thrice and run OUT: jump around right thrice and run
+IN: run after jump around right thrice OUT: run after jump around right thrice
+IN: jump around right thrice after run OUT: jump around right thrice after run
+IN: walk after jump around right thrice OUT: walk after jump around right thrice
+IN: jump after jump around right thrice OUT: jump after jump around right thrice
+IN: look after jump around right thrice OUT: look after jump around right thrice
+IN: walk and jump around right thrice OUT: walk and jump around right thrice
+IN: look and jump around right thrice OUT: look and jump around right thrice
+IN: jump around right thrice and walk OUT: jump around right thrice and walk
+IN: jump around right thrice and look OUT: jump around right thrice and look
+IN: jump around right thrice after jump OUT: jump around right thrice after jump
+IN: jump and jump around right thrice OUT: jump and jump around right thrice
+IN: jump around right thrice after walk OUT: jump around right thrice after walk
+IN: jump around right thrice after look OUT: jump around right thrice after look
+IN: jump around right thrice and jump OUT: jump around right thrice and jump
+IN: jump around right twice and run opposite left thrice OUT: jump around right twice and run opposite left thrice
+IN: run opposite left thrice and jump around right twice OUT: run opposite left thrice and jump around right twice
+IN: run opposite left thrice after jump around right twice OUT: run opposite left thrice after jump around right twice
+IN: jump around right twice after run opposite left thrice OUT: jump around right twice after run opposite left thrice
+IN: jump around right thrice after turn left OUT: jump around right thrice after turn left
+IN: turn left after jump around right thrice OUT: turn left after jump around right thrice
+IN: run twice and jump around right thrice OUT: run twice and jump around right thrice
+IN: jump around right thrice and turn left OUT: jump around right thrice and turn left
+IN: jump around right thrice and run twice OUT: jump around right thrice and run twice
+IN: jump around right thrice after run twice OUT: jump around right thrice after run twice
+IN: run twice after jump around right thrice OUT: run twice after jump around right thrice
+IN: turn left and jump around right thrice OUT: turn left and jump around right thrice
+IN: walk opposite left thrice and jump around right twice OUT: walk opposite left thrice and jump around right twice
+IN: jump opposite left thrice and jump around right twice OUT: jump opposite left thrice and jump around right twice
+IN: jump around right twice after jump opposite left thrice OUT: jump around right twice after jump opposite left thrice
+IN: jump around right twice after walk opposite left thrice OUT: jump around right twice after walk opposite left thrice
+IN: look opposite left thrice after jump around right twice OUT: look opposite left thrice after jump around right twice
+IN: jump around right twice after look opposite left thrice OUT: jump around right twice after look opposite left thrice
+IN: walk opposite left thrice after jump around right twice OUT: walk opposite left thrice after jump around right twice
+IN: jump around right thrice after turn right OUT: jump around right thrice after turn right
+IN: jump around right thrice and turn right OUT: jump around right thrice and turn right
+IN: jump around right twice and walk opposite left thrice OUT: jump around right twice and walk opposite left thrice
+IN: jump opposite left thrice after jump around right twice OUT: jump opposite left thrice after jump around right twice
+IN: jump around right twice and look opposite left thrice OUT: jump around right twice and look opposite left thrice
+IN: jump around right twice and jump opposite left thrice OUT: jump around right twice and jump opposite left thrice
+IN: look opposite left thrice and jump around right twice OUT: look opposite left thrice and jump around right twice
+IN: turn right after jump around right thrice OUT: turn right after jump around right thrice
+IN: turn right and jump around right thrice OUT: turn right and jump around right thrice
+IN: jump twice and jump around right thrice OUT: jump twice and jump around right thrice
+IN: jump twice after jump around right thrice OUT: jump twice after jump around right thrice
+IN: look twice after jump around right thrice OUT: look twice after jump around right thrice
+IN: jump around right thrice after walk twice OUT: jump around right thrice after walk twice
+IN: walk twice after jump around right thrice OUT: walk twice after jump around right thrice
+IN: jump around right thrice and jump twice OUT: jump around right thrice and jump twice
+IN: walk twice and jump around right thrice OUT: walk twice and jump around right thrice
+IN: jump around right thrice after jump twice OUT: jump around right thrice after jump twice
+IN: jump around right thrice after look twice OUT: jump around right thrice after look twice
+IN: look twice and jump around right thrice OUT: look twice and jump around right thrice
+IN: jump around right thrice and look twice OUT: jump around right thrice and look twice
+IN: jump around right thrice and walk twice OUT: jump around right thrice and walk twice
+IN: turn around left twice after jump around right twice OUT: turn around left twice after jump around right twice
+IN: run opposite right thrice and jump around right twice OUT: run opposite right thrice and jump around right twice
+IN: jump around right twice after run opposite right thrice OUT: jump around right twice after run opposite right thrice
+IN: jump around right twice after turn around left twice OUT: jump around right twice after turn around left twice
+IN: run opposite right thrice after jump around right twice OUT: run opposite right thrice after jump around right twice
+IN: jump around right twice and turn around left twice OUT: jump around right twice and turn around left twice
+IN: jump around right twice and run opposite right thrice OUT: jump around right twice and run opposite right thrice
+IN: turn around left twice and jump around right twice OUT: turn around left twice and jump around right twice
+IN: run thrice and jump around right thrice OUT: run thrice and jump around right thrice
+IN: jump around right thrice and run left OUT: jump around right thrice and run left
+IN: jump around right thrice after run left OUT: jump around right thrice after run left
+IN: jump around right thrice and run thrice OUT: jump around right thrice and run thrice
+IN: run left after jump around right thrice OUT: run left after jump around right thrice
+IN: run thrice after jump around right thrice OUT: run thrice after jump around right thrice
+IN: run left and jump around right thrice OUT: run left and jump around right thrice
+IN: jump around right thrice after run thrice OUT: jump around right thrice after run thrice
+IN: jump around right thrice and walk left OUT: jump around right thrice and walk left
+IN: look left and jump around right thrice OUT: look left and jump around right thrice
+IN: run right after jump around right thrice OUT: run right after jump around right thrice
+IN: look opposite right thrice after jump around right twice OUT: look opposite right thrice after jump around right twice
+IN: jump around right twice after walk opposite right thrice OUT: jump around right twice after walk opposite right thrice
+IN: jump around right twice after look opposite right thrice OUT: jump around right twice after look opposite right thrice
+IN: jump around right thrice and jump left OUT: jump around right thrice and jump left
+IN: jump around right twice after jump opposite right thrice OUT: jump around right twice after jump opposite right thrice
+IN: walk left after jump around right thrice OUT: walk left after jump around right thrice
+IN: jump left after jump around right thrice OUT: jump left after jump around right thrice
+IN: look opposite right thrice and jump around right twice OUT: look opposite right thrice and jump around right twice
+IN: jump around right thrice after run right OUT: jump around right thrice after run right
+IN: jump opposite right thrice after jump around right twice OUT: jump opposite right thrice after jump around right twice
+IN: jump opposite right thrice and jump around right twice OUT: jump opposite right thrice and jump around right twice
+IN: jump around right twice and jump opposite right thrice OUT: jump around right twice and jump opposite right thrice
+IN: jump around right thrice after walk left OUT: jump around right thrice after walk left
+IN: jump around right thrice and run right OUT: jump around right thrice and run right
+IN: run right and jump around right thrice OUT: run right and jump around right thrice
+IN: jump around right twice and look opposite right thrice OUT: jump around right twice and look opposite right thrice
+IN: jump left and jump around right thrice OUT: jump left and jump around right thrice
+IN: walk opposite right thrice and jump around right twice OUT: walk opposite right thrice and jump around right twice
+IN: jump around right thrice after jump left OUT: jump around right thrice after jump left
+IN: jump around right twice and walk opposite right thrice OUT: jump around right twice and walk opposite right thrice
+IN: jump around right thrice and look left OUT: jump around right thrice and look left
+IN: jump around right thrice after look left OUT: jump around right thrice after look left
+IN: look left after jump around right thrice OUT: look left after jump around right thrice
+IN: walk opposite right thrice after jump around right twice OUT: walk opposite right thrice after jump around right twice
+IN: walk left and jump around right thrice OUT: walk left and jump around right thrice
+IN: jump around right thrice and walk right OUT: jump around right thrice and walk right
+IN: jump around right thrice and jump right OUT: jump around right thrice and jump right
+IN: jump around right thrice and look right OUT: jump around right thrice and look right
+IN: jump right after jump around right thrice OUT: jump right after jump around right thrice
+IN: jump around right thrice after look right OUT: jump around right thrice after look right
+IN: look right after jump around right thrice OUT: look right after jump around right thrice
+IN: look right and jump around right thrice OUT: look right and jump around right thrice
+IN: walk right and jump around right thrice OUT: walk right and jump around right thrice
+IN: jump around right thrice after walk right OUT: jump around right thrice after walk right
+IN: jump around right thrice after jump right OUT: jump around right thrice after jump right
+IN: jump right and jump around right thrice OUT: jump right and jump around right thrice
+IN: walk right after jump around right thrice OUT: walk right after jump around right thrice
+IN: jump around right thrice and walk thrice OUT: jump around right thrice and walk thrice
+IN: walk thrice after jump around right thrice OUT: walk thrice after jump around right thrice
+IN: jump around right thrice after jump thrice OUT: jump around right thrice after jump thrice
+IN: look thrice and jump around right thrice OUT: look thrice and jump around right thrice
+IN: jump thrice and jump around right thrice OUT: jump thrice and jump around right thrice
+IN: jump around right thrice after walk thrice OUT: jump around right thrice after walk thrice
+IN: jump around right thrice and look thrice OUT: jump around right thrice and look thrice
+IN: jump around right thrice and jump thrice OUT: jump around right thrice and jump thrice
+IN: look thrice after jump around right thrice OUT: look thrice after jump around right thrice
+IN: walk thrice and jump around right thrice OUT: walk thrice and jump around right thrice
+IN: jump around right thrice after look thrice OUT: jump around right thrice after look thrice
+IN: jump thrice after jump around right thrice OUT: jump thrice after jump around right thrice
+IN: jump around right thrice and turn left twice OUT: jump around right thrice and turn left twice
+IN: jump around right twice and turn around right twice OUT: jump around right twice and turn around right twice
+IN: jump around right thrice and turn opposite left OUT: jump around right thrice and turn opposite left
+IN: jump around right thrice after turn opposite left OUT: jump around right thrice after turn opposite left
+IN: turn left twice and jump around right thrice OUT: turn left twice and jump around right thrice
+IN: turn around right twice and jump around right twice OUT: turn around right twice and jump around right twice
+IN: jump around right thrice after turn left twice OUT: jump around right thrice after turn left twice
+IN: turn opposite left and jump around right thrice OUT: turn opposite left and jump around right thrice
+IN: turn opposite left after jump around right thrice OUT: turn opposite left after jump around right thrice
+IN: turn around right twice after jump around right twice OUT: turn around right twice after jump around right twice
+IN: turn left twice after jump around right thrice OUT: turn left twice after jump around right thrice
+IN: jump around right twice after turn around right twice OUT: jump around right twice after turn around right twice
+IN: jump around right thrice and turn opposite right OUT: jump around right thrice and turn opposite right
+IN: turn opposite right and jump around right thrice OUT: turn opposite right and jump around right thrice
+IN: turn right twice after jump around right thrice OUT: turn right twice after jump around right thrice
+IN: jump around right thrice after turn right twice OUT: jump around right thrice after turn right twice
+IN: jump around right thrice and turn right twice OUT: jump around right thrice and turn right twice
+IN: jump around right thrice after turn opposite right OUT: jump around right thrice after turn opposite right
+IN: turn right twice and jump around right thrice OUT: turn right twice and jump around right thrice
+IN: turn opposite right after jump around right thrice OUT: turn opposite right after jump around right thrice
+IN: jump around right thrice and run opposite left OUT: jump around right thrice and run opposite left
+IN: run opposite left after jump around right thrice OUT: run opposite left after jump around right thrice
+IN: jump around right thrice after run opposite left OUT: jump around right thrice after run opposite left
+IN: run opposite left and jump around right thrice OUT: run opposite left and jump around right thrice
+IN: jump around right thrice after look opposite left OUT: jump around right thrice after look opposite left
+IN: walk opposite left and jump around right thrice OUT: walk opposite left and jump around right thrice
+IN: jump around right thrice and look opposite left OUT: jump around right thrice and look opposite left
+IN: jump around right thrice and jump opposite left OUT: jump around right thrice and jump opposite left
+IN: walk opposite left after jump around right thrice OUT: walk opposite left after jump around right thrice
+IN: look opposite left and jump around right thrice OUT: look opposite left and jump around right thrice
+IN: jump around right thrice after walk opposite left OUT: jump around right thrice after walk opposite left
+IN: jump opposite left after jump around right thrice OUT: jump opposite left after jump around right thrice
+IN: jump around right thrice and walk opposite left OUT: jump around right thrice and walk opposite left
+IN: jump opposite left and jump around right thrice OUT: jump opposite left and jump around right thrice
+IN: jump around right thrice after jump opposite left OUT: jump around right thrice after jump opposite left
+IN: look opposite left after jump around right thrice OUT: look opposite left after jump around right thrice
+IN: jump around right thrice after run opposite right OUT: jump around right thrice after run opposite right
+IN: run opposite right and jump around right thrice OUT: run opposite right and jump around right thrice
+IN: run opposite right after jump around right thrice OUT: run opposite right after jump around right thrice
+IN: jump around right thrice and run opposite right OUT: jump around right thrice and run opposite right
+IN: jump around right thrice and walk opposite right OUT: jump around right thrice and walk opposite right
+IN: jump around right thrice and jump opposite right OUT: jump around right thrice and jump opposite right
+IN: jump around right thrice after jump opposite right OUT: jump around right thrice after jump opposite right
+IN: jump opposite right after jump around right thrice OUT: jump opposite right after jump around right thrice
+IN: look opposite right after jump around right thrice OUT: look opposite right after jump around right thrice
+IN: look opposite right and jump around right thrice OUT: look opposite right and jump around right thrice
+IN: jump opposite right and jump around right thrice OUT: jump opposite right and jump around right thrice
+IN: jump around right thrice after walk opposite right OUT: jump around right thrice after walk opposite right
+IN: walk opposite right and jump around right thrice OUT: walk opposite right and jump around right thrice
+IN: jump around right thrice and look opposite right OUT: jump around right thrice and look opposite right
+IN: jump around right thrice after look opposite right OUT: jump around right thrice after look opposite right
+IN: walk opposite right after jump around right thrice OUT: walk opposite right after jump around right thrice
+IN: turn left thrice and jump around right thrice OUT: turn left thrice and jump around right thrice
+IN: jump around right thrice and run left twice OUT: jump around right thrice and run left twice
+IN: jump around right thrice and turn left thrice OUT: jump around right thrice and turn left thrice
+IN: jump around right thrice after run left twice OUT: jump around right thrice after run left twice
+IN: run left twice and jump around right thrice OUT: run left twice and jump around right thrice
+IN: turn left thrice after jump around right thrice OUT: turn left thrice after jump around right thrice
+IN: jump around right thrice after turn left thrice OUT: jump around right thrice after turn left thrice
+IN: run left twice after jump around right thrice OUT: run left twice after jump around right thrice
+IN: jump left twice after jump around right thrice OUT: jump left twice after jump around right thrice
+IN: jump around right thrice after run right twice OUT: jump around right thrice after run right twice
+IN: jump around right thrice and walk left twice OUT: jump around right thrice and walk left twice
+IN: jump around right thrice after look left twice OUT: jump around right thrice after look left twice
+IN: jump around right thrice after jump left twice OUT: jump around right thrice after jump left twice
+IN: jump left twice and jump around right thrice OUT: jump left twice and jump around right thrice
+IN: walk left twice after jump around right thrice OUT: walk left twice after jump around right thrice
+IN: jump around right thrice and look left twice OUT: jump around right thrice and look left twice
+IN: walk left twice and jump around right thrice OUT: walk left twice and jump around right thrice
+IN: look left twice and jump around right thrice OUT: look left twice and jump around right thrice
+IN: jump around right thrice after walk left twice OUT: jump around right thrice after walk left twice
+IN: run right twice after jump around right thrice OUT: run right twice after jump around right thrice
+IN: jump around right thrice and run right twice OUT: jump around right thrice and run right twice
+IN: look left twice after jump around right thrice OUT: look left twice after jump around right thrice
+IN: run right twice and jump around right thrice OUT: run right twice and jump around right thrice
+IN: jump around right thrice and jump left twice OUT: jump around right thrice and jump left twice
+IN: jump around right thrice after turn right thrice OUT: jump around right thrice after turn right thrice
+IN: turn right thrice after jump around right thrice OUT: turn right thrice after jump around right thrice
+IN: jump around right thrice and turn right thrice OUT: jump around right thrice and turn right thrice
+IN: turn right thrice and jump around right thrice OUT: turn right thrice and jump around right thrice
+IN: walk right twice after jump around right thrice OUT: walk right twice after jump around right thrice
+IN: look right twice and jump around right thrice OUT: look right twice and jump around right thrice
+IN: look right twice after jump around right thrice OUT: look right twice after jump around right thrice
+IN: jump around right thrice and look right twice OUT: jump around right thrice and look right twice
+IN: jump around right thrice and jump right twice OUT: jump around right thrice and jump right twice
+IN: jump right twice and jump around right thrice OUT: jump right twice and jump around right thrice
+IN: jump around right thrice after look right twice OUT: jump around right thrice after look right twice
+IN: jump around right thrice after jump right twice OUT: jump around right thrice after jump right twice
+IN: jump around right thrice after walk right twice OUT: jump around right thrice after walk right twice
+IN: walk right twice and jump around right thrice OUT: walk right twice and jump around right thrice
+IN: jump right twice after jump around right thrice OUT: jump right twice after jump around right thrice
+IN: jump around right thrice and walk right twice OUT: jump around right thrice and walk right twice
+IN: turn opposite left twice after jump around right thrice OUT: turn opposite left twice after jump around right thrice
+IN: jump around right thrice and turn around left OUT: jump around right thrice and turn around left
+IN: turn around left and jump around right thrice OUT: turn around left and jump around right thrice
+IN: jump around right thrice after turn around left OUT: jump around right thrice after turn around left
+IN: turn opposite left twice and jump around right thrice OUT: turn opposite left twice and jump around right thrice
+IN: jump around right thrice after turn opposite left twice OUT: jump around right thrice after turn opposite left twice
+IN: turn around left after jump around right thrice OUT: turn around left after jump around right thrice
+IN: jump around right thrice and turn opposite left twice OUT: jump around right thrice and turn opposite left twice
+IN: turn opposite right twice and jump around right thrice OUT: turn opposite right twice and jump around right thrice
+IN: jump around right thrice and turn around right OUT: jump around right thrice and turn around right
+IN: jump around right thrice after turn around right OUT: jump around right thrice after turn around right
+IN: turn around right and jump around right thrice OUT: turn around right and jump around right thrice
+IN: turn opposite right twice after jump around right thrice OUT: turn opposite right twice after jump around right thrice
+IN: jump around right thrice after turn opposite right twice OUT: jump around right thrice after turn opposite right twice
+IN: turn around right after jump around right thrice OUT: turn around right after jump around right thrice
+IN: jump around right thrice and turn opposite right twice OUT: jump around right thrice and turn opposite right twice
+IN: run left thrice and jump around right thrice OUT: run left thrice and jump around right thrice
+IN: run left thrice after jump around right thrice OUT: run left thrice after jump around right thrice
+IN: jump around right thrice and run left thrice OUT: jump around right thrice and run left thrice
+IN: jump around right thrice after run left thrice OUT: jump around right thrice after run left thrice
+IN: run around left thrice and jump around right OUT: run around left thrice and jump around right
+IN: jump around right after run around left thrice OUT: jump around right after run around left thrice
+IN: run around left thrice after jump around right OUT: run around left thrice after jump around right
+IN: jump around right and run around left thrice OUT: jump around right and run around left thrice
+IN: jump around right thrice and look left thrice OUT: jump around right thrice and look left thrice
+IN: jump left thrice and jump around right thrice OUT: jump left thrice and jump around right thrice
+IN: jump around right thrice after walk left thrice OUT: jump around right thrice after walk left thrice
+IN: jump around right thrice and walk left thrice OUT: jump around right thrice and walk left thrice
+IN: jump around right thrice after run right thrice OUT: jump around right thrice after run right thrice
+IN: jump left thrice after jump around right thrice OUT: jump left thrice after jump around right thrice
+IN: jump around right thrice after look left thrice OUT: jump around right thrice after look left thrice
+IN: jump around right thrice and run right thrice OUT: jump around right thrice and run right thrice
+IN: jump around right thrice and jump left thrice OUT: jump around right thrice and jump left thrice
+IN: run right thrice after jump around right thrice OUT: run right thrice after jump around right thrice
+IN: look left thrice after jump around right thrice OUT: look left thrice after jump around right thrice
+IN: look left thrice and jump around right thrice OUT: look left thrice and jump around right thrice
+IN: walk left thrice after jump around right thrice OUT: walk left thrice after jump around right thrice
+IN: walk left thrice and jump around right thrice OUT: walk left thrice and jump around right thrice
+IN: jump around right thrice after jump left thrice OUT: jump around right thrice after jump left thrice
+IN: run right thrice and jump around right thrice OUT: run right thrice and jump around right thrice
+IN: jump right thrice and jump around right thrice OUT: jump right thrice and jump around right thrice
+IN: walk right thrice and jump around right thrice OUT: walk right thrice and jump around right thrice
+IN: jump around right thrice and walk right thrice OUT: jump around right thrice and walk right thrice
+IN: jump right thrice after jump around right thrice OUT: jump right thrice after jump around right thrice
+IN: run opposite left twice and jump around right thrice OUT: run opposite left twice and jump around right thrice
+IN: jump around right thrice and run opposite left twice OUT: jump around right thrice and run opposite left twice
+IN: jump around right thrice and jump right thrice OUT: jump around right thrice and jump right thrice
+IN: jump around right thrice and look right thrice OUT: jump around right thrice and look right thrice
+IN: look right thrice and jump around right thrice OUT: look right thrice and jump around right thrice
+IN: jump around right thrice after look right thrice OUT: jump around right thrice after look right thrice
+IN: jump around right thrice after walk right thrice OUT: jump around right thrice after walk right thrice
+IN: look right thrice after jump around right thrice OUT: look right thrice after jump around right thrice
+IN: walk right thrice after jump around right thrice OUT: walk right thrice after jump around right thrice
+IN: jump around right thrice after run opposite left twice OUT: jump around right thrice after run opposite left twice
+IN: run opposite left twice after jump around right thrice OUT: run opposite left twice after jump around right thrice
+IN: jump around right thrice after jump right thrice OUT: jump around right thrice after jump right thrice
+IN: look opposite left twice and jump around right thrice OUT: look opposite left twice and jump around right thrice
+IN: jump opposite left twice and jump around right thrice OUT: jump opposite left twice and jump around right thrice
+IN: jump around right thrice and look opposite left twice OUT: jump around right thrice and look opposite left twice
+IN: walk opposite left twice and jump around right thrice OUT: walk opposite left twice and jump around right thrice
+IN: jump around right thrice after jump opposite left twice OUT: jump around right thrice after jump opposite left twice
+IN: jump opposite left twice after jump around right thrice OUT: jump opposite left twice after jump around right thrice
+IN: walk opposite left twice after jump around right thrice OUT: walk opposite left twice after jump around right thrice
+IN: jump around right thrice and walk opposite left twice OUT: jump around right thrice and walk opposite left twice
+IN: look opposite left twice after jump around right thrice OUT: look opposite left twice after jump around right thrice
+IN: jump around right thrice and jump opposite left twice OUT: jump around right thrice and jump opposite left twice
+IN: jump around right thrice after look opposite left twice OUT: jump around right thrice after look opposite left twice
+IN: jump around right thrice after walk opposite left twice OUT: jump around right thrice after walk opposite left twice
+IN: run around left twice and jump around right twice OUT: run around left twice and jump around right twice
+IN: jump around right twice after run around left twice OUT: jump around right twice after run around left twice
+IN: turn around left thrice after jump around right twice OUT: turn around left thrice after jump around right twice
+IN: turn around left thrice and jump around right twice OUT: turn around left thrice and jump around right twice
+IN: jump around right twice and turn around left thrice OUT: jump around right twice and turn around left thrice
+IN: run around left twice after jump around right twice OUT: run around left twice after jump around right twice
+IN: jump around right twice and run around left twice OUT: jump around right twice and run around left twice
+IN: run opposite right twice after jump around right thrice OUT: run opposite right twice after jump around right thrice
+IN: run opposite right twice and jump around right thrice OUT: run opposite right twice and jump around right thrice
+IN: jump around right thrice and run opposite right twice OUT: jump around right thrice and run opposite right twice
+IN: jump around right twice after turn around left thrice OUT: jump around right twice after turn around left thrice
+IN: jump around right thrice after run opposite right twice OUT: jump around right thrice after run opposite right twice
+IN: jump around right thrice after look opposite right twice OUT: jump around right thrice after look opposite right twice
+IN: jump opposite right twice after jump around right thrice OUT: jump opposite right twice after jump around right thrice
+IN: jump around right thrice and look opposite right twice OUT: jump around right thrice and look opposite right twice
+IN: look opposite right twice and jump around right thrice OUT: look opposite right twice and jump around right thrice
+IN: jump around right thrice and walk opposite right twice OUT: jump around right thrice and walk opposite right twice
+IN: walk opposite right twice and jump around right thrice OUT: walk opposite right twice and jump around right thrice
+IN: jump around right thrice and jump opposite right twice OUT: jump around right thrice and jump opposite right twice
+IN: jump around right thrice after jump opposite right twice OUT: jump around right thrice after jump opposite right twice
+IN: jump around right thrice after walk opposite right twice OUT: jump around right thrice after walk opposite right twice
+IN: jump opposite right twice and jump around right thrice OUT: jump opposite right twice and jump around right thrice
+IN: walk opposite right twice after jump around right thrice OUT: walk opposite right twice after jump around right thrice
+IN: look opposite right twice after jump around right thrice OUT: look opposite right twice after jump around right thrice
+IN: jump around right after jump around left thrice OUT: jump around right after jump around left thrice
+IN: walk around left thrice after jump around right OUT: walk around left thrice after jump around right
+IN: jump around right after run around right thrice OUT: jump around right after run around right thrice
+IN: run around right thrice and jump around right OUT: run around right thrice and jump around right
+IN: jump around right after walk around left thrice OUT: jump around right after walk around left thrice
+IN: jump around left thrice and jump around right OUT: jump around left thrice and jump around right
+IN: jump around right and walk around left thrice OUT: jump around right and walk around left thrice
+IN: jump around right and run around right thrice OUT: jump around right and run around right thrice
+IN: jump around right and look around left thrice OUT: jump around right and look around left thrice
+IN: jump around right after look around left thrice OUT: jump around right after look around left thrice
+IN: look around left thrice after jump around right OUT: look around left thrice after jump around right
+IN: look around left thrice and jump around right OUT: look around left thrice and jump around right
+IN: jump around right and jump around left thrice OUT: jump around right and jump around left thrice
+IN: walk around left thrice and jump around right OUT: walk around left thrice and jump around right
+IN: jump around left thrice after jump around right OUT: jump around left thrice after jump around right
+IN: run around right thrice after jump around right OUT: run around right thrice after jump around right
+IN: jump around left twice after jump around right twice OUT: jump around left twice after jump around right twice
+IN: jump around right thrice and turn opposite left thrice OUT: jump around right thrice and turn opposite left thrice
+IN: jump around right twice and jump around left twice OUT: jump around right twice and jump around left twice
+IN: run around left and jump around right thrice OUT: run around left and jump around right thrice
+IN: jump around right twice after walk around left twice OUT: jump around right twice after walk around left twice
+IN: jump around right thrice after turn opposite left thrice OUT: jump around right thrice after turn opposite left thrice
+IN: turn opposite left thrice after jump around right thrice OUT: turn opposite left thrice after jump around right thrice
+IN: jump around left twice and jump around right twice OUT: jump around left twice and jump around right twice
+IN: jump around right thrice after run around left OUT: jump around right thrice after run around left
+IN: jump around right twice and look around left twice OUT: jump around right twice and look around left twice
+IN: jump around right thrice and run around left OUT: jump around right thrice and run around left
+IN: look around left twice after jump around right twice OUT: look around left twice after jump around right twice
+IN: run around left after jump around right thrice OUT: run around left after jump around right thrice
+IN: walk around left twice and jump around right twice OUT: walk around left twice and jump around right twice
+IN: jump around right twice after run around right twice OUT: jump around right twice after run around right twice
+IN: run around right twice and jump around right twice OUT: run around right twice and jump around right twice
+IN: turn opposite left thrice and jump around right thrice OUT: turn opposite left thrice and jump around right thrice
+IN: jump around right twice and walk around left twice OUT: jump around right twice and walk around left twice
+IN: jump around right twice after look around left twice OUT: jump around right twice after look around left twice
+IN: jump around right twice and run around right twice OUT: jump around right twice and run around right twice
+IN: look around left twice and jump around right twice OUT: look around left twice and jump around right twice
+IN: walk around left twice after jump around right twice OUT: walk around left twice after jump around right twice
+IN: jump around right twice after jump around left twice OUT: jump around right twice after jump around left twice
+IN: run around right twice after jump around right twice OUT: run around right twice after jump around right twice
+IN: jump around right twice and turn around right thrice OUT: jump around right twice and turn around right thrice
+IN: jump around right thrice and look around left OUT: jump around right thrice and look around left
+IN: jump around left and jump around right thrice OUT: jump around left and jump around right thrice
+IN: look around left after jump around right thrice OUT: look around left after jump around right thrice
+IN: jump around right twice after turn around right thrice OUT: jump around right twice after turn around right thrice
+IN: walk around left after jump around right thrice OUT: walk around left after jump around right thrice
+IN: look around left and jump around right thrice OUT: look around left and jump around right thrice
+IN: jump around right thrice after jump around left OUT: jump around right thrice after jump around left
+IN: jump around right thrice and jump around left OUT: jump around right thrice and jump around left
+IN: turn around right thrice and jump around right twice OUT: turn around right thrice and jump around right twice
+IN: walk around left and jump around right thrice OUT: walk around left and jump around right thrice
+IN: jump around left after jump around right thrice OUT: jump around left after jump around right thrice
+IN: jump around right thrice after walk around left OUT: jump around right thrice after walk around left
+IN: run around right after jump around right thrice OUT: run around right after jump around right thrice
+IN: run around right and jump around right thrice OUT: run around right and jump around right thrice
+IN: jump around right thrice and walk around left OUT: jump around right thrice and walk around left
+IN: jump around right thrice after run around right OUT: jump around right thrice after run around right
+IN: jump around right thrice after look around left OUT: jump around right thrice after look around left
+IN: jump around right thrice and run around right OUT: jump around right thrice and run around right
+IN: turn around right thrice after jump around right twice OUT: turn around right thrice after jump around right twice
+IN: turn opposite right thrice after jump around right thrice OUT: turn opposite right thrice after jump around right thrice
+IN: jump around right thrice and turn opposite right thrice OUT: jump around right thrice and turn opposite right thrice
+IN: jump around right thrice after turn opposite right thrice OUT: jump around right thrice after turn opposite right thrice
+IN: turn opposite right thrice and jump around right thrice OUT: turn opposite right thrice and jump around right thrice
+IN: jump around right thrice after look around right OUT: jump around right thrice after look around right
+IN: jump around right thrice and look around right OUT: jump around right thrice and look around right
+IN: jump around right thrice after jump around right OUT: jump around right thrice after jump around right
+IN: look around right thrice after jump around right OUT: look around right thrice after jump around right
+IN: look around right and jump around right thrice OUT: look around right and jump around right thrice
+IN: walk around right twice after jump around right twice OUT: walk around right twice after jump around right twice
+IN: look around right twice and jump around right twice OUT: look around right twice and jump around right twice
+IN: walk around right thrice after jump around right OUT: walk around right thrice after jump around right
+IN: jump around right twice and look around right twice OUT: jump around right twice and look around right twice
+IN: jump around right twice after jump around right twice OUT: jump around right twice after jump around right twice
+IN: jump around right after walk around right thrice OUT: jump around right after walk around right thrice
+IN: jump around right twice and jump around right twice OUT: jump around right twice and jump around right twice
+IN: jump around right twice after look around right twice OUT: jump around right twice after look around right twice
+IN: jump around right after jump around right thrice OUT: jump around right after jump around right thrice
+IN: jump around right and walk around right thrice OUT: jump around right and walk around right thrice
+IN: jump around right thrice and walk around right OUT: jump around right thrice and walk around right
+IN: jump around right thrice and jump around right OUT: jump around right thrice and jump around right
+IN: jump around right and jump around right thrice OUT: jump around right and jump around right thrice
+IN: look around right after jump around right thrice OUT: look around right after jump around right thrice
+IN: walk around right twice and jump around right twice OUT: walk around right twice and jump around right twice
+IN: jump around right thrice after walk around right OUT: jump around right thrice after walk around right
+IN: look around right twice after jump around right twice OUT: look around right twice after jump around right twice
+IN: jump around right twice after walk around right twice OUT: jump around right twice after walk around right twice
+IN: walk around right after jump around right thrice OUT: walk around right after jump around right thrice
+IN: jump around right after look around right thrice OUT: jump around right after look around right thrice
+IN: jump around right and look around right thrice OUT: jump around right and look around right thrice
+IN: walk around right and jump around right thrice OUT: walk around right and jump around right thrice
+IN: walk around right thrice and jump around right OUT: walk around right thrice and jump around right
+IN: look around right thrice and jump around right OUT: look around right thrice and jump around right
+IN: jump around right twice and walk around right twice OUT: jump around right twice and walk around right twice
+IN: jump around right thrice and run opposite left thrice OUT: jump around right thrice and run opposite left thrice
+IN: run opposite left thrice and jump around right thrice OUT: run opposite left thrice and jump around right thrice
+IN: jump around right thrice after run opposite left thrice OUT: jump around right thrice after run opposite left thrice
+IN: run opposite left thrice after jump around right thrice OUT: run opposite left thrice after jump around right thrice
+IN: look opposite left thrice and jump around right thrice OUT: look opposite left thrice and jump around right thrice
+IN: jump around right thrice and jump opposite left thrice OUT: jump around right thrice and jump opposite left thrice
+IN: jump opposite left thrice and jump around right thrice OUT: jump opposite left thrice and jump around right thrice
+IN: jump opposite left thrice after jump around right thrice OUT: jump opposite left thrice after jump around right thrice
+IN: jump around right thrice after look opposite left thrice OUT: jump around right thrice after look opposite left thrice
+IN: jump around right thrice after walk opposite left thrice OUT: jump around right thrice after walk opposite left thrice
+IN: jump around right thrice and look opposite left thrice OUT: jump around right thrice and look opposite left thrice
+IN: walk opposite left thrice and jump around right thrice OUT: walk opposite left thrice and jump around right thrice
+IN: walk opposite left thrice after jump around right thrice OUT: walk opposite left thrice after jump around right thrice
+IN: look opposite left thrice after jump around right thrice OUT: look opposite left thrice after jump around right thrice
+IN: jump around right thrice and walk opposite left thrice OUT: jump around right thrice and walk opposite left thrice
+IN: jump around right thrice after jump opposite left thrice OUT: jump around right thrice after jump opposite left thrice
+IN: jump around right thrice after run opposite right thrice OUT: jump around right thrice after run opposite right thrice
+IN: jump around right thrice and turn around left twice OUT: jump around right thrice and turn around left twice
+IN: turn around left twice after jump around right thrice OUT: turn around left twice after jump around right thrice
+IN: jump around right thrice after turn around left twice OUT: jump around right thrice after turn around left twice
+IN: run opposite right thrice and jump around right thrice OUT: run opposite right thrice and jump around right thrice
+IN: turn around left twice and jump around right thrice OUT: turn around left twice and jump around right thrice
+IN: jump around right thrice and run opposite right thrice OUT: jump around right thrice and run opposite right thrice
+IN: run opposite right thrice after jump around right thrice OUT: run opposite right thrice after jump around right thrice
+IN: jump opposite right thrice after jump around right thrice OUT: jump opposite right thrice after jump around right thrice
+IN: look opposite right thrice after jump around right thrice OUT: look opposite right thrice after jump around right thrice
+IN: jump opposite right thrice and jump around right thrice OUT: jump opposite right thrice and jump around right thrice
+IN: jump around right thrice and look opposite right thrice OUT: jump around right thrice and look opposite right thrice
+IN: walk opposite right thrice and jump around right thrice OUT: walk opposite right thrice and jump around right thrice
+IN: jump around right thrice after jump opposite right thrice OUT: jump around right thrice after jump opposite right thrice
+IN: jump around right thrice and jump opposite right thrice OUT: jump around right thrice and jump opposite right thrice
+IN: jump around right thrice after walk opposite right thrice OUT: jump around right thrice after walk opposite right thrice
+IN: jump around right thrice and walk opposite right thrice OUT: jump around right thrice and walk opposite right thrice
+IN: walk opposite right thrice after jump around right thrice OUT: walk opposite right thrice after jump around right thrice
+IN: look opposite right thrice and jump around right thrice OUT: look opposite right thrice and jump around right thrice
+IN: jump around right thrice after look opposite right thrice OUT: jump around right thrice after look opposite right thrice
+IN: turn around right twice after jump around right thrice OUT: turn around right twice after jump around right thrice
+IN: jump around right thrice after turn around right twice OUT: jump around right thrice after turn around right twice
+IN: jump around right thrice and turn around right twice OUT: jump around right thrice and turn around right twice
+IN: turn around right twice and jump around right thrice OUT: turn around right twice and jump around right thrice
+IN: jump around right twice after run around left thrice OUT: jump around right twice after run around left thrice
+IN: jump around right twice and run around left thrice OUT: jump around right twice and run around left thrice
+IN: run around left thrice and jump around right twice OUT: run around left thrice and jump around right twice
+IN: run around left thrice after jump around right twice OUT: run around left thrice after jump around right twice
+IN: turn around left thrice and jump around right thrice OUT: turn around left thrice and jump around right thrice
+IN: jump around right thrice after run around left twice OUT: jump around right thrice after run around left twice
+IN: jump around right thrice after turn around left thrice OUT: jump around right thrice after turn around left thrice
+IN: jump around right thrice and run around left twice OUT: jump around right thrice and run around left twice
+IN: run around left twice and jump around right thrice OUT: run around left twice and jump around right thrice
+IN: jump around right thrice and turn around left thrice OUT: jump around right thrice and turn around left thrice
+IN: run around left twice after jump around right thrice OUT: run around left twice after jump around right thrice
+IN: turn around left thrice after jump around right thrice OUT: turn around left thrice after jump around right thrice
+IN: walk around left thrice after jump around right twice OUT: walk around left thrice after jump around right twice
+IN: look around left thrice and jump around right twice OUT: look around left thrice and jump around right twice
+IN: jump around left thrice and jump around right twice OUT: jump around left thrice and jump around right twice
+IN: jump around right twice after look around left thrice OUT: jump around right twice after look around left thrice
+IN: run around right thrice and jump around right twice OUT: run around right thrice and jump around right twice
+IN: jump around right twice and look around left thrice OUT: jump around right twice and look around left thrice
+IN: jump around right twice after run around right thrice OUT: jump around right twice after run around right thrice
+IN: run around right thrice after jump around right twice OUT: run around right thrice after jump around right twice
+IN: jump around left thrice after jump around right twice OUT: jump around left thrice after jump around right twice
+IN: jump around right twice after walk around left thrice OUT: jump around right twice after walk around left thrice
+IN: jump around right twice and walk around left thrice OUT: jump around right twice and walk around left thrice
+IN: jump around right twice and jump around left thrice OUT: jump around right twice and jump around left thrice
+IN: look around left thrice after jump around right twice OUT: look around left thrice after jump around right twice
+IN: jump around right twice after jump around left thrice OUT: jump around right twice after jump around left thrice
+IN: walk around left thrice and jump around right twice OUT: walk around left thrice and jump around right twice
+IN: jump around right twice and run around right thrice OUT: jump around right twice and run around right thrice
+IN: jump around left twice and jump around right thrice OUT: jump around left twice and jump around right thrice
+IN: jump around right thrice after look around left twice OUT: jump around right thrice after look around left twice
+IN: jump around right thrice after walk around left twice OUT: jump around right thrice after walk around left twice
+IN: jump around right thrice and walk around left twice OUT: jump around right thrice and walk around left twice
+IN: walk around left twice and jump around right thrice OUT: walk around left twice and jump around right thrice
+IN: walk around left twice after jump around right thrice OUT: walk around left twice after jump around right thrice
+IN: look around left twice after jump around right thrice OUT: look around left twice after jump around right thrice
+IN: jump around right thrice after run around right twice OUT: jump around right thrice after run around right twice
+IN: jump around right thrice and run around right twice OUT: jump around right thrice and run around right twice
+IN: run around right twice and jump around right thrice OUT: run around right twice and jump around right thrice
+IN: look around left twice and jump around right thrice OUT: look around left twice and jump around right thrice
+IN: jump around right thrice and look around left twice OUT: jump around right thrice and look around left twice
+IN: jump around right thrice after jump around left twice OUT: jump around right thrice after jump around left twice
+IN: jump around right thrice and jump around left twice OUT: jump around right thrice and jump around left twice
+IN: jump around left twice after jump around right thrice OUT: jump around left twice after jump around right thrice
+IN: run around right twice after jump around right thrice OUT: run around right twice after jump around right thrice
+IN: jump around right thrice and turn around right thrice OUT: jump around right thrice and turn around right thrice
+IN: turn around right thrice after jump around right thrice OUT: turn around right thrice after jump around right thrice
+IN: jump around right thrice after turn around right thrice OUT: jump around right thrice after turn around right thrice
+IN: turn around right thrice and jump around right thrice OUT: turn around right thrice and jump around right thrice
+IN: jump around right thrice and jump around right twice OUT: jump around right thrice and jump around right twice
+IN: jump around right thrice and look around right twice OUT: jump around right thrice and look around right twice
+IN: jump around right twice after jump around right thrice OUT: jump around right twice after jump around right thrice
+IN: look around right twice and jump around right thrice OUT: look around right twice and jump around right thrice
+IN: look around right thrice and jump around right twice OUT: look around right thrice and jump around right twice
+IN: walk around right thrice after jump around right twice OUT: walk around right thrice after jump around right twice
+IN: jump around right thrice after walk around right twice OUT: jump around right thrice after walk around right twice
+IN: jump around right thrice after jump around right twice OUT: jump around right thrice after jump around right twice
+IN: walk around right twice after jump around right thrice OUT: walk around right twice after jump around right thrice
+IN: walk around right twice and jump around right thrice OUT: walk around right twice and jump around right thrice
+IN: look around right thrice after jump around right twice OUT: look around right thrice after jump around right twice
+IN: jump around right twice and look around right thrice OUT: jump around right twice and look around right thrice
+IN: look around right twice after jump around right thrice OUT: look around right twice after jump around right thrice
+IN: jump around right twice and jump around right thrice OUT: jump around right twice and jump around right thrice
+IN: jump around right twice and walk around right thrice OUT: jump around right twice and walk around right thrice
+IN: jump around right twice after look around right thrice OUT: jump around right twice after look around right thrice
+IN: walk around right thrice and jump around right twice OUT: walk around right thrice and jump around right twice
+IN: jump around right thrice and walk around right twice OUT: jump around right thrice and walk around right twice
+IN: jump around right twice after walk around right thrice OUT: jump around right twice after walk around right thrice
+IN: jump around right thrice after look around right twice OUT: jump around right thrice after look around right twice
+IN: jump around right thrice after run around left thrice OUT: jump around right thrice after run around left thrice
+IN: run around left thrice and jump around right thrice OUT: run around left thrice and jump around right thrice
+IN: jump around right thrice and run around left thrice OUT: jump around right thrice and run around left thrice
+IN: run around left thrice after jump around right thrice OUT: run around left thrice after jump around right thrice
+IN: jump around left thrice and jump around right thrice OUT: jump around left thrice and jump around right thrice
+IN: walk around left thrice after jump around right thrice OUT: walk around left thrice after jump around right thrice
+IN: jump around right thrice and run around right thrice OUT: jump around right thrice and run around right thrice
+IN: jump around right thrice after walk around left thrice OUT: jump around right thrice after walk around left thrice
+IN: jump around right thrice and walk around left thrice OUT: jump around right thrice and walk around left thrice
+IN: run around right thrice after jump around right thrice OUT: run around right thrice after jump around right thrice
+IN: look around left thrice after jump around right thrice OUT: look around left thrice after jump around right thrice
+IN: jump around right thrice and jump around left thrice OUT: jump around right thrice and jump around left thrice
+IN: run around right thrice and jump around right thrice OUT: run around right thrice and jump around right thrice
+IN: jump around left thrice after jump around right thrice OUT: jump around left thrice after jump around right thrice
+IN: jump around right thrice after look around left thrice OUT: jump around right thrice after look around left thrice
+IN: jump around right thrice after run around right thrice OUT: jump around right thrice after run around right thrice
+IN: jump around right thrice after jump around left thrice OUT: jump around right thrice after jump around left thrice
+IN: look around left thrice and jump around right thrice OUT: look around left thrice and jump around right thrice
+IN: jump around right thrice and look around left thrice OUT: jump around right thrice and look around left thrice
+IN: walk around left thrice and jump around right thrice OUT: walk around left thrice and jump around right thrice
+IN: look around right thrice and jump around right thrice OUT: look around right thrice and jump around right thrice
+IN: walk around right thrice after jump around right thrice OUT: walk around right thrice after jump around right thrice
+IN: look around right thrice after jump around right thrice OUT: look around right thrice after jump around right thrice
+IN: jump around right thrice after jump around right thrice OUT: jump around right thrice after jump around right thrice
+IN: jump around right thrice after look around right thrice OUT: jump around right thrice after look around right thrice
+IN: jump around right thrice and walk around right thrice OUT: jump around right thrice and walk around right thrice
+IN: walk around right thrice and jump around right thrice OUT: walk around right thrice and jump around right thrice
+IN: jump around right thrice and look around right thrice OUT: jump around right thrice and look around right thrice
+IN: jump around right thrice and jump around right thrice OUT: jump around right thrice and jump around right thrice
+IN: jump around right thrice after walk around right thrice OUT: jump around right thrice after walk around right thrice
